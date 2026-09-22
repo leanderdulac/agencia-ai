@@ -1,0 +1,42 @@
+# Agência AI
+
+> Agência GEO (Generative Engine Optimization) totalmente automatizada, baseada no Brasil.
+> Ajudamos marcas a serem citadas em ChatGPT, Perplexity, Gemini, Google AI Overviews e outras engines generativas.
+> Posicionamento: camada de descoberta que complementa (não apaga) o SEO clássico — crawl e indexação ainda importam.
+
+## Site
+
+- Início: https://example.com/ (index.html)
+- Serviços: /servicos.html
+- Metodologia: /metodologia.html
+- Contato: /contato.html
+
+## O que fazemos
+
+- Auditoria de citabilidade em engines generativas
+- Estruturação de entidades e schema
+- Conteúdo otimizado para citação (pipeline automatizado + governança editorial)
+- Monitoramento contínuo de menções e share of answer
+- Integração com fundamentos de SEO técnico
+
+## Pacotes (preços de partida exemplificativos, BRL/mês)
+
+- Starter: R$ 2.900 — auditoria, páginas-chave, schema básico, monitoramento limitado
+- Growth: R$ 6.900 — pipeline de conteúdo, multi-engine, análise competitiva
+- Authority: R$ 14.900 — autoridade editorial, war room de prompts, prioridade
+
+## Contato
+
+- Responsável: Leandro França de Mello
+- Formulário: /contato.html
+- Idioma: português do Brasil (pt-BR)
+
+## Princípios
+
+- GEO não substitui SEO técnico; opera sobre essa base
+- Sem “prompt hacking” frágil — foco em autoridade e legibilidade para modelos
+- Automação com critério humano sobre claims e priorização
+
+## Optional
+
+- FAQ e detalhes de pacotes: index.html#faq e index.html#pacotes

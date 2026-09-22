@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contato — Agência AI | Diagnóstico GEO</title>
+  <meta name="description" content="Solicite um diagnóstico GEO com a Agência AI. Formulário de contato — Leandro França de Mello." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            charcoal: { 950: '#0a0c0f', 900: '#0f1218', 800: '#161b22', 700: '#1e2530', 600: '#2a3341' },
+            cyan: { DEFAULT: '#00e5ff', dim: '#00b8d4' },
+            mist: '#a8b2c1',
+            snow: '#e8ecf1'
+          },
+          fontFamily: {
+            sans: ['"DM Sans"', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
+          },
+          boxShadow: { 'glow-sm': '0 0 20px rgba(0,229,255,0.2)', glow: '0 0 40px rgba(0,229,255,0.15)' }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background: #0a0c0f; color: #e8ecf1; }
+    .nav-blur { backdrop-filter: blur(12px); background: rgba(10,12,15,0.85); }
+    .card-border { border: 1px solid rgba(42,51,65,0.9); }
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(0,229,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,229,255,0.03) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    .field-error { border-color: #f87171 !important; }
+    .error-msg { color: #f87171; font-size: 0.75rem; margin-top: 0.35rem; display: none; }
+    .error-msg.visible { display: block; }
+  </style>
+</head>
+<body class="font-sans antialiased">
+  <header class="fixed top-0 inset-x-0 z-50 nav-blur border-b border-charcoal-600/50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2">
+        <span class="w-8 h-8 rounded-lg bg-cyan/10 border border-cyan/30 flex items-center justify-center font-mono text-cyan text-sm font-medium">AI</span>
+        <span class="font-semibold tracking-tight text-snow">Agência <span class="text-cyan">AI</span></span>
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm text-mist">
+        <a href="servicos.html" class="hover:text-cyan transition">Serviços</a>
+        <a href="metodologia.html" class="hover:text-cyan transition">Metodologia</a>
+        <a href="index.html#pacotes" class="hover:text-cyan transition">Pacotes</a>
+        <a href="contato.html" class="text-cyan">Contato</a>
+      </nav>
+      <a href="contato.html" class="text-sm font-medium px-4 py-2 rounded-lg bg-cyan text-charcoal-950 hover:bg-cyan-dim transition shadow-glow-sm">Falar com a Agência</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="pt-28 pb-20 sm:pt-32 grid-bg">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+          <div>
+            <p class="text-cyan font-mono text-xs uppercase tracking-widest mb-3">Contato</p>
+            <h1 class="text-4xl sm:text-5xl font-bold text-snow tracking-tight">Vamos medir sua citabilidade</h1>
+            <p class="mt-5 text-mist leading-relaxed">
+              Preencha o formulário para solicitar um diagnóstico GEO. Retornamos com próximos passos — sem spam, sem pitch genérico.
+            </p>
+            <div class="mt-10 space-y-5 text-sm">
+              <div class="flex gap-3">
+                <span class="w-9 h-9 rounded-lg bg-cyan/10 border border-cyan/25 flex items-center justify-center text-cyan shrink-0 font-mono text-xs">01</span>
+                <div>
+                  <p class="font-medium text-snow">Diagnóstico inicial</p>
+                  <p class="text-mist mt-0.5">Entendemos marca, mercado e se já há base de SEO.</p>
+                </div>
+              </div>
+              <div class="flex gap-3">
+                <span class="w-9 h-9 rounded-lg bg-cyan/10 border border-cyan/25 flex items-center justify-center text-cyan shrink-0 font-mono text-xs">02</span>
+                <div>
+                  <p class="font-medium text-snow">Recomendação de pacote</p>
+                  <p class="text-mist mt-0.5">Starter, Growth ou Authority — com preço alinhado ao escopo.</p>
+                </div>
+              </div>
+              <div class="flex gap-3">
+                <span class="w-9 h-9 rounded-lg bg-cyan/10 border border-cyan/25 flex items-center justify-center text-cyan shrink-0 font-mono text-xs">03</span>
+                <div>
+                  <p class="font-medium text-snow">Kickoff</p>
+                  <p class="text-mist mt-0.5">Baseline de engines e roadmap das primeiras 4 semanas.</p>
+                </div>
+              </div>
+            </div>
+            <p class="mt-10 text-xs text-mist/60">
+              Responsável: Leandro França de Mello · Agência AI · Brasil
+            </p>
+          </div>
+
+          <div class="relative">
+            <!-- Form card -->
+            <div id="form-card" class="p-6 sm:p-8 rounded-2xl bg-charcoal-900 card-border shadow-glow">
+              <form id="contact-form" novalidate class="space-y-5">
+                <div>
+                  <label for="nome" class="block text-sm font-medium text-snow mb-1.5">Nome completo</label>
+                  <input type="text" id="nome" name="nome" autocomplete="name" required
+                    class="w-full px-4 py-3 rounded-xl bg-charcoal-800 border border-charcoal-600 text-snow placeholder:text-mist/40 focus:outline-none focus:border-cyan/50 transition"
+                    placeholder="Seu nome" />
+                  <p class="error-msg" id="err-nome" role="alert">Informe seu nome (mín. 2 caracteres).</p>
+                </div>
+                <div>
+                  <label for="email" class="block text-sm font-medium text-snow mb-1.5">E-mail corporativo</label>
+                  <input type="email" id="email" name="email" autocomplete="email" required
+                    class="w-full px-4 py-3 rounded-xl bg-charcoal-800 border border-charcoal-600 text-snow placeholder:text-mist/40 focus:outline-none focus:border-cyan/50 transition"
+                    placeholder="voce@empresa.com.br" />
+                  <p class="error-msg" id="err-email" role="alert">Informe um e-mail válido.</p>
+                </div>
+                <div>
+                  <label for="empresa" class="block text-sm font-medium text-snow mb-1.5">Empresa</label>
+                  <input type="text" id="empresa" name="empresa" autocomplete="organization" required
+                    class="w-full px-4 py-3 rounded-xl bg-charcoal-800 border border-charcoal-600 text-snow placeholder:text-mist/40 focus:outline-none focus:border-cyan/50 transition"
+                    placeholder="Nome da empresa" />
+                  <p class="error-msg" id="err-empresa" role="alert">Informe o nome da empresa.</p>
+                </div>
+                <div>
+                  <label for="pacote" class="block text-sm font-medium text-snow mb-1.5">Pacote de interesse</label>
+                  <select id="pacote" name="pacote"
+                    class="w-full px-4 py-3 rounded-xl bg-charcoal-800 border border-charcoal-600 text-snow focus:outline-none focus:border-cyan/50 transition">
+                    <option value="">Ainda não sei — quero diagnóstico</option>
+                    <option value="starter">Starter (R$ 4.900/mês + setup R$ 4.900)</option>
+                    <option value="growth">Growth (R$ 9.900/mês + setup R$ 8.900)</option>
+                    <option value="authority">Authority (R$ 19.900/mês + setup R$ 14.900)</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="mensagem" class="block text-sm font-medium text-snow mb-1.5">Mensagem</label>
+                  <textarea id="mensagem" name="mensagem" rows="4" required
+                    class="w-full px-4 py-3 rounded-xl bg-charcoal-800 border border-charcoal-600 text-snow placeholder:text-mist/40 focus:outline-none focus:border-cyan/50 transition resize-y min-h-[100px]"
+                    placeholder="Conte sobre sua marca, site e se já investe em SEO…"></textarea>
+                  <p class="error-msg" id="err-mensagem" role="alert">Escreva ao menos 20 caracteres sobre o contexto.</p>
+                </div>
+                <div class="flex items-start gap-3">
+                  <input type="checkbox" id="lgpd" name="lgpd" required
+                    class="mt-1 w-4 h-4 rounded border-charcoal-600 bg-charcoal-800 text-cyan focus:ring-cyan/40" />
+                  <label for="lgpd" class="text-xs text-mist leading-relaxed">
+                    Autorizo o contato da Agência AI sobre este pedido. Não compartilhamos seus dados com terceiros para marketing.
+                  </label>
+                </div>
+                <p class="error-msg" id="err-lgpd" role="alert">É necessário autorizar o contato para enviar.</p>
+                <button type="submit" id="submit-btn"
+                  class="w-full py-3.5 rounded-xl bg-cyan text-charcoal-950 font-semibold hover:bg-cyan-dim transition shadow-glow-sm">
+                  Enviar solicitação
+                </button>
+                <p class="text-[11px] text-mist/50 text-center">Formulário client-side — sem envio a servidor nesta demo. Seus dados ficam só no navegador até o “envio” simulado.</p>
+              </form>
+            </div>
+
+            <!-- Success state -->
+            <div id="success-card" class="hidden p-8 sm:p-10 rounded-2xl bg-charcoal-900 border border-cyan/40 shadow-glow text-center">
+              <div class="w-14 h-14 mx-auto rounded-full bg-cyan/15 border border-cyan/40 flex items-center justify-center text-cyan text-2xl mb-5">✓</div>
+              <h2 class="text-2xl font-bold text-snow">Solicitação registrada</h2>
+              <p class="mt-3 text-mist text-sm leading-relaxed max-w-sm mx-auto">
+                Obrigado, <span id="success-nome" class="text-snow font-medium"></span>. Em uma operação real, a equipe da Agência AI entraria em contato pelo e-mail informado.
+              </p>
+              <p class="mt-2 text-xs text-mist/60">Esta é uma demonstração estática — nenhum e-mail foi enviado.</p>
+              <button type="button" id="reset-btn" class="mt-8 px-6 py-2.5 rounded-xl border border-charcoal-600 text-sm text-snow hover:border-cyan/40 hover:text-cyan transition">
+                Enviar outra mensagem
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-charcoal-700 py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row justify-between gap-8">
+      <div>
+        <a href="index.html" class="font-semibold text-snow">Agência <span class="text-cyan">AI</span></a>
+        <p class="mt-2 text-sm text-mist max-w-xs">GEO automatizado para marcas citadas em engines generativas.</p>
+      </div>
+      <div class="flex flex-wrap gap-8 text-sm text-mist">
+        <div class="space-y-2">
+          <p class="text-snow font-medium text-xs uppercase tracking-wider">Site</p>
+          <a href="servicos.html" class="block hover:text-cyan">Serviços</a>
+          <a href="metodologia.html" class="block hover:text-cyan">Metodologia</a>
+          <a href="contato.html" class="block hover:text-cyan">Contato</a>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 mt-10 pt-6 border-t border-charcoal-700 text-xs text-mist/50">
+      © 2026 Agência AI · Leandro França de Mello
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var form = document.getElementById('contact-form');
+      var formCard = document.getElementById('form-card');
+      var successCard = document.getElementById('success-card');
+      var successNome = document.getElementById('success-nome');
+      var resetBtn = document.getElementById('reset-btn');
+      var pacoteSelect = document.getElementById('pacote');
+
+      // Prefill package from query string
+      var params = new URLSearchParams(window.location.search);
+      var pacote = params.get('pacote');
+      if (pacote && ['starter', 'growth', 'authority'].indexOf(pacote) !== -1) {
+        pacoteSelect.value = pacote;
+      }
+
+      function showError(id, show) {
+        var input = document.getElementById(id);
+        var err = document.getElementById('err-' + id);
+        if (!input || !err) return;
+        if (show) {
+          input.classList.add('field-error');
+          err.classList.add('visible');
+        } else {
+          input.classList.remove('field-error');
+          err.classList.remove('visible');
+        }
+      }
+
+      function isValidEmail(v) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+      }
+
+      function validate() {
+        var ok = true;
+        var nome = document.getElementById('nome').value.trim();
+        var email = document.getElementById('email').value.trim();
+        var empresa = document.getElementById('empresa').value.trim();
+        var mensagem = document.getElementById('mensagem').value.trim();
+        var lgpd = document.getElementById('lgpd').checked;
+
+        showError('nome', nome.length < 2);
+        if (nome.length < 2) ok = false;
+
+        showError('email', !isValidEmail(email));
+        if (!isValidEmail(email)) ok = false;
+
+        showError('empresa', empresa.length < 2);
+        if (empresa.length < 2) ok = false;
+
+        showError('mensagem', mensagem.length < 20);
+        if (mensagem.length < 20) ok = false;
+
+        var errLgpd = document.getElementById('err-lgpd');
+        if (!lgpd) {
+          errLgpd.classList.add('visible');
+          ok = false;
+        } else {
+          errLgpd.classList.remove('visible');
+        }
+
+        return ok;
+      }
+
+      ['nome', 'email', 'empresa', 'mensagem'].forEach(function (id) {
+        document.getElementById(id).addEventListener('input', function () {
+          showError(id, false);
+        });
+      });
+      document.getElementById('lgpd').addEventListener('change', function () {
+        document.getElementById('err-lgpd').classList.remove('visible');
+      });
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (!validate()) return;
+
+        var nome = document.getElementById('nome').value.trim();
+        successNome.textContent = nome.split(' ')[0];
+        formCard.classList.add('hidden');
+        successCard.classList.remove('hidden');
+        successCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      });
+
+      resetBtn.addEventListener('click', function () {
+        form.reset();
+        if (pacote) pacoteSelect.value = pacote;
+        successCard.classList.add('hidden');
+        formCard.classList.remove('hidden');
+        ['nome', 'email', 'empresa', 'mensagem'].forEach(function (id) { showError(id, false); });
+        document.getElementById('err-lgpd').classList.remove('visible');
+      });
+    })();
+  </script>
+</body>
+</html>

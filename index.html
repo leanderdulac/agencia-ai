@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agência AI — GEO para marcas citadas em ChatGPT, Perplexity e Gemini</title>
+  <meta name="description" content="Agência AI é uma agência GEO totalmente automatizada. Posicionamos sua marca para ser citada em ChatGPT, Perplexity, Gemini e Google AI Overviews." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            charcoal: { 950: '#0a0c0f', 900: '#0f1218', 800: '#161b22', 700: '#1e2530', 600: '#2a3341' },
+            cyan: { DEFAULT: '#00e5ff', dim: '#00b8d4' },
+            mist: '#a8b2c1',
+            snow: '#e8ecf1'
+          },
+          fontFamily: {
+            sans: ['"DM Sans"', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
+          },
+          boxShadow: {
+            glow: '0 0 40px rgba(0,229,255,0.15)',
+            'glow-sm': '0 0 20px rgba(0,229,255,0.2)'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { background: #0a0c0f; color: #e8ecf1; }
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(0,229,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,229,255,0.03) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    .gradient-orb {
+      background: radial-gradient(ellipse at center, rgba(0,229,255,0.14) 0%, transparent 70%);
+    }
+    .nav-blur { backdrop-filter: blur(12px); background: rgba(10,12,15,0.85); }
+    .card-border { border: 1px solid rgba(42,51,65,0.9); }
+    .card-border:hover { border-color: rgba(0,229,255,0.35); }
+    .accent-line { height: 2px; background: linear-gradient(90deg, #00e5ff, transparent); }
+    .pkg-featured { border-color: rgba(0,229,255,0.5); box-shadow: 0 0 40px rgba(0,229,255,0.12); }
+  </style>
+</head>
+<body class="font-sans antialiased">
+  <header class="fixed top-0 inset-x-0 z-50 nav-blur border-b border-charcoal-600/50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2 group">
+        <span class="w-8 h-8 rounded-lg bg-cyan/10 border border-cyan/30 flex items-center justify-center font-mono text-cyan text-sm font-medium group-hover:shadow-glow-sm transition">AI</span>
+        <span class="font-semibold tracking-tight text-snow">Agência <span class="text-cyan">AI</span></span>
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm text-mist">
+        <a href="servicos.html" class="hover:text-cyan transition">Serviços</a>
+        <a href="metodologia.html" class="hover:text-cyan transition">Metodologia</a>
+        <a href="index.html#pacotes" class="hover:text-cyan transition">Pacotes</a>
+        <a href="contato.html" class="hover:text-cyan transition">Contato</a>
+      </nav>
+      <a href="contato.html" class="text-sm font-medium px-4 py-2 rounded-lg bg-cyan text-charcoal-950 hover:bg-cyan-dim transition shadow-glow-sm">Falar com a Agência</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="relative pt-28 pb-20 sm:pt-36 sm:pb-28 overflow-hidden grid-bg">
+      <div class="absolute top-20 left-1/2 -translate-x-1/2 w-[600px] h-[400px] gradient-orb pointer-events-none"></div>
+      <div class="relative max-w-6xl mx-auto px-4 sm:px-6 text-center">
+        <p class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-cyan mb-6 px-3 py-1.5 rounded-full border border-cyan/25 bg-cyan/5">
+          <span class="w-1.5 h-1.5 rounded-full bg-cyan animate-pulse"></span>
+          GEO · Generative Engine Optimization
+        </p>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-snow max-w-4xl mx-auto leading-[1.1]">
+          Sua marca citada onde as pessoas
+          <span class="text-cyan">já perguntam</span>
+        </h1>
+        <p class="mt-6 text-lg sm:text-xl text-mist max-w-2xl mx-auto leading-relaxed">
+          A Agência AI é uma agência GEO totalmente automatizada. Otimizamos sua presença para ChatGPT, Perplexity, Gemini e Google AI Overviews — a camada de descoberta que está substituindo o SEO clássico.
+        </p>
+        <p class="mt-3 text-sm text-mist/70 max-w-xl mx-auto">
+          Honestidade de produto: bases técnicas de crawl e indexação ainda importam. GEO acelera a citação nas engines generativas sobre essa fundação.
+        </p>
+        <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="contato.html" class="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-cyan text-charcoal-950 font-semibold hover:bg-cyan-dim transition shadow-glow">
+            Solicitar diagnóstico GEO
+          </a>
+          <a href="metodologia.html" class="inline-flex items-center justify-center px-6 py-3.5 rounded-xl border border-charcoal-600 text-snow hover:border-cyan/40 hover:text-cyan transition">
+            Ver metodologia
+          </a>
+        </div>
+        <div class="mt-14 flex flex-wrap justify-center gap-6 sm:gap-10 text-xs font-mono text-mist/60 uppercase tracking-wider">
+          <span>ChatGPT</span>
+          <span>Perplexity</span>
+          <span>Gemini</span>
+          <span>AI Overviews</span>
+          <span>Claude</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 sm:py-24 border-t border-charcoal-700">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="max-w-2xl">
+          <p class="text-cyan font-mono text-xs uppercase tracking-widest mb-3">O problema</p>
+          <h2 class="text-3xl sm:text-4xl font-bold text-snow tracking-tight">As buscas mudaram. Sua estratégia de descoberta, ainda não.</h2>
+          <p class="mt-4 text-mist leading-relaxed">
+            Decisões de compra, pesquisa de fornecedores e comparação de marcas acontecem cada vez mais em conversas com IAs. Se sua marca não é citada nas respostas, você some do radar — mesmo com um site bem ranqueado no Google clássico.
+          </p>
+        </div>
+        <div class="mt-12 grid sm:grid-cols-3 gap-6">
+          <article class="p-6 rounded-2xl bg-charcoal-900 card-border transition">
+            <div class="w-10 h-10 rounded-lg bg-cyan/10 flex items-center justify-center text-cyan font-mono text-sm mb-4">01</div>
+            <h3 class="font-semibold text-snow mb-2">Respostas, não links azuis</h3>
+            <p class="text-sm text-mist leading-relaxed">Ususuários recebem sínteses e recomendações. Aparecer na página 1 não garante ser mencionado pela engine.</p>
+          </article>
+          <article class="p-6 rounded-2xl bg-charcoal-900 card-border transition">
+            <div class="w-10 h-10 rounded-lg bg-cyan/10 flex items-center justify-center text-cyan font-mono text-sm mb-4">02</div>
+            <h3 class="font-semibold text-snow mb-2">Fontes que as IAs confiam</h3>
+            <p class="text-sm text-mist leading-relaxed">Modelos priorizam conteúdo estruturado, autoridade verificável e consistência entre entidades. Conteúdo genérico some.</p>
+          </article>
+          <article class="p-6 rounded-2xl bg-charcoal-900 card-border transition">
+            <div class="w-10 h-10 rounded-lg bg-cyan/10 flex items-center justify-center text-cyan font-mono text-sm mb-4">03</div>
+            <h3 class="font-semibold text-snow mb-2">SEO sozinho não basta</h3>
+            <p class="text-sm text-mist leading-relaxed">Crawl e indexação continuam essenciais — mas GEO exige outra camada: citabilidade, schema e presença em corpora de confiança.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 sm:py-24 border-t border-charcoal-700 bg-charcoal-900/40">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <p class="text-cyan font-mono text-xs uppercase tracking-widest mb-3">A solução</p>
+            <h2 class="text-3xl sm:text-4xl font-bold text-snow tracking-tight">GEO automatizado para marcas que querem ser a fonte, não só o link.</h2>
+            <p class="mt-4 text-mist leading-relaxed">
+              Operamos a camada de Generative Engine Optimization de ponta a ponta: auditoria de citabilidade, estruturação de entidades, conteúdo otimizado para engines e monitoramento contínuo de menções em IAs generativas.
+            </p>
+            <ul class="mt-8 space-y-3">
+              <li class="flex gap-3 text-sm text-snow"><span class="text-cyan mt-0.5">▸</span> Diagnóstico de presença em ChatGPT, Perplexity, Gemini e AI Overviews</li>
+              <li class="flex gap-3 text-sm text-snow"><span class="text-cyan mt-0.5">▸</span> Pipeline automatizado de conteúdo e schema alinhado a entidades</li>
+              <li class="flex gap-3 text-sm text-snow"><span class="text-cyan mt-0.5">▸</span> Relatórios de citações e gaps competitivos, mês a mês</li>
+            </ul>
+            <a href="servicos.html" class="inline-flex mt-8 text-cyan text-sm font-medium hover:underline underline-offset-4">Conhecer os serviços →</a>
+          </div>
+          <div class="relative p-8 rounded-2xl bg-charcoal-800 card-border">
+            <div class="accent-line absolute top-0 left-8 right-8 rounded-full"></div>
+            <p class="font-mono text-xs text-cyan uppercase tracking-widest mb-4">Posicionamento</p>
+            <blockquote class="text-lg text-snow leading-relaxed">
+              “GEO não substitui SEO técnico — ele é a camada que decide se sua marca entra na resposta da IA. Nós cuidamos dessa camada de forma automatizada.”
+            </blockquote>
+            <p class="mt-6 text-sm text-mist">— Leandro França de Mello, Agência AI</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 sm:py-24 border-t border-charcoal-700" id="como-funciona">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="text-center max-w-2xl mx-auto">
+          <p class="text-cyan font-mono text-xs uppercase tracking-widest mb-3">Como funciona</p>
+          <h2 class="text-3xl sm:text-4xl font-bold text-snow tracking-tight">Quatro etapas. Pouca fricção. Muita citabilidade.</h2>
+        </div>
+        <ol class="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <li class="relative p-6 rounded-2xl bg-charcoal-900 card-border">
+            <span class="font-mono text-3xl text-cyan/30 font-bold">01</span>
+            <h3 class="mt-3 font-semibold text-snow">Auditoria GEO</h3>
+            <p class="mt-2 text-sm text-mist">Mapeamos se (e como) você aparece nas principais engines. Identificamos gaps e concorrentes citados.</p>
+          </li>
+          <li class="relative p-6 rounded-2xl bg-charcoal-900 card-border">
+            <span class="font-mono text-3xl text-cyan/30 font-bold">02</span>
+            <h3 class="mt-3 font-semibold text-snow">Estrutura &amp; entidades</h3>
+            <p class="mt-2 text-sm text-mist">Alinhamos marca, produtos e provas sociais a um grafo de entidades legível por modelos e crawlers.</p>
+          </li>
+          <li class="relative p-6 rounded-2xl bg-charcoal-900 card-border">
+            <span class="font-mono text-3xl text-cyan/30 font-bold">03</span>
+            <h3 class="mt-3 font-semibold text-snow">Produção automatizada</h3>
+            <p class="mt-2 text-sm text-mist">Conteúdo, FAQs, páginas e sinais externos gerados e publicados com critérios de citabilidade.</p>
+          </li>
+          <li class="relative p-6 rounded-2xl bg-charcoal-900 card-border">
+            <span class="font-mono text-3xl text-cyan/30 font-bold">04</span>
+            <h3 class="mt-3 font-semibold text-snow">Monitor &amp; iteração</h3>
+            <p class="mt-2 text-sm text-mist">Acompanhamos menções, ajustamos prompts-alvo e expandimos cobertura por tema e mercado.</p>
+          </li>
+        </ol>
+        <p class="mt-8 text-center">
+          <a href="metodologia.html" class="text-sm text-cyan hover:underline underline-offset-4">Detalhar a metodologia completa →</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="py-20 sm:py-24 border-t border-charcoal-700 bg-charcoal-900/40" id="pacotes">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="text-center max-w-2xl mx-auto">
+          <p class="text-cyan font-mono text-xs uppercase tracking-widest mb-3">Pacotes</p>
+          <h2 class="text-3xl sm:text-4xl font-bold text-snow tracking-tight">Escolha o nível de presença nas engines</h2>
+          <p class="mt-3 text-sm text-mist">Preços de partida exemplificativos em BRL. Escopo e investimento finais após diagnóstico.</p>
+        </div>
+        <div class="mt-12 grid md:grid-cols-3 gap-6 items-stretch">
+          <article class="flex flex-col p-7 rounded-2xl bg-charcoal-900 card-border transition">
+            <h3 class="text-lg font-semibold text-snow">Starter</h3>
+            <p class="mt-1 text-sm text-mist">Para validar GEO e ganhar primeiras citações.</p>
+            <p class="mt-6">
+              <span class="text-3xl font-bold text-snow">R$&nbsp;4.900</span>
+              <span class="text-mist text-sm">/mês</span>
+            </p>
+            <p class="text-xs text-mist/60 mt-1">Preço de partida exemplificativo</p>
+            <ul class="mt-6 space-y-2.5 text-sm text-mist flex-1">
+              <li class="flex gap-2"><span class="text-cyan">✓</span> Auditoria GEO inicial</li>
+              <li class="flex gap-2"><span class="text-cyan">✓</span> Otimização de 5 páginas-chave</li>
+              <li class="flex gap-2"><span class="text-cyan">✓</span> Schema &amp; entidades básicas</li>
+              <li class="flex gap-2"><span class="text-cyan">✓</span> Monitoramento mensal (2 engines)</li>
+              <li class="flex gap-2"><span class="text-cyan">✓</span> Relatório mensal de citações</li>
+            </ul>
+            <a href="contato.html?pacote=starter" class="mt-8 block text-center py-3 rounded-xl border border-charcoal-600 text-snow text-sm font-medium hover:border-cyan/40 hover:text-cyan transition">Começar com Starter</a>
+          </article>
+          <article class="flex flex-col p-7 rounded-2xl bg-charcoal-800 pkg-featured relative">
+            <span class="absolute -top-3 left-1/2 -translate-x-1/2 text-[10px] font-mono uppercase tracking-widest bg-cyan text-charcoal-950 px-3 py-1 rounded-full font-semibold">Mais escolhido</span>
+            <h3 class="text-lg font-semibold text-snow">Growth</h3>
+            <p class="mt-1 text-sm text-mist">Para marcas que competem por share of answer.</p>
+            <p class="mt-6">
+              <span class="text-3xl font-bold text-snow">R$&nbsp;9.900</span>
+              <span class="text-mist text-sm">/mês</span>
+            </p>
+            <p class="text-xs text-mist/60 mt-1">Preço de partida exemplificativo</p>
+            <ul class="mt-6 space-y-2.5 text-sm text-mist flex-1">
+              <li class="flex gap-2"><span class="text-cyan">✓</span> Tudo do Starter</li>
+              <li class="flex gap-2"><span class="text-cyan">✓</span> Pipeline de conteúdo automatizado</li>
+              <li class="flex gap-2"><span class="text-cyan">✓</span> Cobertura multi-engine (4+)</li>
+              <li class="flex gap-2"><span class="text-cyan">✓</span> Análise competitiva de citações</li>
+              <li class="flex gap-2"><span class="text-cyan">✓</span> Expansão de entidades e FAQs</li>
+              <li class="flex gap-2"><span class="text-cyan">✓</span> Revisões quinzenais de prompts-alvo</li>
+            </ul>
+            <a href="contato.html?pacote=growth" class="mt-8 block text-center py-3 rounded-xl bg-cyan text-charcoal-950 text-sm font-semibold hover:bg-cyan-dim transition shadow-glow-sm">Começar com Growth</a>
+          </article>
+          <article class="flex flex-col p-7 rounded-2xl bg-charcoal-900 card-border transition">
+            <h3 class="text-lg font-semibold text-snow">Authority</h3>
+            <p class="mt-1 text-sm text-mist">Para líderes de categoria que querem dominar respostas.</p>
+            <p class="mt-6">
+              <span class="text-3xl font-bold text-snow">R$&nbsp;19.900</span>
+              <span class="text-mist text-sm">/mês</span>
+            </p>
+            <p class="text-xs text-mist/60 mt-1">Preço de partida exemplificativo</p>
+            <ul class="mt-6 space-y-2.5 text-sm text-mist flex-1">
+              <li class="flex gap-2"><span class="text-cyan">✓</span> Tudo do Growth</li>
+              <li class="flex gap-2"><span class="text-cyan">✓</span> Programa de autoridade editorial</li>
+              <li class="flex gap-2"><span class="text-cyan">✓</span> Integração com SEO técnico existente</li>
+              <li class="flex gap-2"><span class="text-cyan">✓</span> War room de prompts por vertical</li>
+              <li class="flex gap-2"><span class="text-cyan">✓</span> Prioridade de implementação</li>
+              <li class="flex gap-2"><span class="text-cyan">✓</span> Reuniões estratégicas mensais</li>
+            </ul>
+            <a href="contato.html?pacote=authority" class="mt-8 block text-center py-3 rounded-xl border border-charcoal-600 text-snow text-sm font-medium hover:border-cyan/40 hover:text-cyan transition">Começar com Authority</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 sm:py-24 border-t border-charcoal-700" id="faq">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-12">
+          <p class="text-cyan font-mono text-xs uppercase tracking-widest mb-3">FAQ</p>
+          <h2 class="text-3xl font-bold text-snow tracking-tight">Perguntas frequentes</h2>
+        </div>
+        <div class="space-y-4">
+          <details class="group p-5 rounded-xl bg-charcoal-900 card-border open:border-cyan/30">
+            <summary class="cursor-pointer font-medium text-snow list-none flex justify-between items-center gap-4">
+              GEO substitui SEO?
+              <span class="text-cyan group-open:rotate-45 transition text-xl leading-none">+</span>
+            </summary>
+            <p class="mt-3 text-sm text-mist leading-relaxed">Não. GEO é a camada de citabilidade nas engines generativas. Crawl, indexação, performance e estrutura técnica (SEO clássico) continuam sendo a base. Nós trabalhamos sobre — e com — essa fundação.</p>
+          </details>
+          <details class="group p-5 rounded-xl bg-charcoal-900 card-border">
+            <summary class="cursor-pointer font-medium text-snow list-none flex justify-between items-center gap-4">
+              Em quanto tempo vejo resultados?
+              <span class="text-cyan group-open:rotate-45 transition text-xl leading-none">+</span>
+            </summary>
+            <p class="mt-3 text-sm text-mist leading-relaxed">Sinais iniciais de citação costumam aparecer em 4–8 semanas, dependendo do nicho, concorrência e maturidade do conteúdo. Autoridade sustentável é um ciclo contínuo, não um projeto pontual.</p>
+          </details>
+          <details class="group p-5 rounded-xl bg-charcoal-900 card-border">
+            <summary class="cursor-pointer font-medium text-snow list-none flex justify-between items-center gap-4">
+              Vocês atuam só no Brasil?
+              <span class="text-cyan group-open:rotate-45 transition text-xl leading-none">+</span>
+            </summary>
+            <p class="mt-3 text-sm text-mist leading-relaxed">Somos uma operação brasileira (pt-BR), com foco em marcas que vendem ou se comunicam em português. Engines monitoradas são globais; a estratégia de conteúdo e entidades é localizada.</p>
+          </details>
+          <details class="group p-5 rounded-xl bg-charcoal-900 card-border">
+            <summary class="cursor-pointer font-medium text-snow list-none flex justify-between items-center gap-4">
+              O que significa “totalmente automatizada”?
+              <span class="text-cyan group-open:rotate-45 transition text-xl leading-none">+</span>
+            </summary>
+            <p class="mt-3 text-sm text-mist leading-relaxed">Auditorias, geração de rascunhos, schema, monitoramento de prompts e relatórios rodam em pipelines. Estratégia, critérios editoriais e priorização ficam sob governança humana da Agência AI.</p>
+          </details>
+          <details class="group p-5 rounded-xl bg-charcoal-900 card-border">
+            <summary class="cursor-pointer font-medium text-snow list-none flex justify-between items-center gap-4">
+              Os preços dos pacotes são fechados?
+              <span class="text-cyan group-open:rotate-45 transition text-xl leading-none">+</span>
+            </summary>
+            <p class="mt-3 text-sm text-mist leading-relaxed">Valores oficiais: Starter R$&nbsp;4.900/mês (+ setup R$&nbsp;4.900), Growth R$&nbsp;9.900/mês (+ setup R$&nbsp;8.900), Authority R$&nbsp;19.900/mês (+ setup R$&nbsp;14.900). Ajuste de até ±15% por setor ou escopo.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 sm:py-24 border-t border-charcoal-700">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+        <div class="p-10 sm:p-14 rounded-3xl bg-charcoal-800 border border-cyan/20 shadow-glow relative overflow-hidden">
+          <div class="absolute inset-0 gradient-orb opacity-60 pointer-events-none"></div>
+          <div class="relative">
+            <h2 class="text-3xl sm:text-4xl font-bold text-snow tracking-tight">Pronto para ser citado, não só encontrado?</h2>
+            <p class="mt-4 text-mist max-w-xl mx-auto">Solicite um diagnóstico GEO. Em poucos dias você sabe onde sua marca aparece — e onde os concorrentes estão ganhando as respostas.</p>
+            <a href="contato.html" class="inline-flex mt-8 px-8 py-3.5 rounded-xl bg-cyan text-charcoal-950 font-semibold hover:bg-cyan-dim transition shadow-glow-sm">Solicitar diagnóstico</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-charcoal-700 py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row justify-between gap-8">
+      <div>
+        <a href="index.html" class="font-semibold text-snow">Agência <span class="text-cyan">AI</span></a>
+        <p class="mt-2 text-sm text-mist max-w-xs">GEO automatizado para marcas citadas em engines generativas. Operação sob Leandro França de Mello.</p>
+      </div>
+      <div class="flex flex-wrap gap-8 text-sm text-mist">
+        <div class="space-y-2">
+          <p class="text-snow font-medium text-xs uppercase tracking-wider">Site</p>
+          <a href="servicos.html" class="block hover:text-cyan">Serviços</a>
+          <a href="metodologia.html" class="block hover:text-cyan">Metodologia</a>
+          <a href="contato.html" class="block hover:text-cyan">Contato</a>
+        </div>
+        <div class="space-y-2">
+          <p class="text-snow font-medium text-xs uppercase tracking-wider">Recursos</p>
+          <a href="llms.txt" class="block hover:text-cyan font-mono text-xs">llms.txt</a>
+          <a href="index.html#faq" class="block hover:text-cyan">FAQ</a>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 mt-10 pt-6 border-t border-charcoal-700 text-xs text-mist/50 flex flex-col sm:flex-row justify-between gap-2">
+      <span>© 2026 Agência AI. Todos os direitos reservados.</span>
+      <span>Brasil · América/São_Paulo</span>
+    </div>
+  </footer>
+</body>
+</html>
