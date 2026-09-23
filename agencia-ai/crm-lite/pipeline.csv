@@ -1,3 +1,0 @@
-id,created_at,updated_at,company,contact_name,email,phone,source,package_interest,stage,mrr_brl,setup_brl,next_action,owner,notes,token
-L-20260923003207-11e9c0,2026-09-23T00:32:07-03:00,2026-09-23T00:32:07-03:00,Acme GEO,Ana Silva,ana@acme.example,,e2e-test,growth,kickoff_auto,9900,8900,kickoff_auto,QualifyBot,intake completo → kickoff_auto,BWbKj2V1WLBWWqovrAnb9Q
-L-20260923003227-4e516b,2026-09-23T00:32:27-03:00,2026-09-23T00:32:27-03:00,Beta Labs,Bruno Costa,bruno@beta.example,,site-contato,starter,diagnose_auto,4900,4900,diagnose_auto,QualifyBot,auto após lead,lFXQd_1CFwF84C1VbmAJdg
