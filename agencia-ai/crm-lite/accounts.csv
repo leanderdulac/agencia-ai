@@ -1,0 +1,2 @@
+id,created_at,updated_at,company,website,package,mrr_brl,setup_brl,contract_start,contract_min_months,primary_contact,email,status,engines,prompt_count,notes,token,slug,stage,lead_id
+A-20260923003207-b06405,2026-09-23T00:32:07-03:00,2026-09-23T00:32:07-03:00,Acme GEO,https://acme.example,growth,9900,8900,,3,Ana Silva,ana@acme.example,active,,,intake 100%,BWbKj2V1WLBWWqovrAnb9Q,acme-geo,kickoff_auto,L-20260923003207-11e9c0

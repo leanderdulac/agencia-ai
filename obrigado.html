@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Obrigado — Khabs</title>
+  <meta name="description" content="Solicitação recebida. Timeline automática dos próximos passos GEO." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="config.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            charcoal: { 950: '#0B1220', 900: '#0f1218', 800: '#161b22', 700: '#1e2530', 600: '#2a3341' },
+            cyan: { DEFAULT: '#2F6BFF', dim: '#2557d6' },
+            teal: { DEFAULT: '#00A896' },
+            cream: { DEFAULT: '#F7F5F1' },
+            warn: { DEFAULT: '#E85D04' },
+            mist: '#a8b2c1',
+            snow: '#e8ecf1'
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
+          },
+          boxShadow: { 'glow-sm': '0 0 20px rgba(47,107,255,0.2)', glow: '0 0 40px rgba(47,107,255,0.15)' }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background: #0B1220; color: #e8ecf1; }
+    .nav-blur { backdrop-filter: blur(12px); background: rgba(11,18,32,0.85); }
+    .card-border { border: 1px solid rgba(42,51,65,0.9); }
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(47,107,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(47,107,255,0.03) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    .field-error { border-color: #E85D04 !important; }
+    .error-msg { color: #E85D04; font-size: 0.75rem; margin-top: 0.35rem; display: none; }
+    .error-msg.visible { display: block; }
+    .step-dot { width: 10px; height: 10px; border-radius: 9999px; }
+  </style>
+</head>
+<body class="font-sans antialiased">
+  <header class="fixed top-0 inset-x-0 z-50 nav-blur border-b border-charcoal-600/50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2">
+        <span class="w-8 h-8 rounded-lg bg-cyan/10 border border-cyan/30 flex items-center justify-center font-mono text-cyan text-sm font-medium">★</span>
+        <span class="font-semibold tracking-tight text-snow">Khabs</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm text-mist">
+        <a href="servicos.html" class="hover:text-cyan transition">Serviços</a>
+        <a href="metodologia.html" class="hover:text-cyan transition">Metodologia</a>
+        <a href="qualificar.html" class="hover:text-cyan transition">Diagnóstico</a>
+        <a href="index.html#pacotes" class="hover:text-cyan transition">Pacotes</a>
+        <a href="contato.html" class="text-cyan">Contato</a>
+      </nav>
+      <a href="qualificar.html" class="text-sm font-medium px-4 py-2 rounded-lg bg-cyan text-charcoal-950 hover:bg-cyan-dim transition shadow-glow-sm">Diagnóstico rápido</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="pt-28 pb-20 sm:pt-32 grid-bg">
+      <div class="max-w-2xl mx-auto px-4 sm:px-6">
+        <div class="p-8 rounded-2xl bg-charcoal-900 border border-cyan/40 shadow-glow">
+          <div class="w-14 h-14 rounded-full bg-cyan/15 border border-cyan/40 flex items-center justify-center text-teal text-2xl mb-5">✓</div>
+          <p class="text-cyan font-mono text-xs uppercase tracking-widest mb-2">Lead recebido</p>
+          <h1 class="text-3xl font-bold text-snow">Obrigado — os bots já começaram</h1>
+          <p class="mt-3 text-mist text-sm leading-relaxed">ID <span id="lead-id" class="font-mono text-snow">—</span>. Não é só um “recebemos”: o pipeline local avançou para <span class="text-teal">diagnose_auto</span>.</p>
+          <ol class="mt-8 space-y-4 text-sm">
+            <li class="flex gap-3"><span class="font-mono text-cyan shrink-0">T+0</span><span class="text-mist"><strong class="text-snow">Agora</strong> — lead no CRM-lite · auto-resposta enfileirada (rascunho local, sem envio real).</span></li>
+            <li class="flex gap-3"><span class="font-mono text-cyan shrink-0">≤1d</span><span class="text-mist"><strong class="text-snow">1 dia útil</strong> — recomendação de pacote + rascunho de proposta (ProposalBot).</span></li>
+            <li class="flex gap-3"><span class="font-mono text-cyan shrink-0">Audit</span><span class="text-mist"><strong class="text-snow">Prep de auditoria</strong> — engines e prompts-alvo enfileirados.</span></li>
+            <li class="flex gap-3"><span class="font-mono text-cyan shrink-0">Você</span><span class="text-mist"><strong class="text-snow">Adiante o intake</strong> — acelera o kickoff sem esperar e-mail.</span></li>
+          </ol>
+          <div class="mt-8 flex flex-col sm:flex-row gap-3">
+            <a id="link-onboarding" href="onboarding.html" class="inline-flex justify-center px-5 py-3 rounded-xl bg-cyan text-charcoal-950 font-semibold text-sm hover:bg-cyan-dim transition">Começar intake agora</a>
+            <a id="link-portal" href="portal.html" class="inline-flex justify-center px-5 py-3 rounded-xl border border-charcoal-600 text-sm text-snow hover:border-cyan/40">Ver status no portal</a>
+          </div>
+          <p class="mt-6 text-xs text-mist/60">Dúvidas: <a href="mailto:contato@getkhabs.com" class="text-cyan">contato@getkhabs.com</a> · Gates humanos só para preço, claims regulados, publish CMS e contrato.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="border-t border-charcoal-700 py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row justify-between gap-8">
+      <div>
+        <a href="index.html" class="font-semibold text-snow">Khabs</a>
+        <p class="mt-2 text-sm text-mist max-w-xs">Toda marca é uma estrela na resposta. GEO + Caçador de Citações.</p>
+        <p class="mt-2 text-sm text-mist"><a href="mailto:contato@getkhabs.com" class="hover:text-cyan">contato@getkhabs.com</a></p>
+      </div>
+      <div class="flex flex-wrap gap-8 text-sm text-mist">
+        <div class="space-y-2">
+          <p class="text-snow font-medium text-xs uppercase tracking-wider">Site</p>
+          <a href="servicos.html" class="block hover:text-cyan">Serviços</a>
+          <a href="metodologia.html" class="block hover:text-cyan">Metodologia</a>
+          <a href="qualificar.html" class="block hover:text-cyan">Diagnóstico</a>
+          <a href="contato.html" class="block hover:text-cyan">Contato</a>
+          <a href="portal.html" class="block hover:text-cyan">Portal do cliente</a>
+        </div>
+        <div class="space-y-2">
+          <p class="text-snow font-medium text-xs uppercase tracking-wider">Legal</p>
+          <a href="privacidade.html" class="block hover:text-cyan">Privacidade</a>
+          <a href="termos.html" class="block hover:text-cyan">Termos</a>
+          <a href="llms.txt" class="block hover:text-cyan font-mono text-xs">llms.txt</a>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 mt-10 pt-6 border-t border-charcoal-700 text-xs text-mist/50">
+      © 2026 Khabs · Leandro França de Mello
+    </div>
+  </footer>
+
+<script>
+(function(){
+  var p = new URLSearchParams(location.search);
+  var id = p.get('id') || '';
+  var token = p.get('token') || '';
+  document.getElementById('lead-id').textContent = id || '—';
+  var ob = document.getElementById('link-onboarding');
+  var po = document.getElementById('link-portal');
+  if (id || token) {
+    ob.href = 'onboarding.html?lead=' + encodeURIComponent(id) + '&token=' + encodeURIComponent(token);
+    po.href = 'portal.html?token=' + encodeURIComponent(token || id);
+  }
+})();
+</script>
+</body>
+</html>

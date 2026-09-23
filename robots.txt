@@ -1,4 +1,4 @@
-# Agência AI — robots.txt
+# Khabs — robots.txt
 # Permitimos crawlers de busca e de motores generativos (GEO).
 
 User-agent: *
@@ -44,4 +44,4 @@ Allow: /
 User-agent: meta-externalagent
 Allow: /
 
-Sitemap: https://agencia.ai/sitemap.xml
+Sitemap: https://getkhabs.com/sitemap.xml

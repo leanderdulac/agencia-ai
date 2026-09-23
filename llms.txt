@@ -1,34 +1,43 @@
-# Agência AI
+# Khabs
 
-> Agência GEO (Generative Engine Optimization) totalmente automatizada, baseada no Brasil.
+> Khabs · agência GEO (Generative Engine Optimization). Toda marca é uma estrela na resposta.
+> Every brand is a star in the answer.
 > Ajudamos marcas a serem citadas em ChatGPT, Perplexity, Gemini, Google AI Overviews e outras engines generativas.
+> Produto de monitoramento: Caçador de Citações. Pipelines automatizados com governança humana.
 > Posicionamento: camada de descoberta que complementa (não apaga) o SEO clássico — crawl e indexação ainda importam.
 
 ## Site
 
-- Início: https://example.com/ (index.html)
-- Serviços: /servicos.html
-- Metodologia: /metodologia.html
-- Contato: /contato.html
+- Início: https://getkhabs.com/
+- Serviços: https://getkhabs.com/servicos.html
+- Metodologia: https://getkhabs.com/metodologia.html
+- Contato: https://getkhabs.com/contato.html
+- Privacidade: https://getkhabs.com/privacidade.html
+- Termos: https://getkhabs.com/termos.html
 
 ## O que fazemos
 
 - Auditoria de citabilidade em engines generativas
 - Estruturação de entidades e schema
 - Conteúdo otimizado para citação (pipeline automatizado + governança editorial)
-- Monitoramento contínuo de menções e share of answer
+- Monitoramento contínuo de menções e share of answer (Caçador de Citações)
 - Integração com fundamentos de SEO técnico
 
-## Pacotes (preços de partida exemplificativos, BRL/mês)
+## Pacotes oficiais (BRL)
 
-- Starter: R$ 2.900 — auditoria, páginas-chave, schema básico, monitoramento limitado
-- Growth: R$ 6.900 — pipeline de conteúdo, multi-engine, análise competitiva
-- Authority: R$ 14.900 — autoridade editorial, war room de prompts, prioridade
+| Pacote | Setup (único) | Retainer mensal |
+|--------|---------------|-----------------|
+| Starter | R$ 4.900 | R$ 4.900 |
+| Growth | R$ 8.900 | R$ 9.900 |
+| Authority | R$ 14.900 | R$ 19.900 |
+
+Contrato mínimo: Starter/Growth 3 meses · Authority 6 meses. Ajuste ±15% por setor/escopo (só fundador).
 
 ## Contato
 
 - Responsável: Leandro França de Mello
-- Formulário: /contato.html
+- E-mail: contato@getkhabs.com
+- Formulário: https://getkhabs.com/contato.html
 - Idioma: português do Brasil (pt-BR)
 
 ## Princípios
@@ -39,4 +48,4 @@
 
 ## Optional
 
-- FAQ e detalhes de pacotes: index.html#faq e index.html#pacotes
+- FAQ e detalhes de pacotes: https://getkhabs.com/index.html#faq e https://getkhabs.com/index.html#pacotes

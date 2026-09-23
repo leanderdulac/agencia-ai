@@ -4,58 +4,73 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Metodologia — Agência AI | Como fazemos GEO</title>
-  <meta name="description" content="Metodologia GEO da Agência AI: auditoria, entidades, produção automatizada, monitoramento e integração com fundamentos de SEO." />
+  <title>Metodologia — Khabs | Como fazemos GEO</title>
+  <meta name="description" content="Metodologia GEO da Khabs: auditoria, entidades, produção automatizada, Caçador de Citações e integração com fundamentos de SEO." />
+  <link rel="canonical" href="https://getkhabs.com/metodologia.html" />
+  <meta property="og:title" content="Metodologia — Khabs | Como fazemos GEO" />
+  <meta property="og:description" content="Metodologia GEO da Khabs: auditoria, entidades, produção e Caçador de Citações." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://getkhabs.com/metodologia.html" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Khabs" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Metodologia — Khabs | Como fazemos GEO" />
+  <meta name="twitter:description" content="Metodologia GEO da Khabs: auditoria, entidades, produção e Caçador de Citações." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            charcoal: { 950: '#0a0c0f', 900: '#0f1218', 800: '#161b22', 700: '#1e2530', 600: '#2a3341' },
-            cyan: { DEFAULT: '#00e5ff', dim: '#00b8d4' },
+            charcoal: { 950: '#0B1220', 900: '#0f1218', 800: '#161b22', 700: '#1e2530', 600: '#2a3341' },
+            cyan: { DEFAULT: '#2F6BFF', dim: '#2557d6' },
+            teal: { DEFAULT: '#00A896' },
+            cream: { DEFAULT: '#F7F5F1' },
+            warn: { DEFAULT: '#E85D04' },
             mist: '#a8b2c1',
             snow: '#e8ecf1'
           },
           fontFamily: {
-            sans: ['"DM Sans"', 'system-ui', 'sans-serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
             mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
           },
-          boxShadow: { 'glow-sm': '0 0 20px rgba(0,229,255,0.2)' }
+          boxShadow: { 'glow-sm': '0 0 20px rgba(47,107,255,0.2)' }
         }
       }
     }
   </script>
   <style>
-    body { background: #0a0c0f; color: #e8ecf1; }
-    .nav-blur { backdrop-filter: blur(12px); background: rgba(10,12,15,0.85); }
+    body { background: #0B1220; color: #e8ecf1; }
+    .nav-blur { backdrop-filter: blur(12px); background: rgba(11,18,32,0.85); }
     .card-border { border: 1px solid rgba(42,51,65,0.9); }
     .grid-bg {
       background-image:
-        linear-gradient(rgba(0,229,255,0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0,229,255,0.03) 1px, transparent 1px);
+        linear-gradient(rgba(47,107,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(47,107,255,0.03) 1px, transparent 1px);
       background-size: 48px 48px;
     }
-    .timeline-line { background: linear-gradient(180deg, #00e5ff 0%, rgba(0,229,255,0.15) 100%); }
+    .timeline-line { background: linear-gradient(180deg, #2F6BFF 0%, rgba(47,107,255,0.15) 100%); }
   </style>
 </head>
 <body class="font-sans antialiased">
   <header class="fixed top-0 inset-x-0 z-50 nav-blur border-b border-charcoal-600/50">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
       <a href="index.html" class="flex items-center gap-2">
-        <span class="w-8 h-8 rounded-lg bg-cyan/10 border border-cyan/30 flex items-center justify-center font-mono text-cyan text-sm font-medium">AI</span>
-        <span class="font-semibold tracking-tight text-snow">Agência <span class="text-cyan">AI</span></span>
+        <span class="w-8 h-8 rounded-lg bg-cyan/10 border border-cyan/30 flex items-center justify-center font-mono text-cyan text-sm font-medium">★</span>
+        <span class="font-semibold tracking-tight text-snow">Khabs</span>
       </a>
       <nav class="hidden md:flex items-center gap-8 text-sm text-mist">
         <a href="servicos.html" class="hover:text-cyan transition">Serviços</a>
         <a href="metodologia.html" class="text-cyan">Metodologia</a>
+        <a href="case-climatewise.html" class="hover:text-cyan transition">Case</a>
+        <a href="qualificar.html" class="hover:text-cyan transition">Diagnóstico</a>
         <a href="index.html#pacotes" class="hover:text-cyan transition">Pacotes</a>
         <a href="contato.html" class="hover:text-cyan transition">Contato</a>
       </nav>
-      <a href="contato.html" class="text-sm font-medium px-4 py-2 rounded-lg bg-cyan text-charcoal-950 hover:bg-cyan-dim transition shadow-glow-sm">Falar com a Agência</a>
+      <a href="contato.html" class="text-sm font-medium px-4 py-2 rounded-lg bg-cyan text-charcoal-950 hover:bg-cyan-dim transition shadow-glow-sm">Falar com a Khabs</a>
     </div>
   </header>
 
@@ -115,7 +130,7 @@
             <span class="absolute -left-8 sm:-left-10 w-5 h-5 rounded-full bg-charcoal-950 border-2 border-cyan"></span>
             <p class="font-mono text-xs text-cyan uppercase tracking-widest">Fase 04 · Contínuo</p>
             <h2 class="mt-2 text-xl font-bold text-snow">Medir, aprender, dobrar a aposta</h2>
-            <p class="mt-3 text-sm text-mist leading-relaxed">Reexecutamos a bateria de prompts. Comparamos share of answer. Cortamos o que não move e reforçamos o que gera citação. Relatórios em português, acionáveis para marketing e produto.</p>
+            <p class="mt-3 text-sm text-mist leading-relaxed">Com o Caçador de Citações, reexecutamos a bateria de prompts. Comparamos share of answer. Cortamos o que não move e reforçamos o que gera citação. Relatórios em português, acionáveis para marketing e produto.</p>
             <ul class="mt-4 space-y-1.5 text-sm text-snow">
               <li>• Ciclos mensais (quinzenais no Growth/Authority)</li>
               <li>• Alertas de regressão</li>
@@ -158,20 +173,30 @@
   <footer class="border-t border-charcoal-700 py-12">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row justify-between gap-8">
       <div>
-        <a href="index.html" class="font-semibold text-snow">Agência <span class="text-cyan">AI</span></a>
-        <p class="mt-2 text-sm text-mist max-w-xs">GEO automatizado para marcas citadas em engines generativas.</p>
+        <a href="index.html" class="font-semibold text-snow">Khabs</a>
+        <p class="mt-2 text-sm text-mist max-w-xs">Toda marca é uma estrela na resposta. GEO + Caçador de Citações.</p>
+        <p class="mt-2 text-sm text-mist"><a href="mailto:contato@getkhabs.com" class="hover:text-cyan">contato@getkhabs.com</a></p>
       </div>
       <div class="flex flex-wrap gap-8 text-sm text-mist">
         <div class="space-y-2">
           <p class="text-snow font-medium text-xs uppercase tracking-wider">Site</p>
           <a href="servicos.html" class="block hover:text-cyan">Serviços</a>
           <a href="metodologia.html" class="block hover:text-cyan">Metodologia</a>
+          <a href="case-climatewise.html" class="block hover:text-cyan">Case</a>
+          <a href="qualificar.html" class="block hover:text-cyan">Diagnóstico</a>
           <a href="contato.html" class="block hover:text-cyan">Contato</a>
+          <a href="portal.html" class="block hover:text-cyan">Portal</a>
+        </div>
+        <div class="space-y-2">
+          <p class="text-snow font-medium text-xs uppercase tracking-wider">Legal</p>
+          <a href="privacidade.html" class="block hover:text-cyan">Privacidade</a>
+          <a href="termos.html" class="block hover:text-cyan">Termos</a>
+          <a href="llms.txt" class="block hover:text-cyan font-mono text-xs">llms.txt</a>
         </div>
       </div>
     </div>
     <div class="max-w-6xl mx-auto px-4 sm:px-6 mt-10 pt-6 border-t border-charcoal-700 text-xs text-mist/50">
-      © 2026 Agência AI · Leandro França de Mello
+      © 2026 Khabs · Leandro França de Mello
     </div>
   </footer>
 </body>

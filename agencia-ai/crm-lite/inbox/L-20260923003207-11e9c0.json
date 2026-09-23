@@ -1,0 +1,28 @@
+{
+  "id": "L-20260923003207-11e9c0",
+  "created_at": "2026-09-23T00:32:07-03:00",
+  "updated_at": "2026-09-23T00:32:07-03:00",
+  "company": "Acme GEO",
+  "contact_name": "Ana Silva",
+  "email": "ana@acme.example",
+  "phone": "",
+  "source": "e2e-test",
+  "package_interest": "growth",
+  "stage": "kickoff_auto",
+  "mrr_brl": 9900,
+  "setup_brl": 8900,
+  "next_action": "diagnose_auto",
+  "owner": "QualifyBot",
+  "notes": "Queremos melhorar citação em ChatGPT e Perplexity para nosso produto SaaS B2B.",
+  "token": "BWbKj2V1WLBWWqovrAnb9Q",
+  "qualification": {
+    "site": "yes",
+    "seo": "basic",
+    "engines": "4",
+    "budget": "mid"
+  },
+  "mensagem": "Queremos melhorar citação em ChatGPT e Perplexity para nosso produto SaaS B2B.",
+  "recommended_package": "growth",
+  "utm": {},
+  "advance_note": "intake completo → kickoff_auto"
+}

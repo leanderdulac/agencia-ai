@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ops board (local) — Khabs</title>
+  <meta name="description" content="Board interno local: inbox leads, advance stage, drafts." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="config.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            charcoal: { 950: '#0B1220', 900: '#0f1218', 800: '#161b22', 700: '#1e2530', 600: '#2a3341' },
+            cyan: { DEFAULT: '#2F6BFF', dim: '#2557d6' },
+            teal: { DEFAULT: '#00A896' },
+            cream: { DEFAULT: '#F7F5F1' },
+            warn: { DEFAULT: '#E85D04' },
+            mist: '#a8b2c1',
+            snow: '#e8ecf1'
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
+          },
+          boxShadow: { 'glow-sm': '0 0 20px rgba(47,107,255,0.2)', glow: '0 0 40px rgba(47,107,255,0.15)' }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background: #0B1220; color: #e8ecf1; }
+    .nav-blur { backdrop-filter: blur(12px); background: rgba(11,18,32,0.85); }
+    .card-border { border: 1px solid rgba(42,51,65,0.9); }
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(47,107,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(47,107,255,0.03) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    input, textarea, select { background: #161b22; border: 1px solid #2a3341; color: #e8ecf1; border-radius: 0.75rem; padding: 0.75rem 1rem; width: 100%; }
+    input:focus, textarea:focus, select:focus { outline: none; border-color: rgba(47,107,255,0.5); }
+    label { display: block; font-size: 0.875rem; font-weight: 500; color: #e8ecf1; margin-bottom: 0.35rem; }
+  </style>
+</head>
+<body class="font-sans antialiased">
+  <header class="fixed top-0 inset-x-0 z-50 nav-blur border-b border-charcoal-600/50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2">
+        <span class="w-8 h-8 rounded-lg bg-cyan/10 border border-cyan/30 flex items-center justify-center font-mono text-cyan text-sm font-medium">★</span>
+        <span class="font-semibold tracking-tight text-snow">Khabs</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm text-mist">
+        <a href="servicos.html" class="hover:text-cyan transition">Serviços</a>
+        <a href="metodologia.html" class="hover:text-cyan transition">Metodologia</a>
+        <a href="qualificar.html" class="hover:text-cyan transition">Diagnóstico</a>
+        <a href="index.html#pacotes" class="hover:text-cyan transition">Pacotes</a>
+        <a href="contato.html" class="hover:text-cyan transition">Contato</a>
+      </nav>
+      <a href="portal.html" class="text-sm font-medium px-4 py-2 rounded-lg border border-charcoal-600 text-snow hover:border-cyan/40 transition">Portal</a>
+    </div>
+  </header>
+
+  <div class="fixed top-16 inset-x-0 z-40 bg-warn/90 text-charcoal-950 text-center text-xs font-semibold py-1.5 tracking-wide">SOMENTE LOCAL — sem senha · não publicar · sem envio real de e-mail</div>
+  <main>
+    <section class="pt-32 pb-20 sm:pt-36">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6">
+        <div class="flex flex-wrap items-end justify-between gap-4 mb-8">
+          <div>
+            <p class="text-cyan font-mono text-xs uppercase tracking-widest mb-2">Ops interno</p>
+            <h1 class="text-3xl font-bold text-snow">Inbox &amp; pipeline</h1>
+          </div>
+          <button id="refresh" type="button" class="px-4 py-2 rounded-xl border border-charcoal-600 text-sm text-snow hover:border-cyan/40">Atualizar</button>
+        </div>
+        <div id="list" class="space-y-4"></div>
+        <h2 class="mt-12 text-lg font-semibold text-snow">Fila outbound (rascunhos)</h2>
+        <div id="out" class="mt-4 space-y-3 text-sm"></div>
+      </div>
+    </section>
+  </main>
+  <footer class="border-t border-charcoal-700 py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row justify-between gap-8">
+      <div>
+        <a href="index.html" class="font-semibold text-snow">Khabs</a>
+        <p class="mt-2 text-sm text-mist max-w-xs">Toda marca é uma estrela na resposta.</p>
+        <p class="mt-2 text-sm text-mist"><a href="mailto:contato@getkhabs.com" class="hover:text-cyan">contato@getkhabs.com</a></p>
+      </div>
+      <div class="flex flex-wrap gap-8 text-sm text-mist">
+        <div class="space-y-2">
+          <p class="text-snow font-medium text-xs uppercase tracking-wider">Site</p>
+          <a href="qualificar.html" class="block hover:text-cyan">Diagnóstico</a>
+          <a href="contato.html" class="block hover:text-cyan">Contato</a>
+          <a href="portal.html" class="block hover:text-cyan">Portal</a>
+          <a href="onboarding.html" class="block hover:text-cyan">Intake</a>
+        </div>
+        <div class="space-y-2">
+          <p class="text-snow font-medium text-xs uppercase tracking-wider">Legal</p>
+          <a href="privacidade.html" class="block hover:text-cyan">Privacidade</a>
+          <a href="termos.html" class="block hover:text-cyan">Termos</a>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 mt-10 pt-6 border-t border-charcoal-700 text-xs text-mist/50">© 2026 Khabs · Leandro França de Mello</div>
+  </footer>
+
+<script>
+(function(){
+  var api = (window.KHABS && window.KHABS.apiBase) || '';
+  var stages = ['visit','qualify','lead','diagnose_auto','proposal_draft','won','intake_selfserve','kickoff_auto','sprint30','retain'];
+
+  function load(){
+    fetch(api + '/api/leads').then(function(r){ return r.json(); }).then(function(d){
+      var list = document.getElementById('list');
+      if (!d.leads || !d.leads.length) { list.innerHTML = '<p class="text-mist text-sm">Nenhum lead no inbox ainda.</p>'; }
+      else {
+        list.innerHTML = d.leads.map(function(L){
+          var nextOpts = stages.map(function(s){ return '<option value="'+s+'"'+(s===L.stage?' selected':'')+'>'+s+'</option>'; }).join('');
+          return '<div class="p-5 rounded-2xl bg-charcoal-900 card-border" data-id="'+L.id+'">'+
+            '<div class="flex flex-wrap justify-between gap-3">'+
+            '<div><p class="font-semibold text-snow">'+ (L.company||'') +'</p>'+
+            '<p class="text-xs text-mist mt-1">'+ (L.contact_name||'') +' · '+ (L.email||'') +' · <span class="font-mono text-cyan">'+ (L.stage||'') +'</span></p>'+
+            '<p class="text-[11px] text-mist/50 mt-1 font-mono">'+L.id+' · token '+ (L.token||'') +'</p></div>'+
+            '<div class="flex flex-wrap gap-2 items-center">'+
+            '<select class="stage-sel text-xs py-2 px-2 w-auto">'+nextOpts+'</select>'+
+            '<button type="button" class="btn-adv px-3 py-2 rounded-lg bg-cyan text-charcoal-950 text-xs font-semibold">Avançar</button>'+
+            '<button type="button" class="btn-mail px-3 py-2 rounded-lg border border-charcoal-600 text-xs">Copiar e-mail</button>'+
+            '<a class="px-3 py-2 rounded-lg border border-charcoal-600 text-xs text-cyan" href="portal.html?token='+encodeURIComponent(L.token||'')+'" target="_blank">Portal</a>'+
+            '</div></div>'+
+            '<p class="mt-3 text-xs text-mist/70 line-clamp-2">'+(L.notes||L.mensagem||'')+'</p></div>';
+        }).join('');
+        list.querySelectorAll('.btn-adv').forEach(function(btn){
+          btn.onclick = function(){
+            var card = btn.closest('[data-id]');
+            var id = card.getAttribute('data-id');
+            var stage = card.querySelector('.stage-sel').value;
+            fetch(api + '/api/advance', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ id:id, stage:stage, note:'ops.html' }) })
+              .then(function(){ load(); });
+          };
+        });
+        list.querySelectorAll('.btn-mail').forEach(function(btn){
+          btn.onclick = function(){
+            var card = btn.closest('[data-id]');
+            var id = card.getAttribute('data-id');
+            var L = (d.leads||[]).find(function(x){ return x.id===id; }) || {};
+            var text = 'Para: '+(L.email||'')+'\\nAssunto: Khabs — update ('+(L.company||'')+')\\n\\nOlá '+(L.contact_name||'').split(' ')[0]+',\\n\\nAtualização do estágio: '+(L.stage||'')+'.\\nPortal: http://127.0.0.1:8787/portal.html?token='+(L.token||'')+'\\n\\n— Ops Khabs (rascunho local)';
+            navigator.clipboard.writeText(text).then(function(){ btn.textContent = 'Copiado!'; setTimeout(function(){ btn.textContent='Copiar e-mail'; }, 1200); });
+          };
+        });
+      }
+      var out = document.getElementById('out');
+      out.innerHTML = (d.outbound||[]).slice(0,15).map(function(o){
+        return '<div class="p-4 rounded-xl bg-charcoal-900 card-border"><p class="text-xs font-mono text-cyan">'+o.kind+' · '+o.status+'</p><p class="text-snow text-sm mt-1">'+o.subject+'</p><p class="text-mist text-xs mt-1">→ '+o.to+'</p><pre class="mt-2 text-[11px] text-mist/70 whitespace-pre-wrap max-h-24 overflow-auto">'+(o.body||'')+'</pre></div>';
+      }).join('') || '<p class="text-mist text-sm">Fila vazia.</p>';
+    }).catch(function(){
+      document.getElementById('list').innerHTML = '<p class="text-warn text-sm">API indisponível. Rode ./start-local.sh</p>';
+    });
+  }
+  document.getElementById('refresh').onclick = load;
+  load();
+  setInterval(load, 15000);
+})();
+</script>
+</body>
+</html>

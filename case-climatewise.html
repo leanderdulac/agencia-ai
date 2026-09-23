@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Case ClimateWise — Khabs | Piloto GEO</title>
+  <meta name="description" content="Case piloto ClimateWise (FIMCE): pacote GEO A–D, llms.txt e docs/geo publicados no GitHub. Baseline de citações iniciada em 23/09/2026." />
+  <link rel="canonical" href="https://getkhabs.com/case-climatewise.html" />
+  <meta property="og:title" content="Case piloto — ClimateWise | Khabs GEO" />
+  <meta property="og:description" content="Marca técnica forte no GitHub, baixa citabilidade em engines generativas. Entrega GEO A–D + llms.txt + docs/geo." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://getkhabs.com/case-climatewise.html" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Khabs" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Case piloto — ClimateWise | Khabs GEO" />
+  <meta name="twitter:description" content="Pacote GEO A–D, llms.txt e docs/geo para ClimateWise (FIMCE). Baseline iniciada em 23/09/2026." />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Case piloto — ClimateWise",
+    "description": "Piloto GEO da Khabs para ClimateWise (FIMCE): conteúdo citeável A–D, llms.txt e docs/geo.",
+    "inLanguage": "pt-BR",
+    "datePublished": "2026-09-23",
+    "author": { "@type": "Organization", "name": "Khabs", "url": "https://getkhabs.com" },
+    "publisher": { "@type": "Organization", "name": "Khabs", "url": "https://getkhabs.com" },
+    "about": {
+      "@type": "SoftwareApplication",
+      "name": "ClimateWise",
+      "alternateName": "FIMCE",
+      "url": "https://github.com/leanderdulac/ClimateAI"
+    },
+    "mainEntityOfPage": "https://getkhabs.com/case-climatewise.html"
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            charcoal: { 950: '#0B1220', 900: '#0f1218', 800: '#161b22', 700: '#1e2530', 600: '#2a3341' },
+            cyan: { DEFAULT: '#2F6BFF', dim: '#2557d6' },
+            teal: { DEFAULT: '#00A896' },
+            cream: { DEFAULT: '#F7F5F1' },
+            warn: { DEFAULT: '#E85D04' },
+            mist: '#a8b2c1',
+            snow: '#e8ecf1'
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
+          },
+          boxShadow: {
+            glow: '0 0 40px rgba(47,107,255,0.15)',
+            'glow-sm': '0 0 20px rgba(47,107,255,0.2)'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { background: #0B1220; color: #e8ecf1; }
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(47,107,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(47,107,255,0.03) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    .gradient-orb {
+      background: radial-gradient(ellipse at center, rgba(47,107,255,0.14) 0%, transparent 70%);
+    }
+    .nav-blur { backdrop-filter: blur(12px); background: rgba(11,18,32,0.85); }
+    .card-border { border: 1px solid rgba(42,51,65,0.9); }
+    .card-border:hover { border-color: rgba(47,107,255,0.35); }
+    .accent-line { height: 2px; background: linear-gradient(90deg, #2F6BFF, transparent); }
+  </style>
+</head>
+<body class="font-sans antialiased">
+  <header class="fixed top-0 inset-x-0 z-50 nav-blur border-b border-charcoal-600/50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2 group">
+        <span class="w-8 h-8 rounded-lg bg-cyan/10 border border-cyan/30 flex items-center justify-center font-mono text-cyan text-sm font-medium group-hover:shadow-glow-sm transition">★</span>
+        <span class="font-semibold tracking-tight text-snow">Khabs</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm text-mist">
+        <a href="servicos.html" class="hover:text-cyan transition">Serviços</a>
+        <a href="metodologia.html" class="hover:text-cyan transition">Metodologia</a>
+        <a href="case-climatewise.html" class="text-cyan">Case</a>
+        <a href="qualificar.html" class="hover:text-cyan transition">Diagnóstico</a>
+        <a href="index.html#pacotes" class="hover:text-cyan transition">Pacotes</a>
+        <a href="contato.html" class="hover:text-cyan transition">Contato</a>
+      </nav>
+      <a href="contato.html" class="text-sm font-medium px-4 py-2 rounded-lg bg-cyan text-charcoal-950 hover:bg-cyan-dim transition shadow-glow-sm">Falar com a Khabs</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. Hero -->
+    <section class="relative pt-28 pb-16 sm:pt-36 sm:pb-20 overflow-hidden grid-bg border-b border-charcoal-700">
+      <div class="absolute top-20 left-1/2 -translate-x-1/2 w-[600px] h-[400px] gradient-orb pointer-events-none"></div>
+      <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
+        <p class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-cyan mb-6 px-3 py-1.5 rounded-full border border-cyan/25 bg-cyan/5">
+          <span class="w-1.5 h-1.5 rounded-full bg-cyan animate-pulse"></span>
+          Case piloto · GEO
+        </p>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-snow max-w-4xl leading-[1.1]">
+          Case piloto — <span class="text-cyan">ClimateWise</span>
+        </h1>
+        <p class="mt-5 text-lg text-mist max-w-2xl leading-relaxed">
+          ClimateWise (FIMCE — Framework Integrado de Modelagem Climático-Econômica) é o piloto GEO da Khabs: transformar uma marca técnica forte no GitHub em fonte citeável para ChatGPT, Perplexity, Gemini e AI Overviews.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3 text-xs font-mono text-mist/70">
+          <span class="px-3 py-1.5 rounded-lg border border-charcoal-600 bg-charcoal-900">Marca: ClimateWise</span>
+          <span class="px-3 py-1.5 rounded-lg border border-charcoal-600 bg-charcoal-900">Repo: ClimateAI</span>
+          <span class="px-3 py-1.5 rounded-lg border border-charcoal-600 bg-charcoal-900">Licença: MIT</span>
+          <span class="px-3 py-1.5 rounded-lg border border-charcoal-600 bg-charcoal-900">Idioma: pt-BR</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Desafio -->
+    <section class="py-16 sm:py-20 border-b border-charcoal-700" id="desafio">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="max-w-3xl">
+          <p class="text-cyan font-mono text-xs uppercase tracking-widest mb-3">Desafio</p>
+          <h2 class="text-3xl sm:text-4xl font-bold text-snow tracking-tight">Marca técnica forte no GitHub, baixa citabilidade em motores generativos</h2>
+          <p class="mt-5 text-mist leading-relaxed">
+            O ClimateWise já tinha repositório público, stack documentada (FastAPI + React, NOAA / Embrapa / OpenMeteo) e posicionamento claro em atuária climática e seguros paramétricos. O gap: engines generativas raramente citam o produto porque o conteúdo não estava estruturado para resposta — sem blocos answer-first, FAQ com schema, tabela comparativa, claims com evidência, nem <span class="font-mono text-snow text-sm">llms.txt</span> / pacote <span class="font-mono text-snow text-sm">docs/geo</span> no próprio repo.
+          </p>
+          <ul class="mt-6 space-y-2 text-sm text-snow">
+            <li class="flex gap-3"><span class="text-cyan mt-0.5">▸</span> Autoridade técnica concentrada em README e código, pouco “chunkável” para LLMs</li>
+            <li class="flex gap-3"><span class="text-cyan mt-0.5">▸</span> Entidade ClimateWise / FIMCE pouco explícita para Knowledge Graph e sameAs</li>
+            <li class="flex gap-3"><span class="text-cyan mt-0.5">▸</span> Sem baseline formal de menções em ChatGPT, Perplexity, Gemini e AI Overviews</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. O que entregamos -->
+    <section class="py-16 sm:py-20 border-b border-charcoal-700 bg-charcoal-900/40" id="entrega">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="max-w-2xl mb-12">
+          <p class="text-cyan font-mono text-xs uppercase tracking-widest mb-3">Entrega</p>
+          <h2 class="text-3xl sm:text-4xl font-bold text-snow tracking-tight">O que entregamos</h2>
+          <p class="mt-4 text-mist leading-relaxed">Pacote GEO citeável A–D, manifesto <span class="font-mono text-snow text-sm">llms.txt</span> e pasta <span class="font-mono text-snow text-sm">docs/geo</span> publicados no repositório ClimateAI.</p>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-6">
+          <article class="p-6 rounded-2xl bg-charcoal-900 card-border transition">
+            <div class="w-10 h-10 rounded-lg bg-cyan/10 flex items-center justify-center text-cyan font-mono text-sm mb-4">A</div>
+            <h3 class="font-semibold text-snow mb-2">Answer-first</h3>
+            <p class="text-sm text-mist leading-relaxed">Bloco hub “O que é o ClimateWise?”, para quem é, o que faz e snippet pronto para citação por LLMs — com stack verificável no repo.</p>
+          </article>
+          <article class="p-6 rounded-2xl bg-charcoal-900 card-border transition">
+            <div class="w-10 h-10 rounded-lg bg-cyan/10 flex items-center justify-center text-cyan font-mono text-sm mb-4">B</div>
+            <h3 class="font-semibold text-snow mb-2">FAQ + schema</h3>
+            <p class="text-sm text-mist leading-relaxed">Perguntas citeáveis (FIMCE, fontes climáticas, SUSEP, Partner API, ClimateWise vs ClimateAI) + JSON-LD FAQPage / SoftwareApplication.</p>
+          </article>
+          <article class="p-6 rounded-2xl bg-charcoal-900 card-border transition">
+            <div class="w-10 h-10 rounded-lg bg-cyan/10 flex items-center justify-center text-cyan font-mono text-sm mb-4">C</div>
+            <h3 class="font-semibold text-snow mb-2">Tabela comparativa</h3>
+            <p class="text-sm text-mist leading-relaxed">Comparativo estruturado ClimateWise vs API meteorológica “pura” vs planilha atuarial — para prompts de comparação e “melhor ferramenta”.</p>
+          </article>
+          <article class="p-6 rounded-2xl bg-charcoal-900 card-border transition">
+            <div class="w-10 h-10 rounded-lg bg-cyan/10 flex items-center justify-center text-cyan font-mono text-sm mb-4">D</div>
+            <h3 class="font-semibold text-snow mb-2">Claims com evidência</h3>
+            <p class="text-sm text-mist leading-relaxed">Afirmações ancoradas em artefatos do repositório (README, Partner API, integrações NOAA/Embrapa/OpenMeteo) — sem claims inventados.</p>
+          </article>
+        </div>
+        <div class="mt-8 grid md:grid-cols-2 gap-6">
+          <div class="p-6 rounded-2xl bg-charcoal-800 card-border relative">
+            <div class="accent-line absolute top-0 left-6 right-6 rounded-full"></div>
+            <p class="font-mono text-xs text-cyan uppercase tracking-widest mb-2">llms.txt</p>
+            <h3 class="font-semibold text-snow mb-2">Manifesto machine-readable</h3>
+            <p class="text-sm text-mist leading-relaxed">Arquivo na raiz do ClimateAI descrevendo marca, produto, páginas GEO e Partner API — ponto de entrada para crawlers e agentes.</p>
+          </div>
+          <div class="p-6 rounded-2xl bg-charcoal-800 card-border relative">
+            <div class="accent-line absolute top-0 left-6 right-6 rounded-full"></div>
+            <p class="font-mono text-xs text-cyan uppercase tracking-widest mb-2">docs/geo</p>
+            <h3 class="font-semibold text-snow mb-2">Pacote publicado no repo</h3>
+            <p class="text-sm text-mist leading-relaxed">README do pacote, <span class="font-mono text-snow text-xs">pacote-AD-climatewise.md</span> completo e schema FAQ em <span class="font-mono text-snow text-xs">docs/geo/</span> no GitHub.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Artefatos -->
+    <section class="py-16 sm:py-20 border-b border-charcoal-700" id="artefatos">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="max-w-2xl mb-10">
+          <p class="text-cyan font-mono text-xs uppercase tracking-widest mb-3">Artefatos</p>
+          <h2 class="text-3xl sm:text-4xl font-bold text-snow tracking-tight">Links públicos (verificáveis)</h2>
+          <p class="mt-4 text-mist leading-relaxed">Tudo abaixo está no GitHub — sem landing inventada. Use raw para consumo por agentes; use blob/tree para leitura humana.</p>
+        </div>
+        <div class="overflow-x-auto rounded-2xl border border-charcoal-600 bg-charcoal-900">
+          <table class="w-full text-sm text-left">
+            <thead class="text-xs font-mono uppercase tracking-wider text-mist/70 border-b border-charcoal-600">
+              <tr>
+                <th class="px-5 py-3 font-medium">Artefato</th>
+                <th class="px-5 py-3 font-medium">Link</th>
+              </tr>
+            </thead>
+            <tbody class="text-mist divide-y divide-charcoal-700">
+              <tr>
+                <td class="px-5 py-4 text-snow">llms.txt (raw)</td>
+                <td class="px-5 py-4">
+                  <a class="text-cyan hover:underline break-all" href="https://raw.githubusercontent.com/leanderdulac/ClimateAI/main/llms.txt" rel="noopener noreferrer" target="_blank">raw.githubusercontent.com/…/llms.txt</a>
+                </td>
+              </tr>
+              <tr>
+                <td class="px-5 py-4 text-snow">llms.txt (GitHub)</td>
+                <td class="px-5 py-4">
+                  <a class="text-cyan hover:underline break-all" href="https://github.com/leanderdulac/ClimateAI/blob/main/llms.txt" rel="noopener noreferrer" target="_blank">github.com/…/blob/main/llms.txt</a>
+                </td>
+              </tr>
+              <tr>
+                <td class="px-5 py-4 text-snow">docs/geo</td>
+                <td class="px-5 py-4">
+                  <a class="text-cyan hover:underline break-all" href="https://github.com/leanderdulac/ClimateAI/tree/main/docs/geo" rel="noopener noreferrer" target="_blank">github.com/…/tree/main/docs/geo</a>
+                </td>
+              </tr>
+              <tr>
+                <td class="px-5 py-4 text-snow">Pacote A–D</td>
+                <td class="px-5 py-4">
+                  <a class="text-cyan hover:underline break-all" href="https://github.com/leanderdulac/ClimateAI/blob/main/docs/geo/pacote-AD-climatewise.md" rel="noopener noreferrer" target="_blank">docs/geo/pacote-AD-climatewise.md</a>
+                </td>
+              </tr>
+              <tr>
+                <td class="px-5 py-4 text-snow">Repo ClimateAI</td>
+                <td class="px-5 py-4">
+                  <a class="text-cyan hover:underline break-all" href="https://github.com/leanderdulac/ClimateAI" rel="noopener noreferrer" target="_blank">github.com/leanderdulac/ClimateAI</a>
+                </td>
+              </tr>
+              <tr>
+                <td class="px-5 py-4 text-snow">Conteúdo GEO (espelho)</td>
+                <td class="px-5 py-4">
+                  <a class="text-cyan hover:underline break-all" href="https://github.com/leanderdulac/climatewise-geo" rel="noopener noreferrer" target="_blank">github.com/leanderdulac/climatewise-geo</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Resultado dia 0 -->
+    <section class="py-16 sm:py-20 border-b border-charcoal-700 bg-charcoal-900/40" id="resultado">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="max-w-3xl">
+          <p class="text-cyan font-mono text-xs uppercase tracking-widest mb-3">Resultado · dia 0</p>
+          <h2 class="text-3xl sm:text-4xl font-bold text-snow tracking-tight">Baseline em andamento</h2>
+          <p class="mt-5 text-mist leading-relaxed">
+            Em <strong class="text-snow font-medium">23/09/2026</strong> iniciamos a baseline de citabilidade do ClimateWise nas engines generativas (prompts de definição, comparação e uso atuarial/paramétrico). Ainda <strong class="text-snow font-medium">não há percentuais de citação before/after</strong> para reportar — qualquer número agora seria inventado.
+          </p>
+          <div class="mt-6 p-5 rounded-2xl bg-charcoal-800 card-border text-sm text-mist leading-relaxed">
+            <p class="text-snow font-medium mb-2">O que já está feito</p>
+            <ul class="space-y-1.5">
+              <li>• Pacote A–D + schema publicados</li>
+              <li>• <span class="font-mono text-xs text-snow">llms.txt</span> e <span class="font-mono text-xs text-snow">docs/geo</span> no repo ClimateAI</li>
+              <li>• Janela de medição aberta (dia 0 = 23/09/2026, America/São_Paulo)</li>
+            </ul>
+            <p class="mt-4">
+              Atualizações deste case (scores, menções e gaps) serão publicadas nesta página —
+              <a href="#resultado" class="text-cyan hover:underline underline-offset-4">acompanhe o bloco Resultado</a>
+              ou peça um relatório via
+              <a href="contato.html" class="text-cyan hover:underline underline-offset-4">contato</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. CTA -->
+    <section class="py-20 sm:py-24">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+        <div class="p-10 sm:p-14 rounded-3xl bg-charcoal-800 border border-cyan/20 shadow-glow relative overflow-hidden">
+          <div class="absolute inset-0 gradient-orb opacity-60 pointer-events-none"></div>
+          <div class="relative">
+            <h2 class="text-3xl sm:text-4xl font-bold text-snow tracking-tight">Quer o mesmo diagnóstico GEO?</h2>
+            <p class="mt-4 text-mist max-w-xl mx-auto">Pedimos o mesmo rigor do piloto ClimateWise: artefatos verificáveis, baseline honesta e zero métricas inventadas. Fale com a Khabs.</p>
+            <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
+              <a href="contato.html" class="inline-flex justify-center px-8 py-3.5 rounded-xl bg-cyan text-charcoal-950 font-semibold hover:bg-cyan-dim transition shadow-glow-sm">Pedir diagnóstico GEO</a>
+              <a href="qualificar.html" class="inline-flex justify-center px-8 py-3.5 rounded-xl border border-charcoal-600 text-snow hover:border-cyan/40 hover:text-cyan transition">Diagnóstico rápido</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-charcoal-700 py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row justify-between gap-8">
+      <div>
+        <a href="index.html" class="font-semibold text-snow">Khabs</a>
+        <p class="mt-2 text-sm text-mist max-w-xs">Toda marca é uma estrela na resposta. GEO + Caçador de Citações. Operação sob Leandro França de Mello.</p>
+        <p class="mt-2 text-sm text-mist"><a href="mailto:contato@getkhabs.com" class="hover:text-cyan">contato@getkhabs.com</a></p>
+      </div>
+      <div class="flex flex-wrap gap-8 text-sm text-mist">
+        <div class="space-y-2">
+          <p class="text-snow font-medium text-xs uppercase tracking-wider">Site</p>
+          <a href="servicos.html" class="block hover:text-cyan">Serviços</a>
+          <a href="metodologia.html" class="block hover:text-cyan">Metodologia</a>
+          <a href="case-climatewise.html" class="block hover:text-cyan">Case</a>
+          <a href="qualificar.html" class="block hover:text-cyan">Diagnóstico</a>
+          <a href="contato.html" class="block hover:text-cyan">Contato</a>
+          <a href="portal.html" class="block hover:text-cyan">Portal</a>
+        </div>
+        <div class="space-y-2">
+          <p class="text-snow font-medium text-xs uppercase tracking-wider">Legal &amp; recursos</p>
+          <a href="privacidade.html" class="block hover:text-cyan">Privacidade</a>
+          <a href="termos.html" class="block hover:text-cyan">Termos</a>
+          <a href="llms.txt" class="block hover:text-cyan font-mono text-xs">llms.txt</a>
+          <a href="index.html#faq" class="block hover:text-cyan">FAQ</a>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 mt-10 pt-6 border-t border-charcoal-700 text-xs text-mist/50 flex flex-col sm:flex-row justify-between gap-2">
+      <span>© 2026 Khabs. Todos os direitos reservados.</span>
+      <span>Brasil · América/São_Paulo</span>
+    </div>
+  </footer>
+</body>
+</html>

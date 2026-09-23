@@ -1,0 +1,30 @@
+Khabs local stack → http://127.0.0.1:8787/
+  Static: /workspace/agencia-ai-pages
+  CRM:    /workspace/agencia-ai/crm-lite
+  API:    POST /api/leads | /api/intake | /api/advance | GET /api/status?token=
+[khabs-local] 127.0.0.1 "GET /api/health HTTP/1.1" 200 -
+[khabs-local] 127.0.0.1 "POST /api/leads HTTP/1.1" 201 -
+[khabs-local] 127.0.0.1 "GET /api/status?token=BWbKj2V1WLBWWqovrAnb9Q HTTP/1.1" 200 -
+[khabs-local] 127.0.0.1 "POST /api/intake HTTP/1.1" 200 -
+[khabs-local] 127.0.0.1 "POST /api/advance HTTP/1.1" 200 -
+[khabs-local] 127.0.0.1 "POST /api/intake HTTP/1.1" 200 -
+[khabs-local] 127.0.0.1 "GET /api/leads HTTP/1.1" 200 -
+[khabs-local] 127.0.0.1 "GET /index.html HTTP/1.1" 200 -
+[khabs-local] 127.0.0.1 "GET /qualificar.html HTTP/1.1" 200 -
+[khabs-local] 127.0.0.1 "GET /contato.html HTTP/1.1" 200 -
+[khabs-local] 127.0.0.1 "GET /obrigado.html HTTP/1.1" 200 -
+[khabs-local] 127.0.0.1 "GET /onboarding.html HTTP/1.1" 200 -
+[khabs-local] 127.0.0.1 "GET /portal.html HTTP/1.1" 200 -
+[khabs-local] 127.0.0.1 "GET /ops.html HTTP/1.1" 200 -
+Khabs local stack → http://127.0.0.1:8787/
+  Static: /workspace/agencia-ai-pages
+  CRM:    /workspace/agencia-ai/crm-lite
+  API:    POST /api/leads | /api/intake | /api/advance | GET /api/status?token=
+[khabs-local] 127.0.0.1 "GET /api/health HTTP/1.1" 200 -
+[khabs-local] 127.0.0.1 "POST /api/leads HTTP/1.1" 201 -
+[khabs-local] 127.0.0.1 "GET /api/health HTTP/1.1" 200 -
+Khabs local stack → http://127.0.0.1:8787/
+  Static: /workspace/agencia-ai-pages
+  CRM:    /workspace/agencia-ai-pages/agencia-ai/crm-lite
+  API:    POST /api/leads | /api/intake | /api/advance | GET /api/status?token=
+[khabs-local] 127.0.0.1 "GET /api/health HTTP/1.1" 200 -

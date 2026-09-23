@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diagnóstico GEO — Khabs</title>
+  <meta name="description" content="Wizard rápido: qualifique sua marca e receba recomendação Starter, Growth ou Authority." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="config.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            charcoal: { 950: '#0B1220', 900: '#0f1218', 800: '#161b22', 700: '#1e2530', 600: '#2a3341' },
+            cyan: { DEFAULT: '#2F6BFF', dim: '#2557d6' },
+            teal: { DEFAULT: '#00A896' },
+            cream: { DEFAULT: '#F7F5F1' },
+            warn: { DEFAULT: '#E85D04' },
+            mist: '#a8b2c1',
+            snow: '#e8ecf1'
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
+          },
+          boxShadow: { 'glow-sm': '0 0 20px rgba(47,107,255,0.2)', glow: '0 0 40px rgba(47,107,255,0.15)' }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background: #0B1220; color: #e8ecf1; }
+    .nav-blur { backdrop-filter: blur(12px); background: rgba(11,18,32,0.85); }
+    .card-border { border: 1px solid rgba(42,51,65,0.9); }
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(47,107,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(47,107,255,0.03) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    .field-error { border-color: #E85D04 !important; }
+    .error-msg { color: #E85D04; font-size: 0.75rem; margin-top: 0.35rem; display: none; }
+    .error-msg.visible { display: block; }
+    .step-dot { width: 10px; height: 10px; border-radius: 9999px; }
+  </style>
+</head>
+<body class="font-sans antialiased">
+  <header class="fixed top-0 inset-x-0 z-50 nav-blur border-b border-charcoal-600/50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2">
+        <span class="w-8 h-8 rounded-lg bg-cyan/10 border border-cyan/30 flex items-center justify-center font-mono text-cyan text-sm font-medium">★</span>
+        <span class="font-semibold tracking-tight text-snow">Khabs</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm text-mist">
+        <a href="servicos.html" class="hover:text-cyan transition">Serviços</a>
+        <a href="metodologia.html" class="hover:text-cyan transition">Metodologia</a>
+        <a href="qualificar.html" class="text-cyan">Diagnóstico</a>
+        <a href="index.html#pacotes" class="hover:text-cyan transition">Pacotes</a>
+        <a href="contato.html" class="hover:text-cyan transition">Contato</a>
+      </nav>
+      <a href="qualificar.html" class="text-sm font-medium px-4 py-2 rounded-lg bg-cyan text-charcoal-950 hover:bg-cyan-dim transition shadow-glow-sm">Diagnóstico rápido</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="pt-28 pb-20 sm:pt-32 grid-bg">
+      <div class="max-w-2xl mx-auto px-4 sm:px-6">
+        <p class="text-cyan font-mono text-xs uppercase tracking-widest mb-3">Diagnóstico automático</p>
+        <h1 class="text-3xl sm:text-4xl font-bold text-snow tracking-tight">Em 1 minuto, o pacote certo</h1>
+        <p class="mt-3 text-mist text-sm leading-relaxed">Responda 6 perguntas. O QualifyBot recomenda Starter, Growth ou Authority — preços oficiais, sem compromisso.</p>
+        <div class="mt-6 flex items-center gap-2" id="progress-dots"></div>
+        <div class="mt-8 p-6 sm:p-8 rounded-2xl bg-charcoal-900 card-border shadow-glow" id="wizard">
+          <div id="step-view"></div>
+          <div class="mt-8 flex justify-between gap-3">
+            <button type="button" id="btn-prev" class="px-4 py-2.5 rounded-xl border border-charcoal-600 text-sm text-mist hover:text-snow hover:border-cyan/40 transition disabled:opacity-30">Voltar</button>
+            <button type="button" id="btn-next" class="px-5 py-2.5 rounded-xl bg-cyan text-charcoal-950 text-sm font-semibold hover:bg-cyan-dim transition shadow-glow-sm">Continuar</button>
+          </div>
+        </div>
+        <div id="result" class="hidden mt-8 p-6 sm:p-8 rounded-2xl bg-charcoal-900 border border-cyan/40 shadow-glow"></div>
+      </div>
+    </section>
+  </main>
+  <footer class="border-t border-charcoal-700 py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row justify-between gap-8">
+      <div>
+        <a href="index.html" class="font-semibold text-snow">Khabs</a>
+        <p class="mt-2 text-sm text-mist max-w-xs">Toda marca é uma estrela na resposta. GEO + Caçador de Citações.</p>
+        <p class="mt-2 text-sm text-mist"><a href="mailto:contato@getkhabs.com" class="hover:text-cyan">contato@getkhabs.com</a></p>
+      </div>
+      <div class="flex flex-wrap gap-8 text-sm text-mist">
+        <div class="space-y-2">
+          <p class="text-snow font-medium text-xs uppercase tracking-wider">Site</p>
+          <a href="servicos.html" class="block hover:text-cyan">Serviços</a>
+          <a href="metodologia.html" class="block hover:text-cyan">Metodologia</a>
+          <a href="qualificar.html" class="block hover:text-cyan">Diagnóstico</a>
+          <a href="contato.html" class="block hover:text-cyan">Contato</a>
+          <a href="portal.html" class="block hover:text-cyan">Portal do cliente</a>
+        </div>
+        <div class="space-y-2">
+          <p class="text-snow font-medium text-xs uppercase tracking-wider">Legal</p>
+          <a href="privacidade.html" class="block hover:text-cyan">Privacidade</a>
+          <a href="termos.html" class="block hover:text-cyan">Termos</a>
+          <a href="llms.txt" class="block hover:text-cyan font-mono text-xs">llms.txt</a>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 mt-10 pt-6 border-t border-charcoal-700 text-xs text-mist/50">
+      © 2026 Khabs · Leandro França de Mello
+    </div>
+  </footer>
+
+<script>
+(function(){
+  var steps = [
+    { id:'site', q:'Sua marca já tem site no ar (https)?', opts:[
+      {v:'yes', l:'Sim, site ativo'}, {v:'partial', l:'Landing / em construção'}, {v:'no', l:'Ainda não'}
+    ]},
+    { id:'seo', q:'Já há investimento ativo em SEO (próprio ou agência)?', opts:[
+      {v:'active', l:'Sim, SEO ativo'}, {v:'basic', l:'Básico / ocasional'}, {v:'none', l:'Não'}
+    ]},
+    { id:'engines', q:'Quais engines importam para vocês?', opts:[
+      {v:'2', l:'ChatGPT + Perplexity'}, {v:'4', l:'4 engines (ChatGPT, Perplexity, Gemini, AI Overviews)'}, {v:'unsure', l:'Ainda não sei'}
+    ]},
+    { id:'budget', q:'Faixa de orçamento mensal para GEO?', opts:[
+      {v:'low', l:'Até ~R$ 5k'}, {v:'mid', l:'R$ 5k–12k'}, {v:'high', l:'Acima de R$ 12k'}
+    ]},
+    { id:'urgency', q:'Urgência para começar?', opts:[
+      {v:'now', l:'Este mês'}, {v:'quarter', l:'Neste trimestre'}, {v:'explore', l:'Só explorando'}
+    ]},
+    { id:'category', q:'Objetivo principal?', opts:[
+      {v:'enter', l:'Entrar em GEO com base sólida'}, {v:'scale', l:'Escalar citação vs concorrentes'}, {v:'dominate', l:'Dominar a categoria nas respostas'}
+    ]}
+  ];
+  var answers = {};
+  var i = 0;
+  var dots = document.getElementById('progress-dots');
+  var view = document.getElementById('step-view');
+  var btnPrev = document.getElementById('btn-prev');
+  var btnNext = document.getElementById('btn-next');
+  var result = document.getElementById('result');
+  var wizard = document.getElementById('wizard');
+
+  function recommend(){
+    var score = 0;
+    if (answers.site === 'yes') score += 2; else if (answers.site === 'partial') score += 1;
+    if (answers.seo === 'active') score += 3; else if (answers.seo === 'basic') score += 1;
+    if (answers.engines === '4') score += 3; else if (answers.engines === '2') score += 1;
+    if (answers.budget === 'high') score += 4; else if (answers.budget === 'mid') score += 2;
+    if (answers.urgency === 'now') score += 2; else if (answers.urgency === 'quarter') score += 1;
+    if (answers.category === 'dominate') score += 4; else if (answers.category === 'scale') score += 2;
+    var pkg = 'starter', label = 'Starter', price = 'R$ 4.900/mês + setup R$ 4.900', why = 'Ideal para entrar em GEO com site e marca claros.';
+    if (score >= 12 || answers.budget === 'high' || answers.category === 'dominate') {
+      pkg = 'authority'; label = 'Authority'; price = 'R$ 19.900/mês + setup R$ 14.900'; why = 'Para dominar a categoria com cobertura ampla e war room.';
+    } else if (score >= 7 || answers.budget === 'mid' || answers.category === 'scale' || answers.engines === '4') {
+      pkg = 'growth'; label = 'Growth'; price = 'R$ 9.900/mês + setup R$ 8.900'; why = 'Melhor custo-benefício para mid-market com SEO básico e 4 engines.';
+    }
+    return { pkg: pkg, label: label, price: price, why: why, score: score };
+  }
+
+  function render(){
+    dots.innerHTML = steps.map(function(_, idx){
+      var bg = idx < i ? 'bg-teal' : (idx === i ? 'bg-cyan' : 'bg-charcoal-600');
+      return '<span class="step-dot '+bg+'"></span>';
+    }).join('');
+    var s = steps[i];
+    var html = '<p class="text-xs font-mono text-mist/60 mb-2">Passo '+(i+1)+' de '+steps.length+'</p>';
+    html += '<h2 class="text-xl font-semibold text-snow mb-5">'+s.q+'</h2><div class="space-y-2">';
+    s.opts.forEach(function(o){
+      var sel = answers[s.id] === o.v;
+      html += '<button type="button" data-v="'+o.v+'" class="opt w-full text-left px-4 py-3 rounded-xl border '+(sel?'border-cyan/60 bg-cyan/10 text-snow':'border-charcoal-600 text-mist hover:border-cyan/40 hover:text-snow')+' transition text-sm">'+o.l+'</button>';
+    });
+    html += '</div>';
+    view.innerHTML = html;
+    view.querySelectorAll('.opt').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        answers[s.id] = btn.getAttribute('data-v');
+        render();
+      });
+    });
+    btnPrev.disabled = i === 0;
+    btnNext.textContent = i === steps.length - 1 ? 'Ver recomendação' : 'Continuar';
+  }
+
+  btnPrev.addEventListener('click', function(){ if(i>0){ i--; render(); }});
+  btnNext.addEventListener('click', function(){
+    var s = steps[i];
+    if (!answers[s.id]) { view.classList.add('ring-1','ring-warn'); setTimeout(function(){ view.classList.remove('ring-1','ring-warn'); }, 600); return; }
+    if (i < steps.length - 1) { i++; render(); return; }
+    var r = recommend();
+    try { localStorage.setItem('khabs_qualify', JSON.stringify({ answers: answers, rec: r, at: Date.now() })); } catch(e){}
+    wizard.classList.add('hidden');
+    result.classList.remove('hidden');
+    var qs = new URLSearchParams({
+      pacote: r.pkg,
+      recommended: r.pkg,
+      site: answers.site||'',
+      seo: answers.seo||'',
+      engines: answers.engines||'',
+      budget: answers.budget||'',
+      urgency: answers.urgency||'',
+      category: answers.category||'',
+      source: 'qualificar'
+    });
+    result.innerHTML = '<p class="text-cyan font-mono text-xs uppercase tracking-widest mb-2">Recomendação QualifyBot</p>'+
+      '<h2 class="text-2xl font-bold text-snow">Pacote '+r.label+'</h2>'+
+      '<p class="mt-2 text-teal font-mono text-sm">'+r.price+'</p>'+
+      '<p class="mt-3 text-mist text-sm leading-relaxed">'+r.why+' <span class="text-mist/50">(score '+r.score+')</span></p>'+
+      '<div class="mt-6 flex flex-col sm:flex-row gap-3">'+
+      '<a href="contato.html?'+qs.toString()+'" class="inline-flex justify-center px-5 py-3 rounded-xl bg-cyan text-charcoal-950 font-semibold text-sm hover:bg-cyan-dim transition shadow-glow-sm">Continuar para contato</a>'+
+      '<button type="button" id="retry" class="px-5 py-3 rounded-xl border border-charcoal-600 text-sm text-snow hover:border-cyan/40">Refazer</button></div>'+
+      '<p class="mt-4 text-[11px] text-mist/50">Preços oficiais — exceções só com Leandro. Sem Crowley.</p>';
+    document.getElementById('retry').onclick = function(){ result.classList.add('hidden'); wizard.classList.remove('hidden'); i=0; answers={}; render(); };
+  });
+  render();
+})();
+</script>
+</body>
+</html>

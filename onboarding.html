@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Onboarding / Intake — Khabs</title>
+  <meta name="description" content="Intake self-serve Parte A. Auto-save e progresso." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="config.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            charcoal: { 950: '#0B1220', 900: '#0f1218', 800: '#161b22', 700: '#1e2530', 600: '#2a3341' },
+            cyan: { DEFAULT: '#2F6BFF', dim: '#2557d6' },
+            teal: { DEFAULT: '#00A896' },
+            cream: { DEFAULT: '#F7F5F1' },
+            warn: { DEFAULT: '#E85D04' },
+            mist: '#a8b2c1',
+            snow: '#e8ecf1'
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
+          },
+          boxShadow: { 'glow-sm': '0 0 20px rgba(47,107,255,0.2)', glow: '0 0 40px rgba(47,107,255,0.15)' }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background: #0B1220; color: #e8ecf1; }
+    .nav-blur { backdrop-filter: blur(12px); background: rgba(11,18,32,0.85); }
+    .card-border { border: 1px solid rgba(42,51,65,0.9); }
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(47,107,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(47,107,255,0.03) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    input, textarea, select { background: #161b22; border: 1px solid #2a3341; color: #e8ecf1; border-radius: 0.75rem; padding: 0.75rem 1rem; width: 100%; }
+    input:focus, textarea:focus, select:focus { outline: none; border-color: rgba(47,107,255,0.5); }
+    label { display: block; font-size: 0.875rem; font-weight: 500; color: #e8ecf1; margin-bottom: 0.35rem; }
+  </style>
+</head>
+<body class="font-sans antialiased">
+  <header class="fixed top-0 inset-x-0 z-50 nav-blur border-b border-charcoal-600/50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2">
+        <span class="w-8 h-8 rounded-lg bg-cyan/10 border border-cyan/30 flex items-center justify-center font-mono text-cyan text-sm font-medium">★</span>
+        <span class="font-semibold tracking-tight text-snow">Khabs</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm text-mist">
+        <a href="servicos.html" class="hover:text-cyan transition">Serviços</a>
+        <a href="metodologia.html" class="hover:text-cyan transition">Metodologia</a>
+        <a href="qualificar.html" class="hover:text-cyan transition">Diagnóstico</a>
+        <a href="index.html#pacotes" class="hover:text-cyan transition">Pacotes</a>
+        <a href="contato.html" class="hover:text-cyan transition">Contato</a>
+      </nav>
+      <a href="portal.html" class="text-sm font-medium px-4 py-2 rounded-lg border border-charcoal-600 text-snow hover:border-cyan/40 transition">Portal</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="pt-28 pb-20 sm:pt-32 grid-bg">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6">
+        <p class="text-cyan font-mono text-xs uppercase tracking-widest mb-3">Intake self-serve</p>
+        <h1 class="text-3xl font-bold text-snow">Onboarding — Parte A</h1>
+        <p class="mt-2 text-mist text-sm">Preencha no seu ritmo. Rascunho salva no navegador e no CRM local. Ops só escala se P0 travar.</p>
+        <div class="mt-6 h-2 rounded-full bg-charcoal-700 overflow-hidden">
+          <div id="bar" class="h-full bg-cyan transition-all" style="width:0%"></div>
+        </div>
+        <p class="mt-2 text-xs text-mist/70"><span id="pct">0</span>% · <span id="save-status">pronto</span></p>
+        <div class="mt-8 p-6 sm:p-8 rounded-2xl bg-charcoal-900 card-border space-y-6" id="form-wrap">
+          <div id="step-panel"></div>
+          <div class="flex justify-between gap-3 pt-2">
+            <button type="button" id="prev" class="px-4 py-2.5 rounded-xl border border-charcoal-600 text-sm text-mist">Voltar</button>
+            <div class="flex gap-2">
+              <button type="button" id="save" class="px-4 py-2.5 rounded-xl border border-charcoal-600 text-sm text-snow hover:border-cyan/40">Salvar rascunho</button>
+              <button type="button" id="next" class="px-5 py-2.5 rounded-xl bg-cyan text-charcoal-950 text-sm font-semibold">Continuar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="border-t border-charcoal-700 py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row justify-between gap-8">
+      <div>
+        <a href="index.html" class="font-semibold text-snow">Khabs</a>
+        <p class="mt-2 text-sm text-mist max-w-xs">Toda marca é uma estrela na resposta.</p>
+        <p class="mt-2 text-sm text-mist"><a href="mailto:contato@getkhabs.com" class="hover:text-cyan">contato@getkhabs.com</a></p>
+      </div>
+      <div class="flex flex-wrap gap-8 text-sm text-mist">
+        <div class="space-y-2">
+          <p class="text-snow font-medium text-xs uppercase tracking-wider">Site</p>
+          <a href="qualificar.html" class="block hover:text-cyan">Diagnóstico</a>
+          <a href="contato.html" class="block hover:text-cyan">Contato</a>
+          <a href="portal.html" class="block hover:text-cyan">Portal</a>
+          <a href="onboarding.html" class="block hover:text-cyan">Intake</a>
+        </div>
+        <div class="space-y-2">
+          <p class="text-snow font-medium text-xs uppercase tracking-wider">Legal</p>
+          <a href="privacidade.html" class="block hover:text-cyan">Privacidade</a>
+          <a href="termos.html" class="block hover:text-cyan">Termos</a>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 mt-10 pt-6 border-t border-charcoal-700 text-xs text-mist/50">© 2026 Khabs · Leandro França de Mello</div>
+  </footer>
+
+<script>
+(function(){
+  var api = (window.KHABS && window.KHABS.apiBase) || '';
+  var params = new URLSearchParams(location.search);
+  var leadId = params.get('lead') || '';
+  var token = params.get('token') || '';
+  var LS = 'khabs_intake_' + (token || leadId || 'draft');
+  var step = 0;
+  var data = { lead_id: leadId, token: token, progress_pct: 0, complete: false };
+  try { data = Object.assign(data, JSON.parse(localStorage.getItem(LS) || '{}')); } catch(e){}
+  if (leadId) data.lead_id = leadId;
+  if (token) data.token = token;
+
+  var steps = [
+    { title: 'A1 — Empresa', fields: [
+      ['company','Nome fantasia / empresa *'],['website','Site canônico (https)'],['cnpj','CNPJ'],['setor','Setor'],['package','Pacote (starter/growth/authority)']
+    ]},
+    { title: 'A2 — Contatos', fields: [
+      ['decisor_nome','Decisor — nome'],['decisor_email','Decisor — e-mail'],['decisor_cargo','Cargo'],['aprovador_conteudo','Aprovador de conteúdo'],['canal_preferido','Canal preferido (e-mail/Slack)']
+    ]},
+    { title: 'A3 — Acessos', fields: [
+      ['acesso_cms','CMS (status / convite)'],['acesso_ga4','GA4'],['acesso_gsc','Search Console'],['acesso_gtm','GTM (se houver)'],['acesso_slack','Slack / e-mail do projeto']
+    ]},
+    { title: 'A4 — Marca e voz', fields: [
+      ['tom','3 adjetivos de tom'],['proibidas','Palavras / claims proibidos'],['diferenciais','Até 5 diferenciais factuais'],['concorrentes','3–5 concorrentes']
+    ]},
+    { title: 'A5 — Comprador e prompts', fields: [
+      ['persona','Persona principal'],['perguntas_ia','10 perguntas que o comprador faria a uma IA (uma por linha)'],['produtos_m1','Produtos prioridade mês 1']
+    ]},
+    { title: 'A6–A8 — SEO, analytics, logística', fields: [
+      ['seo_atual','Quem faz SEO hoje'],['conversao','Conversão principal / evento GA4'],['meta_ai','Meta AI referrals'],['vencimento','Dia vencimento retainer'],['blackouts','Blackouts (férias/lançamentos)']
+    ]}
+  ];
+
+  var panel = document.getElementById('step-panel');
+  var bar = document.getElementById('bar');
+  var pctEl = document.getElementById('pct');
+  var statusEl = document.getElementById('save-status');
+
+  function progress(){
+    var total = 0, filled = 0;
+    steps.forEach(function(s){ s.fields.forEach(function(f){ total++; if ((data[f[0]]||'').toString().trim()) filled++; }); });
+    var p = total ? Math.round(filled/total*100) : 0;
+    data.progress_pct = p;
+    bar.style.width = p + '%';
+    pctEl.textContent = p;
+    return p;
+  }
+
+  function render(){
+    var s = steps[step];
+    var html = '<p class="text-xs font-mono text-mist/60 mb-1">Parte '+(step+1)+' / '+steps.length+'</p><h2 class="text-xl font-semibold text-snow mb-5">'+s.title+'</h2><div class="space-y-4">';
+    s.fields.forEach(function(f){
+      var id = f[0], lab = f[1];
+      var multi = id.indexOf('perguntas')>=0 || id.indexOf('diferenciais')>=0 || id.indexOf('proibidas')>=0;
+      html += '<div><label for="'+id+'">'+lab+'</label>';
+      if (multi) html += '<textarea id="'+id+'" rows="4">'+(data[id]||'').replace(/</g,'&lt;')+'</textarea>';
+      else html += '<input id="'+id+'" type="text" value="'+(data[id]||'').replace(/"/g,'&quot;')+'" />';
+      html += '</div>';
+    });
+    html += '</div>';
+    panel.innerHTML = html;
+    s.fields.forEach(function(f){
+      var el = document.getElementById(f[0]);
+      el.addEventListener('input', function(){ data[f[0]] = el.value; progress(); scheduleSave(); });
+    });
+    document.getElementById('prev').disabled = step===0;
+    document.getElementById('next').textContent = step===steps.length-1 ? 'Concluir intake' : 'Continuar';
+    progress();
+  }
+
+  var timer = null;
+  function scheduleSave(){
+    statusEl.textContent = 'salvando…';
+    clearTimeout(timer);
+    timer = setTimeout(persist, 600);
+  }
+
+  function persist(complete){
+    if (complete) data.complete = true;
+    try { localStorage.setItem(LS, JSON.stringify(data)); } catch(e){}
+    progress();
+    return fetch(api + '/api/intake', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(data)
+    }).then(function(r){ return r.json(); }).then(function(j){
+      if (j.token) { data.token = j.token; token = j.token; }
+      if (j.slug) data.slug = j.slug;
+      try { localStorage.setItem(LS, JSON.stringify(data)); } catch(e){}
+      statusEl.textContent = 'salvo ' + new Date().toLocaleTimeString('pt-BR');
+      return j;
+    }).catch(function(){ statusEl.textContent = 'falha API — rascunho local ok'; return null; });
+  }
+
+  document.getElementById('prev').onclick = function(){ if(step>0){ step--; render(); } };
+  document.getElementById('save').onclick = function(){ persist(false); };
+  document.getElementById('next').onclick = function(){
+    if (step < steps.length-1) { persist(false); step++; render(); return; }
+    persist(true).then(function(j){
+      var t = (j && j.token) || data.token || token;
+      location.href = 'portal.html?token=' + encodeURIComponent(t||'');
+    });
+  };
+  render();
+  if (data.company || data.token) persist(false);
+})();
+</script>
+</body>
+</html>

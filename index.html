@@ -4,29 +4,70 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Agência AI — GEO para marcas citadas em ChatGPT, Perplexity e Gemini</title>
-  <meta name="description" content="Agência AI é uma agência GEO totalmente automatizada. Posicionamos sua marca para ser citada em ChatGPT, Perplexity, Gemini e Google AI Overviews." />
+  <title>Khabs — GEO / citações em ChatGPT, Perplexity e Gemini</title>
+  <meta name="description" content="Khabs · agência GEO. Toda marca é uma estrela na resposta. Citações em ChatGPT, Perplexity e Gemini — com Caçador de Citações e governança humana." />
+  <link rel="canonical" href="https://getkhabs.com/" />
+  <meta property="og:title" content="Khabs — Toda marca é uma estrela na resposta." />
+  <meta property="og:description" content="Agência GEO. Citações em ChatGPT, Perplexity, Gemini e AI Overviews — Caçador de Citações." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://getkhabs.com/" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Khabs" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Khabs — GEO / citações em engines generativas" />
+  <meta name="twitter:description" content="Toda marca é uma estrela na resposta. Diagnóstico GEO com a Khabs." />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://getkhabs.com/#organization",
+        "name": "Khabs",
+        "url": "https://getkhabs.com",
+        "email": "contato@getkhabs.com",
+        "description": "Agência brasileira de Generative Engine Optimization (GEO). Toda marca é uma estrela na resposta.",
+        "slogan": "Toda marca é uma estrela na resposta.",
+        "founder": { "@type": "Person", "name": "Leandro França de Mello" },
+        "areaServed": { "@type": "Country", "name": "Brasil" },
+        "knowsAbout": ["Generative Engine Optimization", "GEO", "Caçador de Citações", "ChatGPT", "Perplexity", "Gemini", "AI Overviews"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://getkhabs.com/#website",
+        "url": "https://getkhabs.com",
+        "name": "Khabs",
+        "description": "Khabs — agência GEO. Toda marca é uma estrela na resposta.",
+        "publisher": { "@id": "https://getkhabs.com/#organization" },
+        "inLanguage": "pt-BR"
+      }
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            charcoal: { 950: '#0a0c0f', 900: '#0f1218', 800: '#161b22', 700: '#1e2530', 600: '#2a3341' },
-            cyan: { DEFAULT: '#00e5ff', dim: '#00b8d4' },
+            charcoal: { 950: '#0B1220', 900: '#0f1218', 800: '#161b22', 700: '#1e2530', 600: '#2a3341' },
+            cyan: { DEFAULT: '#2F6BFF', dim: '#2557d6' },
+            teal: { DEFAULT: '#00A896' },
+            cream: { DEFAULT: '#F7F5F1' },
+            warn: { DEFAULT: '#E85D04' },
             mist: '#a8b2c1',
             snow: '#e8ecf1'
           },
           fontFamily: {
-            sans: ['"DM Sans"', 'system-ui', 'sans-serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
             mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
           },
           boxShadow: {
-            glow: '0 0 40px rgba(0,229,255,0.15)',
-            'glow-sm': '0 0 20px rgba(0,229,255,0.2)'
+            glow: '0 0 40px rgba(47,107,255,0.15)',
+            'glow-sm': '0 0 20px rgba(47,107,255,0.2)'
           }
         }
       }
@@ -34,37 +75,39 @@
   </script>
   <style>
     html { scroll-behavior: smooth; }
-    body { background: #0a0c0f; color: #e8ecf1; }
+    body { background: #0B1220; color: #e8ecf1; }
     .grid-bg {
       background-image:
-        linear-gradient(rgba(0,229,255,0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0,229,255,0.03) 1px, transparent 1px);
+        linear-gradient(rgba(47,107,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(47,107,255,0.03) 1px, transparent 1px);
       background-size: 48px 48px;
     }
     .gradient-orb {
-      background: radial-gradient(ellipse at center, rgba(0,229,255,0.14) 0%, transparent 70%);
+      background: radial-gradient(ellipse at center, rgba(47,107,255,0.14) 0%, transparent 70%);
     }
-    .nav-blur { backdrop-filter: blur(12px); background: rgba(10,12,15,0.85); }
+    .nav-blur { backdrop-filter: blur(12px); background: rgba(11,18,32,0.85); }
     .card-border { border: 1px solid rgba(42,51,65,0.9); }
-    .card-border:hover { border-color: rgba(0,229,255,0.35); }
-    .accent-line { height: 2px; background: linear-gradient(90deg, #00e5ff, transparent); }
-    .pkg-featured { border-color: rgba(0,229,255,0.5); box-shadow: 0 0 40px rgba(0,229,255,0.12); }
+    .card-border:hover { border-color: rgba(47,107,255,0.35); }
+    .accent-line { height: 2px; background: linear-gradient(90deg, #2F6BFF, transparent); }
+    .pkg-featured { border-color: rgba(47,107,255,0.5); box-shadow: 0 0 40px rgba(47,107,255,0.12); }
   </style>
 </head>
 <body class="font-sans antialiased">
   <header class="fixed top-0 inset-x-0 z-50 nav-blur border-b border-charcoal-600/50">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
       <a href="index.html" class="flex items-center gap-2 group">
-        <span class="w-8 h-8 rounded-lg bg-cyan/10 border border-cyan/30 flex items-center justify-center font-mono text-cyan text-sm font-medium group-hover:shadow-glow-sm transition">AI</span>
-        <span class="font-semibold tracking-tight text-snow">Agência <span class="text-cyan">AI</span></span>
+        <span class="w-8 h-8 rounded-lg bg-cyan/10 border border-cyan/30 flex items-center justify-center font-mono text-cyan text-sm font-medium group-hover:shadow-glow-sm transition">★</span>
+        <span class="font-semibold tracking-tight text-snow">Khabs</span>
       </a>
       <nav class="hidden md:flex items-center gap-8 text-sm text-mist">
         <a href="servicos.html" class="hover:text-cyan transition">Serviços</a>
         <a href="metodologia.html" class="hover:text-cyan transition">Metodologia</a>
+        <a href="case-climatewise.html" class="hover:text-cyan transition">Case</a>
+        <a href="qualificar.html" class="hover:text-cyan transition">Diagnóstico</a>
         <a href="index.html#pacotes" class="hover:text-cyan transition">Pacotes</a>
         <a href="contato.html" class="hover:text-cyan transition">Contato</a>
       </nav>
-      <a href="contato.html" class="text-sm font-medium px-4 py-2 rounded-lg bg-cyan text-charcoal-950 hover:bg-cyan-dim transition shadow-glow-sm">Falar com a Agência</a>
+      <a href="contato.html" class="text-sm font-medium px-4 py-2 rounded-lg bg-cyan text-charcoal-950 hover:bg-cyan-dim transition shadow-glow-sm">Falar com a Khabs</a>
     </div>
   </header>
 
@@ -74,14 +117,15 @@
       <div class="relative max-w-6xl mx-auto px-4 sm:px-6 text-center">
         <p class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-cyan mb-6 px-3 py-1.5 rounded-full border border-cyan/25 bg-cyan/5">
           <span class="w-1.5 h-1.5 rounded-full bg-cyan animate-pulse"></span>
-          GEO · Generative Engine Optimization
+          Khabs · agência GEO
         </p>
+        <p class="text-sm text-mist/80 mb-4 tracking-wide">Toda marca é uma estrela na resposta.</p>
         <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-snow max-w-4xl mx-auto leading-[1.1]">
           Sua marca citada onde as pessoas
           <span class="text-cyan">já perguntam</span>
         </h1>
         <p class="mt-6 text-lg sm:text-xl text-mist max-w-2xl mx-auto leading-relaxed">
-          A Agência AI é uma agência GEO totalmente automatizada. Otimizamos sua presença para ChatGPT, Perplexity, Gemini e Google AI Overviews — a camada de descoberta que está substituindo o SEO clássico.
+          Khabs é uma agência GEO com monitoramento de citações em IA (Caçador de Citações). Pipelines automatizados posicionam sua marca em ChatGPT, Perplexity, Gemini e Google AI Overviews — com governança humana sobre estratégia e critérios editoriais.
         </p>
         <p class="mt-3 text-sm text-mist/70 max-w-xl mx-auto">
           Honestidade de produto: bases técnicas de crawl e indexação ainda importam. GEO acelera a citação nas engines generativas sobre essa fundação.
@@ -155,7 +199,7 @@
             <blockquote class="text-lg text-snow leading-relaxed">
               “GEO não substitui SEO técnico — ele é a camada que decide se sua marca entra na resposta da IA. Nós cuidamos dessa camada de forma automatizada.”
             </blockquote>
-            <p class="mt-6 text-sm text-mist">— Leandro França de Mello, Agência AI</p>
+            <p class="mt-6 text-sm text-mist">— Leandro França de Mello, Khabs</p>
           </div>
         </div>
       </div>
@@ -195,12 +239,31 @@
       </div>
     </section>
 
+    <section class="py-20 sm:py-24 border-t border-charcoal-700" id="case">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="max-w-2xl mb-10">
+          <p class="text-cyan font-mono text-xs uppercase tracking-widest mb-3">Prova social</p>
+          <h2 class="text-3xl sm:text-4xl font-bold text-snow tracking-tight">Case piloto em andamento</h2>
+        </div>
+        <a href="case-climatewise.html" class="block group p-6 sm:p-8 rounded-2xl bg-charcoal-900 card-border transition hover:shadow-glow-sm">
+          <div class="flex flex-col sm:flex-row sm:items-center gap-6 justify-between">
+            <div class="max-w-2xl">
+              <p class="font-mono text-xs text-cyan uppercase tracking-widest mb-2">ClimateWise · FIMCE</p>
+              <h3 class="text-xl sm:text-2xl font-bold text-snow group-hover:text-cyan transition">GEO para marca técnica forte no GitHub</h3>
+              <p class="mt-3 text-sm text-mist leading-relaxed">Pacote A–D, llms.txt e docs/geo publicados. Baseline de citações iniciada em 23/09/2026 — sem métricas inventadas.</p>
+            </div>
+            <span class="shrink-0 inline-flex items-center gap-2 text-cyan text-sm font-medium">Ver case <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+      </div>
+    </section>
+
     <section class="py-20 sm:py-24 border-t border-charcoal-700 bg-charcoal-900/40" id="pacotes">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="text-center max-w-2xl mx-auto">
           <p class="text-cyan font-mono text-xs uppercase tracking-widest mb-3">Pacotes</p>
           <h2 class="text-3xl sm:text-4xl font-bold text-snow tracking-tight">Escolha o nível de presença nas engines</h2>
-          <p class="mt-3 text-sm text-mist">Preços de partida exemplificativos em BRL. Escopo e investimento finais após diagnóstico.</p>
+          <p class="mt-3 text-sm text-mist">Tabela oficial em BRL (setup + retainer). Escopo detalhado após diagnóstico.</p>
         </div>
         <div class="mt-12 grid md:grid-cols-3 gap-6 items-stretch">
           <article class="flex flex-col p-7 rounded-2xl bg-charcoal-900 card-border transition">
@@ -210,13 +273,13 @@
               <span class="text-3xl font-bold text-snow">R$&nbsp;4.900</span>
               <span class="text-mist text-sm">/mês</span>
             </p>
-            <p class="text-xs text-mist/60 mt-1">Preço de partida exemplificativo</p>
+            <p class="text-xs text-mist mt-1">Setup único: <span class="text-snow">R$&nbsp;4.900</span></p>
             <ul class="mt-6 space-y-2.5 text-sm text-mist flex-1">
-              <li class="flex gap-2"><span class="text-cyan">✓</span> Auditoria GEO inicial</li>
-              <li class="flex gap-2"><span class="text-cyan">✓</span> Otimização de 5 páginas-chave</li>
-              <li class="flex gap-2"><span class="text-cyan">✓</span> Schema &amp; entidades básicas</li>
-              <li class="flex gap-2"><span class="text-cyan">✓</span> Monitoramento mensal (2 engines)</li>
-              <li class="flex gap-2"><span class="text-cyan">✓</span> Relatório mensal de citações</li>
+              <li class="flex gap-2"><span class="text-teal">✓</span> Auditoria GEO inicial</li>
+              <li class="flex gap-2"><span class="text-teal">✓</span> Otimização de 5 páginas-chave</li>
+              <li class="flex gap-2"><span class="text-teal">✓</span> Schema &amp; entidades básicas</li>
+              <li class="flex gap-2"><span class="text-teal">✓</span> Monitoramento mensal (2 engines)</li>
+              <li class="flex gap-2"><span class="text-teal">✓</span> Relatório mensal de citações</li>
             </ul>
             <a href="contato.html?pacote=starter" class="mt-8 block text-center py-3 rounded-xl border border-charcoal-600 text-snow text-sm font-medium hover:border-cyan/40 hover:text-cyan transition">Começar com Starter</a>
           </article>
@@ -228,14 +291,14 @@
               <span class="text-3xl font-bold text-snow">R$&nbsp;9.900</span>
               <span class="text-mist text-sm">/mês</span>
             </p>
-            <p class="text-xs text-mist/60 mt-1">Preço de partida exemplificativo</p>
+            <p class="text-xs text-mist mt-1">Setup único: <span class="text-snow">R$&nbsp;8.900</span></p>
             <ul class="mt-6 space-y-2.5 text-sm text-mist flex-1">
-              <li class="flex gap-2"><span class="text-cyan">✓</span> Tudo do Starter</li>
-              <li class="flex gap-2"><span class="text-cyan">✓</span> Pipeline de conteúdo automatizado</li>
-              <li class="flex gap-2"><span class="text-cyan">✓</span> Cobertura multi-engine (4+)</li>
-              <li class="flex gap-2"><span class="text-cyan">✓</span> Análise competitiva de citações</li>
-              <li class="flex gap-2"><span class="text-cyan">✓</span> Expansão de entidades e FAQs</li>
-              <li class="flex gap-2"><span class="text-cyan">✓</span> Revisões quinzenais de prompts-alvo</li>
+              <li class="flex gap-2"><span class="text-teal">✓</span> Tudo do Starter</li>
+              <li class="flex gap-2"><span class="text-teal">✓</span> Pipeline de conteúdo automatizado</li>
+              <li class="flex gap-2"><span class="text-teal">✓</span> Cobertura multi-engine (4+)</li>
+              <li class="flex gap-2"><span class="text-teal">✓</span> Análise competitiva de citações</li>
+              <li class="flex gap-2"><span class="text-teal">✓</span> Expansão de entidades e FAQs</li>
+              <li class="flex gap-2"><span class="text-teal">✓</span> Revisões quinzenais de prompts-alvo</li>
             </ul>
             <a href="contato.html?pacote=growth" class="mt-8 block text-center py-3 rounded-xl bg-cyan text-charcoal-950 text-sm font-semibold hover:bg-cyan-dim transition shadow-glow-sm">Começar com Growth</a>
           </article>
@@ -246,14 +309,14 @@
               <span class="text-3xl font-bold text-snow">R$&nbsp;19.900</span>
               <span class="text-mist text-sm">/mês</span>
             </p>
-            <p class="text-xs text-mist/60 mt-1">Preço de partida exemplificativo</p>
+            <p class="text-xs text-mist mt-1">Setup único: <span class="text-snow">R$&nbsp;14.900</span></p>
             <ul class="mt-6 space-y-2.5 text-sm text-mist flex-1">
-              <li class="flex gap-2"><span class="text-cyan">✓</span> Tudo do Growth</li>
-              <li class="flex gap-2"><span class="text-cyan">✓</span> Programa de autoridade editorial</li>
-              <li class="flex gap-2"><span class="text-cyan">✓</span> Integração com SEO técnico existente</li>
-              <li class="flex gap-2"><span class="text-cyan">✓</span> War room de prompts por vertical</li>
-              <li class="flex gap-2"><span class="text-cyan">✓</span> Prioridade de implementação</li>
-              <li class="flex gap-2"><span class="text-cyan">✓</span> Reuniões estratégicas mensais</li>
+              <li class="flex gap-2"><span class="text-teal">✓</span> Tudo do Growth</li>
+              <li class="flex gap-2"><span class="text-teal">✓</span> Programa de autoridade editorial</li>
+              <li class="flex gap-2"><span class="text-teal">✓</span> Integração com SEO técnico existente</li>
+              <li class="flex gap-2"><span class="text-teal">✓</span> War room de prompts por vertical</li>
+              <li class="flex gap-2"><span class="text-teal">✓</span> Prioridade de implementação</li>
+              <li class="flex gap-2"><span class="text-teal">✓</span> Reuniões estratégicas mensais</li>
             </ul>
             <a href="contato.html?pacote=authority" class="mt-8 block text-center py-3 rounded-xl border border-charcoal-600 text-snow text-sm font-medium hover:border-cyan/40 hover:text-cyan transition">Começar com Authority</a>
           </article>
@@ -294,7 +357,7 @@
               O que significa “totalmente automatizada”?
               <span class="text-cyan group-open:rotate-45 transition text-xl leading-none">+</span>
             </summary>
-            <p class="mt-3 text-sm text-mist leading-relaxed">Auditorias, geração de rascunhos, schema, monitoramento de prompts e relatórios rodam em pipelines. Estratégia, critérios editoriais e priorização ficam sob governança humana da Agência AI.</p>
+            <p class="mt-3 text-sm text-mist leading-relaxed">Auditorias, geração de rascunhos, schema, monitoramento de prompts e relatórios rodam em pipelines. Estratégia, critérios editoriais e priorização ficam sob governança humana da Khabs.</p>
           </details>
           <details class="group p-5 rounded-xl bg-charcoal-900 card-border">
             <summary class="cursor-pointer font-medium text-snow list-none flex justify-between items-center gap-4">
@@ -324,25 +387,31 @@
   <footer class="border-t border-charcoal-700 py-12">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row justify-between gap-8">
       <div>
-        <a href="index.html" class="font-semibold text-snow">Agência <span class="text-cyan">AI</span></a>
-        <p class="mt-2 text-sm text-mist max-w-xs">GEO automatizado para marcas citadas em engines generativas. Operação sob Leandro França de Mello.</p>
+        <a href="index.html" class="font-semibold text-snow">Khabs</a>
+        <p class="mt-2 text-sm text-mist max-w-xs">Toda marca é uma estrela na resposta. GEO + Caçador de Citações. Operação sob Leandro França de Mello.</p>
+        <p class="mt-2 text-sm text-mist"><a href="mailto:contato@getkhabs.com" class="hover:text-cyan">contato@getkhabs.com</a></p>
       </div>
       <div class="flex flex-wrap gap-8 text-sm text-mist">
         <div class="space-y-2">
           <p class="text-snow font-medium text-xs uppercase tracking-wider">Site</p>
           <a href="servicos.html" class="block hover:text-cyan">Serviços</a>
           <a href="metodologia.html" class="block hover:text-cyan">Metodologia</a>
+          <a href="case-climatewise.html" class="block hover:text-cyan">Case</a>
+          <a href="qualificar.html" class="block hover:text-cyan">Diagnóstico</a>
           <a href="contato.html" class="block hover:text-cyan">Contato</a>
+          <a href="portal.html" class="block hover:text-cyan">Portal</a>
         </div>
         <div class="space-y-2">
-          <p class="text-snow font-medium text-xs uppercase tracking-wider">Recursos</p>
+          <p class="text-snow font-medium text-xs uppercase tracking-wider">Legal &amp; recursos</p>
+          <a href="privacidade.html" class="block hover:text-cyan">Privacidade</a>
+          <a href="termos.html" class="block hover:text-cyan">Termos</a>
           <a href="llms.txt" class="block hover:text-cyan font-mono text-xs">llms.txt</a>
           <a href="index.html#faq" class="block hover:text-cyan">FAQ</a>
         </div>
       </div>
     </div>
     <div class="max-w-6xl mx-auto px-4 sm:px-6 mt-10 pt-6 border-t border-charcoal-700 text-xs text-mist/50 flex flex-col sm:flex-row justify-between gap-2">
-      <span>© 2026 Agência AI. Todos os direitos reservados.</span>
+      <span>© 2026 Khabs. Todos os direitos reservados.</span>
       <span>Brasil · América/São_Paulo</span>
     </div>
   </footer>

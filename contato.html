@@ -4,43 +4,57 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contato — Agência AI | Diagnóstico GEO</title>
-  <meta name="description" content="Solicite um diagnóstico GEO com a Agência AI. Formulário de contato — Leandro França de Mello." />
+  <title>Contato — Khabs | Diagnóstico GEO</title>
+  <meta name="description" content="Solicite um diagnóstico GEO com a Khabs. Toda marca é uma estrela na resposta. — Leandro França de Mello." />
+  <link rel="canonical" href="https://getkhabs.com/contato.html" />
+  <meta property="og:title" content="Contato — Khabs | Diagnóstico GEO" />
+  <meta property="og:description" content="Solicite um diagnóstico GEO. Toda marca é uma estrela na resposta." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://getkhabs.com/contato.html" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Khabs" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Contato — Khabs" />
+  <meta name="twitter:description" content="Diagnóstico GEO com a Khabs. contato@getkhabs.com" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="config.js"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            charcoal: { 950: '#0a0c0f', 900: '#0f1218', 800: '#161b22', 700: '#1e2530', 600: '#2a3341' },
-            cyan: { DEFAULT: '#00e5ff', dim: '#00b8d4' },
+            charcoal: { 950: '#0B1220', 900: '#0f1218', 800: '#161b22', 700: '#1e2530', 600: '#2a3341' },
+            cyan: { DEFAULT: '#2F6BFF', dim: '#2557d6' },
+            teal: { DEFAULT: '#00A896' },
+            cream: { DEFAULT: '#F7F5F1' },
+            warn: { DEFAULT: '#E85D04' },
             mist: '#a8b2c1',
             snow: '#e8ecf1'
           },
           fontFamily: {
-            sans: ['"DM Sans"', 'system-ui', 'sans-serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
             mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
           },
-          boxShadow: { 'glow-sm': '0 0 20px rgba(0,229,255,0.2)', glow: '0 0 40px rgba(0,229,255,0.15)' }
+          boxShadow: { 'glow-sm': '0 0 20px rgba(47,107,255,0.2)', glow: '0 0 40px rgba(47,107,255,0.15)' }
         }
       }
     }
   </script>
   <style>
-    body { background: #0a0c0f; color: #e8ecf1; }
-    .nav-blur { backdrop-filter: blur(12px); background: rgba(10,12,15,0.85); }
+    body { background: #0B1220; color: #e8ecf1; }
+    .nav-blur { backdrop-filter: blur(12px); background: rgba(11,18,32,0.85); }
     .card-border { border: 1px solid rgba(42,51,65,0.9); }
     .grid-bg {
       background-image:
-        linear-gradient(rgba(0,229,255,0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0,229,255,0.03) 1px, transparent 1px);
+        linear-gradient(rgba(47,107,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(47,107,255,0.03) 1px, transparent 1px);
       background-size: 48px 48px;
     }
-    .field-error { border-color: #f87171 !important; }
-    .error-msg { color: #f87171; font-size: 0.75rem; margin-top: 0.35rem; display: none; }
+    .field-error { border-color: #E85D04 !important; }
+    .error-msg { color: #E85D04; font-size: 0.75rem; margin-top: 0.35rem; display: none; }
     .error-msg.visible { display: block; }
   </style>
 </head>
@@ -48,16 +62,18 @@
   <header class="fixed top-0 inset-x-0 z-50 nav-blur border-b border-charcoal-600/50">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
       <a href="index.html" class="flex items-center gap-2">
-        <span class="w-8 h-8 rounded-lg bg-cyan/10 border border-cyan/30 flex items-center justify-center font-mono text-cyan text-sm font-medium">AI</span>
-        <span class="font-semibold tracking-tight text-snow">Agência <span class="text-cyan">AI</span></span>
+        <span class="w-8 h-8 rounded-lg bg-cyan/10 border border-cyan/30 flex items-center justify-center font-mono text-cyan text-sm font-medium">★</span>
+        <span class="font-semibold tracking-tight text-snow">Khabs</span>
       </a>
       <nav class="hidden md:flex items-center gap-8 text-sm text-mist">
         <a href="servicos.html" class="hover:text-cyan transition">Serviços</a>
         <a href="metodologia.html" class="hover:text-cyan transition">Metodologia</a>
+        <a href="case-climatewise.html" class="hover:text-cyan transition">Case</a>
+        <a href="qualificar.html" class="hover:text-cyan transition">Diagnóstico</a>
         <a href="index.html#pacotes" class="hover:text-cyan transition">Pacotes</a>
         <a href="contato.html" class="text-cyan">Contato</a>
       </nav>
-      <a href="contato.html" class="text-sm font-medium px-4 py-2 rounded-lg bg-cyan text-charcoal-950 hover:bg-cyan-dim transition shadow-glow-sm">Falar com a Agência</a>
+      <a href="qualificar.html" class="text-sm font-medium px-4 py-2 rounded-lg bg-cyan text-charcoal-950 hover:bg-cyan-dim transition shadow-glow-sm">Diagnóstico rápido</a>
     </div>
   </header>
 
@@ -69,8 +85,19 @@
             <p class="text-cyan font-mono text-xs uppercase tracking-widest mb-3">Contato</p>
             <h1 class="text-4xl sm:text-5xl font-bold text-snow tracking-tight">Vamos medir sua citabilidade</h1>
             <p class="mt-5 text-mist leading-relaxed">
-              Preencha o formulário para solicitar um diagnóstico GEO. Retornamos com próximos passos — sem spam, sem pitch genérico.
+              Preencha o formulário — o QualifyBot registra o lead, avança o estágio e prepara a auditoria. Ou faça o <a href="qualificar.html" class="text-cyan hover:underline">diagnóstico rápido</a> antes.
             </p>
+            <div class="mt-8 p-5 rounded-2xl bg-charcoal-900 card-border space-y-3 text-sm">
+              <div>
+                <p class="text-xs uppercase tracking-wider text-mist/70">E-mail</p>
+                <a id="contact-email" href="mailto:contato@getkhabs.com" class="text-cyan hover:text-cyan-dim font-medium">contato@getkhabs.com</a>
+              </div>
+              <div id="whatsapp-block" class="hidden">
+                <p class="text-xs uppercase tracking-wider text-mist/70">WhatsApp</p>
+                <a id="contact-whatsapp" href="#" class="text-cyan hover:text-cyan-dim font-medium" target="_blank" rel="noopener"></a>
+              </div>
+              <p class="text-xs text-mist/60">WhatsApp comercial: a definir.</p>
+            </div>
             <div class="mt-10 space-y-5 text-sm">
               <div class="flex gap-3">
                 <span class="w-9 h-9 rounded-lg bg-cyan/10 border border-cyan/25 flex items-center justify-center text-cyan shrink-0 font-mono text-xs">01</span>
@@ -95,12 +122,11 @@
               </div>
             </div>
             <p class="mt-10 text-xs text-mist/60">
-              Responsável: Leandro França de Mello · Agência AI · Brasil
+              Responsável: Leandro França de Mello · Khabs · Brasil
             </p>
           </div>
 
           <div class="relative">
-            <!-- Form card -->
             <div id="form-card" class="p-6 sm:p-8 rounded-2xl bg-charcoal-900 card-border shadow-glow">
               <form id="contact-form" novalidate class="space-y-5">
                 <div>
@@ -145,26 +171,26 @@
                   <input type="checkbox" id="lgpd" name="lgpd" required
                     class="mt-1 w-4 h-4 rounded border-charcoal-600 bg-charcoal-800 text-cyan focus:ring-cyan/40" />
                   <label for="lgpd" class="text-xs text-mist leading-relaxed">
-                    Autorizo o contato da Agência AI sobre este pedido. Não compartilhamos seus dados com terceiros para marketing.
+                    Autorizo o contato da Khabs sobre este pedido, conforme a <a href="privacidade.html" class="text-cyan hover:underline">Política de Privacidade</a>.
                   </label>
                 </div>
                 <p class="error-msg" id="err-lgpd" role="alert">É necessário autorizar o contato para enviar.</p>
+                <p id="submit-error" class="error-msg" role="alert">Não foi possível enviar agora. Tente de novo ou escreva para contato@getkhabs.com.</p>
                 <button type="submit" id="submit-btn"
-                  class="w-full py-3.5 rounded-xl bg-cyan text-charcoal-950 font-semibold hover:bg-cyan-dim transition shadow-glow-sm">
+                  class="w-full py-3.5 rounded-xl bg-cyan text-charcoal-950 font-semibold hover:bg-cyan-dim transition shadow-glow-sm disabled:opacity-60">
                   Enviar solicitação
                 </button>
-                <p class="text-[11px] text-mist/50 text-center">Formulário client-side — sem envio a servidor nesta demo. Seus dados ficam só no navegador até o “envio” simulado.</p>
+                <p class="text-[11px] text-mist/50 text-center">No local stack, gravamos no CRM-lite e avançamos para diagnose_auto automaticamente.</p>
               </form>
             </div>
 
-            <!-- Success state -->
             <div id="success-card" class="hidden p-8 sm:p-10 rounded-2xl bg-charcoal-900 border border-cyan/40 shadow-glow text-center">
-              <div class="w-14 h-14 mx-auto rounded-full bg-cyan/15 border border-cyan/40 flex items-center justify-center text-cyan text-2xl mb-5">✓</div>
-              <h2 class="text-2xl font-bold text-snow">Solicitação registrada</h2>
+              <div class="w-14 h-14 mx-auto rounded-full bg-cyan/15 border border-cyan/40 flex items-center justify-center text-teal text-2xl mb-5">✓</div>
+              <h2 class="text-2xl font-bold text-snow">Recebemos sua solicitação</h2>
               <p class="mt-3 text-mist text-sm leading-relaxed max-w-sm mx-auto">
-                Obrigado, <span id="success-nome" class="text-snow font-medium"></span>. Em uma operação real, a equipe da Agência AI entraria em contato pelo e-mail informado.
+                Obrigado, <span id="success-nome" class="text-snow font-medium"></span>. Em modo local, o ideal é redirecionar para obrigado.html após o POST /api/leads. Se viu este card, a API local estava offline.
               </p>
-              <p class="mt-2 text-xs text-mist/60">Esta é uma demonstração estática — nenhum e-mail foi enviado.</p>
+              <p class="mt-2 text-xs text-mist/60">Dúvidas urgentes: <a href="mailto:contato@getkhabs.com" class="text-cyan">contato@getkhabs.com</a></p>
               <button type="button" id="reset-btn" class="mt-8 px-6 py-2.5 rounded-xl border border-charcoal-600 text-sm text-snow hover:border-cyan/40 hover:text-cyan transition">
                 Enviar outra mensagem
               </button>
@@ -178,50 +204,94 @@
   <footer class="border-t border-charcoal-700 py-12">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row justify-between gap-8">
       <div>
-        <a href="index.html" class="font-semibold text-snow">Agência <span class="text-cyan">AI</span></a>
-        <p class="mt-2 text-sm text-mist max-w-xs">GEO automatizado para marcas citadas em engines generativas.</p>
+        <a href="index.html" class="font-semibold text-snow">Khabs</a>
+        <p class="mt-2 text-sm text-mist max-w-xs">Toda marca é uma estrela na resposta. GEO + Caçador de Citações.</p>
+        <p class="mt-2 text-sm text-mist"><a href="mailto:contato@getkhabs.com" class="hover:text-cyan">contato@getkhabs.com</a></p>
       </div>
       <div class="flex flex-wrap gap-8 text-sm text-mist">
         <div class="space-y-2">
           <p class="text-snow font-medium text-xs uppercase tracking-wider">Site</p>
           <a href="servicos.html" class="block hover:text-cyan">Serviços</a>
           <a href="metodologia.html" class="block hover:text-cyan">Metodologia</a>
+          <a href="case-climatewise.html" class="block hover:text-cyan">Case</a>
+          <a href="qualificar.html" class="block hover:text-cyan">Diagnóstico</a>
           <a href="contato.html" class="block hover:text-cyan">Contato</a>
+          <a href="portal.html" class="block hover:text-cyan">Portal</a>
+        </div>
+        <div class="space-y-2">
+          <p class="text-snow font-medium text-xs uppercase tracking-wider">Legal</p>
+          <a href="privacidade.html" class="block hover:text-cyan">Privacidade</a>
+          <a href="termos.html" class="block hover:text-cyan">Termos</a>
+          <a href="llms.txt" class="block hover:text-cyan font-mono text-xs">llms.txt</a>
         </div>
       </div>
     </div>
     <div class="max-w-6xl mx-auto px-4 sm:px-6 mt-10 pt-6 border-t border-charcoal-700 text-xs text-mist/50">
-      © 2026 Agência AI · Leandro França de Mello
+      © 2026 Khabs · Leandro França de Mello
     </div>
   </footer>
 
-  <script>
+
+  
+    <script>
     (function () {
+      var cfg = window.KHABS || {
+        email: 'contato@getkhabs.com',
+        whatsapp: null,
+        brand: 'Khabs',
+        apiBase: '',
+        formProvider: 'local'
+      };
+      var apiBase = (cfg.apiBase || '').replace(/\/$/, '');
+
+      var emailEl = document.getElementById('contact-email');
+      if (emailEl && cfg.email) {
+        emailEl.href = 'mailto:' + cfg.email;
+        emailEl.textContent = cfg.email;
+      }
+      if (cfg.whatsapp) {
+        var waBlock = document.getElementById('whatsapp-block');
+        var waLink = document.getElementById('contact-whatsapp');
+        if (waBlock && waLink) {
+          var digits = String(cfg.whatsapp).replace(/\D/g, '');
+          waBlock.classList.remove('hidden');
+          waLink.href = 'https://wa.me/' + digits;
+          waLink.textContent = 'Abrir WhatsApp';
+          var note = waBlock.nextElementSibling;
+          if (note && note.tagName === 'P') note.classList.add('hidden');
+        }
+      }
+
       var form = document.getElementById('contact-form');
       var formCard = document.getElementById('form-card');
       var successCard = document.getElementById('success-card');
       var successNome = document.getElementById('success-nome');
       var resetBtn = document.getElementById('reset-btn');
       var pacoteSelect = document.getElementById('pacote');
+      var submitBtn = document.getElementById('submit-btn');
+      var submitError = document.getElementById('submit-error');
+      if (!form || !pacoteSelect || !submitBtn) return;
 
-      // Prefill package from query string
       var params = new URLSearchParams(window.location.search);
-      var pacote = params.get('pacote');
+      var pacote = params.get('pacote') || params.get('recommended');
       if (pacote && ['starter', 'growth', 'authority'].indexOf(pacote) !== -1) {
         pacoteSelect.value = pacote;
+      }
+      var qualBits = [];
+      ['site', 'seo', 'engines', 'budget', 'urgency', 'category'].forEach(function (k) {
+        if (params.get(k)) qualBits.push(k + '=' + params.get(k));
+      });
+      var msgEl = document.getElementById('mensagem');
+      if (qualBits.length && msgEl && !msgEl.value) {
+        msgEl.value = 'Diagnóstico rápido: ' + qualBits.join(', ') + '. Pacote sugerido: ' + (pacote || 'a definir') + '.';
       }
 
       function showError(id, show) {
         var input = document.getElementById(id);
         var err = document.getElementById('err-' + id);
         if (!input || !err) return;
-        if (show) {
-          input.classList.add('field-error');
-          err.classList.add('visible');
-        } else {
-          input.classList.remove('field-error');
-          err.classList.remove('visible');
-        }
+        if (show) { input.classList.add('field-error'); err.classList.add('visible'); }
+        else { input.classList.remove('field-error'); err.classList.remove('visible'); }
       }
 
       function isValidEmail(v) {
@@ -235,59 +305,123 @@
         var empresa = document.getElementById('empresa').value.trim();
         var mensagem = document.getElementById('mensagem').value.trim();
         var lgpd = document.getElementById('lgpd').checked;
-
-        showError('nome', nome.length < 2);
-        if (nome.length < 2) ok = false;
-
-        showError('email', !isValidEmail(email));
-        if (!isValidEmail(email)) ok = false;
-
-        showError('empresa', empresa.length < 2);
-        if (empresa.length < 2) ok = false;
-
-        showError('mensagem', mensagem.length < 20);
-        if (mensagem.length < 20) ok = false;
-
+        showError('nome', nome.length < 2); if (nome.length < 2) ok = false;
+        showError('email', !isValidEmail(email)); if (!isValidEmail(email)) ok = false;
+        showError('empresa', empresa.length < 2); if (empresa.length < 2) ok = false;
+        showError('mensagem', mensagem.length < 20); if (mensagem.length < 20) ok = false;
         var errLgpd = document.getElementById('err-lgpd');
-        if (!lgpd) {
-          errLgpd.classList.add('visible');
-          ok = false;
-        } else {
-          errLgpd.classList.remove('visible');
-        }
-
+        if (!lgpd) { if (errLgpd) errLgpd.classList.add('visible'); ok = false; }
+        else if (errLgpd) errLgpd.classList.remove('visible');
         return ok;
       }
 
       ['nome', 'email', 'empresa', 'mensagem'].forEach(function (id) {
-        document.getElementById(id).addEventListener('input', function () {
+        var el = document.getElementById(id);
+        if (!el) return;
+        el.addEventListener('input', function () {
           showError(id, false);
+          if (submitError) submitError.classList.remove('visible');
         });
       });
-      document.getElementById('lgpd').addEventListener('change', function () {
-        document.getElementById('err-lgpd').classList.remove('visible');
-      });
+      var lgpdEl = document.getElementById('lgpd');
+      if (lgpdEl) {
+        lgpdEl.addEventListener('change', function () {
+          var e = document.getElementById('err-lgpd');
+          if (e) e.classList.remove('visible');
+        });
+      }
+
+      function showSuccess(nome) {
+        if (successNome) successNome.textContent = nome.split(' ')[0];
+        if (formCard) formCard.classList.add('hidden');
+        if (successCard) {
+          successCard.classList.remove('hidden');
+          successCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }
 
       form.addEventListener('submit', function (e) {
         e.preventDefault();
+        if (submitError) submitError.classList.remove('visible');
         if (!validate()) return;
 
-        var nome = document.getElementById('nome').value.trim();
-        successNome.textContent = nome.split(' ')[0];
-        formCard.classList.add('hidden');
-        successCard.classList.remove('hidden');
-        successCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        var payload = {
+          nome: document.getElementById('nome').value.trim(),
+          email: document.getElementById('email').value.trim(),
+          empresa: document.getElementById('empresa').value.trim(),
+          pacote: pacoteSelect.value,
+          recommended_package: params.get('recommended') || pacoteSelect.value,
+          mensagem: document.getElementById('mensagem').value.trim(),
+          source: params.get('source') || 'site-contato',
+          qualification: {
+            site: params.get('site'),
+            seo: params.get('seo'),
+            engines: params.get('engines'),
+            budget: params.get('budget'),
+            urgency: params.get('urgency'),
+            category: params.get('category')
+          }
+        };
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Enviando…';
+
+        function goObrigado(id, token) {
+          var q = new URLSearchParams({ id: id || '', token: token || '' });
+          window.location.href = 'obrigado.html?' + q.toString();
+        }
+
+        fetch(apiBase + '/api/leads', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(payload)
+        }).then(function (res) {
+          if (!res.ok) throw new Error('HTTP ' + res.status);
+          return res.json();
+        }).then(function (data) {
+          goObrigado(data.id, data.token);
+        }).catch(function () {
+          if (cfg.formProvider === 'formsubmit') {
+            var dest = cfg.email || 'contato@getkhabs.com';
+            return fetch('https://formsubmit.co/ajax/' + encodeURIComponent(dest), {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+              body: JSON.stringify(Object.assign({}, payload, {
+                _subject: 'Khabs — lead diagnóstico GEO',
+                _template: 'table',
+                _captcha: 'false'
+              }))
+            }).then(function (res) {
+              if (!res.ok) throw new Error('fs');
+              showSuccess(payload.nome);
+            });
+          }
+          throw new Error('local-api');
+        }).catch(function () {
+          if (submitError) {
+            submitError.classList.add('visible');
+            submitError.textContent = 'API local indisponível. Rode ./start-local.sh (porta 8787) ou escreva para ' + (cfg.email || 'contato@getkhabs.com') + '.';
+          }
+        }).finally(function () {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Enviar solicitação';
+        });
       });
 
-      resetBtn.addEventListener('click', function () {
-        form.reset();
-        if (pacote) pacoteSelect.value = pacote;
-        successCard.classList.add('hidden');
-        formCard.classList.remove('hidden');
-        ['nome', 'email', 'empresa', 'mensagem'].forEach(function (id) { showError(id, false); });
-        document.getElementById('err-lgpd').classList.remove('visible');
-      });
+      if (resetBtn) {
+        resetBtn.addEventListener('click', function () {
+          form.reset();
+          if (pacote) pacoteSelect.value = pacote;
+          if (successCard) successCard.classList.add('hidden');
+          if (formCard) formCard.classList.remove('hidden');
+          ['nome', 'email', 'empresa', 'mensagem'].forEach(function (id) { showError(id, false); });
+          var e = document.getElementById('err-lgpd');
+          if (e) e.classList.remove('visible');
+          if (submitError) submitError.classList.remove('visible');
+        });
+      }
     })();
   </script>
+
 </body>
 </html>

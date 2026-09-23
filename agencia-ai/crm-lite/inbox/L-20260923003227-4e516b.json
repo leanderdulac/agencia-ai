@@ -1,0 +1,23 @@
+{
+  "id": "L-20260923003227-4e516b",
+  "created_at": "2026-09-23T00:32:27-03:00",
+  "updated_at": "2026-09-23T00:32:27-03:00",
+  "company": "Beta Labs",
+  "contact_name": "Bruno Costa",
+  "email": "bruno@beta.example",
+  "phone": "",
+  "source": "site-contato",
+  "package_interest": "starter",
+  "stage": "diagnose_auto",
+  "mrr_brl": 4900,
+  "setup_brl": 4900,
+  "next_action": "diagnose_auto",
+  "owner": "QualifyBot",
+  "notes": "Site no ar, SEO básico, queremos começar GEO este mês com orçamento starter.",
+  "token": "lFXQd_1CFwF84C1VbmAJdg",
+  "qualification": {},
+  "mensagem": "Site no ar, SEO básico, queremos começar GEO este mês com orçamento starter.",
+  "recommended_package": "starter",
+  "utm": {},
+  "advance_note": "auto após lead"
+}
