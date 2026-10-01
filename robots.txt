@@ -1,4 +1,4 @@
-# Khabs — robots.txt
+# Refrain — robots.txt
 # Permitimos crawlers de busca e de motores generativos (GEO).
 
 User-agent: *
@@ -44,4 +44,4 @@ Allow: /
 User-agent: meta-externalagent
 Allow: /
 
-Sitemap: https://getkhabs.com/sitemap.xml
+Sitemap: https://www.refrain.com.br/sitemap.xml

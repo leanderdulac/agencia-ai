@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-# Khabs — unified local site + automation API on :8787
+# Refrain — unified local site + automation API on :8787
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")" && pwd)"
-PORT="${KHABS_PORT:-8787}"
+PORT="${REFRAIN_PORT:-8787}"
 PIDFILE="${ROOT}/local-api/.server.pid"
 LOGFILE="${ROOT}/local-api/server.log"
 
@@ -24,18 +24,18 @@ fi
 # If something else already serves 8787, do not kill aggressively — refuse
 if command -v ss >/dev/null 2>&1; then
   if ss -ltn "( sport = :$PORT )" 2>/dev/null | grep -q ":$PORT"; then
-    echo "Porta $PORT já em uso. Pare o processo manualmente ou use KHABS_PORT=8788 ./start-local.sh"
+    echo "Porta $PORT já em uso. Pare o processo manualmente ou use REFRAIN_PORT=8788 ./start-local.sh"
     exit 1
   fi
 elif command -v lsof >/dev/null 2>&1; then
   if lsof -iTCP:"$PORT" -sTCP:LISTEN >/dev/null 2>&1; then
-    echo "Porta $PORT já em uso. Pare o processo manualmente ou use KHABS_PORT=8788 ./start-local.sh"
+    echo "Porta $PORT já em uso. Pare o processo manualmente ou use REFRAIN_PORT=8788 ./start-local.sh"
     exit 1
   fi
 fi
 
-export KHABS_AGENCIA="${KHABS_AGENCIA:-$ROOT/agencia-ai}"
-export KHABS_PORT="$PORT"
+export REFRAIN_AGENCIA="${REFRAIN_AGENCIA:-$ROOT/agencia-ai}"
+export REFRAIN_PORT="$PORT"
 
 nohup python3 "$ROOT/local-api/server.py" >>"$LOGFILE" 2>&1 &
 echo $! >"$PIDFILE"
@@ -48,7 +48,7 @@ fi
 
 cat <<EOF
 
-★ Khabs local stack rodando
+Refrain local stack rodando
   Site + API:  http://127.0.0.1:${PORT}/
   Diagnóstico: http://127.0.0.1:${PORT}/qualificar.html
   Contato:     http://127.0.0.1:${PORT}/contato.html
@@ -57,7 +57,7 @@ cat <<EOF
   Health:      http://127.0.0.1:${PORT}/api/health
 
   PID: $(cat "$PIDFILE")  ·  log: $LOGFILE
-  CRM: \$KHABS_AGENCIA/crm-lite/
+  CRM: \$REFRAIN_AGENCIA/crm-lite/
 
   (Alternativa: site estático em :8080 + API :8787 — prefira este processo único.)
 

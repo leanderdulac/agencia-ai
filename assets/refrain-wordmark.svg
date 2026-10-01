@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 178 48" width="178" height="48" role="img" aria-labelledby="t">
+  <title id="t">Refrain — Seja o refrão que a IA repete.</title>
+  <!-- Wordmark Refrain: "refrain" em minúsculas com o "ai" destacado + sinal de ritornello (repetição) da partitura.
+       Texto com pilha de fontes do sistema (sem webfont); textLength fixa a largura para o sinal não colidir. -->
+  <text x="2" y="36" textLength="134" lengthAdjust="spacingAndGlyphs"
+        font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, 'Liberation Sans', system-ui, sans-serif"
+        font-size="38" font-weight="700" letter-spacing="-1" fill="#E8ECF1">refr<tspan fill="#2F6BFF">ai</tspan>n</text>
+  <g fill="#2F6BFF">
+    <circle cx="148" cy="20" r="3.2"/>
+    <circle cx="148" cy="32" r="3.2"/>
+    <rect x="156" y="9" width="3" height="30" rx="1"/>
+    <rect x="163" y="9" width="7" height="30" rx="1.5"/>
+  </g>
+</svg>
