@@ -3,8 +3,9 @@
 <head>
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <meta charset="UTF-8" />
+  <meta name="robots" content="noindex,nofollow" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ops board (local) — Khabs</title>
+  <title>Ops board (local) — Refrain</title>
   <meta name="description" content="Board interno local: inbox leads, advance stage, drafts." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -52,8 +53,7 @@
   <header class="fixed top-0 inset-x-0 z-50 nav-blur border-b border-charcoal-600/50">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
       <a href="index.html" class="flex items-center gap-2">
-        <span class="w-8 h-8 rounded-lg bg-cyan/10 border border-cyan/30 flex items-center justify-center font-mono text-cyan text-sm font-medium">★</span>
-        <span class="font-semibold tracking-tight text-snow">Khabs</span>
+        <img src="assets/refrain-wordmark.svg" alt="Refrain" width="119" height="32" class="h-8 w-auto" />
       </a>
       <nav class="hidden md:flex items-center gap-8 text-sm text-mist">
         <a href="servicos.html" class="hover:text-cyan transition">Serviços</a>
@@ -86,9 +86,10 @@
   <footer class="border-t border-charcoal-700 py-12">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row justify-between gap-8">
       <div>
-        <a href="index.html" class="font-semibold text-snow">Khabs</a>
-        <p class="mt-2 text-sm text-mist max-w-xs">Toda marca é uma estrela na resposta.</p>
-        <p class="mt-2 text-sm text-mist"><a href="mailto:contato@getkhabs.com" class="hover:text-cyan">contato@getkhabs.com</a></p>
+        <a href="index.html" class="inline-block" aria-label="Refrain — início"><img src="assets/refrain-wordmark.svg" alt="Refrain" width="104" height="28" class="h-7 w-auto" /></a>
+        <p class="mt-2 text-sm text-mist max-w-xs">Seja o refrão que a IA repete.</p>
+        <!-- contato@refrain.com.br = placeholder até a caixa de e-mail ser configurada -->
+        <p class="mt-2 text-sm text-mist"><a href="mailto:contato@refrain.com.br" class="hover:text-cyan">contato@refrain.com.br</a></p>
       </div>
       <div class="flex flex-wrap gap-8 text-sm text-mist">
         <div class="space-y-2">
@@ -105,12 +106,12 @@
         </div>
       </div>
     </div>
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 mt-10 pt-6 border-t border-charcoal-700 text-xs text-mist/50">© 2026 Khabs · Leandro França de Mello</div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 mt-10 pt-6 border-t border-charcoal-700 text-xs text-mist/50">© 2026 Refrain · Leandro França de Mello</div>
   </footer>
 
 <script>
 (function(){
-  var api = (window.KHABS && window.KHABS.apiBase) || '';
+  var api = (window.REFRAIN && window.REFRAIN.apiBase) || '';
   var stages = ['visit','qualify','lead','diagnose_auto','proposal_draft','won','intake_selfserve','kickoff_auto','sprint30','retain'];
 
   function load(){
@@ -147,7 +148,7 @@
             var card = btn.closest('[data-id]');
             var id = card.getAttribute('data-id');
             var L = (d.leads||[]).find(function(x){ return x.id===id; }) || {};
-            var text = 'Para: '+(L.email||'')+'\\nAssunto: Khabs — update ('+(L.company||'')+')\\n\\nOlá '+(L.contact_name||'').split(' ')[0]+',\\n\\nAtualização do estágio: '+(L.stage||'')+'.\\nPortal: http://127.0.0.1:8787/portal.html?token='+(L.token||'')+'\\n\\n— Ops Khabs (rascunho local)';
+            var text = 'Para: '+(L.email||'')+'\\nAssunto: Refrain — update ('+(L.company||'')+')\\n\\nOlá '+(L.contact_name||'').split(' ')[0]+',\\n\\nAtualização do estágio: '+(L.stage||'')+'.\\nPortal: http://127.0.0.1:8787/portal.html?token='+(L.token||'')+'\\n\\n— Ops Refrain (rascunho local)';
             navigator.clipboard.writeText(text).then(function(){ btn.textContent = 'Copiado!'; setTimeout(function(){ btn.textContent='Copiar e-mail'; }, 1200); });
           };
         });
