@@ -212,8 +212,7 @@
       '<p class="mt-3 text-mist text-sm leading-relaxed">'+r.why+' <span class="text-mist/50">(score '+r.score+')</span></p>'+
       '<div class="mt-6 flex flex-col sm:flex-row gap-3">'+
       '<a href="contato.html?'+qs.toString()+'" class="inline-flex justify-center px-5 py-3 rounded-xl bg-cyan text-charcoal-950 font-semibold text-sm hover:bg-cyan-dim transition shadow-glow-sm">Continuar para contato</a>'+
-      '<button type="button" id="retry" class="px-5 py-3 rounded-xl border border-charcoal-600 text-sm text-snow hover:border-cyan/40">Refazer</button></div>'+
-      '<p class="mt-4 text-[11px] text-mist/50">Preços oficiais — exceções só com Leandro. Sem Crowley.</p>';
+      '<button type="button" id="retry" class="px-5 py-3 rounded-xl border border-charcoal-600 text-sm text-snow hover:border-cyan/40">Refazer</button></div>';
     document.getElementById('retry').onclick = function(){ result.classList.add('hidden'); wizard.classList.remove('hidden'); i=0; answers={}; render(); };
   });
   render();
