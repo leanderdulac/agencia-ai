@@ -1,4 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <title>Refrain</title>
   <rect width="32" height="32" rx="8" fill="#0B1220"/>
-  <text x="16" y="23" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" font-weight="700" fill="#2F6BFF">★</text>
+  <g fill="#2F6BFF">
+    <circle cx="9.5" cy="12.5" r="2.4"/>
+    <circle cx="9.5" cy="19.5" r="2.4"/>
+    <rect x="15" y="7" width="2.4" height="18" rx="0.8"/>
+    <rect x="20" y="7" width="5" height="18" rx="1.2"/>
+  </g>
 </svg>

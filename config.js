@@ -1,14 +1,19 @@
 /**
- * Khabs — config pública do site estático.
- * Produção: FormSubmit/Formspree → contato@getkhabs.com
- * Local: apiBase vazio = same-origin com ./start-local.sh (:8787)
+ * Refrain — config pública do site estático.
+ * Produção (GitHub Pages): não há API → o formulário cai no FormSubmit → e-mail abaixo.
+ *   ATENÇÃO: contato@refrain.com.br é PLACEHOLDER até a caixa existir (MX em refrain.com.br)
+ *   e o FormSubmit ser ativado (1º envio gera e-mail de ativação para essa caixa).
+ * Local: ./start-local.sh (:8787) — a API local é tentada primeiro (same-origin).
+ * WhatsApp: deixe null até o número comercial estar definido.
  */
-window.KHABS = {
-  brand: "Khabs",
-  tagline: "Toda marca é uma estrela na resposta.",
-  email: "contato@getkhabs.com",
+window.REFRAIN = {
+  brand: "Refrain",
+  tagline: "Seja o refrão que a IA repete.",
+  taglineEn: "Be the refrain AI repeats.",
+  email: "contato@refrain.com.br", // placeholder — caixa ainda não configurada
+  emailStatus: "placeholder",
   whatsapp: null,
-  siteUrl: "https://getkhabs.com",
-  formProvider: "local", // local | formsubmit | mailto
+  siteUrl: "https://www.refrain.com.br",
+  formProvider: "formsubmit", // formsubmit | mailto  (API local é sempre tentada antes)
   apiBase: "" // same-origin on :8787; or "http://127.0.0.1:8787" if static on :8080
 };

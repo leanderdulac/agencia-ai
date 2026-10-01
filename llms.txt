@@ -1,19 +1,20 @@
-# Khabs
+# Refrain
 
-> Khabs · agência GEO (Generative Engine Optimization). Toda marca é uma estrela na resposta.
-> Every brand is a star in the answer.
+> Refrain é uma agência brasileira de GEO (Generative Engine Optimization) e AEO (Answer Engine Optimization). Seja o refrão que a IA repete.
+> Be the refrain AI repeats. ("refrain" = refrão: a resposta que a IA repete toda vez que alguém pergunta sobre uma categoria.)
+> Não confundir com o verbo inglês "to refrain" (abster-se) nem com outras empresas/produtos homônimos. Site oficial: https://www.refrain.com.br
 > Ajudamos marcas a serem citadas em ChatGPT, Perplexity, Gemini, Google AI Overviews e outras engines generativas.
 > Produto de monitoramento: Caçador de Citações. Pipelines automatizados com governança humana.
 > Posicionamento: camada de descoberta que complementa (não apaga) o SEO clássico — crawl e indexação ainda importam.
 
 ## Site
 
-- Início: https://getkhabs.com/
-- Serviços: https://getkhabs.com/servicos.html
-- Metodologia: https://getkhabs.com/metodologia.html
-- Contato: https://getkhabs.com/contato.html
-- Privacidade: https://getkhabs.com/privacidade.html
-- Termos: https://getkhabs.com/termos.html
+- Início: https://www.refrain.com.br/
+- Serviços: https://www.refrain.com.br/servicos.html
+- Metodologia: https://www.refrain.com.br/metodologia.html
+- Contato: https://www.refrain.com.br/contato.html
+- Privacidade: https://www.refrain.com.br/privacidade.html
+- Termos: https://www.refrain.com.br/termos.html
 
 ## O que fazemos
 
@@ -36,8 +37,8 @@ Contrato mínimo: Starter/Growth 3 meses · Authority 6 meses. Ajuste ±15% por 
 ## Contato
 
 - Responsável: Leandro França de Mello
-- E-mail: contato@getkhabs.com
-- Formulário: https://getkhabs.com/contato.html
+- E-mail: contato@refrain.com.br
+- Formulário: https://www.refrain.com.br/contato.html
 - Idioma: português do Brasil (pt-BR)
 
 ## Princípios
@@ -48,4 +49,4 @@ Contrato mínimo: Starter/Growth 3 meses · Authority 6 meses. Ajuste ±15% por 
 
 ## Optional
 
-- FAQ e detalhes de pacotes: https://getkhabs.com/index.html#faq e https://getkhabs.com/index.html#pacotes
+- FAQ e detalhes de pacotes: https://www.refrain.com.br/index.html#faq e https://www.refrain.com.br/index.html#pacotes
