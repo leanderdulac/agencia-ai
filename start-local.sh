@@ -50,7 +50,7 @@ cat <<EOF
 
 Refrain local stack rodando
   Site + API:  http://127.0.0.1:${PORT}/
-  Diagnóstico: http://127.0.0.1:${PORT}/qualificar.html
+  Diagnóstico: http://127.0.0.1:${PORT}/orcamento.html
   Contato:     http://127.0.0.1:${PORT}/contato.html
   Portal:      http://127.0.0.1:${PORT}/portal.html
   Ops board:   http://127.0.0.1:${PORT}/ops.html
