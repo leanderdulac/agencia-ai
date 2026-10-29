@@ -30,7 +30,7 @@ Pasta publicada do marketing site da **Refrain** (agência de GEO/AEO). Fonte do
 | `index.html` | Landing (pacotes + FAQ + JSON-LD Organization/WebSite) |
 | `servicos.html` · `metodologia.html` · `case-climatewise.html` | Páginas de conteúdo |
 | `contato.html` | Formulário → API local (se houver) → FormSubmit (`config.js`) |
-| `qualificar.html` | Diagnóstico rápido (client-side) → contato |
+| `orcamento.html` | Diagnóstico rápido (client-side) → contato |
 | `obrigado.html` · `onboarding.html` · `portal.html` · `ops.html` | Jornada CX — **exigem a API local** (`/api/*`); no Pages ficam sem dados (noindex) |
 | `privacidade.html` · `termos.html` | Legal (LGPD) |
 | `config.js` | `window.REFRAIN` (e-mail, WhatsApp, provider do form) |
