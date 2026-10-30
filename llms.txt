@@ -56,3 +56,7 @@ Contrato mínimo: Starter/Growth 3 meses · Authority 6 meses. Ajuste ±15% por 
 - [App do Gabarito](https://app.refrain.com.br): diagnóstico self-serve.
 - [Orçamento / diagnóstico rápido](https://www.refrain.com.br/orcamento.html): wizard que recomenda Starter, Growth ou Authority.
 - [Contato e vendas](https://www.refrain.com.br/contato.html)
+
+## Blog
+- [Blog da Refrain](https://www.refrain.com.br/blog/): guias de GEO em pt-BR, com fontes.
+- [Como aparecer nas Visões gerais criadas por IA do Google: o que o próprio Google diz](https://www.refrain.com.br/blog/como-aparecer-nas-visoes-gerais-criadas-por-ia-do-google.html) (2026-10-30): requisitos oficiais do Google para AI Overviews e Modo IA (indexação + snippet, sem requisito extra).
