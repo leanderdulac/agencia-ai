@@ -60,6 +60,7 @@ Contrato mínimo: Starter/Growth 3 meses · Authority 6 meses. Ajuste ±15% por 
 ## Blog
 - [Blog da Refrain](https://www.refrain.com.br/blog/): guias de GEO em pt-BR, com fontes.
 - [Como aparecer nas Visões gerais criadas por IA do Google: o que o próprio Google diz](https://www.refrain.com.br/blog/como-aparecer-nas-visoes-gerais-criadas-por-ia-do-google.html) (2026-10-30): requisitos oficiais do Google para AI Overviews e Modo IA (indexação + snippet, sem requisito extra).
+- [Robots.txt para IA: quais robôs liberar para aparecer no ChatGPT, Perplexity, Claude e Gemini](https://www.refrain.com.br/blog/robots-txt-para-ia-gptbot-oai-searchbot-perplexitybot-claudebot.html) (2026-10-31): robôs de busca (OAI-SearchBot, PerplexityBot, Claude-SearchBot, Googlebot) vs. robôs de treino (GPTBot, ClaudeBot, Google-Extended), segundo a documentação de cada empresa.
 
 ## Respostas oficiais (Refrain)
 - [Respostas oficiais sobre a Refrain](https://www.refrain.com.br/respostas/)

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Robots.txt para IA: quais robôs liberar para aparecer no ChatGPT, Perplexity, Claude e Gemini | Blog Refrain</title>
+  <meta name="description" content="Para ser citado em buscas de IA, libere os robôs de busca de cada empresa (OAI-SearchBot, PerplexityBot, Claude-SearchBot e Googlebot). Bloquear robôs de treino como GPTBot e Google-Extended não tira seu site dessas buscas." />
+  <link rel="canonical" href="https://www.refrain.com.br/blog/robots-txt-para-ia-gptbot-oai-searchbot-perplexitybot-claudebot.html" />
+  <meta property="og:title" content="Robots.txt para IA: quais robôs liberar para aparecer no ChatGPT, Perplexity, Claude e Gemini" />
+  <meta property="og:description" content="Para ser citado em buscas de IA, libere os robôs de busca de cada empresa (OAI-SearchBot, PerplexityBot, Claude-SearchBot e Googlebot). Bloquear robôs de treino como GPTBot e Google-Extended não tira seu site dessas buscas." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.refrain.com.br/blog/robots-txt-para-ia-gptbot-oai-searchbot-perplexitybot-claudebot.html" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Refrain" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Article",
+   "@id": "https://www.refrain.com.br/blog/robots-txt-para-ia-gptbot-oai-searchbot-perplexitybot-claudebot.html#article",
+   "headline": "Robots.txt para IA: quais robôs liberar para aparecer no ChatGPT, Perplexity, Claude e Gemini",
+   "description": "Para ser citado em buscas de IA, libere os robôs de busca de cada empresa (OAI-SearchBot, PerplexityBot, Claude-SearchBot e Googlebot). Bloquear robôs de treino como GPTBot e Google-Extended não tira seu site dessas buscas.",
+   "inLanguage": "pt-BR",
+   "datePublished": "2026-10-31",
+   "dateModified": "2026-10-31",
+   "author": {
+    "@type": "Person",
+    "name": "Leandro França de Mello"
+   },
+   "publisher": {
+    "@type": "Organization",
+    "@id": "https://www.refrain.com.br/#organization",
+    "name": "Refrain",
+    "url": "https://www.refrain.com.br/"
+   },
+   "mainEntityOfPage": "https://www.refrain.com.br/blog/robots-txt-para-ia-gptbot-oai-searchbot-perplexitybot-claudebot.html",
+   "citation": [
+    "https://platform.openai.com/docs/bots",
+    "https://docs.perplexity.ai/guides/bots",
+    "https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler",
+    "https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers?hl=pt-br",
+    "https://developers.google.com/search/docs/appearance/ai-features?hl=pt-br",
+    "https://developers.google.com/search/docs/crawling-indexing/robots/intro?hl=pt-br"
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://www.refrain.com.br/blog/robots-txt-para-ia-gptbot-oai-searchbot-perplexitybot-claudebot.html#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Bloquear o GPTBot tira meu site do ChatGPT?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Não das respostas de busca. A OpenAI diz que GPTBot e OAI-SearchBot são configurações independentes: o OAI-SearchBot controla a aparição nos resultados de busca do ChatGPT, e o GPTBot sinaliza o uso do conteúdo no treino."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Qual robô do Perplexity preciso liberar?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "O PerplexityBot. Segundo o Perplexity, ele mostra e linka sites nos resultados e não é usado para coletar conteúdo para modelos de IA. A empresa recomenda liberá-lo no robots.txt e permitir as faixas de IP publicadas."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "O Google-Extended afeta o AI Overviews?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Não. O Google diz que o Google-Extended não afeta a inclusão do site na Pesquisa Google. As Visões gerais criadas por IA fazem parte da Pesquisa e dependem do Googlebot."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Quanto tempo leva para uma mudança no robots.txt valer no ChatGPT?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A OpenAI informa que pode levar cerca de 24 horas para os sistemas dela se ajustarem a uma atualização do robots.txt."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "O robots.txt bloqueia o acesso feito a pedido de um usuário?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Depende da empresa. A OpenAI observa que as regras podem não se aplicar ao ChatGPT-User, porque essas visitas são iniciadas por usuários. A Anthropic diz que o Claude-User pode ser controlado pelo site."
+     }
+    }
+   ]
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Início",
+     "item": "https://www.refrain.com.br/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Blog",
+     "item": "https://www.refrain.com.br/blog/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Robots.txt para IA: quais robôs liberar para aparecer no ChatGPT, Perplexity, Claude e Gemini",
+     "item": "https://www.refrain.com.br/blog/robots-txt-para-ia-gptbot-oai-searchbot-perplexitybot-claudebot.html"
+    }
+   ]
+  }
+ ]
+}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../config.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            charcoal: { 950: '#0B1220', 900: '#0f1218', 800: '#161b22', 700: '#1e2530', 600: '#2a3341' },
+            cyan: { DEFAULT: '#2F6BFF', dim: '#2557d6' },
+            teal: { DEFAULT: '#00A896' },
+            cream: { DEFAULT: '#F7F5F1' },
+            warn: { DEFAULT: '#E85D04' },
+            mist: '#a8b2c1',
+            snow: '#e8ecf1'
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
+          },
+          boxShadow: { 'glow-sm': '0 0 20px rgba(47,107,255,0.2)', glow: '0 0 40px rgba(47,107,255,0.15)' }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background: #0B1220; color: #e8ecf1; }
+    .nav-blur { backdrop-filter: blur(12px); background: rgba(11,18,32,0.85); }
+    .card-border { border: 1px solid rgba(42,51,65,0.9); }
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(47,107,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(47,107,255,0.03) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    .field-error { border-color: #E85D04 !important; }
+    .error-msg { color: #E85D04; font-size: 0.75rem; margin-top: 0.35rem; display: none; }
+    .error-msg.visible { display: block; }
+  </style>
+<script src="https://app.refrain.com.br/hub/refrain-1b85fe/geo.js" async></script>
+</head>
+<body class="font-sans antialiased">
+  <style>
+    .prose-r h2 { font-size:1.5rem; font-weight:700; color:#e8ecf1; margin-top:2.5rem; margin-bottom:.75rem; }
+    .prose-r p { color:#c9d1dc; line-height:1.75; margin-top:1rem; }
+    .prose-r ul, .prose-r ol { color:#c9d1dc; margin-top:1rem; padding-left:1.25rem; line-height:1.75; }
+    .prose-r ul { list-style:disc; } .prose-r ol { list-style:decimal; }
+    .prose-r a { color:#2F6BFF; text-decoration:underline; }
+    .prose-r table { width:100%; margin-top:1.25rem; border-collapse:collapse; font-size:.9rem; }
+    .prose-r th, .prose-r td { border:1px solid rgba(42,51,65,0.9); padding:.6rem .75rem; text-align:left; vertical-align:top; color:#c9d1dc; }
+    .prose-r th { background:#161b22; color:#e8ecf1; }
+    .prose-r code { font-family:'JetBrains Mono',monospace; font-size:.85em; background:#161b22; padding:.1rem .3rem; border-radius:.25rem; }
+  </style>
+<script src="https://app.refrain.com.br/hub/refrain-1b85fe/geo.js" async></script>
+</head>
+<body class="font-sans antialiased">
+  <header class="fixed top-0 inset-x-0 z-50 nav-blur border-b border-charcoal-600/50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="../index.html" class="flex items-center gap-2">
+        <img src="../assets/refrain-wordmark.svg" alt="Refrain" width="119" height="32" class="h-8 w-auto" />
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm text-mist">
+        <a href="../servicos.html" class="hover:text-cyan transition">Serviços</a>
+        <a href="../metodologia.html" class="hover:text-cyan transition">Metodologia</a>
+        <a href="../case-climatewise.html" class="hover:text-cyan transition">Case</a>
+        <a href="../orcamento.html" class="hover:text-cyan transition">Diagnóstico</a>
+        <a href="../index.html#pacotes" class="hover:text-cyan transition">Pacotes</a>
+        <a href="../precos.html" class="hover:text-cyan transition">Preços</a>
+        <a href="./" class="text-cyan">Blog</a>
+        <a href="../contato.html" class="hover:text-cyan transition">Contato</a>
+      </nav>
+      <a href="../orcamento.html" class="text-sm font-medium px-4 py-2 rounded-lg bg-cyan text-charcoal-950 hover:bg-cyan-dim transition shadow-glow-sm">Diagnóstico rápido</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="pt-28 pb-20 sm:pt-32 grid-bg">
+      <article class="max-w-3xl mx-auto px-4 sm:px-6">
+        <p class="text-cyan font-mono text-xs uppercase tracking-widest mb-3"><a href="./" class="hover:underline">Blog</a> · 31 de outubro de 2026</p>
+        <h1 class="text-3xl sm:text-4xl font-bold text-snow tracking-tight">Robots.txt para IA: quais robôs liberar para aparecer no ChatGPT, Perplexity, Claude e Gemini</h1>
+        <div class="prose-r">
+
+        <p id="resposta"><strong>Se você quer que a sua empresa seja citada nas respostas do ChatGPT, do Perplexity, do Claude e do Google, o robots.txt precisa liberar os robôs de busca de cada uma: OAI-SearchBot (OpenAI), PerplexityBot (Perplexity), Claude-SearchBot (Anthropic) e Googlebot (Google).</strong> Os robôs que coletam conteúdo para treinar modelos, como GPTBot, ClaudeBot e o token Google-Extended, são controles separados. Segundo a documentação de cada empresa, bloquear esses robôs de treino não tira o seu site das buscas com IA.</p>
+        <p>Muita PME bloqueou “tudo que é IA” em 2023 e 2024 por medo de ter o conteúdo usado em treino. Às vezes a própria hospedagem ou a CDN fez isso sem avisar. Agora, quando o cliente pergunta ao ChatGPT “qual a melhor clínica de fisioterapia em Campinas?”, esse site pode simplesmente não entrar na resposta. Abaixo está o que cada empresa diz oficialmente sobre os seus robôs.</p>
+
+        <h2>Qual a diferença entre robô de busca, robô de treino e acesso do usuário?</h2>
+        <p>As empresas de IA usam hoje três tipos de acesso, e cada um tem um nome próprio no robots.txt:</p>
+        <ul>
+          <li><strong>Robô de busca:</strong> indexa páginas para mostrar e linkar o seu site nas respostas. É o que mais importa para GEO.</li>
+          <li><strong>Robô de treino:</strong> coleta conteúdo que pode entrar no treinamento de modelos futuros.</li>
+          <li><strong>Acesso iniciado pelo usuário:</strong> a IA visita uma página porque alguém, naquele momento, pediu uma resposta que precisa dela.</li>
+        </ul>
+        <p>A OpenAI deixa isso explícito na <a href="https://platform.openai.com/docs/bots" rel="noopener">página sobre os seus robôs</a>: cada configuração é independente, e um site pode liberar o OAI-SearchBot para aparecer nos resultados de busca enquanto bloqueia o GPTBot para sinalizar que o conteúdo não deve ser usado no treino dos modelos.</p>
+
+        <h2>Quais robôs liberar em cada IA?</h2>
+        <table>
+          <thead><tr><th>Empresa</th><th>Robô de busca (libere para ser citado)</th><th>Robô ou token de treino</th><th>Acesso do usuário</th></tr></thead>
+          <tbody>
+            <tr><td>OpenAI (ChatGPT)</td><td><code>OAI-SearchBot</code></td><td><code>GPTBot</code></td><td><code>ChatGPT-User</code></td></tr>
+            <tr><td>Perplexity</td><td><code>PerplexityBot</code></td><td>Não usa robô para treinar modelos, segundo a empresa</td><td><code>Perplexity-User</code></td></tr>
+            <tr><td>Anthropic (Claude)</td><td><code>Claude-SearchBot</code></td><td><code>ClaudeBot</code></td><td><code>Claude-User</code></td></tr>
+            <tr><td>Google (Pesquisa, Visões gerais e Modo IA)</td><td><code>Googlebot</code></td><td><code>Google-Extended</code> (token de controle, não um robô separado)</td><td>Não se aplica</td></tr>
+          </tbody>
+        </table>
+        <p>Fontes: <a href="https://platform.openai.com/docs/bots" rel="noopener">OpenAI</a>, <a href="https://docs.perplexity.ai/guides/bots" rel="noopener">Perplexity</a>, <a href="https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler" rel="noopener">Anthropic</a> e <a href="https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers?hl=pt-br" rel="noopener">Google</a>.</p>
+
+        <h2>O que acontece se eu bloquear o OAI-SearchBot?</h2>
+        <p>A OpenAI diz que sites que bloqueiam o OAI-SearchBot não aparecem nas respostas de busca do ChatGPT, embora ainda possam aparecer como links de navegação. A empresa também avisa que pode levar cerca de 24 horas depois de uma mudança no robots.txt para os sistemas dela se ajustarem.</p>
+        <p>Já o ChatGPT-User não é usado para rastrear a web de forma automática. Como essas visitas são iniciadas por usuários, a OpenAI observa que as regras do robots.txt podem não se aplicar a elas.</p>
+
+        <h2>E no Perplexity e no Claude?</h2>
+        <p>A <a href="https://docs.perplexity.ai/guides/bots" rel="noopener">documentação do Perplexity</a> diz que o PerplexityBot serve para mostrar e linkar sites nos resultados e não é usado para coletar conteúdo para modelos de IA. A recomendação da empresa é liberar o PerplexityBot no robots.txt e permitir as faixas de IP que ela publica.</p>
+        <p>A <a href="https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler" rel="noopener">Anthropic</a> separa três robôs. Bloquear o ClaudeBot sinaliza que o conteúdo futuro do site deve ficar fora do treino. Bloquear o Claude-SearchBot impede a indexação para busca e, nas palavras da empresa, pode reduzir a visibilidade do site nas respostas. Bloquear o Claude-User impede que o Claude busque a página quando um usuário pergunta algo.</p>
+
+        <h2>Bloquear o Google-Extended tira meu site do AI Overviews?</h2>
+        <p>Não. O Google diz que o <a href="https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers?hl=pt-br" rel="noopener">Google-Extended</a> controla se o conteúdo rastreado pode ser usado para treinar futuras gerações do Gemini e para embasamento nos apps do Gemini e na Vertex AI, e que ele não afeta a inclusão do site na Pesquisa Google nem é sinal de classificação.</p>
+        <p>As Visões gerais criadas por IA e o Modo IA fazem parte da Pesquisa, então dependem do Googlebot. Como explicamos no artigo sobre <a href="como-aparecer-nas-visoes-gerais-criadas-por-ia-do-google.html">como aparecer nas Visões gerais criadas por IA do Google</a>, o requisito é a página estar indexada e qualificada para snippet, segundo a <a href="https://developers.google.com/search/docs/appearance/ai-features?hl=pt-br" rel="noopener">documentação do Google</a>.</p>
+
+        <h2>Como fica um robots.txt pensado para GEO?</h2>
+        <p>Um exemplo para quem quer aparecer nas buscas com IA, mas prefere não ceder conteúdo para treino:</p>
+        <pre class="mt-4 p-4 rounded-xl bg-charcoal-900 card-border overflow-x-auto text-sm"><code># Buscas com IA: liberar
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+# Treino de modelos: bloquear (opcional)
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+Sitemap: https://www.seusite.com.br/sitemap.xml</code></pre>
+        <p>Se você também quer contribuir com o treino, troque os <code>Disallow</code> por <code>Allow</code>. A decisão é de negócio, mas não confunda as duas coisas: o que define se você é citado hoje é o robô de busca. As regras gerais de sintaxe estão na <a href="https://developers.google.com/search/docs/crawling-indexing/robots/intro?hl=pt-br" rel="noopener">introdução ao robots.txt do Google</a>.</p>
+
+        <h2>Checklist rápido para esta semana</h2>
+        <ol>
+          <li>Abra <code>seusite.com.br/robots.txt</code> e procure <code>Disallow: /</code> para OAI-SearchBot, PerplexityBot, Claude-SearchBot ou Googlebot.</li>
+          <li>Pergunte à hospedagem ou à CDN se existe bloqueio automático de “bots de IA” ligado no painel. Ele age antes do robots.txt.</li>
+          <li>Decida, separadamente, se quer bloquear GPTBot, ClaudeBot e Google-Extended.</li>
+          <li>Inclua a linha <code>Sitemap:</code> apontando para o seu sitemap.</li>
+          <li>Depois de mudar, espere pelo menos um dia e teste as perguntas de compra no ChatGPT, no Perplexity e no Gemini.</li>
+        </ol>
+
+        <h2 id="faq">Perguntas frequentes</h2>
+        </div>
+        <div class="space-y-3 mt-4"><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Bloquear o GPTBot tira meu site do ChatGPT?</summary><p class="mt-2 text-mist text-sm">Não das respostas de busca. A OpenAI diz que GPTBot e OAI-SearchBot são configurações independentes: o OAI-SearchBot controla a aparição nos resultados de busca do ChatGPT, e o GPTBot sinaliza o uso do conteúdo no treino.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Qual robô do Perplexity preciso liberar?</summary><p class="mt-2 text-mist text-sm">O PerplexityBot. Segundo o Perplexity, ele mostra e linka sites nos resultados e não é usado para coletar conteúdo para modelos de IA. A empresa recomenda liberá-lo no robots.txt e permitir as faixas de IP publicadas.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">O Google-Extended afeta o AI Overviews?</summary><p class="mt-2 text-mist text-sm">Não. O Google diz que o Google-Extended não afeta a inclusão do site na Pesquisa Google. As Visões gerais criadas por IA fazem parte da Pesquisa e dependem do Googlebot.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Quanto tempo leva para uma mudança no robots.txt valer no ChatGPT?</summary><p class="mt-2 text-mist text-sm">A OpenAI informa que pode levar cerca de 24 horas para os sistemas dela se ajustarem a uma atualização do robots.txt.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">O robots.txt bloqueia o acesso feito a pedido de um usuário?</summary><p class="mt-2 text-mist text-sm">Depende da empresa. A OpenAI observa que as regras podem não se aplicar ao ChatGPT-User, porque essas visitas são iniciadas por usuários. A Anthropic diz que o Claude-User pode ser controlado pelo site.</p></details></div>
+        <div class="prose-r"><h2>Fontes</h2><ul><li><a href="https://platform.openai.com/docs/bots" rel="noopener">https://platform.openai.com/docs/bots</a></li><li><a href="https://docs.perplexity.ai/guides/bots" rel="noopener">https://docs.perplexity.ai/guides/bots</a></li><li><a href="https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler" rel="noopener">https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler</a></li><li><a href="https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers?hl=pt-br" rel="noopener">https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers?hl=pt-br</a></li><li><a href="https://developers.google.com/search/docs/appearance/ai-features?hl=pt-br" rel="noopener">https://developers.google.com/search/docs/appearance/ai-features?hl=pt-br</a></li><li><a href="https://developers.google.com/search/docs/crawling-indexing/robots/intro?hl=pt-br" rel="noopener">https://developers.google.com/search/docs/crawling-indexing/robots/intro?hl=pt-br</a></li></ul></div>
+        <div class="mt-12 rounded-2xl card-border bg-charcoal-800 p-6">
+          <p class="text-snow font-semibold text-lg">Quer saber se as IAs já citam a sua marca?</p>
+          <p class="mt-2 text-mist text-sm">O Gabarito GEO da Refrain testa perguntas de compra no ChatGPT, Perplexity e Gemini e entrega score, gaps priorizados e checklist em minutos, incluindo a checagem do seu robots.txt. R$ 497, pagamento único.</p>
+          <div class="mt-4 flex flex-wrap gap-3"><a href="../precos.html" class="text-sm font-medium px-4 py-2 rounded-lg bg-cyan text-charcoal-950 hover:bg-cyan-dim transition">Ver preços do Gabarito</a><a href="../orcamento.html" class="text-sm font-medium px-4 py-2 rounded-lg border border-charcoal-600 text-snow hover:border-cyan/40 hover:text-cyan transition">Fazer diagnóstico rápido</a></div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="border-t border-charcoal-700 py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row justify-between gap-8">
+      <div>
+        <a href="../index.html" class="inline-block" aria-label="Refrain — início"><img src="../assets/refrain-wordmark.svg" alt="Refrain" width="104" height="28" class="h-7 w-auto" /></a>
+        <p class="mt-2 text-sm text-mist max-w-xs">Seja o refrão que a IA repete. GEO + Caçador de Citações.</p>
+        <p class="mt-2 text-sm text-mist"><a href="mailto:contato@refrain.com.br" class="hover:text-cyan">contato@refrain.com.br</a></p>
+      </div>
+      <div class="flex flex-wrap gap-8 text-sm text-mist">
+        <div class="space-y-2">
+          <p class="text-snow font-medium text-xs uppercase tracking-wider">Site</p>
+          <a href="../servicos.html" class="block hover:text-cyan">Serviços</a>
+          <a href="../metodologia.html" class="block hover:text-cyan">Metodologia</a>
+          <a href="../case-climatewise.html" class="block hover:text-cyan">Case</a>
+          <a href="../orcamento.html" class="block hover:text-cyan">Diagnóstico</a>
+          <a href="../precos.html" class="block hover:text-cyan">Preços</a>
+          <a href="./" class="block hover:text-cyan">Blog</a>
+          <a href="../contato.html" class="block hover:text-cyan">Contato</a>
+          <a href="../portal.html" class="block hover:text-cyan">Portal</a>
+        </div>
+        <div class="space-y-2">
+          <p class="text-snow font-medium text-xs uppercase tracking-wider">Legal</p>
+          <a href="../privacidade.html" class="block hover:text-cyan">Privacidade</a>
+          <a href="../termos.html" class="block hover:text-cyan">Termos</a>
+          <a href="../llms.txt" class="block hover:text-cyan font-mono text-xs">llms.txt</a>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 mt-10 pt-6 border-t border-charcoal-700 text-xs text-mist/50">
+      © 2026 Refrain · Leandro França de Mello
+    </div>
+  </footer>
+<script src="https://app.refrain.com.br/chat-widget.js" async></script>
+</body>
+</html>
