@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>llms.txt: o que é, como criar e se ele ajuda a aparecer no ChatGPT, Perplexity e Gemini | Blog Refrain</title>
+  <meta name="description" content="O llms.txt é um arquivo em Markdown na raiz do site que resume o negócio e aponta as páginas mais úteis para agentes de IA. Ajuda agentes a entender o site, mas não é requisito para o Google nem garantia de citação." />
+  <link rel="canonical" href="https://www.refrain.com.br/blog/llms-txt-o-que-e-como-criar-chatgpt-perplexity-gemini.html" />
+  <meta property="og:title" content="llms.txt: o que é, como criar e se ele ajuda a aparecer no ChatGPT, Perplexity e Gemini" />
+  <meta property="og:description" content="O llms.txt é um arquivo em Markdown na raiz do site que resume o negócio e aponta as páginas mais úteis para agentes de IA. Ajuda agentes a entender o site, mas não é requisito para o Google nem garantia de citação." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.refrain.com.br/blog/llms-txt-o-que-e-como-criar-chatgpt-perplexity-gemini.html" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Refrain" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Article",
+   "@id": "https://www.refrain.com.br/blog/llms-txt-o-que-e-como-criar-chatgpt-perplexity-gemini.html#article",
+   "headline": "llms.txt: o que é, como criar e se ele ajuda a aparecer no ChatGPT, Perplexity e Gemini",
+   "description": "O llms.txt é um arquivo em Markdown na raiz do site que resume o negócio e aponta as páginas mais úteis para agentes de IA. Ajuda agentes a entender o site, mas não é requisito para o Google nem garantia de citação.",
+   "inLanguage": "pt-BR",
+   "datePublished": "2026-11-01",
+   "dateModified": "2026-11-01",
+   "author": {
+    "@type": "Person",
+    "name": "Leandro França de Mello"
+   },
+   "publisher": {
+    "@type": "Organization",
+    "@id": "https://www.refrain.com.br/#organization",
+    "name": "Refrain",
+    "url": "https://www.refrain.com.br/"
+   },
+   "mainEntityOfPage": "https://www.refrain.com.br/blog/llms-txt-o-que-e-como-criar-chatgpt-perplexity-gemini.html",
+   "citation": [
+    "https://llmstxt.org/",
+    "https://developer.chrome.com/docs/lighthouse/agentic-browsing/llms-txt",
+    "https://developers.google.com/search/docs/appearance/ai-features?hl=pt-br",
+    "https://developers.openai.com/llms.txt",
+    "https://docs.anthropic.com/llms.txt",
+    "https://ai.google.dev/gemini-api/docs/llms.txt"
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://www.refrain.com.br/blog/llms-txt-o-que-e-como-criar-chatgpt-perplexity-gemini.html#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "O llms.txt é obrigatório para aparecer no AI Overviews?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Não. O Google diz que não é preciso criar arquivos legíveis por máquina, arquivos de texto para IA nem marcação especial para aparecer nas Visões gerais criadas por IA e no Modo IA. O requisito é a página estar indexada e qualificada para snippet."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Onde coloco o llms.txt?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Na raiz do site, em seusite.com.br/llms.txt. A proposta também permite arquivos em subpastas, como /docs/llms.txt, cobrindo só as páginas daquela pasta."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "O llms.txt substitui o robots.txt ou o sitemap.xml?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Não. O robots.txt diz quais robôs podem acessar o site, o sitemap.xml lista todas as páginas indexáveis e o llms.txt é um resumo curado para agentes de IA. Os três convivem."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Qual é o único item obrigatório do arquivo?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Pela especificação, só o título H1 com o nome do site ou projeto. O resumo em citação, os parágrafos de contexto e as listas de links em seções H2 são opcionais, mas são o que torna o arquivo útil."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "O Lighthouse penaliza quem não tem llms.txt?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Não. Segundo a documentação do Chrome, se o arquivo não existe (erro 404) a auditoria fica como não aplicável, porque ele é opcional. O Lighthouse só sinaliza o site quando o servidor dá erro ao tentar buscar o arquivo."
+     }
+    }
+   ]
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Início",
+     "item": "https://www.refrain.com.br/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Blog",
+     "item": "https://www.refrain.com.br/blog/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "llms.txt: o que é, como criar e se ele ajuda a aparecer no ChatGPT, Perplexity e Gemini",
+     "item": "https://www.refrain.com.br/blog/llms-txt-o-que-e-como-criar-chatgpt-perplexity-gemini.html"
+    }
+   ]
+  }
+ ]
+}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../config.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            charcoal: { 950: '#0B1220', 900: '#0f1218', 800: '#161b22', 700: '#1e2530', 600: '#2a3341' },
+            cyan: { DEFAULT: '#2F6BFF', dim: '#2557d6' },
+            teal: { DEFAULT: '#00A896' },
+            cream: { DEFAULT: '#F7F5F1' },
+            warn: { DEFAULT: '#E85D04' },
+            mist: '#a8b2c1',
+            snow: '#e8ecf1'
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
+          },
+          boxShadow: { 'glow-sm': '0 0 20px rgba(47,107,255,0.2)', glow: '0 0 40px rgba(47,107,255,0.15)' }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background: #0B1220; color: #e8ecf1; }
+    .nav-blur { backdrop-filter: blur(12px); background: rgba(11,18,32,0.85); }
+    .card-border { border: 1px solid rgba(42,51,65,0.9); }
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(47,107,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(47,107,255,0.03) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    .field-error { border-color: #E85D04 !important; }
+    .error-msg { color: #E85D04; font-size: 0.75rem; margin-top: 0.35rem; display: none; }
+    .error-msg.visible { display: block; }
+  </style>
+<script src="https://app.refrain.com.br/hub/refrain-1b85fe/geo.js" async></script>
+</head>
+<body class="font-sans antialiased">
+  <style>
+    .prose-r h2 { font-size:1.5rem; font-weight:700; color:#e8ecf1; margin-top:2.5rem; margin-bottom:.75rem; }
+    .prose-r p { color:#c9d1dc; line-height:1.75; margin-top:1rem; }
+    .prose-r ul, .prose-r ol { color:#c9d1dc; margin-top:1rem; padding-left:1.25rem; line-height:1.75; }
+    .prose-r ul { list-style:disc; } .prose-r ol { list-style:decimal; }
+    .prose-r a { color:#2F6BFF; text-decoration:underline; }
+    .prose-r table { width:100%; margin-top:1.25rem; border-collapse:collapse; font-size:.9rem; }
+    .prose-r th, .prose-r td { border:1px solid rgba(42,51,65,0.9); padding:.6rem .75rem; text-align:left; vertical-align:top; color:#c9d1dc; }
+    .prose-r th { background:#161b22; color:#e8ecf1; }
+    .prose-r code { font-family:'JetBrains Mono',monospace; font-size:.85em; background:#161b22; padding:.1rem .3rem; border-radius:.25rem; }
+  </style>
+<script src="https://app.refrain.com.br/hub/refrain-1b85fe/geo.js" async></script>
+</head>
+<body class="font-sans antialiased">
+  <header class="fixed top-0 inset-x-0 z-50 nav-blur border-b border-charcoal-600/50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="../index.html" class="flex items-center gap-2">
+        <img src="../assets/refrain-wordmark.svg" alt="Refrain" width="119" height="32" class="h-8 w-auto" />
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm text-mist">
+        <a href="../servicos.html" class="hover:text-cyan transition">Serviços</a>
+        <a href="../metodologia.html" class="hover:text-cyan transition">Metodologia</a>
+        <a href="../case-climatewise.html" class="hover:text-cyan transition">Case</a>
+        <a href="../orcamento.html" class="hover:text-cyan transition">Diagnóstico</a>
+        <a href="../index.html#pacotes" class="hover:text-cyan transition">Pacotes</a>
+        <a href="../precos.html" class="hover:text-cyan transition">Preços</a>
+        <a href="./" class="text-cyan">Blog</a>
+        <a href="../contato.html" class="hover:text-cyan transition">Contato</a>
+      </nav>
+      <a href="../orcamento.html" class="text-sm font-medium px-4 py-2 rounded-lg bg-cyan text-charcoal-950 hover:bg-cyan-dim transition shadow-glow-sm">Diagnóstico rápido</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="pt-28 pb-20 sm:pt-32 grid-bg">
+      <article class="max-w-3xl mx-auto px-4 sm:px-6">
+        <p class="text-cyan font-mono text-xs uppercase tracking-widest mb-3"><a href="./" class="hover:underline">Blog</a> · 1 de novembro de 2026</p>
+        <h1 class="text-3xl sm:text-4xl font-bold text-snow tracking-tight">llms.txt: o que é, como criar e se ele ajuda a aparecer no ChatGPT, Perplexity e Gemini</h1>
+        <div class="prose-r">
+        <p id="resposta"><strong>O llms.txt é um arquivo de texto em Markdown, publicado em <code>seusite.com.br/llms.txt</code>, que resume em poucas linhas o que a empresa faz e aponta as páginas mais úteis para agentes de IA.</strong> Ele ajuda um assistente que está pesquisando o seu site a achar rápido a informação certa. Mas não é requisito para aparecer no Google: o próprio Google diz que não é preciso criar arquivos especiais para IA para entrar nas Visões gerais criadas por IA e no Modo IA.</p>
+        <p>Ou seja, vale a pena ter, custa pouco e não substitui o básico. Abaixo está o que a especificação diz, quem já usa e como montar o seu em meia hora.</p>
+
+        <h2>Quem criou o llms.txt e para que ele serve?</h2>
+        <p>A proposta foi publicada por Jeremy Howard em 3 de setembro de 2024 no site <a href="https://llmstxt.org/" rel="noopener">llmstxt.org</a>, que hoje está na versão 2. O argumento é simples: páginas HTML misturam a informação com menus, anúncios e JavaScript, e um agente de IA tem janela de contexto limitada. Um resumo curado, num lugar fixo, economiza esse trabalho.</p>
+        <p>A especificação diz que o arquivo é usado principalmente na hora da resposta (quando um agente precisa de informação para ajudar alguém), e não no treino de modelos. O uso mais forte até agora é em documentação de software, mas o texto cita explicitamente empresas descrevendo sua estrutura e suas políticas, e escolas descrevendo seus cursos.</p>
+
+        <h2>Quem já publica um llms.txt?</h2>
+        <p>As próprias empresas de IA publicam o arquivo para as suas documentações de desenvolvedor: <a href="https://developers.openai.com/llms.txt" rel="noopener">OpenAI</a>, <a href="https://docs.anthropic.com/llms.txt" rel="noopener">Anthropic</a> e <a href="https://ai.google.dev/gemini-api/docs/llms.txt" rel="noopener">Gemini</a>. Segundo o autor da proposta, milhares de sites já têm o arquivo e plataformas de documentação passaram a gerá-lo automaticamente.</p>
+        <p>O Chrome também passou a olhar para ele. O Lighthouse, ferramenta de auditoria do Google embutida no navegador, tem uma <a href="https://developer.chrome.com/docs/lighthouse/agentic-browsing/llms-txt" rel="noopener">verificação de llms.txt</a> dentro das auditorias de navegação por agentes. A documentação chama o arquivo de “convenção emergente” e explica que, sem ele, os agentes podem gastar mais tempo rastreando o site para entender sua estrutura.</p>
+
+        <h2>O llms.txt faz o ChatGPT ou o Google me citarem mais?</h2>
+        <p>Não há garantia, e é importante não vender isso como atalho. No caso do Google, a <a href="https://developers.google.com/search/docs/appearance/ai-features?hl=pt-br" rel="noopener">documentação sobre recursos de IA</a> é direta: você não precisa criar novos arquivos legíveis por máquina, arquivos de texto para IA nem marcação para aparecer nesses recursos, e não existe dado estruturado especial a adicionar. O que conta é a página estar indexada e qualificada para snippet, como explicamos no artigo sobre <a href="como-aparecer-nas-visoes-gerais-criadas-por-ia-do-google.html">como aparecer nas Visões gerais criadas por IA do Google</a>.</p>
+        <p>Nenhuma das fontes citadas aqui promete que ter um llms.txt aumenta citações no ChatGPT, no Perplexity ou no Gemini. O ganho real é outro: quando um agente visita o seu site a pedido de um usuário, ele encontra num só lugar o que você vende, para quem, por quanto e onde estão os detalhes.</p>
+
+        <h2>Qual a diferença entre llms.txt, robots.txt e sitemap.xml?</h2>
+        <table>
+          <thead><tr><th>Arquivo</th><th>Para quem</th><th>O que faz</th><th>Necessário para GEO?</th></tr></thead>
+          <tbody>
+            <tr><td><code>robots.txt</code></td><td>Robôs de rastreamento</td><td>Diz quem pode acessar o quê</td><td>Sim. Se bloquear os robôs de busca, você some das respostas</td></tr>
+            <tr><td><code>sitemap.xml</code></td><td>Buscadores</td><td>Lista todas as páginas indexáveis</td><td>Recomendado, ajuda na descoberta das páginas</td></tr>
+            <tr><td><code>llms.txt</code></td><td>Agentes e modelos de linguagem</td><td>Resumo curado com os links mais úteis</td><td>Opcional, complemento barato</td></tr>
+          </tbody>
+        </table>
+        <p>A especificação do llms.txt diz que ele foi feito para conviver com esses padrões, e que o sitemap não o substitui porque costuma ser grande demais e não traz versões das páginas fáceis de ler para modelos. Para o robots.txt, veja nosso guia de <a href="robots-txt-para-ia-gptbot-oai-searchbot-perplexitybot-claudebot.html">quais robôs de IA liberar</a>.</p>
+
+        <h2>Como montar um llms.txt passo a passo?</h2>
+        <p>Pela especificação, as seções vêm nesta ordem:</p>
+        <ol>
+          <li>Um título H1 com o nome da empresa. É o único item obrigatório.</li>
+          <li>Uma citação (linha começando com <code>&gt;</code>) com o resumo do negócio.</li>
+          <li>Parágrafos ou listas com contexto, sem subtítulos.</li>
+          <li>Seções H2 com listas de links no formato <code>[nome](url): nota</code>.</li>
+          <li>Opcionalmente, uma seção <code>## Optional</code> com links secundários, que o agente pode pular quando tem pouco espaço.</li>
+        </ol>
+        <p>Um exemplo fictício para uma clínica (troque pelos seus dados reais):</p>
+        <pre class="mt-4 p-4 rounded-xl bg-charcoal-900 card-border overflow-x-auto text-sm"><code># Clínica Exemplo de Fisioterapia
+
+&gt; Clínica de fisioterapia ortopédica e esportiva em Campinas (SP).
+&gt; Atende particular e convênios. Agendamento online.
+
+Atendemos de segunda a sábado. Não fazemos atendimento domiciliar.
+
+## Serviços
+- [Fisioterapia ortopédica](https://www.exemplo.com.br/ortopedica): pós-operatório, coluna, joelho
+- [Pilates clínico](https://www.exemplo.com.br/pilates): turmas e sessões individuais
+
+## Preços e convênios
+- [Convênios aceitos](https://www.exemplo.com.br/convenios): lista atualizada
+- [Valores particulares](https://www.exemplo.com.br/precos)
+
+## Optional
+- [Blog](https://www.exemplo.com.br/blog/)</code></pre>
+        <p>Se quiser ver um arquivo real, o <a href="https://www.refrain.com.br/llms.txt">llms.txt da Refrain</a> segue esse formato.</p>
+
+        <h2>Quais erros evitar?</h2>
+        <ul>
+          <li><strong>Copiar o sitemap inteiro.</strong> O arquivo deve ser curto e escolhido a dedo, para caber no contexto do agente.</li>
+          <li><strong>Colocar informação que não está no site.</strong> Preços, endereços e políticas precisam bater com as páginas, senão o agente recebe sinais contraditórios.</li>
+          <li><strong>Deixar desatualizado.</strong> Mudou preço, serviço ou convênio? Atualize o llms.txt no mesmo dia.</li>
+          <li><strong>Esquecer o básico.</strong> Robots.txt liberando os robôs de busca, páginas indexadas e conteúdo em texto continuam sendo o que mais pesa.</li>
+          <li><strong>Servir com erro.</strong> O Lighthouse sinaliza o site quando o servidor dá erro ao buscar o arquivo. Teste se <code>/llms.txt</code> abre normalmente no navegador.</li>
+        </ul>
+
+        <h2 id="faq">Perguntas frequentes</h2>
+        </div>
+        <div class="space-y-3 mt-4"><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">O llms.txt é obrigatório para aparecer no AI Overviews?</summary><p class="mt-2 text-mist text-sm">Não. O Google diz que não é preciso criar arquivos legíveis por máquina, arquivos de texto para IA nem marcação especial para aparecer nas Visões gerais criadas por IA e no Modo IA. O requisito é a página estar indexada e qualificada para snippet.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Onde coloco o llms.txt?</summary><p class="mt-2 text-mist text-sm">Na raiz do site, em seusite.com.br/llms.txt. A proposta também permite arquivos em subpastas, como /docs/llms.txt, cobrindo só as páginas daquela pasta.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">O llms.txt substitui o robots.txt ou o sitemap.xml?</summary><p class="mt-2 text-mist text-sm">Não. O robots.txt diz quais robôs podem acessar o site, o sitemap.xml lista todas as páginas indexáveis e o llms.txt é um resumo curado para agentes de IA. Os três convivem.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Qual é o único item obrigatório do arquivo?</summary><p class="mt-2 text-mist text-sm">Pela especificação, só o título H1 com o nome do site ou projeto. O resumo em citação, os parágrafos de contexto e as listas de links em seções H2 são opcionais, mas são o que torna o arquivo útil.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">O Lighthouse penaliza quem não tem llms.txt?</summary><p class="mt-2 text-mist text-sm">Não. Segundo a documentação do Chrome, se o arquivo não existe (erro 404) a auditoria fica como não aplicável, porque ele é opcional. O Lighthouse só sinaliza o site quando o servidor dá erro ao tentar buscar o arquivo.</p></details></div>
+        <div class="prose-r"><h2>Fontes</h2><ul><li><a href="https://llmstxt.org/" rel="noopener">https://llmstxt.org/</a></li><li><a href="https://developer.chrome.com/docs/lighthouse/agentic-browsing/llms-txt" rel="noopener">https://developer.chrome.com/docs/lighthouse/agentic-browsing/llms-txt</a></li><li><a href="https://developers.google.com/search/docs/appearance/ai-features?hl=pt-br" rel="noopener">https://developers.google.com/search/docs/appearance/ai-features?hl=pt-br</a></li><li><a href="https://developers.openai.com/llms.txt" rel="noopener">https://developers.openai.com/llms.txt</a></li><li><a href="https://docs.anthropic.com/llms.txt" rel="noopener">https://docs.anthropic.com/llms.txt</a></li><li><a href="https://ai.google.dev/gemini-api/docs/llms.txt" rel="noopener">https://ai.google.dev/gemini-api/docs/llms.txt</a></li></ul></div>
+        <div class="mt-12 rounded-2xl card-border bg-charcoal-800 p-6">
+          <p class="text-snow font-semibold text-lg">Quer saber se as IAs já citam a sua marca?</p>
+          <p class="mt-2 text-mist text-sm">O Gabarito GEO da Refrain testa perguntas de compra no ChatGPT, Perplexity e Gemini e entrega score, gaps priorizados e checklist em minutos, incluindo robots.txt e llms.txt. R$ 497, pagamento único.</p>
+          <div class="mt-4 flex flex-wrap gap-3"><a href="../precos.html" class="text-sm font-medium px-4 py-2 rounded-lg bg-cyan text-charcoal-950 hover:bg-cyan-dim transition">Ver preços do Gabarito</a><a href="../orcamento.html" class="text-sm font-medium px-4 py-2 rounded-lg border border-charcoal-600 text-snow hover:border-cyan/40 hover:text-cyan transition">Fazer diagnóstico rápido</a></div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="border-t border-charcoal-700 py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row justify-between gap-8">
+      <div>
+        <a href="../index.html" class="inline-block" aria-label="Refrain — início"><img src="../assets/refrain-wordmark.svg" alt="Refrain" width="104" height="28" class="h-7 w-auto" /></a>
+        <p class="mt-2 text-sm text-mist max-w-xs">Seja o refrão que a IA repete. GEO + Caçador de Citações.</p>
+        <p class="mt-2 text-sm text-mist"><a href="mailto:contato@refrain.com.br" class="hover:text-cyan">contato@refrain.com.br</a></p>
+      </div>
+      <div class="flex flex-wrap gap-8 text-sm text-mist">
+        <div class="space-y-2">
+          <p class="text-snow font-medium text-xs uppercase tracking-wider">Site</p>
+          <a href="../servicos.html" class="block hover:text-cyan">Serviços</a>
+          <a href="../metodologia.html" class="block hover:text-cyan">Metodologia</a>
+          <a href="../case-climatewise.html" class="block hover:text-cyan">Case</a>
+          <a href="../orcamento.html" class="block hover:text-cyan">Diagnóstico</a>
+          <a href="../precos.html" class="block hover:text-cyan">Preços</a>
+          <a href="./" class="block hover:text-cyan">Blog</a>
+          <a href="../contato.html" class="block hover:text-cyan">Contato</a>
+          <a href="../portal.html" class="block hover:text-cyan">Portal</a>
+        </div>
+        <div class="space-y-2">
+          <p class="text-snow font-medium text-xs uppercase tracking-wider">Legal</p>
+          <a href="../privacidade.html" class="block hover:text-cyan">Privacidade</a>
+          <a href="../termos.html" class="block hover:text-cyan">Termos</a>
+          <a href="../llms.txt" class="block hover:text-cyan font-mono text-xs">llms.txt</a>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 mt-10 pt-6 border-t border-charcoal-700 text-xs text-mist/50">
+      © 2026 Refrain · Leandro França de Mello
+    </div>
+  </footer>
+<script src="https://app.refrain.com.br/chat-widget.js" async></script>
+</body>
+</html>
