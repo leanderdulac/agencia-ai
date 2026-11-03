@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Como aparecer na busca do ChatGPT: o que a OpenAI diz e como medir as visitas | Blog Refrain</title>
+  <meta name="description" content="Para aparecer nas respostas do ChatGPT com busca, libere o OAI-SearchBot no robots.txt e no firewall e tenha páginas que respondam às perguntas do cliente. Veja o que a OpenAI diz e como medir o tráfego com utm_source=chatgpt.com." />
+  <link rel="canonical" href="https://www.refrain.com.br/blog/como-aparecer-na-busca-do-chatgpt-oai-searchbot.html" />
+  <meta property="og:title" content="Como aparecer na busca do ChatGPT: o que a OpenAI diz e como medir as visitas" />
+  <meta property="og:description" content="Para aparecer nas respostas do ChatGPT com busca, libere o OAI-SearchBot no robots.txt e no firewall e tenha páginas que respondam às perguntas do cliente. Veja o que a OpenAI diz e como medir o tráfego com utm_source=chatgpt.com." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.refrain.com.br/blog/como-aparecer-na-busca-do-chatgpt-oai-searchbot.html" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Refrain" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Article",
+   "@id": "https://www.refrain.com.br/blog/como-aparecer-na-busca-do-chatgpt-oai-searchbot.html#article",
+   "headline": "Como aparecer na busca do ChatGPT: o que a OpenAI diz e como medir as visitas",
+   "description": "Para aparecer nas respostas do ChatGPT com busca, libere o OAI-SearchBot no robots.txt e no firewall e tenha páginas que respondam às perguntas do cliente. Veja o que a OpenAI diz e como medir o tráfego com utm_source=chatgpt.com.",
+   "inLanguage": "pt-BR",
+   "datePublished": "2026-11-03",
+   "dateModified": "2026-11-03",
+   "author": {
+    "@type": "Person",
+    "name": "Leandro França de Mello"
+   },
+   "publisher": {
+    "@type": "Organization",
+    "@id": "https://www.refrain.com.br/#organization",
+    "name": "Refrain",
+    "url": "https://www.refrain.com.br/"
+   },
+   "mainEntityOfPage": "https://www.refrain.com.br/blog/como-aparecer-na-busca-do-chatgpt-oai-searchbot.html",
+   "citation": [
+    "https://help.openai.com/en/articles/9237897-searching-the-web-with-chatgpt",
+    "https://developers.openai.com/api/docs/bots",
+    "https://help.openai.com/en/articles/12627856-publishers-and",
+    "https://openai.com/searchbot.json"
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://www.refrain.com.br/blog/como-aparecer-na-busca-do-chatgpt-oai-searchbot.html#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Qualquer site pode aparecer na busca do ChatGPT?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Segundo a OpenAI, qualquer site público pode aparecer, desde que não bloqueie o OAI-SearchBot e que o servidor ou CDN aceite os IPs publicados desse robô. A posição nos resultados não é garantida."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Bloquear o GPTBot tira meu site da busca do ChatGPT?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Não. A OpenAI diz que as configurações do GPTBot (treino de modelos) e do OAI-SearchBot (busca) são independentes. Dá para bloquear um e liberar o outro."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Quanto tempo leva para valer uma mudança no robots.txt?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A OpenAI informa que pode levar cerca de 24 horas para os sistemas de busca se ajustarem depois de uma mudança no robots.txt."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Como saber quantas visitas vieram do ChatGPT?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "O ChatGPT adiciona o parâmetro utm_source=chatgpt.com aos links de referência, então o Google Analytics e outras ferramentas conseguem separar essas visitas. Isso mede cliques, não citações."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Preciso pagar ou me cadastrar em algum lugar para aparecer?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A documentação da OpenAI não menciona cadastro nem pagamento para aparecer nos resultados orgânicos da busca. O que ela pede é liberar o OAI-SearchBot."
+     }
+    }
+   ]
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Início",
+     "item": "https://www.refrain.com.br/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Blog",
+     "item": "https://www.refrain.com.br/blog/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Como aparecer na busca do ChatGPT: o que a OpenAI diz e como medir as visitas",
+     "item": "https://www.refrain.com.br/blog/como-aparecer-na-busca-do-chatgpt-oai-searchbot.html"
+    }
+   ]
+  }
+ ]
+}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../config.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            charcoal: { 950: '#0B1220', 900: '#0f1218', 800: '#161b22', 700: '#1e2530', 600: '#2a3341' },
+            cyan: { DEFAULT: '#2F6BFF', dim: '#2557d6' },
+            teal: { DEFAULT: '#00A896' },
+            cream: { DEFAULT: '#F7F5F1' },
+            warn: { DEFAULT: '#E85D04' },
+            mist: '#a8b2c1',
+            snow: '#e8ecf1'
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
+          },
+          boxShadow: { 'glow-sm': '0 0 20px rgba(47,107,255,0.2)', glow: '0 0 40px rgba(47,107,255,0.15)' }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background: #0B1220; color: #e8ecf1; }
+    .nav-blur { backdrop-filter: blur(12px); background: rgba(11,18,32,0.85); }
+    .card-border { border: 1px solid rgba(42,51,65,0.9); }
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(47,107,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(47,107,255,0.03) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    .field-error { border-color: #E85D04 !important; }
+    .error-msg { color: #E85D04; font-size: 0.75rem; margin-top: 0.35rem; display: none; }
+    .error-msg.visible { display: block; }
+  </style>
+<script src="https://app.refrain.com.br/hub/refrain-1b85fe/geo.js" async></script>
+</head>
+<body class="font-sans antialiased">
+  <style>
+    .prose-r h2 { font-size:1.5rem; font-weight:700; color:#e8ecf1; margin-top:2.5rem; margin-bottom:.75rem; }
+    .prose-r p { color:#c9d1dc; line-height:1.75; margin-top:1rem; }
+    .prose-r ul, .prose-r ol { color:#c9d1dc; margin-top:1rem; padding-left:1.25rem; line-height:1.75; }
+    .prose-r ul { list-style:disc; } .prose-r ol { list-style:decimal; }
+    .prose-r a { color:#2F6BFF; text-decoration:underline; }
+    .prose-r table { width:100%; margin-top:1.25rem; border-collapse:collapse; font-size:.9rem; }
+    .prose-r th, .prose-r td { border:1px solid rgba(42,51,65,0.9); padding:.6rem .75rem; text-align:left; vertical-align:top; color:#c9d1dc; }
+    .prose-r th { background:#161b22; color:#e8ecf1; }
+    .prose-r code { font-family:'JetBrains Mono',monospace; font-size:.85em; background:#161b22; padding:.1rem .3rem; border-radius:.25rem; }
+  </style>
+<script src="https://app.refrain.com.br/hub/refrain-1b85fe/geo.js" async></script>
+</head>
+<body class="font-sans antialiased">
+  <header class="fixed top-0 inset-x-0 z-50 nav-blur border-b border-charcoal-600/50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="../index.html" class="flex items-center gap-2">
+        <img src="../assets/refrain-wordmark.svg" alt="Refrain" width="119" height="32" class="h-8 w-auto" />
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm text-mist">
+        <a href="../servicos.html" class="hover:text-cyan transition">Serviços</a>
+        <a href="../metodologia.html" class="hover:text-cyan transition">Metodologia</a>
+        <a href="../case-climatewise.html" class="hover:text-cyan transition">Case</a>
+        <a href="../orcamento.html" class="hover:text-cyan transition">Diagnóstico</a>
+        <a href="../index.html#pacotes" class="hover:text-cyan transition">Pacotes</a>
+        <a href="../precos.html" class="hover:text-cyan transition">Preços</a>
+        <a href="./" class="text-cyan">Blog</a>
+        <a href="../contato.html" class="hover:text-cyan transition">Contato</a>
+      </nav>
+      <a href="../orcamento.html" class="text-sm font-medium px-4 py-2 rounded-lg bg-cyan text-charcoal-950 hover:bg-cyan-dim transition shadow-glow-sm">Diagnóstico rápido</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="pt-28 pb-20 sm:pt-32 grid-bg">
+      <article class="max-w-3xl mx-auto px-4 sm:px-6">
+        <p class="text-cyan font-mono text-xs uppercase tracking-widest mb-3"><a href="./" class="hover:underline">Blog</a> · 3 de novembro de 2026</p>
+        <h1 class="text-3xl sm:text-4xl font-bold text-snow tracking-tight">Como aparecer na busca do ChatGPT: o que a OpenAI diz e como medir as visitas</h1>
+        <div class="prose-r">
+        <p id="resposta"><strong>Para aparecer nas respostas do ChatGPT com busca, o site precisa deixar o robô OAI-SearchBot rastrear as páginas, tanto no robots.txt quanto no firewall ou CDN, e ter conteúdo que responda bem às perguntas que o ChatGPT pesquisa. A OpenAI diz que qualquer site público pode aparecer, mas que a posição não é garantida.</strong> Depois, dá para medir as visitas que vêm do ChatGPT pelo parâmetro <code>utm_source=chatgpt.com</code>, que a própria OpenAI adiciona aos links.</p>
+        <p>Abaixo está o que a documentação oficial da OpenAI diz, passo a passo, e como uma PME, clínica, loja virtual ou SaaS pode conferir se está tudo certo.</p>
+
+        <h2>Como o ChatGPT escolhe os sites que aparecem na busca?</h2>
+        <p>Segundo a <a href="https://help.openai.com/en/articles/9237897-searching-the-web-with-chatgpt" rel="noopener">central de ajuda da OpenAI sobre busca na web</a>, o ChatGPT classifica os resultados usando vários fatores pensados para levar o usuário a informações relevantes e confiáveis, e a colocação não é garantida. A OpenAI não publica a lista desses fatores, então desconfie de quem promete uma fórmula exata.</p>
+        <p>O mesmo texto explica que, às vezes, o ChatGPT recorre a outros provedores de busca. Nesses casos, ele reescreve a pergunta do usuário em uma ou mais consultas mais específicas e pode fazer novas buscas depois de ler os primeiros resultados. Ele também usa a localização aproximada do usuário, a partir do IP, para perguntas como “restaurantes perto de mim”. Na prática, isso significa que o seu site disputa espaço em consultas curtas e objetivas, muitas vezes com o nome da cidade, e não só na frase longa que o cliente digitou.</p>
+
+        <h2>Qual robô precisa estar liberado?</h2>
+        <p>O robô da busca é o <strong>OAI-SearchBot</strong>. A <a href="https://developers.openai.com/api/docs/bots" rel="noopener">página da OpenAI sobre seus robôs</a> diz que sites que bloqueiam o OAI-SearchBot não aparecem nas respostas da busca do ChatGPT, embora ainda possam aparecer como links de navegação. A recomendação oficial é liberar o OAI-SearchBot no robots.txt e permitir as requisições vindas dos IPs que a OpenAI publica.</p>
+        <table>
+          <thead><tr><th>Robô</th><th>Para que serve</th><th>O que fazer se você quer aparecer na busca</th></tr></thead>
+          <tbody>
+            <tr><td><code>OAI-SearchBot</code></td><td>Mostrar sites nos resultados da busca do ChatGPT</td><td>Liberar no robots.txt e no firewall</td></tr>
+            <tr><td><code>GPTBot</code></td><td>Coletar conteúdo que pode ser usado no treino dos modelos</td><td>Decisão separada: pode bloquear sem afetar a busca</td></tr>
+            <tr><td><code>ChatGPT-User</code></td><td>Visitar páginas quando um usuário pede, no ChatGPT ou num GPT</td><td>Não decide se o site aparece na busca</td></tr>
+          </tbody>
+        </table>
+        <p>A OpenAI afirma que cada configuração é independente. Dá para liberar o OAI-SearchBot e bloquear o GPTBot, se você quer aparecer na busca sem ceder conteúdo para treino. Para os detalhes de cada robô, inclusive os de outras IAs, veja nosso guia de <a href="robots-txt-para-ia-gptbot-oai-searchbot-perplexitybot-claudebot.html">robots.txt para IA</a>.</p>
+
+        <h2>Liberar no robots.txt basta?</h2>
+        <p>Nem sempre. Muitos sites ficam atrás de um CDN ou firewall com regras que barram robôs desconhecidos, e aí o robots.txt diz “pode entrar” enquanto o servidor responde com bloqueio. A OpenAI pede que o provedor de hospedagem ou CDN permita o tráfego dos <a href="https://openai.com/searchbot.json" rel="noopener">IPs publicados do OAI-SearchBot</a>.</p>
+        <p>Outro ponto é o tempo. Segundo a OpenAI, pode levar cerca de 24 horas depois de uma mudança no robots.txt para os sistemas de busca se ajustarem, então teste no dia seguinte, não na hora.</p>
+
+        <h2>Como checar se o meu site está liberado?</h2>
+        <ol>
+          <li>Abra <code>seudominio.com.br/robots.txt</code> e confira se não há um <code>Disallow: /</code> valendo para <code>OAI-SearchBot</code> ou para todos os robôs (<code>User-agent: *</code>).</li>
+          <li>Se quiser deixar explícito, adicione as linhas <code>User-agent: OAI-SearchBot</code> e <code>Allow: /</code>.</li>
+          <li>Pergunte a quem cuida do site (ou veja o painel do CDN) se existe regra que bloqueia robôs de IA por padrão, e libere os IPs da lista oficial.</li>
+          <li>Nos logs do servidor, procure visitas com <code>OAI-SearchBot</code> no user-agent. Se elas aparecem e recebem resposta 200, o robô está conseguindo ler as páginas.</li>
+          <li>Confirme que as páginas importantes não têm <code>noindex</code> por engano.</li>
+        </ol>
+
+        <h2>Como medir as visitas que vêm do ChatGPT?</h2>
+        <p>O <a href="https://help.openai.com/en/articles/12627856-publishers-and" rel="noopener">FAQ da OpenAI para publishers e desenvolvedores</a> diz que o ChatGPT inclui automaticamente o parâmetro <code>utm_source=chatgpt.com</code> nos links de referência. Com isso, ferramentas como o Google Analytics separam essas visitas das demais. No GA4, basta olhar os relatórios de aquisição de tráfego filtrando a origem <code>chatgpt.com</code>.</p>
+        <p>Esse número mostra quem clicou, não quantas vezes a marca foi citada. Muita gente lê a resposta e não clica. Para saber se o ChatGPT recomenda você nas perguntas de compra do seu mercado, é preciso testar essas perguntas diretamente e acompanhar ao longo do tempo.</p>
+
+        <h2>E se eu não quiser aparecer?</h2>
+        <p>Basta bloquear o OAI-SearchBot no robots.txt. Mas, segundo o FAQ da OpenAI, se o endereço de uma página bloqueada chegar por um provedor de busca parceiro ou por links em outras páginas, o ChatGPT ainda pode mostrar só o link e o título. Para evitar isso, a OpenAI indica a meta tag <code>noindex</code>, com um detalhe: o robô precisa poder rastrear a página para conseguir ler essa tag.</p>
+
+        <h2>O que mais aumenta a chance de ser citado?</h2>
+        <p>A OpenAI não detalha os critérios, mas como o ChatGPT busca e lê páginas para montar a resposta, ajuda ter páginas que respondam de forma direta às perguntas que o seu cliente faz: preço, comparação, como funciona, para quem serve, onde fica. Resposta clara no início, subtítulos em forma de pergunta e informação atualizada facilitam o trabalho de quem lê, seja pessoa ou máquina. Complementos como <a href="dados-estruturados-schema-org-ajudam-aparecer-chatgpt-google-ia.html">dados estruturados</a> e um <a href="llms-txt-o-que-e-como-criar-chatgpt-perplexity-gemini.html">llms.txt</a> organizam o site, mas não substituem conteúdo útil e acesso liberado.</p>
+
+        <h2 id="faq">Perguntas frequentes</h2>
+        </div>
+        <div class="space-y-3 mt-4"><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Qualquer site pode aparecer na busca do ChatGPT?</summary><p class="mt-2 text-mist text-sm">Segundo a OpenAI, qualquer site público pode aparecer, desde que não bloqueie o OAI-SearchBot e que o servidor ou CDN aceite os IPs publicados desse robô. A posição nos resultados não é garantida.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Bloquear o GPTBot tira meu site da busca do ChatGPT?</summary><p class="mt-2 text-mist text-sm">Não. A OpenAI diz que as configurações do GPTBot (treino de modelos) e do OAI-SearchBot (busca) são independentes. Dá para bloquear um e liberar o outro.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Quanto tempo leva para valer uma mudança no robots.txt?</summary><p class="mt-2 text-mist text-sm">A OpenAI informa que pode levar cerca de 24 horas para os sistemas de busca se ajustarem depois de uma mudança no robots.txt.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Como saber quantas visitas vieram do ChatGPT?</summary><p class="mt-2 text-mist text-sm">O ChatGPT adiciona o parâmetro utm_source=chatgpt.com aos links de referência, então o Google Analytics e outras ferramentas conseguem separar essas visitas. Isso mede cliques, não citações.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Preciso pagar ou me cadastrar em algum lugar para aparecer?</summary><p class="mt-2 text-mist text-sm">A documentação da OpenAI não menciona cadastro nem pagamento para aparecer nos resultados orgânicos da busca. O que ela pede é liberar o OAI-SearchBot.</p></details></div>
+        <div class="prose-r"><h2>Fontes</h2><ul><li><a href="https://help.openai.com/en/articles/9237897-searching-the-web-with-chatgpt" rel="noopener">https://help.openai.com/en/articles/9237897-searching-the-web-with-chatgpt</a></li><li><a href="https://developers.openai.com/api/docs/bots" rel="noopener">https://developers.openai.com/api/docs/bots</a></li><li><a href="https://help.openai.com/en/articles/12627856-publishers-and" rel="noopener">https://help.openai.com/en/articles/12627856-publishers-and</a></li><li><a href="https://openai.com/searchbot.json" rel="noopener">https://openai.com/searchbot.json</a></li></ul></div>
+        <div class="mt-12 rounded-2xl card-border bg-charcoal-800 p-6">
+          <p class="text-snow font-semibold text-lg">Quer saber se as IAs já citam a sua marca?</p>
+          <p class="mt-2 text-mist text-sm">O Gabarito GEO da Refrain testa perguntas de compra no ChatGPT, Perplexity e Gemini e entrega score, gaps priorizados e checklist em minutos, incluindo a checagem de acesso dos robôs de IA ao seu site. R$ 497, pagamento único.</p>
+          <div class="mt-4 flex flex-wrap gap-3"><a href="../precos.html" class="text-sm font-medium px-4 py-2 rounded-lg bg-cyan text-charcoal-950 hover:bg-cyan-dim transition">Ver preços do Gabarito</a><a href="../orcamento.html" class="text-sm font-medium px-4 py-2 rounded-lg border border-charcoal-600 text-snow hover:border-cyan/40 hover:text-cyan transition">Fazer diagnóstico rápido</a></div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="border-t border-charcoal-700 py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row justify-between gap-8">
+      <div>
+        <a href="../index.html" class="inline-block" aria-label="Refrain — início"><img src="../assets/refrain-wordmark.svg" alt="Refrain" width="104" height="28" class="h-7 w-auto" /></a>
+        <p class="mt-2 text-sm text-mist max-w-xs">Seja o refrão que a IA repete. GEO + Caçador de Citações.</p>
+        <p class="mt-2 text-sm text-mist"><a href="mailto:contato@refrain.com.br" class="hover:text-cyan">contato@refrain.com.br</a></p>
+      </div>
+      <div class="flex flex-wrap gap-8 text-sm text-mist">
+        <div class="space-y-2">
+          <p class="text-snow font-medium text-xs uppercase tracking-wider">Site</p>
+          <a href="../servicos.html" class="block hover:text-cyan">Serviços</a>
+          <a href="../metodologia.html" class="block hover:text-cyan">Metodologia</a>
+          <a href="../case-climatewise.html" class="block hover:text-cyan">Case</a>
+          <a href="../orcamento.html" class="block hover:text-cyan">Diagnóstico</a>
+          <a href="../precos.html" class="block hover:text-cyan">Preços</a>
+          <a href="./" class="block hover:text-cyan">Blog</a>
+          <a href="../contato.html" class="block hover:text-cyan">Contato</a>
+          <a href="../portal.html" class="block hover:text-cyan">Portal</a>
+        </div>
+        <div class="space-y-2">
+          <p class="text-snow font-medium text-xs uppercase tracking-wider">Legal</p>
+          <a href="../privacidade.html" class="block hover:text-cyan">Privacidade</a>
+          <a href="../termos.html" class="block hover:text-cyan">Termos</a>
+          <a href="../llms.txt" class="block hover:text-cyan font-mono text-xs">llms.txt</a>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 mt-10 pt-6 border-t border-charcoal-700 text-xs text-mist/50">
+      © 2026 Refrain · Leandro França de Mello
+    </div>
+  </footer>
+<script src="https://app.refrain.com.br/chat-widget.js" async></script>
+</body>
+</html>
+
+
