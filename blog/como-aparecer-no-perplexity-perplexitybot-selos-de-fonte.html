@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Como aparecer no Perplexity: o que a própria Perplexity diz sobre robôs, firewall e selos de fonte | Blog Refrain</title>
+  <meta name="description" content="Para ser citado no Perplexity, libere o PerplexityBot no robots.txt e no firewall (com os IPs publicados) e tenha páginas que respondam às perguntas do cliente com autoria clara. Veja o que a documentação oficial diz." />
+  <link rel="canonical" href="https://www.refrain.com.br/blog/como-aparecer-no-perplexity-perplexitybot-selos-de-fonte.html" />
+  <meta property="og:title" content="Como aparecer no Perplexity: o que a própria Perplexity diz sobre robôs, firewall e selos de fonte" />
+  <meta property="og:description" content="Para ser citado no Perplexity, libere o PerplexityBot no robots.txt e no firewall (com os IPs publicados) e tenha páginas que respondam às perguntas do cliente com autoria clara. Veja o que a documentação oficial diz." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.refrain.com.br/blog/como-aparecer-no-perplexity-perplexitybot-selos-de-fonte.html" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Refrain" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Article",
+   "@id": "https://www.refrain.com.br/blog/como-aparecer-no-perplexity-perplexitybot-selos-de-fonte.html#article",
+   "headline": "Como aparecer no Perplexity: o que a própria Perplexity diz sobre robôs, firewall e selos de fonte",
+   "description": "Para ser citado no Perplexity, libere o PerplexityBot no robots.txt e no firewall (com os IPs publicados) e tenha páginas que respondam às perguntas do cliente com autoria clara. Veja o que a documentação oficial diz.",
+   "inLanguage": "pt-BR",
+   "datePublished": "2026-11-04",
+   "dateModified": "2026-11-04",
+   "author": {
+    "@type": "Person",
+    "name": "Leandro França de Mello"
+   },
+   "publisher": {
+    "@type": "Organization",
+    "@id": "https://www.refrain.com.br/#organization",
+    "name": "Refrain",
+    "url": "https://www.refrain.com.br/"
+   },
+   "mainEntityOfPage": "https://www.refrain.com.br/blog/como-aparecer-no-perplexity-perplexitybot-selos-de-fonte.html",
+   "citation": [
+    "https://docs.perplexity.ai/guides/bots",
+    "https://www.perplexity.ai/perplexitybot.json",
+    "https://www.perplexity.ai/perplexity-user.json",
+    "https://www.perplexity.ai/help-center/en/articles/10352895-how-does-perplexity-work",
+    "https://www.perplexity.ai/help-center/en/articles/20260806-understanding-source-labels"
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://www.refrain.com.br/blog/como-aparecer-no-perplexity-perplexitybot-selos-de-fonte.html#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "O PerplexityBot usa meu conteúdo para treinar modelos de IA?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Não, segundo a Perplexity. A documentação diz que o PerplexityBot serve para mostrar e linkar sites nos resultados de busca e não é usado para coletar conteúdo para modelos de IA de base."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Bloquear o Perplexity-User no robots.txt funciona?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Em geral, não. A Perplexity informa que, como a visita é pedida por um usuário, esse agente costuma ignorar as regras do robots.txt. O controle que vale para aparecer na busca é o do PerplexityBot."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Quanto tempo leva para valer uma mudança no robots.txt?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A Perplexity diz que pode levar até 24 horas para os sistemas refletirem a mudança."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "O Bot Fight Mode da Cloudflare atrapalha?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Pode atrapalhar. A Perplexity avisa que o Bot Fight Mode não pode ser pulado com regras personalizadas do WAF e pode continuar desafiando os robôs dela mesmo com a regra de liberação."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Preciso de um selo Trusted para ser citado?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Não. A Perplexity diz que a maioria dos domínios não tem selo e que a ausência dele não é um julgamento negativo. O selo só sinaliza que o site passou pela revisão de fontes."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Dá para pagar para ganhar selo ou aparecer mais?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A Perplexity afirma que os selos são definidos só pelo processo de revisão de fontes e que parcerias, pagamentos e outros acordos comerciais não afetam o selo."
+     }
+    }
+   ]
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Início",
+     "item": "https://www.refrain.com.br/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Blog",
+     "item": "https://www.refrain.com.br/blog/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Como aparecer no Perplexity: o que a própria Perplexity diz sobre robôs, firewall e selos de fonte",
+     "item": "https://www.refrain.com.br/blog/como-aparecer-no-perplexity-perplexitybot-selos-de-fonte.html"
+    }
+   ]
+  }
+ ]
+}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../config.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            charcoal: { 950: '#0B1220', 900: '#0f1218', 800: '#161b22', 700: '#1e2530', 600: '#2a3341' },
+            cyan: { DEFAULT: '#2F6BFF', dim: '#2557d6' },
+            teal: { DEFAULT: '#00A896' },
+            cream: { DEFAULT: '#F7F5F1' },
+            warn: { DEFAULT: '#E85D04' },
+            mist: '#a8b2c1',
+            snow: '#e8ecf1'
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
+          },
+          boxShadow: { 'glow-sm': '0 0 20px rgba(47,107,255,0.2)', glow: '0 0 40px rgba(47,107,255,0.15)' }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background: #0B1220; color: #e8ecf1; }
+    .nav-blur { backdrop-filter: blur(12px); background: rgba(11,18,32,0.85); }
+    .card-border { border: 1px solid rgba(42,51,65,0.9); }
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(47,107,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(47,107,255,0.03) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    .field-error { border-color: #E85D04 !important; }
+    .error-msg { color: #E85D04; font-size: 0.75rem; margin-top: 0.35rem; display: none; }
+    .error-msg.visible { display: block; }
+  </style>
+<script src="https://app.refrain.com.br/hub/refrain-1b85fe/geo.js" async></script>
+</head>
+<body class="font-sans antialiased">
+  <style>
+    .prose-r h2 { font-size:1.5rem; font-weight:700; color:#e8ecf1; margin-top:2.5rem; margin-bottom:.75rem; }
+    .prose-r p { color:#c9d1dc; line-height:1.75; margin-top:1rem; }
+    .prose-r ul, .prose-r ol { color:#c9d1dc; margin-top:1rem; padding-left:1.25rem; line-height:1.75; }
+    .prose-r ul { list-style:disc; } .prose-r ol { list-style:decimal; }
+    .prose-r a { color:#2F6BFF; text-decoration:underline; }
+    .prose-r table { width:100%; margin-top:1.25rem; border-collapse:collapse; font-size:.9rem; }
+    .prose-r th, .prose-r td { border:1px solid rgba(42,51,65,0.9); padding:.6rem .75rem; text-align:left; vertical-align:top; color:#c9d1dc; }
+    .prose-r th { background:#161b22; color:#e8ecf1; }
+    .prose-r code { font-family:'JetBrains Mono',monospace; font-size:.85em; background:#161b22; padding:.1rem .3rem; border-radius:.25rem; }
+  </style>
+<script src="https://app.refrain.com.br/hub/refrain-1b85fe/geo.js" async></script>
+</head>
+<body class="font-sans antialiased">
+  <header class="fixed top-0 inset-x-0 z-50 nav-blur border-b border-charcoal-600/50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="../index.html" class="flex items-center gap-2">
+        <img src="../assets/refrain-wordmark.svg" alt="Refrain" width="119" height="32" class="h-8 w-auto" />
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm text-mist">
+        <a href="../servicos.html" class="hover:text-cyan transition">Serviços</a>
+        <a href="../metodologia.html" class="hover:text-cyan transition">Metodologia</a>
+        <a href="../case-climatewise.html" class="hover:text-cyan transition">Case</a>
+        <a href="../orcamento.html" class="hover:text-cyan transition">Diagnóstico</a>
+        <a href="../index.html#pacotes" class="hover:text-cyan transition">Pacotes</a>
+        <a href="../precos.html" class="hover:text-cyan transition">Preços</a>
+        <a href="./" class="text-cyan">Blog</a>
+        <a href="../contato.html" class="hover:text-cyan transition">Contato</a>
+      </nav>
+      <a href="../orcamento.html" class="text-sm font-medium px-4 py-2 rounded-lg bg-cyan text-charcoal-950 hover:bg-cyan-dim transition shadow-glow-sm">Diagnóstico rápido</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="pt-28 pb-20 sm:pt-32 grid-bg">
+      <article class="max-w-3xl mx-auto px-4 sm:px-6">
+        <p class="text-cyan font-mono text-xs uppercase tracking-widest mb-3"><a href="./" class="hover:underline">Blog</a> · 4 de novembro de 2026</p>
+        <h1 class="text-3xl sm:text-4xl font-bold text-snow tracking-tight">Como aparecer no Perplexity: o que a própria Perplexity diz sobre robôs, firewall e selos de fonte</h1>
+        <div class="prose-r">
+        <p id="resposta"><strong>Para aparecer nas respostas do Perplexity, o seu site precisa estar acessível ao <code>PerplexityBot</code>, o robô que a Perplexity usa para mostrar e linkar sites nos resultados. Isso significa liberá-lo no robots.txt e no firewall, aceitando os IPs que a empresa publica. Depois disso, a chance de citação depende de ter páginas que respondam de forma direta às perguntas do seu cliente.</strong></p>
+        <p>Abaixo está o que a <a href="https://docs.perplexity.ai/guides/bots" rel="noopener">documentação oficial de robôs da Perplexity</a> e a central de ajuda dizem, traduzido para quem tem uma PME, um SaaS, uma clínica, um e-commerce ou uma escola.</p>
+
+        <h2>Como o Perplexity escolhe as fontes que cita?</h2>
+        <p>Segundo a <a href="https://www.perplexity.ai/help-center/en/articles/10352895-how-does-perplexity-work" rel="noopener">central de ajuda da Perplexity</a>, a ferramenta interpreta a pergunta, busca na internet em tempo real, resume as informações mais relevantes e coloca citações numeradas com link para as fontes originais em cada resposta.</p>
+        <p>Na prática, isso quer dizer que o Perplexity cita páginas que ele consegue encontrar e ler no momento da pergunta. Um site bloqueado ou que não responde à pergunta do cliente fica de fora, por melhor que seja a empresa.</p>
+
+        <h2>Quais robôs do Perplexity visitam o meu site?</h2>
+        <p>A Perplexity documenta dois agentes, e cada configuração funciona de forma independente:</p>
+        <table>
+          <thead><tr><th>Agente</th><th>Para que serve, segundo a Perplexity</th><th>O que fazer</th></tr></thead>
+          <tbody>
+            <tr><td><code>PerplexityBot</code></td><td>Mostrar e linkar sites nos resultados de busca do Perplexity. Não é usado para coletar conteúdo para modelos de IA de base.</td><td>Liberar no robots.txt e no firewall, com os <a href="https://www.perplexity.ai/perplexitybot.json" rel="noopener">IPs publicados</a></td></tr>
+            <tr><td><code>Perplexity-User</code></td><td>Visitar uma página quando um usuário faz uma pergunta, para dar uma resposta precisa e linkar a página. Não rastreia a web nem coleta conteúdo para treino.</td><td>Liberar no firewall com os <a href="https://www.perplexity.ai/perplexity-user.json" rel="noopener">IPs publicados</a>; o robots.txt em geral não se aplica a ele</td></tr>
+          </tbody>
+        </table>
+        <p>Um ponto que confunde muita gente: como a visita do <code>Perplexity-User</code> é pedida por um usuário, a Perplexity diz que esse agente geralmente ignora as regras do robots.txt. Já o <code>PerplexityBot</code> segue o robots.txt, e mudanças podem levar até 24 horas para valer. Para a lista de robôs de outras IAs, veja nosso guia de <a href="robots-txt-para-ia-gptbot-oai-searchbot-perplexitybot-claudebot.html">robots.txt para IA</a>.</p>
+
+        <h2>Liberar no robots.txt basta?</h2>
+        <p>Nem sempre. Se o site está atrás de um WAF (firewall de aplicação web), como o da Cloudflare ou da AWS, o robots.txt pode dizer “pode entrar” enquanto o firewall bloqueia ou desafia o robô. A Perplexity recomenda liberar explicitamente os dois agentes, combinando o user-agent com a faixa de IPs oficial de cada um, para não abrir a porta a robôs falsos.</p>
+        <ul>
+          <li><strong>Cloudflare:</strong> criar uma regra personalizada com ação <em>Skip</em> que case o user-agent com os IPs de cada robô e colocá-la acima das regras que bloqueiam. A Perplexity avisa que o <em>Bot Fight Mode</em> não pode ser pulado por regra personalizada e pode continuar desafiando os robôs.</li>
+          <li><strong>AWS WAF:</strong> criar um conjunto de IPs para cada robô e uma regra de <em>Allow</em> que combine o IP com o user-agent, com prioridade acima das regras de bloqueio.</li>
+          <li><strong>Atualização:</strong> as faixas de IP mudam. A Perplexity recomenda buscar as listas oficiais periodicamente e atualizar as regras.</li>
+        </ul>
+
+        <h2>Como checar se o meu site está acessível ao Perplexity?</h2>
+        <ol>
+          <li>Abra <code>seudominio.com.br/robots.txt</code> e confira se não há <code>Disallow: /</code> para <code>PerplexityBot</code> ou para todos os robôs (<code>User-agent: *</code>).</li>
+          <li>Se quiser deixar explícito, adicione <code>User-agent: PerplexityBot</code> e <code>Allow: /</code>.</li>
+          <li>Pergunte a quem cuida do site, ou veja o painel do CDN, se existe proteção contra robôs ligada por padrão, como o Bot Fight Mode.</li>
+          <li>Nos logs do servidor, procure visitas com <code>PerplexityBot</code> ou <code>Perplexity-User</code> no user-agent e confira se recebem resposta 200, e não 403 ou desafio.</li>
+          <li>Depois de 24 horas, faça no Perplexity as perguntas que o seu cliente faria e veja se o seu site aparece entre as fontes.</li>
+        </ol>
+
+        <h2>O que são os selos Government, Academic e Trusted?</h2>
+        <p>Em alguns resultados, a Perplexity mostra um pequeno escudo ao lado da fonte. Segundo o artigo <a href="https://www.perplexity.ai/help-center/en/articles/20260806-understanding-source-labels" rel="noopener">Understanding source labels</a>, o selo indica um domínio avaliado pelo processo de revisão de fontes da empresa, em três categorias: Government (sites oficiais de governo), Academic (sites científicos) e Trusted (sites que aparecem com frequência nos resultados e publicam dentro da própria área de especialidade).</p>
+        <p>A avaliação vale para o site inteiro, não para cada página, e parte de perguntas objetivas, como:</p>
+        <ul>
+          <li>O site corrige os próprios erros?</li>
+          <li>Diz quem escreveu cada texto?</li>
+          <li>Separa notícia de publicidade e de opinião?</li>
+        </ul>
+        <p>A Perplexity afirma que parcerias, pagamentos e acordos comerciais não influenciam o selo, que a maioria dos domínios não tem selo e que não ter selo não é um julgamento negativo. A empresa não diz que o selo muda a chance de citação, então trate esses critérios como boas práticas de credibilidade, não como atalho.</p>
+
+        <h2>O que aumenta a chance de ser citado?</h2>
+        <p>A Perplexity não publica uma fórmula de ranqueamento. O que dá para afirmar a partir da documentação é que ela busca e lê páginas em tempo real para montar respostas com fontes. Então ajuda ter:</p>
+        <ul>
+          <li>Páginas que respondem às perguntas de compra do seu mercado (preço, comparação, para quem serve, como funciona, onde fica), com a resposta no primeiro parágrafo.</li>
+          <li>Autoria visível, data de atualização e uma política de correção, que são os mesmos sinais que a Perplexity usa na revisão de fontes.</li>
+          <li>Informação atualizada e consistente com o que aparece em outros sites sobre a sua empresa.</li>
+          <li>Complementos que organizam o site, como <a href="dados-estruturados-schema-org-ajudam-aparecer-chatgpt-google-ia.html">dados estruturados</a> e um <a href="llms-txt-o-que-e-como-criar-chatgpt-perplexity-gemini.html">llms.txt</a>, sem esquecer que eles não substituem conteúdo útil e acesso liberado.</li>
+        </ul>
+        <p>O raciocínio é o mesmo que vale para a <a href="como-aparecer-na-busca-do-chatgpt-oai-searchbot.html">busca do ChatGPT</a>: primeiro garantir que o robô entra, depois garantir que ele encontra uma resposta boa.</p>
+
+        <h2 id="faq">Perguntas frequentes</h2>
+        </div>
+        <div class="space-y-3 mt-4"><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">O PerplexityBot usa meu conteúdo para treinar modelos de IA?</summary><p class="mt-2 text-mist text-sm">Não, segundo a Perplexity. A documentação diz que o PerplexityBot serve para mostrar e linkar sites nos resultados de busca e não é usado para coletar conteúdo para modelos de IA de base.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Bloquear o Perplexity-User no robots.txt funciona?</summary><p class="mt-2 text-mist text-sm">Em geral, não. A Perplexity informa que, como a visita é pedida por um usuário, esse agente costuma ignorar as regras do robots.txt. O controle que vale para aparecer na busca é o do PerplexityBot.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Quanto tempo leva para valer uma mudança no robots.txt?</summary><p class="mt-2 text-mist text-sm">A Perplexity diz que pode levar até 24 horas para os sistemas refletirem a mudança.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">O Bot Fight Mode da Cloudflare atrapalha?</summary><p class="mt-2 text-mist text-sm">Pode atrapalhar. A Perplexity avisa que o Bot Fight Mode não pode ser pulado com regras personalizadas do WAF e pode continuar desafiando os robôs dela mesmo com a regra de liberação.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Preciso de um selo Trusted para ser citado?</summary><p class="mt-2 text-mist text-sm">Não. A Perplexity diz que a maioria dos domínios não tem selo e que a ausência dele não é um julgamento negativo. O selo só sinaliza que o site passou pela revisão de fontes.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Dá para pagar para ganhar selo ou aparecer mais?</summary><p class="mt-2 text-mist text-sm">A Perplexity afirma que os selos são definidos só pelo processo de revisão de fontes e que parcerias, pagamentos e outros acordos comerciais não afetam o selo.</p></details></div>
+        <div class="prose-r"><h2>Fontes</h2><ul><li><a href="https://docs.perplexity.ai/guides/bots" rel="noopener">https://docs.perplexity.ai/guides/bots</a></li><li><a href="https://www.perplexity.ai/perplexitybot.json" rel="noopener">https://www.perplexity.ai/perplexitybot.json</a></li><li><a href="https://www.perplexity.ai/perplexity-user.json" rel="noopener">https://www.perplexity.ai/perplexity-user.json</a></li><li><a href="https://www.perplexity.ai/help-center/en/articles/10352895-how-does-perplexity-work" rel="noopener">https://www.perplexity.ai/help-center/en/articles/10352895-how-does-perplexity-work</a></li><li><a href="https://www.perplexity.ai/help-center/en/articles/20260806-understanding-source-labels" rel="noopener">https://www.perplexity.ai/help-center/en/articles/20260806-understanding-source-labels</a></li></ul></div>
+        <div class="mt-12 rounded-2xl card-border bg-charcoal-800 p-6">
+          <p class="text-snow font-semibold text-lg">Quer saber se as IAs já citam a sua marca?</p>
+          <p class="mt-2 text-mist text-sm">O Gabarito GEO da Refrain testa perguntas de compra no ChatGPT, Perplexity e Gemini e entrega score, gaps priorizados e checklist em minutos, incluindo a checagem de acesso dos robôs de IA ao seu site. R$ 497, pagamento único.</p>
+          <div class="mt-4 flex flex-wrap gap-3"><a href="../precos.html" class="text-sm font-medium px-4 py-2 rounded-lg bg-cyan text-charcoal-950 hover:bg-cyan-dim transition">Ver preços do Gabarito</a><a href="../orcamento.html" class="text-sm font-medium px-4 py-2 rounded-lg border border-charcoal-600 text-snow hover:border-cyan/40 hover:text-cyan transition">Fazer diagnóstico rápido</a></div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="border-t border-charcoal-700 py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row justify-between gap-8">
+      <div>
+        <a href="../index.html" class="inline-block" aria-label="Refrain — início"><img src="../assets/refrain-wordmark.svg" alt="Refrain" width="104" height="28" class="h-7 w-auto" /></a>
+        <p class="mt-2 text-sm text-mist max-w-xs">Seja o refrão que a IA repete. GEO + Caçador de Citações.</p>
+        <p class="mt-2 text-sm text-mist"><a href="mailto:contato@refrain.com.br" class="hover:text-cyan">contato@refrain.com.br</a></p>
+      </div>
+      <div class="flex flex-wrap gap-8 text-sm text-mist">
+        <div class="space-y-2">
+          <p class="text-snow font-medium text-xs uppercase tracking-wider">Site</p>
+          <a href="../servicos.html" class="block hover:text-cyan">Serviços</a>
+          <a href="../metodologia.html" class="block hover:text-cyan">Metodologia</a>
+          <a href="../case-climatewise.html" class="block hover:text-cyan">Case</a>
+          <a href="../orcamento.html" class="block hover:text-cyan">Diagnóstico</a>
+          <a href="../precos.html" class="block hover:text-cyan">Preços</a>
+          <a href="./" class="block hover:text-cyan">Blog</a>
+          <a href="../contato.html" class="block hover:text-cyan">Contato</a>
+          <a href="../portal.html" class="block hover:text-cyan">Portal</a>
+        </div>
+        <div class="space-y-2">
+          <p class="text-snow font-medium text-xs uppercase tracking-wider">Legal</p>
+          <a href="../privacidade.html" class="block hover:text-cyan">Privacidade</a>
+          <a href="../termos.html" class="block hover:text-cyan">Termos</a>
+          <a href="../llms.txt" class="block hover:text-cyan font-mono text-xs">llms.txt</a>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 mt-10 pt-6 border-t border-charcoal-700 text-xs text-mist/50">
+      © 2026 Refrain · Leandro França de Mello
+    </div>
+  </footer>
+<script src="https://app.refrain.com.br/chat-widget.js" async></script>
+</body>
+</html>
+
+
