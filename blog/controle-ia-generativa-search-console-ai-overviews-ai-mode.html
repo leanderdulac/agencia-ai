@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Controle de IA generativa no Search Console: incluir ou excluir o site das Visões gerais e do Modo IA | Blog Refrain</title>
+  <meta name="description" content="Desde 31 de agosto de 2026, o Search Console tem um controle para incluir ou excluir o site das Visões gerais criadas por IA, do Modo IA e dos recursos de IA no Discover. Veja como usar, medir e não confundir com Google-Extended ou noindex." />
+  <link rel="canonical" href="https://www.refrain.com.br/blog/controle-ia-generativa-search-console-ai-overviews-ai-mode.html" />
+  <meta property="og:title" content="Controle de IA generativa no Search Console: incluir ou excluir o site das Visões gerais e do Modo IA" />
+  <meta property="og:description" content="Desde 31 de agosto de 2026, o Search Console tem um controle para incluir ou excluir o site das Visões gerais criadas por IA, do Modo IA e dos recursos de IA no Discover. Veja como usar, medir e não confundir com Google-Extended ou noindex." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.refrain.com.br/blog/controle-ia-generativa-search-console-ai-overviews-ai-mode.html" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Refrain" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Article",
+   "@id": "https://www.refrain.com.br/blog/controle-ia-generativa-search-console-ai-overviews-ai-mode.html#article",
+   "headline": "Controle de IA generativa no Search Console: incluir ou excluir o site das Visões gerais e do Modo IA",
+   "description": "Desde 31 de agosto de 2026, o Search Console tem um controle para incluir ou excluir o site das Visões gerais criadas por IA, do Modo IA e dos recursos de IA no Discover. Veja como usar, medir e não confundir com Google-Extended ou noindex.",
+   "inLanguage": "pt-BR",
+   "datePublished": "2026-11-05",
+   "dateModified": "2026-11-05",
+   "author": {
+    "@type": "Person",
+    "name": "Leandro França de Mello"
+   },
+   "publisher": {
+    "@type": "Organization",
+    "@id": "https://www.refrain.com.br/#organization",
+    "name": "Refrain",
+    "url": "https://www.refrain.com.br/"
+   },
+   "mainEntityOfPage": "https://www.refrain.com.br/blog/controle-ia-generativa-search-console-ai-overviews-ai-mode.html",
+   "citation": [
+    "https://support.google.com/webmasters/answer/16908024?hl=pt-BR",
+    "https://support.google.com/webmasters/answer/16984139?hl=pt-BR",
+    "https://developers.google.com/search/docs/appearance/ai-features?hl=pt-BR",
+    "https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers?hl=pt-BR"
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://www.refrain.com.br/blog/controle-ia-generativa-search-console-ai-overviews-ai-mode.html#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": 'Excluir o site das Visões gerais e do Modo IA tira o site da Pesquisa Google?',
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": 'Não. Segundo o Google, o controle afeta só a exibição em recursos de IA generativa na Pesquisa. O conteúdo ainda pode ser usado na Pesquisa em geral. Para impedir a aparição na Pesquisa Google, use noindex.'
+     }
+    },
+    {
+     "@type": "Question",
+     "name": 'Esse controle impede o Google de treinar modelos com o meu conteúdo?',
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": 'Não. O Google afirma que o controle de IA generativa da Pesquisa não afeta o treinamento de IA. Para limitar treinamento e embasamento em apps do Gemini e na Vertex AI, use o token Google-Extended no robots.txt.'
+     }
+    },
+    {
+     "@type": "Question",
+     "name": 'Quanto tempo leva para a exclusão valer?',
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": 'O Google diz que, em geral, o conteúdo é excluído em 1 ou 2 dias após ativar o controle; alguns materiais podem levar mais por causa de cache e propagação nos sistemas.'
+     }
+    },
+    {
+     "@type": "Question",
+     "name": 'Por que o Relatório de performance da IA generativa não abre no meu Search Console?',
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": 'Segundo o Google, isso costuma acontecer quando o site não recebe impressões suficientes nesses recursos — ou porque você excluiu o site. Para poder aparecer, inclua o site nos recursos de IA generativa na Pesquisa.'
+     }
+    },
+    {
+     "@type": "Question",
+     "name": 'A exclusão vale como sinal de ranking?',
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": 'Não. O Google declara que esse controle não é usado como indicador de classificação ou de inclusão para outras partes da Pesquisa, e que não substitui opções como Merchant Center e Google Ads.'
+     }
+    },
+    {
+     "@type": "Question",
+     "name": 'Preciso de otimização especial além desse controle para aparecer nas Visões gerais?',
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": 'Não há requisito técnico extra. O Google diz que basta a página estar indexada e qualificada para snippet. O controle do Search Console só decide se o site pode participar desses recursos de IA; a elegibilidade técnica continua a mesma.'
+     }
+    }
+   ]
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Início",
+     "item": "https://www.refrain.com.br/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Blog",
+     "item": "https://www.refrain.com.br/blog/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Controle de IA generativa no Search Console: incluir ou excluir o site das Visões gerais e do Modo IA",
+     "item": "https://www.refrain.com.br/blog/controle-ia-generativa-search-console-ai-overviews-ai-mode.html"
+    }
+   ]
+  }
+ ]
+}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../config.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            charcoal: { 950: '#0B1220', 900: '#0f1218', 800: '#161b22', 700: '#1e2530', 600: '#2a3341' },
+            cyan: { DEFAULT: '#2F6BFF', dim: '#2557d6' },
+            teal: { DEFAULT: '#00A896' },
+            cream: { DEFAULT: '#F7F5F1' },
+            warn: { DEFAULT: '#E85D04' },
+            mist: '#a8b2c1',
+            snow: '#e8ecf1'
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
+          },
+          boxShadow: { 'glow-sm': '0 0 20px rgba(47,107,255,0.2)', glow: '0 0 40px rgba(47,107,255,0.15)' }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background: #0B1220; color: #e8ecf1; }
+    .nav-blur { backdrop-filter: blur(12px); background: rgba(11,18,32,0.85); }
+    .card-border { border: 1px solid rgba(42,51,65,0.9); }
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(47,107,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(47,107,255,0.03) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    .field-error { border-color: #E85D04 !important; }
+    .error-msg { color: #E85D04; font-size: 0.75rem; margin-top: 0.35rem; display: none; }
+    .error-msg.visible { display: block; }
+  </style>
+<script src="https://app.refrain.com.br/hub/refrain-1b85fe/geo.js" async></script>
+</head>
+<body class="font-sans antialiased">
+  <style>
+    .prose-r h2 { font-size:1.5rem; font-weight:700; color:#e8ecf1; margin-top:2.5rem; margin-bottom:.75rem; }
+    .prose-r p { color:#c9d1dc; line-height:1.75; margin-top:1rem; }
+    .prose-r ul, .prose-r ol { color:#c9d1dc; margin-top:1rem; padding-left:1.25rem; line-height:1.75; }
+    .prose-r ul { list-style:disc; } .prose-r ol { list-style:decimal; }
+    .prose-r a { color:#2F6BFF; text-decoration:underline; }
+    .prose-r table { width:100%; margin-top:1.25rem; border-collapse:collapse; font-size:.9rem; }
+    .prose-r th, .prose-r td { border:1px solid rgba(42,51,65,0.9); padding:.6rem .75rem; text-align:left; vertical-align:top; color:#c9d1dc; }
+    .prose-r th { background:#161b22; color:#e8ecf1; }
+    .prose-r code { font-family:'JetBrains Mono',monospace; font-size:.85em; background:#161b22; padding:.1rem .3rem; border-radius:.25rem; }
+  </style>
+  <header class="fixed top-0 inset-x-0 z-50 nav-blur border-b border-charcoal-600/50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="../index.html" class="flex items-center gap-2">
+        <img src="../assets/refrain-wordmark.svg" alt="Refrain" width="119" height="32" class="h-8 w-auto" />
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm text-mist">
+        <a href="../servicos.html" class="hover:text-cyan transition">Serviços</a>
+        <a href="../metodologia.html" class="hover:text-cyan transition">Metodologia</a>
+        <a href="../case-climatewise.html" class="hover:text-cyan transition">Case</a>
+        <a href="../orcamento.html" class="hover:text-cyan transition">Diagnóstico</a>
+        <a href="../index.html#pacotes" class="hover:text-cyan transition">Pacotes</a>
+        <a href="../precos.html" class="hover:text-cyan transition">Preços</a>
+        <a href="./" class="text-cyan">Blog</a>
+        <a href="../contato.html" class="hover:text-cyan transition">Contato</a>
+      </nav>
+      <a href="../orcamento.html" class="text-sm font-medium px-4 py-2 rounded-lg bg-cyan text-charcoal-950 hover:bg-cyan-dim transition shadow-glow-sm">Diagnóstico rápido</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="pt-28 pb-20 sm:pt-32 grid-bg">
+      <article class="max-w-3xl mx-auto px-4 sm:px-6">
+        <p class="text-cyan font-mono text-xs uppercase tracking-widest mb-3"><a href="./" class="hover:underline">Blog</a> · 5 de novembro de 2026</p>
+        <h1 class="text-3xl sm:text-4xl font-bold text-snow tracking-tight">Controle de IA generativa no Search Console: incluir ou excluir o site das Visões gerais e do Modo IA</h1>
+        <div class="prose-r">
+        <p id="resposta"><strong>Desde 31 de agosto de 2026, o Google Search Console oferece um controle mundial para incluir ou excluir o site das Visões gerais criadas por IA, do Modo IA e dos recursos de IA generativa no Discover. A opção fica em Configurações &gt; IA generativa na Pesquisa; a exclusão costuma valer em 1 ou 2 dias e não é sinal de ranking.</strong></p>
+        <p>Este guia resume o que a <a href="https://support.google.com/webmasters/answer/16908024?hl=pt-BR" rel="noopener">ajuda oficial do Search Console</a> e a documentação de <a href="https://developers.google.com/search/docs/appearance/ai-features?hl=pt-BR" rel="noopener">recursos de IA na Pesquisa</a> dizem. Complementa o nosso artigo sobre <a href="como-aparecer-nas-visoes-gerais-criadas-por-ia-do-google.html">como aparecer nas Visões gerais criadas por IA</a>: lá está a elegibilidade técnica; aqui, o controle novo de participação.</p>
+
+        <h2>O que é o controle de IA generativa do Search Console?</h2>
+        <p>É uma configuração por propriedade no Search Console que decide se links e conteúdo do seu site podem aparecer em certos recursos de IA generativa da Pesquisa Google.</p>
+        <p>Segundo o Google, você acessa em <strong>Configurações &gt; IA generativa na Pesquisa</strong>. O padrão para propriedades sem mãe configurada é incluir o site. Se existir propriedade mãe, a filha pode herdar essa escolha até alguém sobrescrever manualmente.</p>
+
+        <h2>Quais recursos do Google esse controle afeta?</h2>
+        <p>A documentação lista três áreas (e diz que a lista pode crescer conforme a Pesquisa evolui):</p>
+        <ul>
+          <li><strong>Visões gerais criadas por IA</strong> (AI Overviews)</li>
+          <li><strong>Modo IA</strong> (AI Mode)</li>
+          <li><strong>Recursos de IA generativa no Google Discover</strong></li>
+        </ul>
+        <p>O Google deixa claro o que o controle <em>não</em> faz: não substitui Merchant Center nem Google Ads; não é indicador de classificação; o conteúdo ainda pode ser usado na Pesquisa em geral; e <strong>não afeta treinamento de IA</strong>.</p>
+
+        <h2>Incluir, excluir ou herdar: o que cada opção faz?</h2>
+        <ol>
+          <li><strong>Incluir</strong> — conteúdo e links podem aparecer nesses recursos de IA, inclusive ajudando a fundamentar respostas. O site pode receber impressões e tráfego. É o padrão.</li>
+          <li><strong>Excluir</strong> — o conteúdo não aparece para usuários nesses recursos (nem como link nem como base da resposta). Você deixa de receber tráfego e impressões deles. Outros sites continuam disponíveis e podem parecer semelhantes ao seu.</li>
+          <li><strong>Herdar da propriedade mãe</strong> — a propriedade segue a configuração da mãe mais próxima que interrompeu a herança. Você pode sobrescrever a qualquer momento. Donos do domínio de nível superior recebem aviso quando uma filha sobrescreve.</li>
+        </ol>
+        <p>Antes de mudar, o Google recomenda olhar o <a href="https://support.google.com/webmasters/answer/16984139?hl=pt-BR" rel="noopener">Relatório de performance da IA generativa</a> para estimar o impacto no tráfego.</p>
+
+        <h2>Qual a diferença entre esse controle, o Google-Extended e o noindex?</h2>
+        <p>São ferramentas diferentes. Misturá-las é o erro mais comum depois do lançamento.</p>
+        <table>
+          <thead><tr><th>Controle</th><th>O que faz, segundo o Google</th><th>O que não faz</th></tr></thead>
+          <tbody>
+            <tr><td><strong>IA generativa no Search Console</strong> (Incluir / Excluir)</td><td>Decide se o site aparece em Visões gerais, Modo IA e IA no Discover (links e grounding nesses recursos).</td><td>Não remove o site da Pesquisa clássica; não afeta treino; não é sinal de ranking.</td></tr>
+            <tr><td><strong>Google-Extended</strong> (robots.txt)</td><td>Controla uso do conteúdo para treinar modelos Gemini (apps Gemini e Vertex AI) e para embasamento em apps Gemini e Embasamento com a Pesquisa Google na Vertex AI.</td><td>Não afeta inclusão nem ranking na Pesquisa Google.</td></tr>
+            <tr><td><strong>noindex</strong></td><td>Impede que a página apareça na Pesquisa Google.</td><td>É bem mais amplo: tira a página da busca, não só dos recursos de IA.</td></tr>
+            <tr><td><strong>nosnippet / data-nosnippet / max-snippet</strong></td><td>Limitam o que pode aparecer em prévias na Pesquisa.</td><td>Não são o botão Incluir/Excluir do Search Console; o Google os cita como controles de visualização junto com noindex.</td></tr>
+          </tbody>
+        </table>
+        <p>Para treino e grounding fora desses recursos de IA da Pesquisa, o caminho documentado é o <code>Google-Extended</code> na lista de <a href="https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers?hl=pt-BR" rel="noopener">rastreadores comuns do Google</a>. Para liberar ou bloquear robôs de outras IAs, veja nosso guia de <a href="robots-txt-para-ia-gptbot-oai-searchbot-perplexitybot-claudebot.html">robots.txt para IA</a>.</p>
+
+        <h2>Como medir se o site aparece nas Visões gerais e no Modo IA?</h2>
+        <p>Use o <strong>Relatório de performance da IA generativa</strong> no Search Console (também lançado mundialmente em 31 de agosto de 2026). Ele mostra impressões dos recursos de IA generativa na Pesquisa.</p>
+        <p>O relatório inclui impressões de:</p>
+        <ul>
+          <li>Visões gerais criadas por IA</li>
+          <li>Modo IA</li>
+        </ul>
+        <p>Para o Discover, o Google aponta um relatório separado de performance da IA generativa no Discover. Dados de experimentos do Search Labs não entram, porque ainda estão em desenvolvimento.</p>
+        <p>Dimensões disponíveis: páginas, países, datas e dispositivos. Há filtro por tipo de pesquisa (web baseada em texto ou web multimodal, incluindo Lens e Circule para Pesquisar). Impressões contam quantas vezes links do site foram mostrados a um usuário nesses recursos.</p>
+        <p>Se o relatório não abrir, o Google diz que isso costuma ocorrer por poucas impressões — ou porque o site está excluído. Tráfego desses recursos também entra no relatório de performance geral (tipo Web), junto com o restante da Pesquisa.</p>
+
+        <h2>Quanto tempo leva para a exclusão valer?</h2>
+        <p>Depois de mudar o controle, o Google afirma que o conteúdo costuma ser excluído dos recursos relevantes em <strong>1 ou 2 dias</strong>. Alguns materiais podem demorar mais por cache e propagação.</p>
+        <p>Isso é diferente do prazo de rastreamento de tags como nosnippet ou noindex, que depende de o Googlebot revisitar a página (de dias a meses). O controle do Search Console é uma configuração da propriedade, não uma meta tag por URL.</p>
+
+        <h2>O que continua valendo para ser elegível?</h2>
+        <p>O controle só decide se o site <em>pode</em> participar. Para aparecer como link de suporte, a documentação de recursos de IA repete: a página precisa estar <strong>indexada</strong> e <strong>qualificada para snippet</strong>. Não há requisito técnico extra nem schema especial.</p>
+        <p>Práticas de SEO que o Google continua citando: permitir rastreamento do Googlebot, conteúdo útil em texto, boa experiência na página, dados estruturados alinhados ao texto visível. Detalhes no nosso guia de <a href="como-aparecer-nas-visoes-gerais-criadas-por-ia-do-google.html">Visões gerais criadas por IA</a>.</p>
+
+        <h2 id="faq">Perguntas frequentes</h2>
+        </div>
+        <div class="space-y-3 mt-4"><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Excluir o site das Visões gerais e do Modo IA tira o site da Pesquisa Google?</summary><p class="mt-2 text-mist text-sm">Não. Segundo o Google, o controle afeta só a exibição em recursos de IA generativa na Pesquisa. O conteúdo ainda pode ser usado na Pesquisa em geral. Para impedir a aparição na Pesquisa Google, use noindex.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Esse controle impede o Google de treinar modelos com o meu conteúdo?</summary><p class="mt-2 text-mist text-sm">Não. O Google afirma que o controle de IA generativa da Pesquisa não afeta o treinamento de IA. Para limitar treinamento e embasamento em apps do Gemini e na Vertex AI, use o token Google-Extended no robots.txt.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Quanto tempo leva para a exclusão valer?</summary><p class="mt-2 text-mist text-sm">O Google diz que, em geral, o conteúdo é excluído em 1 ou 2 dias após ativar o controle; alguns materiais podem levar mais por causa de cache e propagação nos sistemas.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Por que o Relatório de performance da IA generativa não abre no meu Search Console?</summary><p class="mt-2 text-mist text-sm">Segundo o Google, isso costuma acontecer quando o site não recebe impressões suficientes nesses recursos — ou porque você excluiu o site. Para poder aparecer, inclua o site nos recursos de IA generativa na Pesquisa.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">A exclusão vale como sinal de ranking?</summary><p class="mt-2 text-mist text-sm">Não. O Google declara que esse controle não é usado como indicador de classificação ou de inclusão para outras partes da Pesquisa, e que não substitui opções como Merchant Center e Google Ads.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Preciso de otimização especial além desse controle para aparecer nas Visões gerais?</summary><p class="mt-2 text-mist text-sm">Não há requisito técnico extra. O Google diz que basta a página estar indexada e qualificada para snippet. O controle do Search Console só decide se o site pode participar desses recursos de IA; a elegibilidade técnica continua a mesma.</p></details></div>
+        <div class="prose-r"><h2>Fontes</h2><ul><li><a href="https://support.google.com/webmasters/answer/16908024?hl=pt-BR" rel="noopener">https://support.google.com/webmasters/answer/16908024</a> — Controle de uso na IA generativa da Pesquisa</li><li><a href="https://support.google.com/webmasters/answer/16984139?hl=pt-BR" rel="noopener">https://support.google.com/webmasters/answer/16984139</a> — Relatório de performance da IA generativa</li><li><a href="https://developers.google.com/search/docs/appearance/ai-features?hl=pt-BR" rel="noopener">https://developers.google.com/search/docs/appearance/ai-features</a> — Recursos de IA e seu site</li><li><a href="https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers?hl=pt-BR" rel="noopener">https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers</a> — Google-Extended e rastreadores comuns</li></ul></div>
+        <div class="mt-12 rounded-2xl card-border bg-charcoal-800 p-6">
+          <p class="text-snow font-semibold text-lg">Quer saber se as IAs já citam a sua marca?</p>
+          <p class="mt-2 text-mist text-sm">O Gabarito GEO da Refrain testa perguntas de compra no ChatGPT, Perplexity e Gemini e entrega score, gaps priorizados e checklist em minutos, incluindo a checagem de acesso dos robôs de IA ao seu site. R$ 497, pagamento único.</p>
+          <div class="mt-4 flex flex-wrap gap-3"><a href="../precos.html" class="text-sm font-medium px-4 py-2 rounded-lg bg-cyan text-charcoal-950 hover:bg-cyan-dim transition">Ver preços do Gabarito</a><a href="../orcamento.html" class="text-sm font-medium px-4 py-2 rounded-lg border border-charcoal-600 text-snow hover:border-cyan/40 hover:text-cyan transition">Fazer diagnóstico rápido</a></div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="border-t border-charcoal-700 py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row justify-between gap-8">
+      <div>
+        <a href="../index.html" class="inline-block" aria-label="Refrain — início"><img src="../assets/refrain-wordmark.svg" alt="Refrain" width="104" height="28" class="h-7 w-auto" /></a>
+        <p class="mt-2 text-sm text-mist max-w-xs">Seja o refrão que a IA repete. GEO + Caçador de Citações.</p>
+        <p class="mt-2 text-sm text-mist"><a href="mailto:contato@refrain.com.br" class="hover:text-cyan">contato@refrain.com.br</a></p>
+      </div>
+      <div class="flex flex-wrap gap-8 text-sm text-mist">
+        <div class="space-y-2">
+          <p class="text-snow font-medium text-xs uppercase tracking-wider">Site</p>
+          <a href="../servicos.html" class="block hover:text-cyan">Serviços</a>
+          <a href="../metodologia.html" class="block hover:text-cyan">Metodologia</a>
+          <a href="../case-climatewise.html" class="block hover:text-cyan">Case</a>
+          <a href="../orcamento.html" class="block hover:text-cyan">Diagnóstico</a>
+          <a href="../precos.html" class="block hover:text-cyan">Preços</a>
+          <a href="./" class="block hover:text-cyan">Blog</a>
+          <a href="../contato.html" class="block hover:text-cyan">Contato</a>
+          <a href="../portal.html" class="block hover:text-cyan">Portal</a>
+        </div>
+        <div class="space-y-2">
+          <p class="text-snow font-medium text-xs uppercase tracking-wider">Legal</p>
+          <a href="../privacidade.html" class="block hover:text-cyan">Privacidade</a>
+          <a href="../termos.html" class="block hover:text-cyan">Termos</a>
+          <a href="../llms.txt" class="block hover:text-cyan font-mono text-xs">llms.txt</a>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 mt-10 pt-6 border-t border-charcoal-700 text-xs text-mist/50">
+      © 2026 Refrain · Leandro França de Mello
+    </div>
+  </footer>
+<script src="https://app.refrain.com.br/chat-widget.js" async></script>
+</body>
+</html>
