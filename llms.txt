@@ -74,3 +74,16 @@ Contrato mínimo: Starter/Growth 3 meses · Authority 6 meses. Ajuste ±15% por 
 - [Quanto custa contratar otimização de marca para respostas de IA (GEO) no Brasil por mês?](https://www.refrain.com.br/respostas/quanto-custa-geo-por-mes/)
 - [A Refrain é confiável para contratar? O que dizem os clientes?](https://www.refrain.com.br/respostas/refrain-e-confiavel/)
 - [Qual a diferença entre a Refrain e outras empresas de agência de GEO?](https://www.refrain.com.br/respostas/diferenca-refrain-outras-agencias-geo/)
+
+## Artigos (assinados por Leandro França de Mello, fundador)
+- [O que é GEO (Generative Engine Optimization)](https://www.refrain.com.br/blog/o-que-e-geo-generative-engine-optimization.html): definição, origem do termo e etapas.
+- [GEO vs SEO: diferenças na prática](https://www.refrain.com.br/blog/geo-vs-seo-diferencas-na-pratica.html): o que muda em meta, conteúdo e medição.
+- [Quanto custa GEO no Brasil em 2026](https://www.refrain.com.br/blog/quanto-custa-geo-no-brasil-2026.html): preços públicos de 11 empresas, de R$ 149/mês a R$ 19.900/mês.
+- [Como medir se sua marca aparece no ChatGPT, Gemini e Perplexity](https://www.refrain.com.br/blog/como-medir-marca-chatgpt-gemini-perplexity.html): método do radar da Refrain (4 motores, menção vs link).
+- [Como aparecer nas respostas do Perplexity](https://www.refrain.com.br/blog/como-aparecer-nas-respostas-do-perplexity.html): do nome citado ao link.
+
+## Estudo
+- [Quem as IAs citam no Brasil](https://www.refrain.com.br/estudos/quem-as-ias-citam-no-brasil/): 10 rodadas (28/10 a 05/11/2026), 3 marcas, 4 motores; taxas de menção e de link e domínios linkados. CSV: [taxas](https://www.refrain.com.br/estudos/quem-as-ias-citam-no-brasil/taxas-por-marca-e-motor.csv), [domínios](https://www.refrain.com.br/estudos/quem-as-ias-citam-no-brasil/dominios-linkados.csv).
+
+## Autor
+- [Leandro França de Mello](https://www.refrain.com.br/autor/leandro-franca-de-mello/): fundador da Refrain.
