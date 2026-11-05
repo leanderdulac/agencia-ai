@@ -1,0 +1,13 @@
+marca,mercado,site,motor,respostas_validas,respostas_com_erro,com_mencao,com_link,taxa_mencao_pct,taxa_link_pct,periodo_inicio,periodo_fim,rodadas
+Refrain,GEO (otimização para respostas de IA),https://www.refrain.com.br,ChatGPT,28,16,14,0,50.0,0.0,2026-10-28,2026-11-05,10
+Refrain,GEO (otimização para respostas de IA),https://www.refrain.com.br,Perplexity,44,0,22,3,50.0,6.8,2026-10-28,2026-11-05,10
+Refrain,GEO (otimização para respostas de IA),https://www.refrain.com.br,Gemini,32,4,16,2,50.0,6.2,2026-10-28,2026-11-05,10
+Refrain,GEO (otimização para respostas de IA),https://www.refrain.com.br,Google AI Mode,36,0,18,9,50.0,25.0,2026-10-28,2026-11-05,10
+Tributus,IA tributária,https://www.tributus.net,ChatGPT,28,16,28,21,100.0,75.0,2026-10-28,2026-11-05,10
+Tributus,IA tributária,https://www.tributus.net,Perplexity,44,0,21,4,47.7,9.1,2026-10-28,2026-11-05,10
+Tributus,IA tributária,https://www.tributus.net,Gemini,32,4,32,32,100.0,100.0,2026-10-28,2026-11-05,10
+Tributus,IA tributária,https://www.tributus.net,Google AI Mode,36,0,22,22,61.1,61.1,2026-10-28,2026-11-05,10
+Asana Bem-Estar,Riscos psicossociais (NR-1),https://www.asanabemestar.com,ChatGPT,28,16,9,0,32.1,0.0,2026-10-28,2026-11-05,10
+Asana Bem-Estar,Riscos psicossociais (NR-1),https://www.asanabemestar.com,Perplexity,44,0,22,0,50.0,0.0,2026-10-28,2026-11-05,10
+Asana Bem-Estar,Riscos psicossociais (NR-1),https://www.asanabemestar.com,Gemini,32,4,16,15,50.0,46.9,2026-10-28,2026-11-05,10
+Asana Bem-Estar,Riscos psicossociais (NR-1),https://www.asanabemestar.com,Google AI Mode,36,0,17,17,47.2,47.2,2026-10-28,2026-11-05,10
