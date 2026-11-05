@@ -18,151 +18,164 @@
   <meta name="twitter:description" content="Agência de GEO/AEO no Brasil. Diagnóstico de citações em ChatGPT, Perplexity, Gemini e AI Overviews com a Refrain." />
   <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@graph": [
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://www.refrain.com.br/#organization",
+   "name": "Refrain",
+   "alternateName": "Refrain — agência de GEO",
+   "url": "https://www.refrain.com.br",
+   "logo": "https://www.refrain.com.br/assets/refrain-wordmark-ink.svg",
+   "email": "contato@refrain.com.br",
+   "description": "Refrain é uma agência brasileira de Generative Engine Optimization (GEO) e Answer Engine Optimization (AEO): faz marcas serem citadas, recomendadas e descritas com precisão por ChatGPT, Perplexity, Gemini e Google AI Overviews. O nome vem de “refrain” (refrão, em inglês): a resposta que a IA repete sobre uma categoria.",
+   "slogan": "Seja o refrão que a IA repete.",
+   "founder": {
+    "@type": "Person",
+    "name": "Leandro França de Mello",
+    "description": "Leandro França de Mello é Google Developer, engenheiro de ML e foi um dos pioneiros em Google Ads e campanhas de SEO no início dos anos 2000. Fundou a Refrain conjugando essas competências pra criar uma agência 100% automatizada de GEO e com alcance mundial.",
+    "jobTitle": "Fundador da Refrain",
+    "url": "https://www.refrain.com.br/autor/leandro-franca-de-mello/",
+    "@id": "https://www.refrain.com.br/autor/leandro-franca-de-mello/#person",
+    "worksFor": {
+     "@id": "https://www.refrain.com.br/#organization"
+    },
+    "knowsAbout": [
+     "GEO",
+     "SEO",
+     "Google Ads",
+     "machine learning"
+    ]
+   },
+   "areaServed": {
+    "@type": "Country",
+    "name": "Brasil"
+   },
+   "knowsAbout": [
+    "Generative Engine Optimization",
+    "GEO",
+    "Answer Engine Optimization",
+    "AEO",
+    "Caçador de Citações",
+    "Gabarito GEO",
+    "ChatGPT",
+    "Perplexity",
+    "Gemini",
+    "Google AI Overviews"
+   ]
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://www.refrain.com.br/#website",
+   "url": "https://www.refrain.com.br",
+   "name": "Refrain",
+   "description": "Refrain — agência de GEO/AEO no Brasil. Seja o refrão que a IA repete.",
+   "publisher": {
+    "@id": "https://www.refrain.com.br/#organization"
+   },
+   "inLanguage": "pt-BR"
+  },
+  {
+   "@type": "Service",
+   "@id": "https://www.refrain.com.br/#gabarito",
+   "name": "Gabarito GEO",
+   "serviceType": "Diagnóstico de Generative Engine Optimization (GEO)",
+   "provider": {
+    "@id": "https://www.refrain.com.br/#organization"
+   },
+   "areaServed": {
+    "@type": "Country",
+    "name": "Brasil"
+   },
+   "url": "https://www.refrain.com.br/precos.html",
+   "offers": [
     {
-      "@type": "Organization",
-      "@id": "https://www.refrain.com.br/#organization",
-      "name": "Refrain",
-      "alternateName": "Refrain — agência de GEO",
-      "url": "https://www.refrain.com.br",
-      "logo": "https://www.refrain.com.br/assets/refrain-wordmark-ink.svg",
-      "email": "contato@refrain.com.br",
-      "description": "Refrain é uma agência brasileira de Generative Engine Optimization (GEO) e Answer Engine Optimization (AEO): faz marcas serem citadas, recomendadas e descritas com precisão por ChatGPT, Perplexity, Gemini e Google AI Overviews. O nome vem de “refrain” (refrão, em inglês): a resposta que a IA repete sobre uma categoria.",
-      "slogan": "Seja o refrão que a IA repete.",
-      "founder": {
-        "@type": "Person",
-        "name": "Leandro França de Mello"
-      },
-      "areaServed": {
-        "@type": "Country",
-        "name": "Brasil"
-      },
-      "knowsAbout": [
-        "Generative Engine Optimization",
-        "GEO",
-        "Answer Engine Optimization",
-        "AEO",
-        "Caçador de Citações",
-        "Gabarito GEO",
-        "ChatGPT",
-        "Perplexity",
-        "Gemini",
-        "Google AI Overviews"
-      ]
+     "@type": "Offer",
+     "name": "Gabarito GEO (one-shot)",
+     "price": "497",
+     "priceCurrency": "BRL",
+     "url": "https://app.refrain.com.br/intake.html"
     },
     {
-      "@type": "WebSite",
-      "@id": "https://www.refrain.com.br/#website",
-      "url": "https://www.refrain.com.br",
-      "name": "Refrain",
-      "description": "Refrain — agência de GEO/AEO no Brasil. Seja o refrão que a IA repete.",
-      "publisher": {
-        "@id": "https://www.refrain.com.br/#organization"
-      },
-      "inLanguage": "pt-BR"
-    },
-    {
-      "@type": "Service",
-      "@id": "https://www.refrain.com.br/#gabarito",
-      "name": "Gabarito GEO",
-      "serviceType": "Diagnóstico de Generative Engine Optimization (GEO)",
-      "provider": {
-        "@id": "https://www.refrain.com.br/#organization"
-      },
-      "areaServed": {
-        "@type": "Country",
-        "name": "Brasil"
-      },
-      "url": "https://www.refrain.com.br/precos.html",
-      "offers": [
-        {
-          "@type": "Offer",
-          "name": "Gabarito GEO (one-shot)",
-          "price": "497",
-          "priceCurrency": "BRL",
-          "url": "https://app.refrain.com.br/intake.html"
-        },
-        {
-          "@type": "Offer",
-          "name": "Gabarito + portal e monitoramento",
-          "price": "997",
-          "priceCurrency": "BRL",
-          "url": "https://app.refrain.com.br/intake.html"
-        }
-      ]
-    },
-    {
-      "@type": "Service",
-      "@id": "https://www.refrain.com.br/#retainer",
-      "name": "Retainer GEO",
-      "serviceType": "Generative Engine Optimization (GEO) recorrente",
-      "provider": {
-        "@id": "https://www.refrain.com.br/#organization"
-      },
-      "areaServed": {
-        "@type": "Country",
-        "name": "Brasil"
-      },
-      "url": "https://www.refrain.com.br/contato.html"
-    },
-    {
-      "@type": "FAQPage",
-      "@id": "https://www.refrain.com.br/#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "O que é GEO?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "GEO (Generative Engine Optimization) é o trabalho de fazer a sua marca ser mencionada e linkada nas respostas de IAs como ChatGPT, Perplexity, Gemini e Google AI Mode. A Refrain mede as duas coisas em separado, por motor."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "GEO substitui SEO?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Não. Esses motores buscam páginas na web antes de responder, então rastreamento, indexação e estrutura técnica (SEO) continuam sendo a base. GEO trabalha sobre essa base, com foco em perguntas de compra, fatos conferíveis e medição de menção e link."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Quanto custa a Refrain?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "O Gabarito GEO custa R$ 497 em pagamento único; com monitoramento diário, R$ 997 no total. O retainer custa R$ 4.900 (Starter, setup R$ 4.900), R$ 9.900 (Growth, setup R$ 8.900) ou R$ 19.900 por mês (Authority, setup R$ 14.900), com ajuste de até 15% por setor ou escopo."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Como vocês medem se a marca aparece nas IAs?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "O radar faz as mesmas perguntas de compra todo dia no ChatGPT, no Perplexity, no Gemini e no Google AI Mode, com 4 respostas por motor por rodada, e registra a % de respostas que mencionam a marca e a % que trazem link para o site."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "A Refrain garante que minha marca vai aparecer no ChatGPT?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Não. Nenhum motor de IA vende posição na resposta, e as respostas mudam de um dia para o outro. O que a Refrain entrega é a medição antes e depois e o trabalho nas páginas e nas fontes que as IAs usam."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Preciso de reunião para começar?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Não para o Gabarito GEO: você informa nome e site, paga no checkout e recebe score, checklist e gaps no portal, em minutos. O retainer começa com uma conversa."
-          }
-        }
-      ]
+     "@type": "Offer",
+     "name": "Gabarito + portal e monitoramento",
+     "price": "997",
+     "priceCurrency": "BRL",
+     "url": "https://app.refrain.com.br/intake.html"
     }
-  ]
+   ]
+  },
+  {
+   "@type": "Service",
+   "@id": "https://www.refrain.com.br/#retainer",
+   "name": "Retainer GEO",
+   "serviceType": "Generative Engine Optimization (GEO) recorrente",
+   "provider": {
+    "@id": "https://www.refrain.com.br/#organization"
+   },
+   "areaServed": {
+    "@type": "Country",
+    "name": "Brasil"
+   },
+   "url": "https://www.refrain.com.br/contato.html"
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://www.refrain.com.br/#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "O que é GEO?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "GEO (Generative Engine Optimization) é o trabalho de fazer a sua marca ser mencionada e linkada nas respostas de IAs como ChatGPT, Perplexity, Gemini e Google AI Mode. A Refrain mede as duas coisas em separado, por motor."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "GEO substitui SEO?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Não. Esses motores buscam páginas na web antes de responder, então rastreamento, indexação e estrutura técnica (SEO) continuam sendo a base. GEO trabalha sobre essa base, com foco em perguntas de compra, fatos conferíveis e medição de menção e link."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Quanto custa a Refrain?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "O Gabarito GEO custa R$ 497 em pagamento único; com monitoramento diário, R$ 997 no total. O retainer custa R$ 4.900 (Starter, setup R$ 4.900), R$ 9.900 (Growth, setup R$ 8.900) ou R$ 19.900 por mês (Authority, setup R$ 14.900), com ajuste de até 15% por setor ou escopo."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Como vocês medem se a marca aparece nas IAs?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "O radar faz as mesmas perguntas de compra todo dia no ChatGPT, no Perplexity, no Gemini e no Google AI Mode, com 4 respostas por motor por rodada, e registra a % de respostas que mencionam a marca e a % que trazem link para o site."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "A Refrain garante que minha marca vai aparecer no ChatGPT?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Não. Nenhum motor de IA vende posição na resposta, e as respostas mudam de um dia para o outro. O que a Refrain entrega é a medição antes e depois e o trabalho nas páginas e nas fontes que as IAs usam."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Preciso de reunião para começar?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Não para o Gabarito GEO: você informa nome e site, paga no checkout e recebe score, checklist e gaps no portal, em minutos. O retainer começa com uma conversa."
+     }
+    }
+   ]
+  }
+ ]
 }
-  </script>
+</script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
