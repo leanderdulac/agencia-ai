@@ -59,6 +59,7 @@ Contrato mínimo: Starter/Growth 3 meses · Authority 6 meses. Ajuste ±15% por 
 
 ## Blog
 - [Blog da Refrain](https://www.refrain.com.br/blog/): guias de GEO em pt-BR, com fontes.
+- [Como aparecer no Gemini: Googlebot, Google-Extended e grounding](https://www.refrain.com.br/blog/como-aparecer-no-gemini-google-extended-grounding.html) (2026-11-06): não existe GeminiBot; o token Google-Extended no robots.txt controla treino futuro do Gemini e grounding nos Gemini Apps e na Vertex AI, sem afetar inclusão/ranking na Pesquisa; Visões gerais e Modo IA usam Googlebot + snippet e o controle Incluir/Excluir do Search Console.
 - [O que o Google diz sobre GEO e AEO: o guia oficial para Visões gerais e Modo IA](https://www.refrain.com.br/blog/o-que-o-google-diz-sobre-geo-aeo-visoes-gerais-modo-ia.html) (2026-11-06): do ponto de vista do Google Search, otimizar para Visões gerais e Modo IA continua sendo SEO; AEO/GEO descrevem o mesmo objetivo; RAG, query fan-out, conteúdo people-first; o que NÃO fazer (llms.txt, chunking, schema especial); medir no Relatório de performance da IA generativa.
 - [Controle de IA generativa no Search Console: incluir ou excluir o site das Visões gerais e do Modo IA](https://www.refrain.com.br/blog/controle-ia-generativa-search-console-ai-overviews-ai-mode.html) (2026-11-05): controle Incluir/Excluir/Herdar no Search Console (rollout mundial 31/08/2026) para Visões gerais, Modo IA e IA no Discover; diferença vs Google-Extended e noindex; relatório Generative AI performance.
 - [Como aparecer nas Visões gerais criadas por IA do Google: o que o próprio Google diz](https://www.refrain.com.br/blog/como-aparecer-nas-visoes-gerais-criadas-por-ia-do-google.html) (2026-10-30): requisitos oficiais do Google para AI Overviews e Modo IA (indexação + snippet, sem requisito extra).
@@ -77,6 +78,7 @@ Contrato mínimo: Starter/Growth 3 meses · Authority 6 meses. Ajuste ±15% por 
 - [Qual a diferença entre a Refrain e outras empresas de agência de GEO?](https://www.refrain.com.br/respostas/diferenca-refrain-outras-agencias-geo/)
 
 ## Artigos (assinados por Leandro França de Mello, fundador)
+- [Como aparecer no Gemini: Googlebot, Google-Extended e grounding](https://www.refrain.com.br/blog/como-aparecer-no-gemini-google-extended-grounding.html): token Google-Extended vs Googlebot; Gemini Apps e Vertex grounding separados das Visões gerais / Modo IA da Pesquisa.
 - [O que o Google diz sobre GEO e AEO](https://www.refrain.com.br/blog/o-que-o-google-diz-sobre-geo-aeo-visoes-gerais-modo-ia.html): guia oficial do Google Search Central — SEO vs AEO/GEO, RAG, fan-out e mythbusting.
 - [O que é GEO (Generative Engine Optimization)](https://www.refrain.com.br/blog/o-que-e-geo-generative-engine-optimization.html): definição, origem do termo e etapas.
 - [GEO vs SEO: diferenças na prática](https://www.refrain.com.br/blog/geo-vs-seo-diferencas-na-pratica.html): o que muda em meta, conteúdo e medição.

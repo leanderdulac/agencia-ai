@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Como aparecer no Gemini: Googlebot, Google-Extended e grounding | Blog Refrain</title>
+  <meta name="description" content="Aparecer no Gemini Apps exige site rastreável pelo Google e Google-Extended liberado no robots.txt. Visões gerais e Modo IA da Pesquisa são outro controle." />
+  <link rel="canonical" href="https://www.refrain.com.br/blog/como-aparecer-no-gemini-google-extended-grounding.html" />
+  <meta property="og:title" content="Como aparecer no Gemini: o que o Google diz sobre Googlebot, Google-Extended e grounding" />
+  <meta property="og:description" content="Aparecer no Gemini Apps exige site rastreável pelo Google e Google-Extended liberado no robots.txt. Visões gerais e Modo IA da Pesquisa são outro controle." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.refrain.com.br/blog/como-aparecer-no-gemini-google-extended-grounding.html" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Refrain" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Article",
+   "@id": "https://www.refrain.com.br/blog/como-aparecer-no-gemini-google-extended-grounding.html#article",
+   "headline": "Como aparecer no Gemini: o que o Google diz sobre Googlebot, Google-Extended e grounding",
+   "description": "Aparecer no Gemini Apps exige site rastreável pelo Google e Google-Extended liberado no robots.txt. Visões gerais e Modo IA da Pesquisa são outro controle.",
+   "inLanguage": "pt-BR",
+   "datePublished": "2026-11-06",
+   "dateModified": "2026-11-06",
+   "author": {
+    "@type": "Person",
+    "name": "Leandro França de Mello",
+    "description": "Leandro França de Mello é Google Developer, engenheiro de ML e foi um dos pioneiros em Google Ads e campanhas de SEO no início dos anos 2000. Fundou a Refrain conjugando essas competências pra criar uma agência 100% automatizada de GEO e com alcance mundial.",
+    "jobTitle": "Fundador da Refrain",
+    "url": "https://www.refrain.com.br/autor/leandro-franca-de-mello/",
+    "@id": "https://www.refrain.com.br/autor/leandro-franca-de-mello/#person",
+    "worksFor": {
+     "@id": "https://www.refrain.com.br/#organization"
+    },
+    "knowsAbout": [
+     "GEO",
+     "SEO",
+     "Google Ads",
+     "machine learning"
+    ]
+   },
+   "publisher": {
+    "@type": "Organization",
+    "@id": "https://www.refrain.com.br/#organization",
+    "name": "Refrain",
+    "url": "https://www.refrain.com.br/"
+   },
+   "mainEntityOfPage": "https://www.refrain.com.br/blog/como-aparecer-no-gemini-google-extended-grounding.html",
+   "citation": [
+    "https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers",
+    "https://developers.google.com/search/docs/crawling-indexing/googlebot"
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://www.refrain.com.br/blog/como-aparecer-no-gemini-google-extended-grounding.html#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Existe um robô chamado GeminiBot?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Não. Segundo o Google, o Google-Extended não tem uma string própria de user-agent HTTP. O rastreio é feito com os user-agents já existentes do Google; o token no robots.txt funciona só como controle."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Bloquear o Google-Extended tira meu site da Pesquisa Google ou das Visões gerais?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Não. O Google afirma que o Google-Extended não afeta a inclusão do site na Pesquisa Google e não é usado como sinal de ranking. Visões gerais criadas por IA e Modo IA seguem as regras da Pesquisa (Googlebot + snippet) e o controle Incluir/Excluir do Search Console."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "O que o Google-Extended controla?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Controla se o conteúdo rastreado no seu site pode ser usado para treinar gerações futuras dos modelos Gemini (Gemini Apps e API Vertex AI para Gemini) e para grounding (embasamento) nos Gemini Apps e no Embasamento com a Pesquisa Google na Vertex AI."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Preciso liberar o Googlebot para aparecer no Gemini Apps?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sim. O site precisa ser rastreável pelos user-agents existentes do Google. O grounding descrito no Google-Extended usa conteúdo do índice da Pesquisa. Bloquear o Googlebot também tira o site da Pesquisa, do Discover, das Imagens, do Vídeo e das Notícias."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "O controle de IA generativa do Search Console substitui o Google-Extended?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Não. São controles diferentes. O do Search Console decide se o site aparece nas Visões gerais, no Modo IA e na IA do Discover. O Google-Extended controla treino e grounding nos Gemini Apps e na Vertex AI. O Google diz que o controle da Pesquisa não afeta treinamento de IA."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Como checar se o Google-Extended está bloqueado?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Abra seusite.com.br/robots.txt e procure um grupo User-agent: Google-Extended com Disallow: /. Confira também se o Googlebot não está bloqueado e se as páginas principais estão indexadas no Search Console."
+     }
+    }
+   ]
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Início",
+     "item": "https://www.refrain.com.br/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Blog",
+     "item": "https://www.refrain.com.br/blog/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Como aparecer no Gemini: o que o Google diz sobre Googlebot, Google-Extended e grounding",
+     "item": "https://www.refrain.com.br/blog/como-aparecer-no-gemini-google-extended-grounding.html"
+    }
+   ]
+  }
+ ]
+}
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../config.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            charcoal: { 950: '#0B1220', 900: '#0f1218', 800: '#161b22', 700: '#1e2530', 600: '#2a3341' },
+            cyan: { DEFAULT: '#2F6BFF', dim: '#2557d6' },
+            teal: { DEFAULT: '#00A896' },
+            cream: { DEFAULT: '#F7F5F1' },
+            warn: { DEFAULT: '#E85D04' },
+            mist: '#a8b2c1',
+            snow: '#e8ecf1'
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
+          },
+          boxShadow: { 'glow-sm': '0 0 20px rgba(47,107,255,0.2)', glow: '0 0 40px rgba(47,107,255,0.15)' }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background: #0B1220; color: #e8ecf1; }
+    .nav-blur { backdrop-filter: blur(12px); background: rgba(11,18,32,0.85); }
+    .card-border { border: 1px solid rgba(42,51,65,0.9); }
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(47,107,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(47,107,255,0.03) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    .field-error { border-color: #E85D04 !important; }
+    .error-msg { color: #E85D04; font-size: 0.75rem; margin-top: 0.35rem; display: none; }
+    .error-msg.visible { display: block; }
+  </style>
+<script src="https://app.refrain.com.br/hub/refrain-1b85fe/geo.js" async></script>
+</head>
+<body class="font-sans antialiased">
+  <style>
+    .prose-r h2 { font-size:1.5rem; font-weight:700; color:#e8ecf1; margin-top:2.5rem; margin-bottom:.75rem; }
+    .prose-r p { color:#c9d1dc; line-height:1.75; margin-top:1rem; }
+    .prose-r ul, .prose-r ol { color:#c9d1dc; margin-top:1rem; padding-left:1.25rem; line-height:1.75; }
+    .prose-r ul { list-style:disc; } .prose-r ol { list-style:decimal; }
+    .prose-r a { color:#2F6BFF; text-decoration:underline; }
+    .prose-r table { width:100%; margin-top:1.25rem; border-collapse:collapse; font-size:.9rem; }
+    .prose-r th, .prose-r td { border:1px solid rgba(42,51,65,0.9); padding:.6rem .75rem; text-align:left; vertical-align:top; color:#c9d1dc; }
+    .prose-r th { background:#161b22; color:#e8ecf1; }
+    .prose-r code { font-family:'JetBrains Mono',monospace; font-size:.85em; background:#161b22; padding:.1rem .3rem; border-radius:.25rem; }
+  </style>
+  <header class="fixed top-0 inset-x-0 z-50 nav-blur border-b border-charcoal-600/50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="../index.html" class="flex items-center gap-2">
+        <img src="../assets/refrain-wordmark.svg" alt="Refrain" width="119" height="32" class="h-8 w-auto" />
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm text-mist">
+        <a href="../servicos.html" class="hover:text-cyan transition">Serviços</a>
+        <a href="../metodologia.html" class="hover:text-cyan transition">Metodologia</a>
+        <a href="../case-climatewise.html" class="hover:text-cyan transition">Case</a>
+        <a href="../orcamento.html" class="hover:text-cyan transition">Diagnóstico</a>
+        <a href="../index.html#pacotes" class="hover:text-cyan transition">Pacotes</a>
+        <a href="../precos.html" class="hover:text-cyan transition">Preços</a>
+        <a href="./" class="text-cyan">Blog</a>
+        <a href="../contato.html" class="hover:text-cyan transition">Contato</a>
+      </nav>
+      <a href="../orcamento.html" class="text-sm font-medium px-4 py-2 rounded-lg bg-cyan text-charcoal-950 hover:bg-cyan-dim transition shadow-glow-sm">Diagnóstico rápido</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="pt-28 pb-20 sm:pt-32 grid-bg">
+      <article class="max-w-3xl mx-auto px-4 sm:px-6">
+        <p class="text-cyan font-mono text-xs uppercase tracking-widest mb-3"><a href="./" class="hover:underline">Blog</a> · 6 de novembro de 2026</p>
+        <h1 class="text-3xl sm:text-4xl font-bold text-snow tracking-tight">Como aparecer no Gemini: o que o Google diz sobre Googlebot, Google-Extended e grounding</h1>
+        <div class="prose-r">
+        <p id="resposta"><strong>Para a marca ser citada com link nas respostas do Gemini Apps — e no grounding (embasamento) do Vertex AI com a Pesquisa Google — o site precisa de três coisas: ser rastreável pelos user-agents que o Google já usa (não existe um “GeminiBot” separado); permitir o token de produto <code>Google-Extended</code> no robots.txt, se você quer que o conteúdo entre em grounding e no treino futuro do Gemini; e ter páginas que respondam de forma direta à pergunta do cliente.</strong> Bloquear o <code>Google-Extended</code> não tira o site da Pesquisa Google nem das Visões gerais criadas por IA nem do Modo IA: esses recursos seguem as regras da Pesquisa (Googlebot + snippet).</p>
+        <p>Abaixo está o que a <a href="https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers" rel="noopener">lista oficial de rastreadores comuns do Google</a> (atualizada em 30 de outubro de 2026) e a página do <a href="https://developers.google.com/search/docs/crawling-indexing/googlebot" rel="noopener">Googlebot</a> dizem. Complementa os guias de <a href="robots-txt-para-ia-gptbot-oai-searchbot-perplexitybot-claudebot.html">robots.txt para IA</a>, <a href="como-aparecer-nas-visoes-gerais-criadas-por-ia-do-google.html">Visões gerais criadas por IA</a> e <a href="controle-ia-generativa-search-console-ai-overviews-ai-mode.html">controle de IA generativa no Search Console</a>.</p>
+
+        <h2>Gemini Apps × Google Search (Visões gerais / Modo IA)</h2>
+        <p>São produtos diferentes, com controles diferentes. Misturá-los é o erro mais comum quando alguém “bloqueia a IA do Google” no robots.txt.</p>
+        <table>
+          <thead><tr><th>Produto</th><th>O que é</th><th>Controle documentado pelo Google</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Gemini Apps</strong> e grounding na Vertex AI</td><td>Respostas do aplicativo/web do Gemini e uso do modelo na API Vertex AI, inclusive com conteúdo do índice no momento do prompt.</td><td>Token <code>Google-Extended</code> no robots.txt, mais rastreio pelos user-agents já existentes do Google.</td></tr>
+            <tr><td><strong>Pesquisa Google:</strong> Visões gerais criadas por IA e Modo IA</td><td>Resumo e modo conversacional na página de resultados da Pesquisa.</td><td><code>Googlebot</code>, página indexada e qualificada para snippet, e o controle Incluir/Excluir de IA generativa no Search Console.</td></tr>
+          </tbody>
+        </table>
+        <p>Do ponto de vista do Google Search, otimizar para Visões gerais e Modo IA continua sendo SEO — ver <a href="o-que-o-google-diz-sobre-geo-aeo-visoes-gerais-modo-ia.html">o que o Google diz sobre GEO e AEO</a>. Este texto trata do Gemini Apps e do token <code>Google-Extended</code>. Bloquear ou liberar esse token não substitui o guia de <a href="como-aparecer-nas-visoes-gerais-criadas-por-ia-do-google.html">Visões gerais</a> nem o do <a href="controle-ia-generativa-search-console-ai-overviews-ai-mode.html">controle Incluir/Excluir no Search Console</a>.</p>
+
+        <h2>Existe um robô “Gemini”?</h2>
+        <p>Não. O Google documenta o <code>Google-Extended</code> como <strong>token de produto independente</strong>, não como um crawler com user-agent HTTP próprio. A ficha oficial diz que ele não tem string própria de user-agent; o rastreio usa os user-agents já existentes do Google, e o token no robots.txt serve só de controle.</p>
+        <p>Você não vai ver “GeminiBot” nos logs. Vai ver <code>Googlebot</code> e outros user-agents do Google. A regra <code>User-agent: Google-Extended</code> é o que o Google consulta para treino futuro do Gemini e para grounding nos apps Gemini e na Vertex AI.</p>
+        <p>Há outro nome na mesma lista que confunde: <code>Google-CloudVertexBot</code>. Esse user-agent vale para rastreios pedidos pelo dono do site ao montar agentes na Vertex AI, e o Google diz que não afeta a Pesquisa. Não é o controle dos Gemini Apps.</p>
+
+        <h2>O que o Google-Extended controla (e o que não controla)</h2>
+        <p>Segundo a página de rastreadores comuns, atualizada em 30 de outubro de 2026, o <code>Google-Extended</code> gerencia se o conteúdo que o Google rastreia no seu site pode ser usado para:</p>
+        <ol>
+          <li><strong>Treinar gerações futuras</strong> dos modelos Gemini que alimentam os Gemini Apps e a API Vertex AI para Gemini.</li>
+          <li><strong>Grounding (embasamento)</strong>: fornecer conteúdo do índice da Pesquisa Google ao modelo no momento do prompt, para melhorar factualidade e relevância, nos Gemini Apps e no Embasamento com a Pesquisa Google na Vertex AI.</li>
+        </ol>
+        <p>O mesmo texto afirma o que o token <em>não</em> faz: <strong>não impacta a inclusão do site na Pesquisa Google</strong> e <strong>não é usado como sinal de ranking</strong>. <code>Disallow: /</code> no <code>Google-Extended</code> não tira o site das Visões gerais nem do Modo IA; <code>Allow: /</code> também não garante citação no Gemini — só autoriza o uso acima.</p>
+        <p>O controle Incluir/Excluir de IA generativa no Search Console (Visões gerais, Modo IA e IA no Discover) <strong>não afeta treinamento de IA</strong>. Para treino e grounding nos Gemini Apps, o caminho documentado é o <code>Google-Extended</code>. O Google declara a intenção de apoiar o sinal AIPREF (<code>user-agent: __usage_ai-training</code>) no início de 2027; até lá, o controle documentado continua sendo este token.</p>
+
+        <h2>robots.txt: Allow e Disallow do Google-Extended</h2>
+        <p>Para permitir que o conteúdo rastreado possa ser usado em treino futuro do Gemini e em grounding nos Gemini Apps e na Vertex AI:</p>
+        <pre class="mt-4 p-4 rounded-xl bg-charcoal-900 card-border overflow-x-auto text-sm"><code>User-agent: Google-Extended
+Allow: /</code></pre>
+        <p>Para recusar esse uso, sem tirar o site da Pesquisa:</p>
+        <pre class="mt-4 p-4 rounded-xl bg-charcoal-900 card-border overflow-x-auto text-sm"><code>User-agent: Google-Extended
+Disallow: /</code></pre>
+        <p>A decisão é de negócio. Quem quer que o conteúdo possa embasar o Gemini Apps e treinar gerações futuras deixa <code>Allow</code>. Quem não quer esse uso deixa <code>Disallow</code> — e o site continua elegível à Pesquisa, desde que o Googlebot não esteja bloqueado. As regras do <code>Google-Extended</code> são independentes das do <code>Googlebot</code>: um grupo não herda o outro. Um <code>User-agent: *</code> com <code>Disallow: /</code> bloqueia o rastreio em geral, inclusive o Googlebot.</p>
+        <p>Sintaxe e os outros robôs de IA estão no guia de <a href="robots-txt-para-ia-gptbot-oai-searchbot-perplexitybot-claudebot.html">robots.txt para IA</a>. O equivalente na OpenAI é separar busca (<code>OAI-SearchBot</code>) de treino (<code>GPTBot</code>), como em <a href="como-aparecer-na-busca-do-chatgpt-oai-searchbot.html">como aparecer na busca do ChatGPT</a>; no Perplexity, o robô de busca é o <code>PerplexityBot</code> (<a href="como-aparecer-no-perplexity-perplexitybot-selos-de-fonte.html">como aparecer no Perplexity</a>).</p>
+
+        <h2>Googlebot continua necessário para a Pesquisa</h2>
+        <p>O <a href="https://developers.google.com/search/docs/crawling-indexing/googlebot" rel="noopener">Googlebot</a> é o nome genérico dos rastreadores da Pesquisa Google (smartphone e desktop). Os dois obedecem ao mesmo token <code>Googlebot</code> no robots.txt; não dá para liberar um e bloquear o outro por robots.txt. Na maioria dos sites o Google indexa sobretudo a versão mobile, então a maior parte das visitas usa o crawler de smartphone.</p>
+        <p>Bloquear o Googlebot afeta a Pesquisa Google (incluindo Discover e todos os recursos da Pesquisa), além de Imagens, Vídeo e Notícias. Sem Googlebot, a página não entra no índice. O grounding descrito no <code>Google-Extended</code> usa conteúdo desse índice — fornecer páginas ao modelo no momento do prompt. Por isso o caminho documentado para aparecer no Gemini começa pelo Googlebot, não por um robô novo.</p>
+        <p>O HTTP user-agent do Googlebot é fácil de falsificar. Antes de bloquear um pedido que “parece Googlebot”, o Google pede para verificar se o IP é de fato do Google (DNS reverso ou faixas de IP publicadas). Uma regra de WAF que bloqueia “bots de IA” por padrão pode impedir o Googlebot antes do robots.txt.</p>
+
+        <h2>Conteúdo answer-first e entidades</h2>
+        <p>O Google não publica uma fórmula de ranking para o Gemini Apps. O que a documentação permite afirmar: o grounding puxa páginas do índice da Pesquisa no momento da pergunta. Páginas que respondem à pergunta do cliente em texto visível são o material que um modelo consegue citar com link.</p>
+        <ul>
+          <li>Resposta no primeiro parágrafo das páginas de serviço, preço, comparação e “para quem serve”.</li>
+          <li>Subtítulos que são as perguntas do cliente, não rótulos internos.</li>
+          <li>Nome da empresa, o que vende, para quem e em qual cidade, escritos de forma consistente — entidades, não só slogan. Autoria e data visíveis, no mesmo espírito da <a href="/autor/leandro-franca-de-mello/">página de autor</a>.</li>
+          <li>Dados estruturados que batem com o texto visível. Não há schema especial para IA; o detalhe está em <a href="dados-estruturados-schema-org-ajudam-aparecer-chatgpt-google-ia.html">dados estruturados e respostas de IA</a>.</li>
+        </ul>
+        <p>Não trate o <code>llms.txt</code> como requisito do Gemini Apps. O Google afirma que a Pesquisa (incluindo recursos de IA) não usa esse arquivo; ele ainda pode ser útil para outros agentes — ver o guia de <a href="llms-txt-o-que-e-como-criar-chatgpt-perplexity-gemini.html">llms.txt</a>. O raciocínio é o mesmo da busca do ChatGPT e do Perplexity: primeiro o rastreio (ou o token) entra; depois a página precisa ser uma resposta boa. Execução contínua está em <a href="../servicos.html">serviços</a>; valores públicos, em <a href="../precos.html">preços</a>.</p>
+
+        <h2>Como checar</h2>
+        <ol>
+          <li>Abra <code>seusite.com.br/robots.txt</code>. Procure um grupo <code>User-agent: Google-Extended</code> com <code>Disallow: /</code>. Confira também se o <code>Googlebot</code> — ou um <code>User-agent: *</code> amplo — não está bloqueando o site inteiro.</li>
+          <li>No Search Console, veja se as páginas de serviço e de preço estão indexadas. Sem índice, não há o que o grounding puxar da Pesquisa.</li>
+          <li>Não use o controle Incluir/Excluir de IA generativa no Search Console como se fosse o <code>Google-Extended</code>. Aquele botão vale para Visões gerais, Modo IA e IA no Discover, não para treino nem para grounding nos Gemini Apps. A diferença está no artigo do <a href="controle-ia-generativa-search-console-ai-overviews-ai-mode.html">controle de IA generativa</a>.</li>
+          <li>Peça no Gemini Apps as perguntas de compra que o seu cliente faria e anote menção e link em separado. O método está em <a href="como-medir-marca-chatgpt-gemini-perplexity.html">como medir se a marca aparece no ChatGPT, Gemini e Perplexity</a>.</li>
+          <li>Se a CDN ou o firewall bloqueia “bots de IA” por padrão, isso pode impedir o Googlebot antes do robots.txt. Vale a mesma checagem de WAF descrita no guia de <a href="robots-txt-para-ia-gptbot-oai-searchbot-perplexitybot-claudebot.html">robots.txt para IA</a>.</li>
+        </ol>
+        <p>Nada disso garante citação. O Google não promete que permitir o <code>Google-Extended</code> faça o Gemini linkar o seu site. O token só autoriza o uso; a página ainda precisa ser encontrada, lida e escolhida como fonte.</p>
+
+        <h2 id="faq">Perguntas frequentes</h2>
+        </div>
+        <div class="space-y-3 mt-4"><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Existe um robô chamado GeminiBot?</summary><p class="mt-2 text-mist text-sm">Não. Segundo o Google, o Google-Extended não tem uma string própria de user-agent HTTP. O rastreio é feito com os user-agents já existentes do Google; o token no robots.txt funciona só como controle.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Bloquear o Google-Extended tira meu site da Pesquisa Google ou das Visões gerais?</summary><p class="mt-2 text-mist text-sm">Não. O Google afirma que o Google-Extended não afeta a inclusão do site na Pesquisa Google e não é usado como sinal de ranking. Visões gerais criadas por IA e Modo IA seguem as regras da Pesquisa (Googlebot + snippet) e o controle Incluir/Excluir do Search Console.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">O que o Google-Extended controla?</summary><p class="mt-2 text-mist text-sm">Controla se o conteúdo rastreado no seu site pode ser usado para treinar gerações futuras dos modelos Gemini (Gemini Apps e API Vertex AI para Gemini) e para grounding (embasamento) nos Gemini Apps e no Embasamento com a Pesquisa Google na Vertex AI.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Preciso liberar o Googlebot para aparecer no Gemini Apps?</summary><p class="mt-2 text-mist text-sm">Sim. O site precisa ser rastreável pelos user-agents existentes do Google. O grounding descrito no Google-Extended usa conteúdo do índice da Pesquisa. Bloquear o Googlebot também tira o site da Pesquisa, do Discover, das Imagens, do Vídeo e das Notícias.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">O controle de IA generativa do Search Console substitui o Google-Extended?</summary><p class="mt-2 text-mist text-sm">Não. São controles diferentes. O do Search Console decide se o site aparece nas Visões gerais, no Modo IA e na IA do Discover. O Google-Extended controla treino e grounding nos Gemini Apps e na Vertex AI. O Google diz que o controle da Pesquisa não afeta treinamento de IA.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Como checar se o Google-Extended está bloqueado?</summary><p class="mt-2 text-mist text-sm">Abra seusite.com.br/robots.txt e procure um grupo User-agent: Google-Extended com Disallow: /. Confira também se o Googlebot não está bloqueado e se as páginas principais estão indexadas no Search Console.</p></details></div>
+        <div class="prose-r"><h2>Fontes</h2><ul><li><a href="https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers" rel="noopener">https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers</a> — rastreadores comuns do Google, seção Google-Extended (atualizada em 2026-10-30)</li><li><a href="https://developers.google.com/search/docs/crawling-indexing/googlebot" rel="noopener">https://developers.google.com/search/docs/crawling-indexing/googlebot</a> — o que é o Googlebot e o que bloquear o Googlebot afeta</li></ul></div>
+        <div class="mt-12 rounded-2xl card-border bg-charcoal-800 p-6">
+          <p class="text-snow font-semibold text-lg">Quer saber se as IAs já citam a sua marca?</p>
+          <p class="mt-2 text-mist text-sm">O Gabarito GEO da Refrain testa perguntas de compra no ChatGPT, Perplexity e Gemini e entrega score, gaps priorizados e checklist em minutos, incluindo a checagem de acesso dos robôs de IA ao seu site. R$ 497, pagamento único.</p>
+          <div class="mt-4 flex flex-wrap gap-3"><a href="../precos.html" class="text-sm font-medium px-4 py-2 rounded-lg bg-cyan text-charcoal-950 hover:bg-cyan-dim transition">Ver preços do Gabarito</a><a href="../orcamento.html" class="text-sm font-medium px-4 py-2 rounded-lg border border-charcoal-600 text-snow hover:border-cyan/40 hover:text-cyan transition">Fazer diagnóstico rápido</a></div>
+        </div>
+      
+        <aside class="mt-12 p-5 rounded-xl border border-white/10 bg-white/5" aria-label="Sobre o autor">
+          <p class="text-snow font-semibold">Sobre o autor</p>
+          <p class="mt-2 text-sm text-mist"><a href="/autor/leandro-franca-de-mello/" class="text-cyan hover:underline">Leandro França de Mello</a> é Google Developer, engenheiro de ML e foi um dos pioneiros em Google Ads e campanhas de SEO no início dos anos 2000. Fundou a Refrain conjugando essas competências pra criar uma agência 100% automatizada de GEO e com alcance mundial.</p>
+        </aside>
+      </article>
+    </section>
+  </main>
+
+  <footer class="border-t border-charcoal-700 py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row justify-between gap-8">
+      <div>
+        <a href="../index.html" class="inline-block" aria-label="Refrain — início"><img src="../assets/refrain-wordmark.svg" alt="Refrain" width="104" height="28" class="h-7 w-auto" /></a>
+        <p class="mt-2 text-sm text-mist max-w-xs">Seja o refrão que a IA repete. GEO + Caçador de Citações.</p>
+        <p class="mt-2 text-sm text-mist"><a href="mailto:contato@refrain.com.br" class="hover:text-cyan">contato@refrain.com.br</a></p>
+      </div>
+      <div class="flex flex-wrap gap-8 text-sm text-mist">
+        <div class="space-y-2">
+          <p class="text-snow font-medium text-xs uppercase tracking-wider">Site</p>
+          <a href="../servicos.html" class="block hover:text-cyan">Serviços</a>
+          <a href="../metodologia.html" class="block hover:text-cyan">Metodologia</a>
+          <a href="../case-climatewise.html" class="block hover:text-cyan">Case</a>
+          <a href="../orcamento.html" class="block hover:text-cyan">Diagnóstico</a>
+          <a href="../precos.html" class="block hover:text-cyan">Preços</a>
+          <a href="./" class="block hover:text-cyan">Artigos</a>
+          <a href="/estudos/quem-as-ias-citam-no-brasil/" class="block hover:text-cyan">Estudo: quem as IAs citam</a>
+          <a href="/autor/leandro-franca-de-mello/" class="block hover:text-cyan">Autor</a>
+          <a href="../contato.html" class="block hover:text-cyan">Contato</a>
+          <a href="../portal.html" class="block hover:text-cyan">Portal</a>
+        </div>
+        <div class="space-y-2">
+          <p class="text-snow font-medium text-xs uppercase tracking-wider">Legal</p>
+          <a href="../privacidade.html" class="block hover:text-cyan">Privacidade</a>
+          <a href="../termos.html" class="block hover:text-cyan">Termos</a>
+          <a href="../llms.txt" class="block hover:text-cyan font-mono text-xs">llms.txt</a>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 mt-10 pt-6 border-t border-charcoal-700 text-xs text-mist/50">
+      © 2026 Refrain · Leandro França de Mello
+    </div>
+  </footer>
+<script src="https://app.refrain.com.br/chat-widget.js" async></script>
+</body>
+</html>

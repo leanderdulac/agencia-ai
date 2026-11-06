@@ -52,6 +52,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.refrain.com.br/blog/como-aparecer-no-gemini-google-extended-grounding.html</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.refrain.com.br/blog/o-que-o-google-diz-sobre-geo-aeo-visoes-gerais-modo-ia.html</loc>
     <lastmod>2026-11-06</lastmod>
     <changefreq>monthly</changefreq>
@@ -139,5 +145,5 @@
   <url><loc>https://www.refrain.com.br/blog/como-medir-marca-chatgpt-gemini-perplexity.html</loc><lastmod>2026-11-05</lastmod></url>
   <url><loc>https://www.refrain.com.br/blog/como-aparecer-nas-respostas-do-perplexity.html</loc><lastmod>2026-11-05</lastmod></url>
   <url><loc>https://www.refrain.com.br/estudos/quem-as-ias-citam-no-brasil/</loc><lastmod>2026-11-05</lastmod></url>
-  <url><loc>https://www.refrain.com.br/autor/leandro-franca-de-mello/</loc><lastmod>2026-11-05</lastmod></url>
+  <url><loc>https://www.refrain.com.br/autor/leandro-franca-de-mello/</loc><lastmod>2026-11-06</lastmod></url>
 </urlset>
