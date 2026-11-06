@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>O que o Google diz sobre GEO e AEO: o guia oficial para Visões gerais e Modo IA | Blog Refrain</title>
+  <meta name="description" content="Do ponto de vista do Google Search, otimizar para Visões gerais e Modo IA continua sendo SEO. O guia oficial (atualizado em 10/07/2026) explica RAG, query fan-out, conteúdo people-first e o que você não precisa fazer (llms.txt, chunking, schema especial)." />
+  <link rel="canonical" href="https://www.refrain.com.br/blog/o-que-o-google-diz-sobre-geo-aeo-visoes-gerais-modo-ia.html" />
+  <meta property="og:title" content="O que o Google diz sobre GEO e AEO: o guia oficial para Visões gerais e Modo IA" />
+  <meta property="og:description" content="Do ponto de vista do Google Search, otimizar para Visões gerais e Modo IA continua sendo SEO. O guia oficial (atualizado em 10/07/2026) explica RAG, query fan-out, conteúdo people-first e o que você não precisa fazer (llms.txt, chunking, schema especial)." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.refrain.com.br/blog/o-que-o-google-diz-sobre-geo-aeo-visoes-gerais-modo-ia.html" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Refrain" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Article",
+   "@id": "https://www.refrain.com.br/blog/o-que-o-google-diz-sobre-geo-aeo-visoes-gerais-modo-ia.html#article",
+   "headline": "O que o Google diz sobre GEO e AEO: o guia oficial para Visões gerais e Modo IA",
+   "description": "Do ponto de vista do Google Search, otimizar para Visões gerais e Modo IA continua sendo SEO. O guia oficial (atualizado em 10/07/2026) explica RAG, query fan-out, conteúdo people-first e o que você não precisa fazer (llms.txt, chunking, schema especial).",
+   "inLanguage": "pt-BR",
+   "datePublished": "2026-11-06",
+   "dateModified": "2026-11-06",
+   "author": {
+    "@type": "Person",
+    "name": "Leandro França de Mello",
+    "description": "Leandro França de Mello é Google Developer, engenheiro de ML e foi um dos pioneiros em Google Ads e campanhas de SEO no início dos anos 2000. Fundou a Refrain conjugando essas competências pra criar uma agência 100% automatizada de GEO e com alcance mundial.",
+    "jobTitle": "Fundador da Refrain",
+    "url": "https://www.refrain.com.br/autor/leandro-franca-de-mello/",
+    "@id": "https://www.refrain.com.br/autor/leandro-franca-de-mello/#person",
+    "worksFor": {
+     "@id": "https://www.refrain.com.br/#organization"
+    },
+    "knowsAbout": [
+     "GEO",
+     "SEO",
+     "Google Ads",
+     "machine learning"
+    ]
+   },
+   "publisher": {
+    "@type": "Organization",
+    "@id": "https://www.refrain.com.br/#organization",
+    "name": "Refrain",
+    "url": "https://www.refrain.com.br/"
+   },
+   "mainEntityOfPage": "https://www.refrain.com.br/blog/o-que-o-google-diz-sobre-geo-aeo-visoes-gerais-modo-ia.html",
+   "citation": [
+    "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
+    "https://developers.google.com/search/docs/appearance/ai-features?hl=pt-BR",
+    "https://support.google.com/webmasters/answer/16984139?hl=pt-BR",
+    "https://support.google.com/webmasters/answer/16908024?hl=pt-BR"
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://www.refrain.com.br/blog/o-que-o-google-diz-sobre-geo-aeo-visoes-gerais-modo-ia.html#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "O Google trata GEO e AEO como disciplinas separadas do SEO?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Não. No guia oficial de otimização para recursos de IA generativa, o Google diz que AEO (answer engine optimization) e GEO (generative engine optimization) descrevem o trabalho de melhorar a visibilidade em experiências de busca com IA, mas, do ponto de vista do Google Search, otimizar para essas experiências continua sendo SEO."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Preciso criar um arquivo llms.txt para aparecer nas Visões gerais ou no Modo IA?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Não. O Google afirma que a Pesquisa (incluindo recursos de IA generativa) não usa arquivos llms.txt nem marcações especiais equivalentes. Criar e manter esses arquivos nem ajuda nem prejudica a visibilidade no Google Search; o Google os ignora. Eles podem ainda fazer sentido para outros agentes ou serviços."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Existe schema.org especial para Visões gerais e Modo IA?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Não. O Google diz que dados estruturados não são obrigatórios para a busca com IA generativa e que não há markup schema.org especial a adicionar. Continuar usando dados estruturados como parte da estratégia de SEO ainda é recomendável para elegibilidade a rich results."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Que tipo de conteúdo o Google recomenda para recursos de IA?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Conteúdo não-commodity, people-first, com ponto de vista único: útil, confiável e baseado em experiência ou expertise, em vez de resumir o que já está em todo lugar ou o que um modelo generativo produziria facilmente."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Quais requisitos técnicos o Google pede para ser elegível?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A página precisa estar indexada e elegível a snippet, cumprindo os requisitos técnicos da Pesquisa. Além disso, o site precisa estar incluído nos recursos de IA generativa da Pesquisa no Search Console. Indexação e exibição nunca são garantidas."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Como medir se o site aparece nas Visões gerais e no Modo IA?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Use o Relatório de performance da IA generativa no Search Console. O Google alerta para desconfiar de ferramentas de terceiros que prometem sucesso de ranking ou alegam acesso a métricas internas do Google."
+     }
+    }
+   ]
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Início",
+     "item": "https://www.refrain.com.br/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Blog",
+     "item": "https://www.refrain.com.br/blog/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "O que o Google diz sobre GEO e AEO: o guia oficial para Visões gerais e Modo IA",
+     "item": "https://www.refrain.com.br/blog/o-que-o-google-diz-sobre-geo-aeo-visoes-gerais-modo-ia.html"
+    }
+   ]
+  }
+ ]
+}
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../config.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            charcoal: { 950: '#0B1220', 900: '#0f1218', 800: '#161b22', 700: '#1e2530', 600: '#2a3341' },
+            cyan: { DEFAULT: '#2F6BFF', dim: '#2557d6' },
+            teal: { DEFAULT: '#00A896' },
+            cream: { DEFAULT: '#F7F5F1' },
+            warn: { DEFAULT: '#E85D04' },
+            mist: '#a8b2c1',
+            snow: '#e8ecf1'
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
+          },
+          boxShadow: { 'glow-sm': '0 0 20px rgba(47,107,255,0.2)', glow: '0 0 40px rgba(47,107,255,0.15)' }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background: #0B1220; color: #e8ecf1; }
+    .nav-blur { backdrop-filter: blur(12px); background: rgba(11,18,32,0.85); }
+    .card-border { border: 1px solid rgba(42,51,65,0.9); }
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(47,107,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(47,107,255,0.03) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    .field-error { border-color: #E85D04 !important; }
+    .error-msg { color: #E85D04; font-size: 0.75rem; margin-top: 0.35rem; display: none; }
+    .error-msg.visible { display: block; }
+  </style>
+<script src="https://app.refrain.com.br/hub/refrain-1b85fe/geo.js" async></script>
+</head>
+<body class="font-sans antialiased">
+  <style>
+    .prose-r h2 { font-size:1.5rem; font-weight:700; color:#e8ecf1; margin-top:2.5rem; margin-bottom:.75rem; }
+    .prose-r p { color:#c9d1dc; line-height:1.75; margin-top:1rem; }
+    .prose-r ul, .prose-r ol { color:#c9d1dc; margin-top:1rem; padding-left:1.25rem; line-height:1.75; }
+    .prose-r ul { list-style:disc; } .prose-r ol { list-style:decimal; }
+    .prose-r a { color:#2F6BFF; text-decoration:underline; }
+    .prose-r table { width:100%; margin-top:1.25rem; border-collapse:collapse; font-size:.9rem; }
+    .prose-r th, .prose-r td { border:1px solid rgba(42,51,65,0.9); padding:.6rem .75rem; text-align:left; vertical-align:top; color:#c9d1dc; }
+    .prose-r th { background:#161b22; color:#e8ecf1; }
+    .prose-r code { font-family:'JetBrains Mono',monospace; font-size:.85em; background:#161b22; padding:.1rem .3rem; border-radius:.25rem; }
+  </style>
+  <header class="fixed top-0 inset-x-0 z-50 nav-blur border-b border-charcoal-600/50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="../index.html" class="flex items-center gap-2">
+        <img src="../assets/refrain-wordmark.svg" alt="Refrain" width="119" height="32" class="h-8 w-auto" />
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm text-mist">
+        <a href="../servicos.html" class="hover:text-cyan transition">Serviços</a>
+        <a href="../metodologia.html" class="hover:text-cyan transition">Metodologia</a>
+        <a href="../case-climatewise.html" class="hover:text-cyan transition">Case</a>
+        <a href="../orcamento.html" class="hover:text-cyan transition">Diagnóstico</a>
+        <a href="../index.html#pacotes" class="hover:text-cyan transition">Pacotes</a>
+        <a href="../precos.html" class="hover:text-cyan transition">Preços</a>
+        <a href="./" class="text-cyan">Blog</a>
+        <a href="../contato.html" class="hover:text-cyan transition">Contato</a>
+      </nav>
+      <a href="../orcamento.html" class="text-sm font-medium px-4 py-2 rounded-lg bg-cyan text-charcoal-950 hover:bg-cyan-dim transition shadow-glow-sm">Diagnóstico rápido</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="pt-28 pb-20 sm:pt-32 grid-bg">
+      <article class="max-w-3xl mx-auto px-4 sm:px-6">
+        <p class="text-cyan font-mono text-xs uppercase tracking-widest mb-3"><a href="./" class="hover:underline">Blog</a> · 6 de novembro de 2026</p>
+        <h1 class="text-3xl sm:text-4xl font-bold text-snow tracking-tight">O que o Google diz sobre GEO e AEO: o guia oficial para Visões gerais e Modo IA</h1>
+        <div class="prose-r">
+        <p id="resposta"><strong>Do ponto de vista do Google Search, otimizar para Visões gerais criadas por IA e para o Modo IA continua sendo SEO: os termos AEO e GEO descrevem o mesmo objetivo de visibilidade em experiências de IA, mas o Google os trata como SEO.</strong></p>
+        <p>Em 10 de julho de 2026, o Google Search Central publicou (e atualizou) o <a href="https://developers.google.com/search/docs/fundamentals/ai-optimization-guide" rel="noopener">guia oficial de otimização para recursos de IA generativa na Pesquisa</a>. Este artigo resume só o que esse guia e a documentação relacionada documentam — sem números inventados, estudos de terceiros nem “hacks”.</p>
+        <p>Complementa nossos guias de <a href="como-aparecer-nas-visoes-gerais-criadas-por-ia-do-google.html">como aparecer nas Visões gerais</a>, <a href="controle-ia-generativa-search-console-ai-overviews-ai-mode.html">controle Incluir/Excluir no Search Console</a>, <a href="llms-txt-o-que-e-como-criar-chatgpt-perplexity-gemini.html">llms.txt</a> e <a href="dados-estruturados-schema-org-ajudam-aparecer-chatgpt-google-ia.html">dados estruturados</a>.</p>
+
+        <h2>SEO ainda importa para as Visões gerais e o Modo IA?</h2>
+        <p>Sim. O Google afirma, em resumo, que as melhores práticas de SEO continuam relevantes porque os recursos de IA generativa na Pesquisa se apoiam nos sistemas centrais de ranking e qualidade da Pesquisa.</p>
+        <p>Esses recursos usam técnicas de IA para destacar conteúdo do índice da Pesquisa — não um índice paralelo “só para IA”.</p>
+
+        <h2>O que o Google diz sobre os termos AEO e GEO?</h2>
+        <p>No mesmo guia, o Google define:</p>
+        <ul>
+          <li><strong>AEO</strong> — <em>answer engine optimization</em></li>
+          <li><strong>GEO</strong> — <em>generative engine optimization</em></li>
+        </ul>
+        <p>São termos que você pode ver usados para descrever o trabalho focado em melhorar a visibilidade em experiências de busca com IA. <strong>Do ponto de vista do Google Search, otimizar para a busca com IA generativa é otimizar para a experiência de busca — e, portanto, continua sendo SEO.</strong></p>
+        <p>Se você considerar conselhos ou serviços de terceiros rotulados como AEO ou GEO, o Google recomenda revisar a orientação oficial sobre como avaliar conselhos de SEO de terceiros.</p>
+
+        <h2>Como as respostas de IA do Google usam o índice (RAG e query fan-out)?</h2>
+        <p>O guia destaca duas técnicas:</p>
+        <ul>
+          <li><strong>Retrieval-augmented generation (RAG)</strong> — também chamada de <em>grounding</em>: melhora qualidade, precisão e atualidade das respostas de IA ao usar os sistemas centrais de ranking para recuperar páginas relevantes e atualizadas do índice da Pesquisa. Os sistemas revisam informações específicas dessas páginas para gerar uma resposta mais confiável e útil, mostrando links clicáveis e em destaque para páginas que sustentam a informação.</li>
+          <li><strong>Query fan-out</strong> — um conjunto de consultas relacionadas e concorrentes geradas pelo modelo para pedir mais informação e buscar resultados adicionais. Exemplo do próprio Google: se a consulta original for “how to fix a lawn that's full of weeds”, as consultas de fan-out podem incluir “best herbicides for lawns”, “remove weeds without chemicals” e “how to prevent weeds in lawn”.</li>
+        </ul>
+        <p>Na prática: o que está indexado e bem ranqueado na Pesquisa clássica é a matéria-prima das Visões gerais e do Modo IA.</p>
+
+        <h2>Que tipo de conteúdo o Google pede (não-commodity, POV único, people-first)?</h2>
+        <p>O Google diz que criar conteúdo que as pessoas achem único, atraente e útil provavelmente influencia a presença do site na busca com IA generativa, no longo prazo, mais do que qualquer outra sugestão do guia.</p>
+        <p>Atributos que o guia lista:</p>
+        <ul>
+          <li><strong>Ponto de vista único</strong> — os sistemas de IA olham várias fontes; ajuda ter um ângulo que se destaque (ex.: avaliação em primeira mão vs. resumo do que já existe). Crie o conteúdo com base no que você sabe; não recicle o que outros já disseram ou o que um modelo generativo produziria facilmente.</li>
+          <li><strong>Conteúdo não-commodity, útil, confiável e people-first</strong> — commodity seria algo como “7 dicas para quem compra a primeira casa” (conhecimento comum, pouco insight). Não-commodity seria algo como “Por que abrimos mão da vistoria e economizamos: um olhar dentro da linha de esgoto” (expertise ou experiência além do óbvio).</li>
+          <li><strong>Organização clara</strong> — escreva para humanos: parágrafos, seções e headings que facilitem a navegação.</li>
+          <li><strong>Imagens e vídeos de qualidade</strong> — os recursos de IA generativa também podem trazer mídia relevante; seguir as práticas de SEO de imagem e vídeo já é otimizar para esses recursos.</li>
+          <li><strong>Foque no que o usuário quer</strong> — criar páginas separadas só para cada variação de consulta (incluindo fan-outs) com o objetivo principal de manipular ranking ou respostas viola a política de abuso de conteúdo em escala. Quantidade alta de páginas não torna o site mais relevante.</li>
+        </ul>
+        <p>Se usar ferramentas de IA generativa na criação, o trabalho precisa atender aos Search Essentials e às políticas de spam. O princípio-guia do Google: “é conteúdo com o qual meus visitantes ficariam satisfeitos?”</p>
+
+        <h2>Quais requisitos técnicos para ser elegível?</h2>
+        <p>Segundo o guia e a documentação de <a href="https://developers.google.com/search/docs/appearance/ai-features?hl=pt-BR" rel="noopener">recursos de IA na Pesquisa</a>:</p>
+        <ul>
+          <li>A página precisa estar <strong>indexada</strong> e <strong>elegível a snippet</strong>, cumprindo os requisitos técnicos da Pesquisa.</li>
+          <li>O site precisa estar <strong>incluído</strong> nos recursos de IA generativa da Pesquisa no Search Console (controle Incluir/Excluir — detalhado no nosso artigo sobre o <a href="controle-ia-generativa-search-console-ai-overviews-ai-mode.html">controle de IA generativa</a>).</li>
+          <li>Cumprir requisitos e políticas <strong>não garante</strong> rastreamento, indexação ou exibição.</li>
+        </ul>
+        <p>O Google também reforça práticas técnicas já conhecidas: conteúdo rastreável, HTML semântico quando possível (foco em legibilidade humana, sem obsessão por HTML “perfeito”), boas práticas de JavaScript SEO, boa experiência na página e redução de conteúdo duplicado.</p>
+
+        <h2>O que você NÃO precisa fazer, segundo o Google?</h2>
+        <p>O guia tem uma seção explícita de “mythbusting”. Para a Pesquisa Google (incluindo IA generativa), você pode ignorar:</p>
+        <table>
+          <thead><tr><th>Prática popular</th><th>O que o Google diz</th></tr></thead>
+          <tbody>
+            <tr><td><strong>llms.txt e “markup especial” para IA</strong></td><td>A Pesquisa Google (incluindo recursos de IA) <strong>não usa</strong> esses arquivos. Criar/manter llms.txt <strong>nem ajuda nem prejudica</strong> no Google Search — o Google os ignora. Pode fazer sentido para <em>outros</em> serviços (veja nosso guia de <a href="llms-txt-o-que-e-como-criar-chatgpt-perplexity-gemini.html">llms.txt</a>).</td></tr>
+            <tr><td><strong>“Chunking” do conteúdo</strong></td><td>Não há requisito de quebrar o texto em pedacinhos para a IA. Os sistemas entendem vários tópicos numa página. Não existe comprimento ideal de página: faça páginas para a audiência.</td></tr>
+            <tr><td><strong>Reescrever só para sistemas de IA</strong></td><td>Não precisa escrever de um jeito especial “para a IA”. Os sistemas entendem sinônimos e significados gerais; não precisa capturar toda variação de long-tail.</td></tr>
+            <tr><td><strong>Buscar menções inautênticas</strong></td><td>Os recursos de IA podem mostrar o que se diz sobre produtos na web, mas perseguir menções inautênticas não ajuda como parece. Ranking foca em conteúdo de qualidade; outros sistemas bloqueiam spam.</td></tr>
+            <tr><td><strong>Schema especial para IA</strong></td><td>Dados estruturados <strong>não são obrigatórios</strong> para busca com IA generativa e <strong>não há</strong> markup schema.org especial. Continuar usando schema ajuda em rich results (veja nosso artigo sobre <a href="dados-estruturados-schema-org-ajudam-aparecer-chatgpt-google-ia.html">schema.org e IA</a>).</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Como medir no Search Console?</h2>
+        <p>Use o <a href="https://support.google.com/webmasters/answer/16984139?hl=pt-BR" rel="noopener">Relatório de performance da IA generativa</a> no Search Console para ver como as pessoas descobrem seu conteúdo pelos recursos de IA generativa na Pesquisa e no Discover.</p>
+        <p>O Google alerta: desconfie de ferramentas de terceiros que prometem sucesso de ranking ou alegam usar métricas “internas” do Google. Nenhuma ferramenta de terceiros tem acesso aos sistemas internos de ranking ou de IA. Use essas ferramentas se ajudarem o fluxo de trabalho, mas avalie o conselho contra a orientação oficial.</p>
+        <p>Lembrete: para o site poder aparecer nesses recursos, ele precisa estar incluído no <a href="https://support.google.com/webmasters/answer/16908024?hl=pt-BR" rel="noopener">controle de IA generativa</a> do Search Console.</p>
+
+        <h2 id="faq">Perguntas frequentes</h2>
+        </div>
+        <div class="space-y-3 mt-4"><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">O Google trata GEO e AEO como disciplinas separadas do SEO?</summary><p class="mt-2 text-mist text-sm">Não. No guia oficial de otimização para recursos de IA generativa, o Google diz que AEO (answer engine optimization) e GEO (generative engine optimization) descrevem o trabalho de melhorar a visibilidade em experiências de busca com IA, mas, do ponto de vista do Google Search, otimizar para essas experiências continua sendo SEO.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Preciso criar um arquivo llms.txt para aparecer nas Visões gerais ou no Modo IA?</summary><p class="mt-2 text-mist text-sm">Não. O Google afirma que a Pesquisa (incluindo recursos de IA generativa) não usa arquivos llms.txt nem marcações especiais equivalentes. Criar e manter esses arquivos nem ajuda nem prejudica a visibilidade no Google Search; o Google os ignora. Eles podem ainda fazer sentido para outros agentes ou serviços.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Existe schema.org especial para Visões gerais e Modo IA?</summary><p class="mt-2 text-mist text-sm">Não. O Google diz que dados estruturados não são obrigatórios para a busca com IA generativa e que não há markup schema.org especial a adicionar. Continuar usando dados estruturados como parte da estratégia de SEO ainda é recomendável para elegibilidade a rich results.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Que tipo de conteúdo o Google recomenda para recursos de IA?</summary><p class="mt-2 text-mist text-sm">Conteúdo não-commodity, people-first, com ponto de vista único: útil, confiável e baseado em experiência ou expertise, em vez de resumir o que já está em todo lugar ou o que um modelo generativo produziria facilmente.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Quais requisitos técnicos o Google pede para ser elegível?</summary><p class="mt-2 text-mist text-sm">A página precisa estar indexada e elegível a snippet, cumprindo os requisitos técnicos da Pesquisa. Além disso, o site precisa estar incluído nos recursos de IA generativa da Pesquisa no Search Console. Indexação e exibição nunca são garantidas.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Como medir se o site aparece nas Visões gerais e no Modo IA?</summary><p class="mt-2 text-mist text-sm">Use o Relatório de performance da IA generativa no Search Console. O Google alerta para desconfiar de ferramentas de terceiros que prometem sucesso de ranking ou alegam acesso a métricas internas do Google.</p></details></div>
+        <div class="prose-r"><h2>Fontes</h2><ul><li><a href="https://developers.google.com/search/docs/fundamentals/ai-optimization-guide" rel="noopener">https://developers.google.com/search/docs/fundamentals/ai-optimization-guide</a> — Guia oficial de otimização para recursos de IA generativa (atualizado 2026-07-10)</li><li><a href="https://developers.google.com/search/docs/appearance/ai-features?hl=pt-BR" rel="noopener">https://developers.google.com/search/docs/appearance/ai-features</a> — Recursos de IA e seu site</li><li><a href="https://support.google.com/webmasters/answer/16984139?hl=pt-BR" rel="noopener">https://support.google.com/webmasters/answer/16984139</a> — Relatório de performance da IA generativa</li><li><a href="https://support.google.com/webmasters/answer/16908024?hl=pt-BR" rel="noopener">https://support.google.com/webmasters/answer/16908024</a> — Controle de uso na IA generativa da Pesquisa</li></ul></div>
+        <div class="mt-12 rounded-2xl card-border bg-charcoal-800 p-6">
+          <p class="text-snow font-semibold text-lg">Quer saber se as IAs já citam a sua marca?</p>
+          <p class="mt-2 text-mist text-sm">O Gabarito GEO da Refrain testa perguntas de compra no ChatGPT, Perplexity e Gemini e entrega score, gaps priorizados e checklist em minutos, incluindo a checagem de acesso dos robôs de IA ao seu site. R$ 497, pagamento único.</p>
+          <div class="mt-4 flex flex-wrap gap-3"><a href="../precos.html" class="text-sm font-medium px-4 py-2 rounded-lg bg-cyan text-charcoal-950 hover:bg-cyan-dim transition">Ver preços do Gabarito</a><a href="../orcamento.html" class="text-sm font-medium px-4 py-2 rounded-lg border border-charcoal-600 text-snow hover:border-cyan/40 hover:text-cyan transition">Fazer diagnóstico rápido</a></div>
+        </div>
+      
+        <aside class="mt-12 p-5 rounded-xl border border-white/10 bg-white/5" aria-label="Sobre o autor">
+          <p class="text-snow font-semibold">Sobre o autor</p>
+          <p class="mt-2 text-sm text-mist"><a href="/autor/leandro-franca-de-mello/" class="text-cyan hover:underline">Leandro França de Mello</a> é Google Developer, engenheiro de ML e foi um dos pioneiros em Google Ads e campanhas de SEO no início dos anos 2000. Fundou a Refrain conjugando essas competências pra criar uma agência 100% automatizada de GEO e com alcance mundial.</p>
+        </aside>
+      </article>
+    </section>
+  </main>
+
+  <footer class="border-t border-charcoal-700 py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row justify-between gap-8">
+      <div>
+        <a href="../index.html" class="inline-block" aria-label="Refrain — início"><img src="../assets/refrain-wordmark.svg" alt="Refrain" width="104" height="28" class="h-7 w-auto" /></a>
+        <p class="mt-2 text-sm text-mist max-w-xs">Seja o refrão que a IA repete. GEO + Caçador de Citações.</p>
+        <p class="mt-2 text-sm text-mist"><a href="mailto:contato@refrain.com.br" class="hover:text-cyan">contato@refrain.com.br</a></p>
+      </div>
+      <div class="flex flex-wrap gap-8 text-sm text-mist">
+        <div class="space-y-2">
+          <p class="text-snow font-medium text-xs uppercase tracking-wider">Site</p>
+          <a href="../servicos.html" class="block hover:text-cyan">Serviços</a>
+          <a href="../metodologia.html" class="block hover:text-cyan">Metodologia</a>
+          <a href="../case-climatewise.html" class="block hover:text-cyan">Case</a>
+          <a href="../orcamento.html" class="block hover:text-cyan">Diagnóstico</a>
+          <a href="../precos.html" class="block hover:text-cyan">Preços</a>
+          <a href="./" class="block hover:text-cyan">Artigos</a>
+          <a href="/estudos/quem-as-ias-citam-no-brasil/" class="block hover:text-cyan">Estudo: quem as IAs citam</a>
+          <a href="/autor/leandro-franca-de-mello/" class="block hover:text-cyan">Autor</a>
+          <a href="../contato.html" class="block hover:text-cyan">Contato</a>
+          <a href="../portal.html" class="block hover:text-cyan">Portal</a>
+        </div>
+        <div class="space-y-2">
+          <p class="text-snow font-medium text-xs uppercase tracking-wider">Legal</p>
+          <a href="../privacidade.html" class="block hover:text-cyan">Privacidade</a>
+          <a href="../termos.html" class="block hover:text-cyan">Termos</a>
+          <a href="../llms.txt" class="block hover:text-cyan font-mono text-xs">llms.txt</a>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 mt-10 pt-6 border-t border-charcoal-700 text-xs text-mist/50">
+      © 2026 Refrain · Leandro França de Mello
+    </div>
+  </footer>
+<script src="https://app.refrain.com.br/chat-widget.js" async></script>
+</body>
+</html>
