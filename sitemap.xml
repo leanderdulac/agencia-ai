@@ -47,9 +47,15 @@
   </url>
   <url>
     <loc>https://www.refrain.com.br/blog/</loc>
-    <lastmod>2026-11-05</lastmod>
+    <lastmod>2026-11-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.refrain.com.br/blog/o-que-o-google-diz-sobre-geo-aeo-visoes-gerais-modo-ia.html</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.refrain.com.br/blog/controle-ia-generativa-search-console-ai-overviews-ai-mode.html</loc>
