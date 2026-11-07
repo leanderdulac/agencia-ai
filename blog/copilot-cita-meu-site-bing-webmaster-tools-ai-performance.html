@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Como saber se o Copilot cita o seu site: o relatório AI Performance do Bing | Blog Refrain</title>
+  <meta name="description" content="O relatório AI Performance do Bing Webmaster Tools mostra quantas vezes o Copilot e os resumos de IA do Bing citam suas páginas, e para quais grounding queries." />
+  <link rel="canonical" href="https://www.refrain.com.br/blog/copilot-cita-meu-site-bing-webmaster-tools-ai-performance.html" />
+  <meta property="og:title" content="Como saber se o Copilot cita o seu site: o relatório AI Performance do Bing Webmaster Tools" />
+  <meta property="og:description" content="O relatório AI Performance do Bing Webmaster Tools mostra quantas vezes o Copilot e os resumos de IA do Bing citam suas páginas, e para quais grounding queries." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.refrain.com.br/blog/copilot-cita-meu-site-bing-webmaster-tools-ai-performance.html" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Refrain" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Article",
+   "@id": "https://www.refrain.com.br/blog/copilot-cita-meu-site-bing-webmaster-tools-ai-performance.html#article",
+   "headline": "Como saber se o Copilot cita o seu site: o relatório AI Performance do Bing Webmaster Tools",
+   "description": "O relatório AI Performance do Bing Webmaster Tools mostra quantas vezes o Copilot e os resumos de IA do Bing citam suas páginas, e para quais grounding queries.",
+   "inLanguage": "pt-BR",
+   "datePublished": "2026-11-07",
+   "dateModified": "2026-11-07",
+   "author": {
+    "@type": "Person",
+    "name": "Leandro França de Mello",
+    "description": "Leandro França de Mello é Google Developer, engenheiro de ML e foi um dos pioneiros em Google Ads e campanhas de SEO no início dos anos 2000. Fundou a Refrain conjugando essas competências pra criar uma agência 100% automatizada de GEO e com alcance mundial.",
+    "jobTitle": "Fundador da Refrain",
+    "url": "https://www.refrain.com.br/autor/leandro-franca-de-mello/",
+    "@id": "https://www.refrain.com.br/autor/leandro-franca-de-mello/#person",
+    "worksFor": {
+     "@id": "https://www.refrain.com.br/#organization"
+    },
+    "knowsAbout": [
+     "GEO",
+     "SEO",
+     "Google Ads",
+     "machine learning"
+    ]
+   },
+   "publisher": {
+    "@type": "Organization",
+    "@id": "https://www.refrain.com.br/#organization",
+    "name": "Refrain",
+    "url": "https://www.refrain.com.br/"
+   },
+   "mainEntityOfPage": "https://www.refrain.com.br/blog/copilot-cita-meu-site-bing-webmaster-tools-ai-performance.html",
+   "citation": [
+    "https://blogs.bing.com/webmaster/2026/2/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview/",
+    "https://www2.bing.com/webmasters/help/ai-performance-9f8e7d6c",
+    "https://blogs.bing.com/search/2026/6/New-AI-Visibility-Insights-in-Bing-Webmaster-Tools-Intents-Topics-Citation-Share-Compare/",
+    "https://www.indexnow.org/documentation"
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://www.refrain.com.br/blog/copilot-cita-meu-site-bing-webmaster-tools-ai-performance.html#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "O que é o relatório AI Performance do Bing Webmaster Tools?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "É um relatório em prévia pública desde 10 de fevereiro de 2026 que mostra quantas vezes as páginas do seu site aparecem como fonte em respostas geradas por IA no Microsoft Copilot, nos resumos de IA do Bing e em integrações de parceiros selecionados, com páginas citadas, grounding queries e tendência no tempo."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "O relatório mostra citações do ChatGPT, do Gemini ou do Perplexity?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Não há essa garantia. A Microsoft lista como superfícies cobertas o Microsoft Copilot, os resumos gerados por IA no Bing e integrações de parceiros selecionados, sem nomear quais parceiros. Para ChatGPT, Gemini e Perplexity, a medição continua sendo por teste de perguntas."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Citação no AI Performance é a mesma coisa que clique?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Não. Segundo a ajuda do Bing, uma citação indica que o conteúdo foi referenciado ou exibido visivelmente como fonte numa resposta de IA. Não representa tráfego, cliques nem engajamento."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "O que são grounding queries?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "São frases curtas e agrupadas que representam o que a IA usou para buscar o conteúdo que acabou citado. Não são as perguntas completas dos usuários nem os prompts exatos."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Por que meu site não tem nenhuma grounding query?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A Microsoft diz que isso acontece quando há pouca atividade de citação agregada no período escolhido, porque citações muito esparsas podem não aparecer. Segundo ela, isso não indica penalidade nem exclusão."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "O que é Citation Share?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "É a porcentagem das citações atribuídas ao seu site entre todas as citações exibidas para uma mesma grounding query. Não mostra quais são os concorrentes, não é ranking e não representa participação de tráfego."
+     }
+    }
+   ]
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Início",
+     "item": "https://www.refrain.com.br/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Blog",
+     "item": "https://www.refrain.com.br/blog/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Como saber se o Copilot cita o seu site: o relatório AI Performance do Bing Webmaster Tools",
+     "item": "https://www.refrain.com.br/blog/copilot-cita-meu-site-bing-webmaster-tools-ai-performance.html"
+    }
+   ]
+  }
+ ]
+}
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../config.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            charcoal: { 950: '#0B1220', 900: '#0f1218', 800: '#161b22', 700: '#1e2530', 600: '#2a3341' },
+            cyan: { DEFAULT: '#2F6BFF', dim: '#2557d6' },
+            teal: { DEFAULT: '#00A896' },
+            cream: { DEFAULT: '#F7F5F1' },
+            warn: { DEFAULT: '#E85D04' },
+            mist: '#a8b2c1',
+            snow: '#e8ecf1'
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
+          },
+          boxShadow: { 'glow-sm': '0 0 20px rgba(47,107,255,0.2)', glow: '0 0 40px rgba(47,107,255,0.15)' }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background: #0B1220; color: #e8ecf1; }
+    .nav-blur { backdrop-filter: blur(12px); background: rgba(11,18,32,0.85); }
+    .card-border { border: 1px solid rgba(42,51,65,0.9); }
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(47,107,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(47,107,255,0.03) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    .field-error { border-color: #E85D04 !important; }
+    .error-msg { color: #E85D04; font-size: 0.75rem; margin-top: 0.35rem; display: none; }
+    .error-msg.visible { display: block; }
+  </style>
+<script src="https://app.refrain.com.br/hub/refrain-1b85fe/geo.js" async></script>
+</head>
+<body class="font-sans antialiased">
+  <style>
+    .prose-r h2 { font-size:1.5rem; font-weight:700; color:#e8ecf1; margin-top:2.5rem; margin-bottom:.75rem; }
+    .prose-r p { color:#c9d1dc; line-height:1.75; margin-top:1rem; }
+    .prose-r ul, .prose-r ol { color:#c9d1dc; margin-top:1rem; padding-left:1.25rem; line-height:1.75; }
+    .prose-r ul { list-style:disc; } .prose-r ol { list-style:decimal; }
+    .prose-r a { color:#2F6BFF; text-decoration:underline; }
+    .prose-r table { width:100%; margin-top:1.25rem; border-collapse:collapse; font-size:.9rem; }
+    .prose-r th, .prose-r td { border:1px solid rgba(42,51,65,0.9); padding:.6rem .75rem; text-align:left; vertical-align:top; color:#c9d1dc; }
+    .prose-r th { background:#161b22; color:#e8ecf1; }
+    .prose-r code { font-family:'JetBrains Mono',monospace; font-size:.85em; background:#161b22; padding:.1rem .3rem; border-radius:.25rem; }
+  </style>
+  <header class="fixed top-0 inset-x-0 z-50 nav-blur border-b border-charcoal-600/50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="../index.html" class="flex items-center gap-2">
+        <img src="../assets/refrain-wordmark.svg" alt="Refrain" width="119" height="32" class="h-8 w-auto" />
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm text-mist">
+        <a href="../servicos.html" class="hover:text-cyan transition">Serviços</a>
+        <a href="../metodologia.html" class="hover:text-cyan transition">Metodologia</a>
+        <a href="../case-climatewise.html" class="hover:text-cyan transition">Case</a>
+        <a href="../orcamento.html" class="hover:text-cyan transition">Diagnóstico</a>
+        <a href="../index.html#pacotes" class="hover:text-cyan transition">Pacotes</a>
+        <a href="../precos.html" class="hover:text-cyan transition">Preços</a>
+        <a href="./" class="text-cyan">Blog</a>
+        <a href="../contato.html" class="hover:text-cyan transition">Contato</a>
+      </nav>
+      <a href="../orcamento.html" class="text-sm font-medium px-4 py-2 rounded-lg bg-cyan text-charcoal-950 hover:bg-cyan-dim transition shadow-glow-sm">Diagnóstico rápido</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="pt-28 pb-20 sm:pt-32 grid-bg">
+      <article class="max-w-3xl mx-auto px-4 sm:px-6">
+        <p class="text-cyan font-mono text-xs uppercase tracking-widest mb-3"><a href="./" class="hover:underline">Blog</a> · 7 de novembro de 2026</p>
+        <h1 class="text-3xl sm:text-4xl font-bold text-snow tracking-tight">Como saber se o Copilot cita o seu site: o relatório AI Performance do Bing Webmaster Tools</h1>
+        <div class="prose-r">
+        <p id="resposta"><strong>Para saber se o Microsoft Copilot cita o seu site, cadastre o domínio no Bing Webmaster Tools e abra o relatório AI Performance. Desde 10 de fevereiro de 2026, em prévia pública, ele mostra quantas vezes suas páginas aparecem como fonte em respostas do Copilot, nos resumos gerados por IA no Bing e em integrações de parceiros selecionados, quais URLs são citadas e para quais grounding queries.</strong> É o primeiro relatório oficial de um grande buscador que conta citações em respostas de IA página a página. Mas não é ranking nem tráfego: a Microsoft avisa que os dados são agregados e amostrados.</p>
+        <p>Abaixo está o que dizem o <a href="https://blogs.bing.com/webmaster/2026/2/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview/" rel="noopener">anúncio do AI Performance</a>, a <a href="https://www2.bing.com/webmasters/help/ai-performance-9f8e7d6c" rel="noopener">página de ajuda do relatório</a> e a <a href="https://blogs.bing.com/search/2026/6/New-AI-Visibility-Insights-in-Bing-Webmaster-Tools-Intents-Topics-Citation-Share-Compare/" rel="noopener">atualização de 16 de junho de 2026</a>, que trouxe Intents, Topics, Citation Share e Compare. É o equivalente, do lado da Microsoft, ao que mostramos no <a href="controle-ia-generativa-search-console-ai-overviews-ai-mode.html">controle de IA generativa do Search Console</a>.</p>
+
+        <h2>O que o relatório AI Performance mede?</h2>
+        <p>Ele mede atividade de citação visível: quantas vezes o seu conteúdo foi referenciado ou exibido como fonte numa resposta gerada por IA. A ajuda do Bing lista três superfícies cobertas:</p>
+        <ul>
+          <li>Microsoft Copilot;</li>
+          <li>resumos gerados por IA no Bing;</li>
+          <li>integrações de parceiros selecionados (a Microsoft não diz quais).</li>
+        </ul>
+        <p>As métricas da tela principal são estas:</p>
+        <table>
+          <thead><tr><th>Métrica</th><th>O que mostra, segundo a Microsoft</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Total Citations</strong></td><td>Total de vezes que o conteúdo foi exibido como fonte em respostas de IA no período. Não indica posição dentro da resposta.</td></tr>
+            <tr><td><strong>Average Cited Pages</strong></td><td>Média diária de páginas únicas do site citadas no período.</td></tr>
+            <tr><td><strong>Grounding queries</strong></td><td>Frases-chave que a IA usou para buscar o conteúdo que acabou citado. É uma amostra.</td></tr>
+            <tr><td><strong>Page-level citation activity</strong></td><td>Contagem de citações por URL: quais páginas são mais citadas.</td></tr>
+            <tr><td><strong>Linha do tempo</strong></td><td>Como o volume de citações muda ao longo do período (7 dias, 30 dias, 3 meses ou intervalo personalizado).</td></tr>
+          </tbody>
+        </table>
+        <p>Os dados são atualizados diariamente, com um pequeno atraso de processamento, e podem ser exportados em CSV ou Excel.</p>
+
+        <h2>O que são grounding queries?</h2>
+        <p>Grounding (embasamento) é o material da web que o sistema de IA usa para sustentar e citar uma resposta. As grounding queries são frases curtas e agrupadas que representam as buscas que levaram o seu conteúdo a ser citado. A Microsoft deixa claro que <strong>não são as perguntas completas dos usuários nem os prompts</strong>, e que uma mesma query pode estar ligada a várias páginas suas (e vice-versa).</p>
+        <p>Desde junho dá para cruzar os dois lados: clicar numa grounding query mostra as páginas citadas para ela, e clicar numa página mostra as queries associadas. Só se filtra por um dos dois de cada vez; para cruzar mais, exporte.</p>
+
+        <h2>O que mudou em junho: Intents, Topics, Citation Share e Compare</h2>
+        <p>Em 16 de junho de 2026 a Microsoft liberou, em prévia global, quatro recursos novos dentro do relatório:</p>
+        <ol>
+          <li><strong>Intents</strong>: classifica as grounding queries por intenção, como Informational, Commercial, Navigational, Comparison, Local, Research e Planning, entre outras.</li>
+          <li><strong>Topics</strong>: agrupa queries parecidas em temas maiores. O exemplo da Microsoft junta “solar panels”, “solar energy efficiency” e “residential solar installation” no tema Solar Energy.</li>
+          <li><strong>Citation Share</strong>: a porcentagem das citações que foram para o seu site entre todas as citações exibidas para a mesma grounding query. Não revela os domínios concorrentes, não é ranking e não é participação de tráfego.</li>
+          <li><strong>Compare</strong>: sobrepõe um período anterior ao atual no mesmo gráfico, por exemplo os últimos 30 dias contra os 30 anteriores.</li>
+        </ol>
+        <p>Intents e Topics são atribuídos por classificadores de IA. A própria Microsoft avisa que, em nichos muito específicos, os rótulos podem sair genéricos.</p>
+
+        <h2>O que o relatório não mostra?</h2>
+        <p>Ler esses números com as ressalvas oficiais evita conclusões erradas. A página de ajuda diz que:</p>
+        <ul>
+          <li>citação <strong>não é clique nem tráfego</strong>;</li>
+          <li>o relatório <strong>não mede ranking, autoridade nem importância</strong> da página dentro da resposta;</li>
+          <li>os dados são uma <strong>amostra</strong>: nem toda citação aparece, citações raras podem sumir e os totais podem divergir entre as visões;</li>
+          <li>uma queda ou alta na linha do tempo <strong>não pode ser atribuída</strong> a uma causa única (mudança de conteúdo, de modelo ou de demanda);</li>
+          <li>não ter nenhuma grounding query no período <strong>não indica penalidade</strong>, só pouca atividade agregada.</li>
+        </ul>
+        <p>Também não há garantia de que ChatGPT, Gemini ou Perplexity estejam entre os “parceiros selecionados”. Para esses motores, a medição continua sendo por perguntas de teste, como explicamos em <a href="como-medir-marca-chatgpt-gemini-perplexity.html">como medir se a marca aparece no ChatGPT, Gemini e Perplexity</a>.</p>
+
+        <h2>Como começar, passo a passo</h2>
+        <ol>
+          <li>Cadastre e verifique o domínio no <a href="https://www.bing.com/webmasters" rel="noopener">Bing Webmaster Tools</a>. Quem já usa o Google Search Console pode importar o site de lá.</li>
+          <li>Confirme que o Bing pode rastrear o site. A ajuda do relatório lembra que, como na busca do Bing, o AI Performance só reflete conteúdo elegível para indexação e que o Bing respeita o robots.txt. Revise as regras para <code>bingbot</code> e para <code>User-agent: *</code> no guia de <a href="robots-txt-para-ia-gptbot-oai-searchbot-perplexitybot-claudebot.html">robots.txt para IA</a>.</li>
+          <li>Envie o sitemap e, se puder, ative o <a href="https://www.indexnow.org/documentation" rel="noopener">IndexNow</a>: um aviso por HTTP de que uma URL foi criada, alterada ou removida, verificado por um arquivo-chave hospedado no próprio domínio. A documentação do protocolo diz que a resposta 200 só confirma o recebimento, não a indexação.</li>
+          <li>Abra o AI Performance, escolha 30 dias e exporte páginas e grounding queries.</li>
+          <li>Repita a leitura uma vez por mês com o Compare e anote o que você mudou no site entre um período e outro.</li>
+        </ol>
+
+        <h2>Como usar os dados para melhorar as páginas</h2>
+        <p>A Microsoft lista boas práticas gerais junto com o relatório. Traduzindo para uma PME, clínica, SaaS ou e-commerce:</p>
+        <ul>
+          <li><strong>Compare as grounding queries com o que você vende.</strong> Se as citações vêm de temas informativos e nada de Commercial ou Comparison, faltam páginas de preço, comparação e “para quem serve”.</li>
+          <li><strong>Olhe as páginas nunca citadas.</strong> A ajuda aponta como causas comuns pouca relevância para perguntas frequentes, falta de clareza ou profundidade, conteúdo desatualizado ou fontes melhores.</li>
+          <li><strong>Estruture para ser citado.</strong> Subtítulos descritivos, seções curtas, tabelas e FAQ, que são os mesmos formatos recomendados pela Microsoft e o padrão que usamos neste blog.</li>
+          <li><strong>Sustente afirmações com fonte</strong> e mantenha datas e números atualizados.</li>
+          <li><strong>Mantenha a entidade consistente</strong>: nome, produto e oferta descritos do mesmo jeito em texto, imagens e <a href="dados-estruturados-schema-org-ajudam-aparecer-chatgpt-google-ia.html">dados estruturados</a>.</li>
+        </ul>
+        <p>Nada disso garante citação. A própria Microsoft diz que melhorar qualidade, estrutura e atualidade fortalece o conteúdo, mas não assegura um resultado específico.</p>
+
+        <h2>Bing AI Performance e Search Console: qual é a diferença?</h2>
+        <p>São relatórios de empresas diferentes, sobre produtos diferentes. O do Google trata das Visões gerais criadas por IA e do Modo IA (ver <a href="como-aparecer-nas-visoes-gerais-criadas-por-ia-do-google.html">Visões gerais</a> e <a href="o-que-o-google-diz-sobre-geo-aeo-visoes-gerais-modo-ia.html">o que o Google diz sobre GEO</a>). O do Bing trata do Copilot, dos resumos de IA do Bing e de parceiros. Uma estratégia de GEO completa olha os dois e complementa com testes diretos no ChatGPT, no <a href="como-aparecer-no-gemini-google-extended-grounding.html">Gemini</a> e no <a href="como-aparecer-no-perplexity-perplexitybot-selos-de-fonte.html">Perplexity</a>.</p>
+
+        <h2 id="faq">Perguntas frequentes</h2>
+        </div>
+        <div class="space-y-3 mt-4"><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">O que é o relatório AI Performance do Bing Webmaster Tools?</summary><p class="mt-2 text-mist text-sm">É um relatório em prévia pública desde 10 de fevereiro de 2026 que mostra quantas vezes as páginas do seu site aparecem como fonte em respostas geradas por IA no Microsoft Copilot, nos resumos de IA do Bing e em integrações de parceiros selecionados, com páginas citadas, grounding queries e tendência no tempo.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">O relatório mostra citações do ChatGPT, do Gemini ou do Perplexity?</summary><p class="mt-2 text-mist text-sm">Não há essa garantia. A Microsoft lista como superfícies cobertas o Microsoft Copilot, os resumos gerados por IA no Bing e integrações de parceiros selecionados, sem nomear quais parceiros. Para ChatGPT, Gemini e Perplexity, a medição continua sendo por teste de perguntas.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Citação no AI Performance é a mesma coisa que clique?</summary><p class="mt-2 text-mist text-sm">Não. Segundo a ajuda do Bing, uma citação indica que o conteúdo foi referenciado ou exibido visivelmente como fonte numa resposta de IA. Não representa tráfego, cliques nem engajamento.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">O que são grounding queries?</summary><p class="mt-2 text-mist text-sm">São frases curtas e agrupadas que representam o que a IA usou para buscar o conteúdo que acabou citado. Não são as perguntas completas dos usuários nem os prompts exatos.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Por que meu site não tem nenhuma grounding query?</summary><p class="mt-2 text-mist text-sm">A Microsoft diz que isso acontece quando há pouca atividade de citação agregada no período escolhido, porque citações muito esparsas podem não aparecer. Segundo ela, isso não indica penalidade nem exclusão.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">O que é Citation Share?</summary><p class="mt-2 text-mist text-sm">É a porcentagem das citações atribuídas ao seu site entre todas as citações exibidas para uma mesma grounding query. Não mostra quais são os concorrentes, não é ranking e não representa participação de tráfego.</p></details></div>
+        <div class="prose-r"><h2>Fontes</h2><ul><li><a href="https://blogs.bing.com/webmaster/2026/2/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview/" rel="noopener">https://blogs.bing.com/webmaster/2026/2/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview/</a> — anúncio do AI Performance no Bing Webmaster Tools (10/02/2026)</li><li><a href="https://www2.bing.com/webmasters/help/ai-performance-9f8e7d6c" rel="noopener">https://www2.bing.com/webmasters/help/ai-performance-9f8e7d6c</a> — ajuda oficial do relatório AI Performance (métricas, limitações e FAQ)</li><li><a href="https://blogs.bing.com/search/2026/6/New-AI-Visibility-Insights-in-Bing-Webmaster-Tools-Intents-Topics-Citation-Share-Compare/" rel="noopener">https://blogs.bing.com/search/2026/6/New-AI-Visibility-Insights-in-Bing-Webmaster-Tools-Intents-Topics-Citation-Share-Compare/</a> — Intents, Topics, Citation Share e Compare (16/06/2026)</li><li><a href="https://www.indexnow.org/documentation" rel="noopener">https://www.indexnow.org/documentation</a> — documentação do protocolo IndexNow</li></ul></div>
+        <div class="mt-12 rounded-2xl card-border bg-charcoal-800 p-6">
+          <p class="text-snow font-semibold text-lg">Quer saber se as IAs já citam a sua marca?</p>
+          <p class="mt-2 text-mist text-sm">O Gabarito GEO da Refrain testa perguntas de compra no ChatGPT, Perplexity e Gemini e entrega score, gaps priorizados e checklist em minutos, incluindo a checagem de acesso dos robôs de IA ao seu site. R$ 497, pagamento único.</p>
+          <div class="mt-4 flex flex-wrap gap-3"><a href="../precos.html" class="text-sm font-medium px-4 py-2 rounded-lg bg-cyan text-charcoal-950 hover:bg-cyan-dim transition">Ver preços do Gabarito</a><a href="../orcamento.html" class="text-sm font-medium px-4 py-2 rounded-lg border border-charcoal-600 text-snow hover:border-cyan/40 hover:text-cyan transition">Fazer diagnóstico rápido</a></div>
+        </div>
+      
+        <aside class="mt-12 p-5 rounded-xl border border-white/10 bg-white/5" aria-label="Sobre o autor">
+          <p class="text-snow font-semibold">Sobre o autor</p>
+          <p class="mt-2 text-sm text-mist"><a href="/autor/leandro-franca-de-mello/" class="text-cyan hover:underline">Leandro França de Mello</a> é Google Developer, engenheiro de ML e foi um dos pioneiros em Google Ads e campanhas de SEO no início dos anos 2000. Fundou a Refrain conjugando essas competências pra criar uma agência 100% automatizada de GEO e com alcance mundial.</p>
+        </aside>
+      </article>
+    </section>
+  </main>
+
+  <footer class="border-t border-charcoal-700 py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row justify-between gap-8">
+      <div>
+        <a href="../index.html" class="inline-block" aria-label="Refrain — início"><img src="../assets/refrain-wordmark.svg" alt="Refrain" width="104" height="28" class="h-7 w-auto" /></a>
+        <p class="mt-2 text-sm text-mist max-w-xs">Seja o refrão que a IA repete. GEO + Caçador de Citações.</p>
+        <p class="mt-2 text-sm text-mist"><a href="mailto:contato@refrain.com.br" class="hover:text-cyan">contato@refrain.com.br</a></p>
+      </div>
+      <div class="flex flex-wrap gap-8 text-sm text-mist">
+        <div class="space-y-2">
+          <p class="text-snow font-medium text-xs uppercase tracking-wider">Site</p>
+          <a href="../servicos.html" class="block hover:text-cyan">Serviços</a>
+          <a href="../metodologia.html" class="block hover:text-cyan">Metodologia</a>
+          <a href="../case-climatewise.html" class="block hover:text-cyan">Case</a>
+          <a href="../orcamento.html" class="block hover:text-cyan">Diagnóstico</a>
+          <a href="../precos.html" class="block hover:text-cyan">Preços</a>
+          <a href="./" class="block hover:text-cyan">Artigos</a>
+          <a href="/estudos/quem-as-ias-citam-no-brasil/" class="block hover:text-cyan">Estudo: quem as IAs citam</a>
+          <a href="/autor/leandro-franca-de-mello/" class="block hover:text-cyan">Autor</a>
+          <a href="../contato.html" class="block hover:text-cyan">Contato</a>
+          <a href="../portal.html" class="block hover:text-cyan">Portal</a>
+        </div>
+        <div class="space-y-2">
+          <p class="text-snow font-medium text-xs uppercase tracking-wider">Legal</p>
+          <a href="../privacidade.html" class="block hover:text-cyan">Privacidade</a>
+          <a href="../termos.html" class="block hover:text-cyan">Termos</a>
+          <a href="../llms.txt" class="block hover:text-cyan font-mono text-xs">llms.txt</a>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 mt-10 pt-6 border-t border-charcoal-700 text-xs text-mist/50">
+      © 2026 Refrain · Leandro França de Mello
+    </div>
+  </footer>
+<script src="https://app.refrain.com.br/chat-widget.js" async></script>
+</body>
+</html>
