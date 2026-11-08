@@ -47,9 +47,15 @@
   </url>
   <url>
     <loc>https://www.refrain.com.br/blog/</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.refrain.com.br/blog/treino-versus-grounding-robots-txt-controle-compartilhado-ia.html</loc>
+    <lastmod>2026-11-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.refrain.com.br/blog/copilot-cita-meu-site-bing-webmaster-tools-ai-performance.html</loc>
