@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Treino versus grounding: o controle compartilhado de IA no robots.txt | Blog Refrain</title>
+  <meta name="description" content="Em 30 de outubro de 2026, Google, OpenAI e Microsoft anunciaram um sinal compartilhado no robots.txt para preferência de treino de IA. Bloquear o treino não é o mesmo que sair das respostas: grounding é outro controle." />
+  <link rel="canonical" href="https://www.refrain.com.br/blog/treino-versus-grounding-robots-txt-controle-compartilhado-ia.html" />
+  <meta property="og:title" content="Treino versus grounding: o controle compartilhado de IA no robots.txt" />
+  <meta property="og:description" content="Em 30 de outubro de 2026, Google, OpenAI e Microsoft anunciaram um sinal compartilhado no robots.txt para preferência de treino de IA. Bloquear o treino não é o mesmo que sair das respostas: grounding é outro controle." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.refrain.com.br/blog/treino-versus-grounding-robots-txt-controle-compartilhado-ia.html" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Refrain" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Article",
+   "@id": "https://www.refrain.com.br/blog/treino-versus-grounding-robots-txt-controle-compartilhado-ia.html#article",
+   "headline": "Treino versus grounding: o controle compartilhado de IA no robots.txt",
+   "description": "Em 30 de outubro de 2026, Google, OpenAI e Microsoft anunciaram um sinal compartilhado no robots.txt para preferência de treino de IA. Bloquear o treino não é o mesmo que sair das respostas: grounding é outro controle.",
+   "inLanguage": "pt-BR",
+   "datePublished": "2026-11-08",
+   "dateModified": "2026-11-08",
+   "author": {
+    "@type": "Person",
+    "name": "Leandro França de Mello",
+    "description": "Leandro França de Mello é Google Developer, engenheiro de ML e foi um dos pioneiros em Google Ads e campanhas de SEO no início dos anos 2000. Fundou a Refrain conjugando essas competências pra criar uma agência 100% automatizada de GEO e com alcance mundial.",
+    "jobTitle": "Fundador da Refrain",
+    "url": "https://www.refrain.com.br/autor/leandro-franca-de-mello/",
+    "@id": "https://www.refrain.com.br/autor/leandro-franca-de-mello/#person",
+    "worksFor": {
+     "@id": "https://www.refrain.com.br/#organization"
+    },
+    "knowsAbout": [
+     "GEO",
+     "SEO",
+     "Google Ads",
+     "machine learning"
+    ]
+   },
+   "publisher": {
+    "@type": "Organization",
+    "@id": "https://www.refrain.com.br/#organization",
+    "name": "Refrain",
+    "url": "https://www.refrain.com.br/"
+   },
+   "mainEntityOfPage": "https://www.refrain.com.br/blog/treino-versus-grounding-robots-txt-controle-compartilhado-ia.html",
+   "citation": [
+    "https://developers.google.com/search/blog/2026/10/ai-training-control",
+    "https://openai.com/index/helping-websites-express-ai-training-preferences",
+    "https://blogs.bing.com/search/2026/10/your-content-your-choice-clearer-preferences-for-training-and-grounding/",
+    "https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers"
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://www.refrain.com.br/blog/treino-versus-grounding-robots-txt-controle-compartilhado-ia.html#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Bloquear o treino com o token compartilhado tira o meu site das respostas do ChatGPT, do Gemini e do Copilot?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Não automaticamente. O sinal anunciado em 30 de outubro de 2026 é uma preferência de TREINO. Na Microsoft, treino e grounding são preferências independentes: recusar grounding (Disallow ou DisallowExtended) é o que a empresa afirma que reduz a visibilidade da marca em experiências de IA como Copilot, AI Mode e AI Overview. No Google, se o site usa o token para optar por não treinar e o Google-Extended não estiver explícito, o Google planeja interpretar isso como se o publisher tivesse recusado o Google-Extended, token que também governa o grounding nos Gemini Apps. O anúncio da OpenAI trata do sinal comum para treino fundacional de IA generativa e diz que ele não substitui os controles atuais de crawlers."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Qual é a sintaxe exata para recusar o treino no site todo?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No anúncio da Microsoft, o exemplo para recusar o treino no site inteiro é o grupo User-Agent: __usage_ai-training com Disallow: /. O padrão é Allow: sem essa regra, o treino continua permitido. A documentação de crawlers comuns do Google cita o mesmo sinal como user-agent: __usage_ai-training e diz que o Google pretende suportá-lo no início de 2027. Também é possível recusar um caminho (Disallow: /example-path/) ou, se quiser declarar de forma explícita, usar Allow: /."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "O que é DisallowExtended na Microsoft?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "É a preferência granular de grounding que a Microsoft introduziu junto com Disallow. Disallow impede o grounding. DisallowExtended limita o grounding às experiências operadas pela Microsoft, como AI Mode, AI Overview, Copilot e Microsoft 365, e exclui serviços de grounding que a Microsoft oferece a terceiros, como Web IQ e o grounding por API no Foundry. Não existe preferência de grounding no robots.txt: ela só se publica no nível da página, com meta tag ou X-Robots-Tag (ai-grounding:disallow ou ai-grounding:disallowextended)."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Quando as novas preferências da Microsoft passam a valer?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A Microsoft passa a honrar as novas preferências a partir de 1º de fevereiro de 2027, conforme rastreia o site. Quem hoje usa NoArchive ou NoCache deve publicar as novas preferências até 1º de março de 2027; depois dessa data esses tags deixam de ser lidos como preferência de treino ou grounding. A preferência temporária de transição de grounding no Bing Webmaster Tools abre em 15 de dezembro de 2026 (só para sites que usavam NoArchive ou NoCache nessa data) e vale até o re-rastreamento ou 30 de setembro de 2027, o que ocorrer primeiro."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "O Google já honra o token compartilhado hoje?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Não. No anúncio de 30 de outubro de 2026, o Google afirma que pretende apoiar o novo controle junto com outros provedores de IA em 2027. A documentação de crawlers comuns, atualizada em 30 de outubro de 2026, detalha que o Google pretende suportar o sinal compartilhado AIPREF (com user-agent: __usage_ai-training) no início de 2027. Até lá, o controle específico continua sendo o Google-Extended, oferecido desde 2023."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Recusar treino ou grounding muda a posição nos resultados clássicos do Google ou do Bing?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Segundo as próprias empresas, não. A Microsoft diz que essas preferências de uso não alteram a elegibilidade nos resultados tradicionais do Bing, observadas as exigências normais de rastreamento e indexação, e que indexar e ranquear páginas na busca clássica não é grounding. O Google afirma que o Google-Extended não impacta a inclusão do site na Pesquisa Google nem é usado como sinal de ranking. Nenhuma escolha, diz a Microsoft, garante inclusão, tráfego ou pagamento."
+     }
+    }
+   ]
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Início",
+     "item": "https://www.refrain.com.br/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Blog",
+     "item": "https://www.refrain.com.br/blog/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Treino versus grounding: o controle compartilhado de IA no robots.txt",
+     "item": "https://www.refrain.com.br/blog/treino-versus-grounding-robots-txt-controle-compartilhado-ia.html"
+    }
+   ]
+  }
+ ]
+}
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../config.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            charcoal: { 950: '#0B1220', 900: '#0f1218', 800: '#161b22', 700: '#1e2530', 600: '#2a3341' },
+            cyan: { DEFAULT: '#2F6BFF', dim: '#2557d6' },
+            teal: { DEFAULT: '#00A896' },
+            cream: { DEFAULT: '#F7F5F1' },
+            warn: { DEFAULT: '#E85D04' },
+            mist: '#a8b2c1',
+            snow: '#e8ecf1'
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
+          },
+          boxShadow: { 'glow-sm': '0 0 20px rgba(47,107,255,0.2)', glow: '0 0 40px rgba(47,107,255,0.15)' }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background: #0B1220; color: #e8ecf1; }
+    .nav-blur { backdrop-filter: blur(12px); background: rgba(11,18,32,0.85); }
+    .card-border { border: 1px solid rgba(42,51,65,0.9); }
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(47,107,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(47,107,255,0.03) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    .field-error { border-color: #E85D04 !important; }
+    .error-msg { color: #E85D04; font-size: 0.75rem; margin-top: 0.35rem; display: none; }
+    .error-msg.visible { display: block; }
+  </style>
+<script src="https://app.refrain.com.br/hub/refrain-1b85fe/geo.js" async></script>
+</head>
+<body class="font-sans antialiased">
+  <style>
+    .prose-r h2 { font-size:1.5rem; font-weight:700; color:#e8ecf1; margin-top:2.5rem; margin-bottom:.75rem; }
+    .prose-r p { color:#c9d1dc; line-height:1.75; margin-top:1rem; }
+    .prose-r ul, .prose-r ol { color:#c9d1dc; margin-top:1rem; padding-left:1.25rem; line-height:1.75; }
+    .prose-r ul { list-style:disc; } .prose-r ol { list-style:decimal; }
+    .prose-r a { color:#2F6BFF; text-decoration:underline; }
+    .prose-r table { width:100%; margin-top:1.25rem; border-collapse:collapse; font-size:.9rem; }
+    .prose-r th, .prose-r td { border:1px solid rgba(42,51,65,0.9); padding:.6rem .75rem; text-align:left; vertical-align:top; color:#c9d1dc; }
+    .prose-r th { background:#161b22; color:#e8ecf1; }
+    .prose-r code { font-family:'JetBrains Mono',monospace; font-size:.85em; background:#161b22; padding:.1rem .3rem; border-radius:.25rem; }
+  </style>
+  <header class="fixed top-0 inset-x-0 z-50 nav-blur border-b border-charcoal-600/50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="../index.html" class="flex items-center gap-2">
+        <img src="../assets/refrain-wordmark.svg" alt="Refrain" width="119" height="32" class="h-8 w-auto" />
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm text-mist">
+        <a href="../servicos.html" class="hover:text-cyan transition">Serviços</a>
+        <a href="../metodologia.html" class="hover:text-cyan transition">Metodologia</a>
+        <a href="../case-climatewise.html" class="hover:text-cyan transition">Case</a>
+        <a href="../orcamento.html" class="hover:text-cyan transition">Diagnóstico</a>
+        <a href="../index.html#pacotes" class="hover:text-cyan transition">Pacotes</a>
+        <a href="../precos.html" class="hover:text-cyan transition">Preços</a>
+        <a href="./" class="text-cyan">Blog</a>
+        <a href="../contato.html" class="hover:text-cyan transition">Contato</a>
+      </nav>
+      <a href="../orcamento.html" class="text-sm font-medium px-4 py-2 rounded-lg bg-cyan text-charcoal-950 hover:bg-cyan-dim transition shadow-glow-sm">Diagnóstico rápido</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="pt-28 pb-20 sm:pt-32 grid-bg">
+      <article class="max-w-3xl mx-auto px-4 sm:px-6">
+        <p class="text-cyan font-mono text-xs uppercase tracking-widest mb-3"><a href="./" class="hover:underline">Blog</a> · 8 de novembro de 2026</p>
+        <h1 class="text-3xl sm:text-4xl font-bold text-snow tracking-tight">Treino versus grounding: o controle compartilhado de IA no robots.txt</h1>
+        <div class="prose-r">
+        <p id="resposta"><strong>Bloquear o treino de IA com o token compartilhado no robots.txt não é o mesmo que sair das respostas do ChatGPT, dos Gemini Apps, do Copilot ou dos resumos de IA do Bing.</strong> Em 30 de outubro de 2026, Google, OpenAI e Microsoft anunciaram um controle compartilhado de preferência de <em>treino</em> no robots.txt. Grounding — usar o conteúdo da web para embasar e citar uma resposta gerada — é outro controle. A Microsoft avisa que recusar grounding reduz a visibilidade da marca em experiências de IA. O Google liga o token Google-Extended ao grounding nos Gemini Apps: sites que permitem explicitamente o Google-Extended ficam elegíveis a aparecer em respostas e receber cliques via grounding.</p>
+        <p>Abaixo está o que dizem o <a href="https://developers.google.com/search/blog/2026/10/ai-training-control" rel="noopener">anúncio do Google Search Central</a>, o <a href="https://openai.com/index/helping-websites-express-ai-training-preferences" rel="noopener">comunicado da OpenAI</a> e o <a href="https://blogs.bing.com/search/2026/10/your-content-your-choice-clearer-preferences-for-training-and-grounding/" rel="noopener">guia da Microsoft no blog do Bing</a>, com a sintaxe copiada desses textos. Complementamos com a <a href="https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers" rel="noopener">documentação de crawlers comuns do Google</a>, atualizada no mesmo dia. Não inventamos tags, prazos nem efeitos que as páginas oficiais não descrevem.</p>
+
+        <h2>O que Google, OpenAI e Microsoft anunciaram em 30 de outubro de 2026?</h2>
+        <p>As três empresas passaram a apoiar, ou anunciaram que vão apoiar, um sinal comum no robots.txt para o publisher dizer se o conteúdo pode ser usado no treino fundacional de modelos generativos. O trabalho vem do grupo AIPREF da IETF (Internet Engineering Task Force), ainda em discussão rumo a um padrão final.</p>
+        <p>Até aqui, cada empresa pedia uma regra própria: Google-Extended, GPTBot, preferências da Microsoft com <code>NoArchive</code> e <code>NoCache</code>, e assim por diante. O token compartilhado reduz essa fragmentação no que diz respeito ao <strong>treino</strong>. Ele não unifica o grounding e não apaga os controles específicos de cada empresa.</p>
+        <p>O Google lembra que a proposta é consistente com o Código de Conduta da UE para provedores de modelos de IA de finalidade geral (GPAI), no âmbito do AI Act, que reconhece o robots.txt como método principal para o publisher expressar preferências legíveis por máquina.</p>
+
+        <h2>Qual é o token compartilhado no robots.txt?</h2>
+        <p>O anúncio da Microsoft publica a sintaxe. A documentação de crawlers do Google confirma o mesmo identificador: <code>user-agent: __usage_ai-training</code>. O post do Search Central fala em um “policy token” compartilhado, sem mostrar a string. O padrão é Allow: se você não publicar nada, o treino continua permitido.</p>
+        <p>Para recusar o treino no site todo, o exemplo da Microsoft é este:</p>
+        <pre><code># Allow is default. No action needed to allow ai training
+
+# Disallow ai training for whole site
+User-Agent: __usage_ai-training
+Disallow: /
+
+# Disallow ai training at a path-level
+User-Agent: __usage_ai-training
+Disallow: /example-path/</code></pre>
+        <p>Se quiser declarar o Allow de forma explícita, o mesmo anúncio mostra:</p>
+        <pre><code>User-Agent: __usage_ai-training
+Allow: /</code></pre>
+        <p>A Microsoft também estende a preferência de treino ao nível da página, com meta tag ou cabeçalho HTTP. A preferência da página sobrescreve a do robots.txt:</p>
+        <pre><code>&lt;meta name="Bingbot" content="ai-training:disallow"&gt;
+X-Robots-Tag: Bingbot: ai-training:disallow</code></pre>
+
+        <h2>Qual é a diferença entre treino e grounding?</h2>
+        <p>A Microsoft define os dois usos de forma independente. Treino é usar um conteúdo para modificar os parâmetros aprendidos de um modelo generativo de IA. Segundo a definição de trabalho da IETF citada por ela, o treino de modelos usados exclusivamente em tarefas não generativas fica de fora dessa categoria, mesmo que o modelo também seja capaz de gerar texto.</p>
+        <p>Grounding é usar o conteúdo como entrada para ajudar a informar respostas geradas por IA. Indexar e ranquear páginas nos resultados tradicionais de busca <strong>não</strong> é grounding. É o mecanismo que liga a resposta a fontes da web — e, quando a experiência cita o site, abre um caminho de volta à página original. É o que o <a href="copilot-cita-meu-site-bing-webmaster-tools-ai-performance.html">relatório AI Performance do Bing Webmaster Tools</a> tenta medir no lado da Microsoft, sob o nome de citações e grounding queries.</p>
+        <p>No Google, o token <a href="como-aparecer-no-gemini-google-extended-grounding.html">Google-Extended</a> cobre os dois lados de uma vez: o publisher usa esse token para gerenciar se o conteúdo rastreado pode ir para o treino de gerações futuras dos modelos Gemini (que alimentam os Gemini Apps e a Vertex AI API for Gemini) e para o grounding nos Gemini Apps e no Grounding with Google Search na Vertex AI. O Google-Extended não afeta a inclusão na Pesquisa Google nem serve de sinal de ranking.</p>
+
+        <h2>O que cada empresa anunciou?</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Empresa</th>
+              <th>Treino</th>
+              <th>Grounding</th>
+              <th>Onde se configura</th>
+              <th>Quando passa a valer</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Google</strong></td>
+              <td>Vai honrar o sinal compartilhado. Se o site usa o token para optar por não treinar e o Google-Extended não estiver explícito, o Google planeja interpretar isso como se o publisher tivesse recusado o Google-Extended. Os controles específicos de cada empresa continuam valendo.</td>
+              <td>Sites que permitem explicitamente o Google-Extended ficam elegíveis a aparecer em respostas e receber cliques via grounding nos Gemini Apps. O próprio Google-Extended também governa o grounding nos Gemini Apps e na Vertex AI. Visões gerais e Modo IA da Pesquisa são outro controle.</td>
+              <td>Token compartilhado no robots.txt; Google-Extended no robots.txt.</td>
+              <td>O blog do Search Central fala em apoio em 2027. A documentação de crawlers diz “early 2027” (início de 2027).</td>
+            </tr>
+            <tr>
+              <td><strong>OpenAI</strong></td>
+              <td>Vai honrar o sinal comum no robots.txt para o treino fundacional de IA generativa. O novo sinal não substitui os controles atuais de crawlers, que continuam a ser respeitados.</td>
+              <td>O anúncio de 30 de outubro trata do sinal de treino. Não descreve um controle novo de grounding nesse texto.</td>
+              <td>robots.txt: sinal compartilhado mais os controles já existentes (como GPTBot e OAI-SearchBot).</td>
+              <td>Pretende implementar o sinal nos próximos meses e publicar outro update com detalhes da implementação.</td>
+            </tr>
+            <tr>
+              <td><strong>Microsoft</strong></td>
+              <td>Preferência independente. robots.txt para o site ou um caminho; também no nível da página, e a página sobrescreve o robots.txt. O padrão é Allow.</td>
+              <td>Preferência independente, só no nível da página. Allow, Disallow ou DisallowExtended. O padrão é Allow. Disallow impede o grounding. DisallowExtended limita o grounding às experiências operadas pela Microsoft (AI Mode, AI Overview, Copilot, Microsoft 365) e exclui serviços a terceiros (Web IQ e grounding via API no Foundry). Recusar grounding reduz a visibilidade da marca em experiências de IA. Não muda a elegibilidade nos resultados clássicos do Bing. Nenhuma escolha garante inclusão, tráfego ou pagamento.</td>
+              <td>Treino: robots.txt ou meta / X-Robots-Tag. Grounding: só meta / X-Robots-Tag. Preferência temporária de transição no Bing Webmaster Tools.</td>
+              <td>As novas preferências passam a ser honradas a partir de 1º de fevereiro de 2027, conforme o rastreamento. Quem usa NoArchive ou NoCache deve migrar até 1º de março de 2027. A preferência temporária de grounding no Bing Webmaster Tools vale até o re-rastreamento ou 30 de setembro de 2027, o que ocorrer primeiro.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Como a Microsoft pede para publicar o grounding?</h2>
+        <p>Não há preferência de grounding no robots.txt. Ela se publica página a página, com meta tag ou cabeçalho HTTP. O exemplo oficial para recusar grounding é:</p>
+        <pre><code>&lt;meta name="Bingbot" content="ai-grounding:disallow"&gt;
+X-Robots-Tag: Bingbot: ai-grounding:disallow</code></pre>
+        <p>Para a opção intermediária, o anúncio pede <code>ai-grounding:disallowextended</code>.</p>
+        <p>A Microsoft faz três ressalvas práticas. Primeiro, essas configurações governam o <em>uso</em> do conteúdo, não o acesso do rastreador: um Allow de treino ou grounding não derruba uma regra do robots.txt que bloqueie o Bingbot. Segundo, publicar a preferência não é o mesmo que ativá-la — a Microsoft precisa rastrear a página para descobri-la; o IndexNow pode avisar que a página mudou e aumentar a chance de um novo rastreamento, mas não garante a data. Terceiro, se ela detectar as novas preferências de treino ou grounding num site, passa a desconsiderar quaisquer <code>NoArchive</code> e <code>NoCache</code> que ainda restem ali.</p>
+
+        <h2>O que uma PME, um SaaS, uma clínica ou um e-commerce no Brasil deve fazer agora?</h2>
+        <ul>
+          <li><strong>Não misture os dois controles.</strong> Recusar treino não é, por si só, sair das respostas. Na Microsoft, as duas preferências são independentes: você pode recusar o treino e manter o grounding em Allow, ou o contrário.</li>
+          <li><strong>Não copie um <code>Disallow: /</code> de treino achando que “só bloqueia o modelo”.</strong> Se o site usa o token compartilhado para optar por não treinar e o Google-Extended não estiver explícito, o Google planeja tratar isso como recusa do Google-Extended. Esse token também governa o grounding nos Gemini Apps. Quem quer recusar o treino amplo e continuar elegível ao grounding do Gemini precisa deixar o Google-Extended explícito (os controles específicos de cada empresa, diz o Google, continuam valendo ao lado do sinal conjunto).</li>
+          <li><strong>Revise <code>NoArchive</code> e <code>NoCache</code> antes de 1º de março de 2027</strong> se o site depende do Bing ou do Copilot. Depois dessa data, esses tags deixam de ser lidos como preferência de treino ou grounding. Quem os usa e quer manter restrições deve publicar as novas preferências e, para grounding, registrar a preferência temporária de transição no Bing Webmaster Tools. Essa tela abre em 15 de dezembro de 2026, apenas para sites que já usavam <code>NoArchive</code> ou <code>NoCache</code> nessa data. Sem o registro até 1º de março, páginas com esses tags antigos voltam ao padrão Allow de grounding até a Microsoft re-rastrear e encontrar a nova preferência.</li>
+          <li><strong>Lembre que o padrão é Allow</strong> nas duas preferências da Microsoft. Não fazer nada significa continuar permitindo treino e grounding.</li>
+          <li><strong>Mantenha os controles de busca que você já usa.</strong> O sinal novo não substitui GPTBot, OAI-SearchBot, Googlebot, Google-Extended nem bingbot. Para aparecer nas respostas com busca, o que conta continua sendo liberar os robôs de busca e ter páginas que respondam à pergunta — como no guia de <a href="robots-txt-para-ia-gptbot-oai-searchbot-perplexitybot-claudebot.html">robots.txt para IA</a>, no texto sobre a <a href="como-aparecer-na-busca-do-chatgpt-oai-searchbot.html">busca do ChatGPT</a> e no <a href="controle-ia-generativa-search-console-ai-overviews-ai-mode.html">controle de IA generativa do Search Console</a> (Visões gerais e Modo IA, um caminho distinto do Google-Extended). O que o <a href="o-que-o-google-diz-sobre-geo-aeo-visoes-gerais-modo-ia.html">Google diz sobre GEO e AEO</a> para a Pesquisa também não muda por causa deste anúncio.</li>
+          <li><strong>Não espere garantia de citação.</strong> A Microsoft afirma expressamente que nenhuma escolha assegura inclusão, tráfego ou pagamento. Publicar Allow só torna o conteúdo elegível a informar respostas.</li>
+        </ul>
+
+        <h2 id="faq">Perguntas frequentes</h2>
+        </div>
+        <div class="space-y-3 mt-4"><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Bloquear o treino com o token compartilhado tira o meu site das respostas do ChatGPT, do Gemini e do Copilot?</summary><p class="mt-2 text-mist text-sm">Não automaticamente. O sinal anunciado em 30 de outubro de 2026 é uma preferência de TREINO. Na Microsoft, treino e grounding são preferências independentes: recusar grounding (Disallow ou DisallowExtended) é o que a empresa afirma que reduz a visibilidade da marca em experiências de IA como Copilot, AI Mode e AI Overview. No Google, se o site usa o token para optar por não treinar e o Google-Extended não estiver explícito, o Google planeja interpretar isso como se o publisher tivesse recusado o Google-Extended, token que também governa o grounding nos Gemini Apps. O anúncio da OpenAI trata do sinal comum para treino fundacional de IA generativa e diz que ele não substitui os controles atuais de crawlers.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Qual é a sintaxe exata para recusar o treino no site todo?</summary><p class="mt-2 text-mist text-sm">No anúncio da Microsoft, o exemplo para recusar o treino no site inteiro é o grupo User-Agent: __usage_ai-training com Disallow: /. O padrão é Allow: sem essa regra, o treino continua permitido. A documentação de crawlers comuns do Google cita o mesmo sinal como user-agent: __usage_ai-training e diz que o Google pretende suportá-lo no início de 2027. Também é possível recusar um caminho (Disallow: /example-path/) ou, se quiser declarar de forma explícita, usar Allow: /.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">O que é DisallowExtended na Microsoft?</summary><p class="mt-2 text-mist text-sm">É a preferência granular de grounding que a Microsoft introduziu junto com Disallow. Disallow impede o grounding. DisallowExtended limita o grounding às experiências operadas pela Microsoft, como AI Mode, AI Overview, Copilot e Microsoft 365, e exclui serviços de grounding que a Microsoft oferece a terceiros, como Web IQ e o grounding por API no Foundry. Não existe preferência de grounding no robots.txt: ela só se publica no nível da página, com meta tag ou X-Robots-Tag (ai-grounding:disallow ou ai-grounding:disallowextended).</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Quando as novas preferências da Microsoft passam a valer?</summary><p class="mt-2 text-mist text-sm">A Microsoft passa a honrar as novas preferências a partir de 1º de fevereiro de 2027, conforme rastreia o site. Quem hoje usa NoArchive ou NoCache deve publicar as novas preferências até 1º de março de 2027; depois dessa data esses tags deixam de ser lidos como preferência de treino ou grounding. A preferência temporária de transição de grounding no Bing Webmaster Tools abre em 15 de dezembro de 2026 (só para sites que usavam NoArchive ou NoCache nessa data) e vale até o re-rastreamento ou 30 de setembro de 2027, o que ocorrer primeiro.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">O Google já honra o token compartilhado hoje?</summary><p class="mt-2 text-mist text-sm">Não. No anúncio de 30 de outubro de 2026, o Google afirma que pretende apoiar o novo controle junto com outros provedores de IA em 2027. A documentação de crawlers comuns, atualizada em 30 de outubro de 2026, detalha que o Google pretende suportar o sinal compartilhado AIPREF (com user-agent: __usage_ai-training) no início de 2027. Até lá, o controle específico continua sendo o Google-Extended, oferecido desde 2023.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Recusar treino ou grounding muda a posição nos resultados clássicos do Google ou do Bing?</summary><p class="mt-2 text-mist text-sm">Segundo as próprias empresas, não. A Microsoft diz que essas preferências de uso não alteram a elegibilidade nos resultados tradicionais do Bing, observadas as exigências normais de rastreamento e indexação, e que indexar e ranquear páginas na busca clássica não é grounding. O Google afirma que o Google-Extended não impacta a inclusão do site na Pesquisa Google nem é usado como sinal de ranking. Nenhuma escolha, diz a Microsoft, garante inclusão, tráfego ou pagamento.</p></details></div>
+        <div class="prose-r"><h2>Fontes</h2><ul>
+<li><a href="https://developers.google.com/search/blog/2026/10/ai-training-control" rel="noopener">https://developers.google.com/search/blog/2026/10/ai-training-control</a> — Google Search Central, “Supporting a shared AI training control for websites” (John Mueller, 30/10/2026)</li>
+<li><a href="https://openai.com/index/helping-websites-express-ai-training-preferences" rel="noopener">https://openai.com/index/helping-websites-express-ai-training-preferences</a> — OpenAI, “Making it easier for websites to express AI training preferences” (30/10/2026)</li>
+<li><a href="https://blogs.bing.com/search/2026/10/your-content-your-choice-clearer-preferences-for-training-and-grounding/" rel="noopener">https://blogs.bing.com/search/2026/10/your-content-your-choice-clearer-preferences-for-training-and-grounding/</a> — Microsoft Bing, “Your content, your choice: clearer preferences for training and grounding” (Krishna Madhavan, 30/10/2026)</li>
+<li><a href="https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers" rel="noopener">https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers</a> — documentação Google-Extended / crawlers comuns do Google (atualizada em 30/10/2026; cita o sinal <code>user-agent: __usage_ai-training</code> no início de 2027)</li>
+</ul></div>
+        <div class="mt-12 rounded-2xl card-border bg-charcoal-800 p-6">
+          <p class="text-snow font-semibold text-lg">Quer saber se as IAs já citam a sua marca?</p>
+          <p class="mt-2 text-mist text-sm">O Gabarito GEO da Refrain testa perguntas de compra no ChatGPT, Perplexity e Gemini e entrega score, gaps priorizados e checklist em minutos, incluindo a checagem de acesso dos robôs de IA ao seu site. R$ 497, pagamento único.</p>
+          <div class="mt-4 flex flex-wrap gap-3"><a href="../precos.html" class="text-sm font-medium px-4 py-2 rounded-lg bg-cyan text-charcoal-950 hover:bg-cyan-dim transition">Ver preços do Gabarito</a><a href="../orcamento.html" class="text-sm font-medium px-4 py-2 rounded-lg border border-charcoal-600 text-snow hover:border-cyan/40 hover:text-cyan transition">Fazer diagnóstico rápido</a></div>
+        </div>
+      
+        <aside class="mt-12 p-5 rounded-xl border border-white/10 bg-white/5" aria-label="Sobre o autor">
+          <p class="text-snow font-semibold">Sobre o autor</p>
+          <p class="mt-2 text-sm text-mist"><a href="/autor/leandro-franca-de-mello/" class="text-cyan hover:underline">Leandro França de Mello</a> é Google Developer, engenheiro de ML e foi um dos pioneiros em Google Ads e campanhas de SEO no início dos anos 2000. Fundou a Refrain conjugando essas competências pra criar uma agência 100% automatizada de GEO e com alcance mundial.</p>
+        </aside>
+      </article>
+    </section>
+  </main>
+
+  <footer class="border-t border-charcoal-700 py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row justify-between gap-8">
+      <div>
+        <a href="../index.html" class="inline-block" aria-label="Refrain — início"><img src="../assets/refrain-wordmark.svg" alt="Refrain" width="104" height="28" class="h-7 w-auto" /></a>
+        <p class="mt-2 text-sm text-mist max-w-xs">Seja o refrão que a IA repete. GEO + Caçador de Citações.</p>
+        <p class="mt-2 text-sm text-mist"><a href="mailto:contato@refrain.com.br" class="hover:text-cyan">contato@refrain.com.br</a></p>
+      </div>
+      <div class="flex flex-wrap gap-8 text-sm text-mist">
+        <div class="space-y-2">
+          <p class="text-snow font-medium text-xs uppercase tracking-wider">Site</p>
+          <a href="../servicos.html" class="block hover:text-cyan">Serviços</a>
+          <a href="../metodologia.html" class="block hover:text-cyan">Metodologia</a>
+          <a href="../case-climatewise.html" class="block hover:text-cyan">Case</a>
+          <a href="../orcamento.html" class="block hover:text-cyan">Diagnóstico</a>
+          <a href="../precos.html" class="block hover:text-cyan">Preços</a>
+          <a href="./" class="block hover:text-cyan">Artigos</a>
+          <a href="/estudos/quem-as-ias-citam-no-brasil/" class="block hover:text-cyan">Estudo: quem as IAs citam</a>
+          <a href="/autor/leandro-franca-de-mello/" class="block hover:text-cyan">Autor</a>
+          <a href="../contato.html" class="block hover:text-cyan">Contato</a>
+          <a href="../portal.html" class="block hover:text-cyan">Portal</a>
+        </div>
+        <div class="space-y-2">
+          <p class="text-snow font-medium text-xs uppercase tracking-wider">Legal</p>
+          <a href="../privacidade.html" class="block hover:text-cyan">Privacidade</a>
+          <a href="../termos.html" class="block hover:text-cyan">Termos</a>
+          <a href="../llms.txt" class="block hover:text-cyan font-mono text-xs">llms.txt</a>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 mt-10 pt-6 border-t border-charcoal-700 text-xs text-mist/50">
+      © 2026 Refrain · Leandro França de Mello
+    </div>
+  </footer>
+<script src="https://app.refrain.com.br/chat-widget.js" async></script>
+</body>
+</html>
