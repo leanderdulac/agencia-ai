@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Como aparecer nas respostas do Claude: Claude-SearchBot, Claude-User e o novo sinal de treino | Blog Refrain</title>
+  <meta name="description" content="O Claude cita fontes da web quando pesquisa. Veja o que a Anthropic documenta sobre os robôs ClaudeBot, Claude-SearchBot e Claude-User, o sinal de treino adotado em 30/10/2026 e o que liberar no robots.txt." />
+  <link rel="canonical" href="https://www.refrain.com.br/blog/como-aparecer-no-claude-claude-searchbot-claude-user.html" />
+  <meta property="og:title" content="Como aparecer nas respostas do Claude: Claude-SearchBot, Claude-User e o novo sinal de treino" />
+  <meta property="og:description" content="O Claude cita fontes da web quando pesquisa. Veja o que a Anthropic documenta sobre os robôs ClaudeBot, Claude-SearchBot e Claude-User, o sinal de treino adotado em 30/10/2026 e o que liberar no robots.txt." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.refrain.com.br/blog/como-aparecer-no-claude-claude-searchbot-claude-user.html" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Refrain" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Article",
+   "@id": "https://www.refrain.com.br/blog/como-aparecer-no-claude-claude-searchbot-claude-user.html#article",
+   "headline": "Como aparecer nas respostas do Claude: Claude-SearchBot, Claude-User e o novo sinal de treino",
+   "description": "O Claude cita fontes da web quando pesquisa. Veja o que a Anthropic documenta sobre os robôs ClaudeBot, Claude-SearchBot e Claude-User, o sinal de treino adotado em 30/10/2026 e o que liberar no robots.txt.",
+   "inLanguage": "pt-BR",
+   "datePublished": "2026-11-10",
+   "dateModified": "2026-11-10",
+   "author": {
+    "@type": "Person",
+    "name": "Leandro França de Mello",
+    "description": "Leandro França de Mello é Google Developer, engenheiro de ML e foi um dos pioneiros em Google Ads e campanhas de SEO no início dos anos 2000. Fundou a Refrain conjugando essas competências pra criar uma agência 100% automatizada de GEO e com alcance mundial.",
+    "jobTitle": "Fundador da Refrain",
+    "url": "https://www.refrain.com.br/autor/leandro-franca-de-mello/",
+    "@id": "https://www.refrain.com.br/autor/leandro-franca-de-mello/#person",
+    "worksFor": {
+     "@id": "https://www.refrain.com.br/#organization"
+    },
+    "knowsAbout": [
+     "GEO",
+     "SEO",
+     "Google Ads",
+     "machine learning"
+    ]
+   },
+   "publisher": {
+    "@type": "Organization",
+    "@id": "https://www.refrain.com.br/#organization",
+    "name": "Refrain",
+    "url": "https://www.refrain.com.br/"
+   },
+   "mainEntityOfPage": "https://www.refrain.com.br/blog/como-aparecer-no-claude-claude-searchbot-claude-user.html",
+   "citation": [
+    "https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler",
+    "https://support.claude.com/en/articles/10684626-enable-and-use-web-search",
+    "https://platform.claude.com/docs/en/agents-and-tools/tool-use/web-search-tool"
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://www.refrain.com.br/blog/como-aparecer-no-claude-claude-searchbot-claude-user.html#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Bloquear o ClaudeBot tira o meu site das respostas do Claude?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Não necessariamente. Segundo a Anthropic, o ClaudeBot coleta conteúdo que pode contribuir para o treino dos modelos, e restringi-lo sinaliza que o material futuro do site deve ficar fora dos dados de treino. A busca usa outros dois robôs: o Claude-SearchBot, que indexa para melhorar os resultados de busca, e o Claude-User, que acessa páginas quando um usuário pergunta algo ao Claude."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Qual robô da Anthropic eu preciso liberar para ser citado pelo Claude?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A Anthropic diz que desativar o Claude-SearchBot pode reduzir a visibilidade e a precisão do site nos resultados de busca, e que desativar o Claude-User impede que o sistema busque seu conteúdo em resposta a uma pergunta de usuário. Quem quer aparecer nas respostas com pesquisa deve manter os dois liberados no robots.txt."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "O que mudou em 30 de outubro de 2026?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A Anthropic passou a reconhecer um sinal legível por máquina para o site dizer que não quer seu conteúdo usado em treino de IA. O sinal segue um rascunho do grupo de trabalho aipref do IETF, e a implantação será gradual e global. Se o robots.txt nomear o ClaudeBot, a Anthropic segue essa regra mesmo que o sinal geral diga outra coisa; se não nomear, segue o sinal geral."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Bloquear os IPs da Anthropic funciona?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A Anthropic avisa que bloquear endereços IP pode não funcionar direito nem garantir a exclusão de forma permanente, porque impede que os robôs leiam o robots.txt. O caminho documentado é o robots.txt, em cada subdomínio que você quer controlar."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "O Claude cita as fontes que usa?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sim. A central de ajuda do Claude diz que cada resposta com pesquisa na web inclui citações para o usuário verificar as fontes. Na API, a documentação diz que as citações estão sempre ativas na ferramenta de busca e trazem a URL, o título e até 150 caracteres do texto citado."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Empresas que usam a API do Claude podem excluir o meu site da busca?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Podem. A ferramenta de busca da API aceita uma lista de domínios permitidos (allowed_domains) ou de domínios bloqueados (blocked_domains), nunca as duas juntas. Ela também aceita a localização do usuário (user_location) para localizar os resultados. Isso é configuração de quem constrói o produto, não algo que o dono do site controle."
+     }
+    }
+   ]
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Início",
+     "item": "https://www.refrain.com.br/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Blog",
+     "item": "https://www.refrain.com.br/blog/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Como aparecer nas respostas do Claude: Claude-SearchBot, Claude-User e o novo sinal de treino",
+     "item": "https://www.refrain.com.br/blog/como-aparecer-no-claude-claude-searchbot-claude-user.html"
+    }
+   ]
+  }
+ ]
+}
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../config.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            charcoal: { 950: '#0B1220', 900: '#0f1218', 800: '#161b22', 700: '#1e2530', 600: '#2a3341' },
+            cyan: { DEFAULT: '#2F6BFF', dim: '#2557d6' },
+            teal: { DEFAULT: '#00A896' },
+            cream: { DEFAULT: '#F7F5F1' },
+            warn: { DEFAULT: '#E85D04' },
+            mist: '#a8b2c1',
+            snow: '#e8ecf1'
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
+          },
+          boxShadow: { 'glow-sm': '0 0 20px rgba(47,107,255,0.2)', glow: '0 0 40px rgba(47,107,255,0.15)' }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background: #0B1220; color: #e8ecf1; }
+    .nav-blur { backdrop-filter: blur(12px); background: rgba(11,18,32,0.85); }
+    .card-border { border: 1px solid rgba(42,51,65,0.9); }
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(47,107,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(47,107,255,0.03) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    .field-error { border-color: #E85D04 !important; }
+    .error-msg { color: #E85D04; font-size: 0.75rem; margin-top: 0.35rem; display: none; }
+    .error-msg.visible { display: block; }
+  </style>
+<script src="https://app.refrain.com.br/hub/refrain-1b85fe/geo.js" async></script>
+</head>
+<body class="font-sans antialiased">
+  <style>
+    .prose-r h2 { font-size:1.5rem; font-weight:700; color:#e8ecf1; margin-top:2.5rem; margin-bottom:.75rem; }
+    .prose-r p { color:#c9d1dc; line-height:1.75; margin-top:1rem; }
+    .prose-r ul, .prose-r ol { color:#c9d1dc; margin-top:1rem; padding-left:1.25rem; line-height:1.75; }
+    .prose-r ul { list-style:disc; } .prose-r ol { list-style:decimal; }
+    .prose-r a { color:#2F6BFF; text-decoration:underline; }
+    .prose-r table { width:100%; margin-top:1.25rem; border-collapse:collapse; font-size:.9rem; }
+    .prose-r th, .prose-r td { border:1px solid rgba(42,51,65,0.9); padding:.6rem .75rem; text-align:left; vertical-align:top; color:#c9d1dc; }
+    .prose-r th { background:#161b22; color:#e8ecf1; }
+    .prose-r code { font-family:'JetBrains Mono',monospace; font-size:.85em; background:#161b22; padding:.1rem .3rem; border-radius:.25rem; }
+  </style>
+  <header class="fixed top-0 inset-x-0 z-50 nav-blur border-b border-charcoal-600/50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="../index.html" class="flex items-center gap-2">
+        <img src="../assets/refrain-wordmark.svg" alt="Refrain" width="119" height="32" class="h-8 w-auto" />
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm text-mist">
+        <a href="../servicos.html" class="hover:text-cyan transition">Serviços</a>
+        <a href="../metodologia.html" class="hover:text-cyan transition">Metodologia</a>
+        <a href="../case-climatewise.html" class="hover:text-cyan transition">Case</a>
+        <a href="../orcamento.html" class="hover:text-cyan transition">Diagnóstico</a>
+        <a href="../index.html#pacotes" class="hover:text-cyan transition">Pacotes</a>
+        <a href="../precos.html" class="hover:text-cyan transition">Preços</a>
+        <a href="./" class="text-cyan">Blog</a>
+        <a href="../contato.html" class="hover:text-cyan transition">Contato</a>
+      </nav>
+      <a href="../orcamento.html" class="text-sm font-medium px-4 py-2 rounded-lg bg-cyan text-charcoal-950 hover:bg-cyan-dim transition shadow-glow-sm">Diagnóstico rápido</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="pt-28 pb-20 sm:pt-32 grid-bg">
+      <article class="max-w-3xl mx-auto px-4 sm:px-6">
+        <p class="text-cyan font-mono text-xs uppercase tracking-widest mb-3"><a href="./" class="hover:underline">Blog</a> · 10 de novembro de 2026</p>
+        <h1 class="text-3xl sm:text-4xl font-bold text-snow tracking-tight">Como aparecer nas respostas do Claude: Claude-SearchBot, Claude-User e o novo sinal de treino</h1>
+        <div class="prose-r">
+        <p id="resposta"><strong>Para aparecer nas respostas do Claude com pesquisa na web, o site precisa deixar o Claude-SearchBot e o Claude-User acessarem as páginas.</strong> Segundo a Anthropic, são esses dois robôs que indexam conteúdo para a busca e buscam páginas quando um usuário pergunta algo. O ClaudeBot é outro caso: ele coleta conteúdo para treino, e bloqueá-lo, segundo a Anthropic, sinaliza que o material futuro do site deve ficar fora do treino. Desde 30 de outubro de 2026, a Anthropic também reconhece um sinal geral de “sem treino de IA”.</p>
+        <p>Este guia segue a <a href="https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler" rel="noopener">página da Anthropic sobre os seus robôs</a>, a <a href="https://support.claude.com/en/articles/10684626-enable-and-use-web-search" rel="noopener">ajuda do Claude sobre pesquisa na web</a> e a <a href="https://platform.claude.com/docs/en/agents-and-tools/tool-use/web-search-tool" rel="noopener">documentação da ferramenta de busca da API</a>. A Anthropic não publica nessas páginas como ordena as fontes, então não há aqui receita de ranking.</p>
+
+        <h2>Quais robôs a Anthropic usa e o que cada um faz?</h2>
+        <table>
+          <thead><tr><th>Robô</th><th>Para que serve</th><th>O que acontece se você bloquear</th></tr></thead>
+          <tbody>
+            <tr><td><code>ClaudeBot</code></td><td>Coleta conteúdo da web que pode contribuir para o treino dos modelos.</td><td>Sinaliza que o material futuro do site deve ficar fora dos dados de treino.</td></tr>
+            <tr><td><code>Claude-SearchBot</code></td><td>Navega e analisa conteúdo para melhorar a qualidade dos resultados de busca.</td><td>O conteúdo deixa de ser indexado para a busca, o que pode reduzir a visibilidade e a precisão do site nos resultados.</td></tr>
+            <tr><td><code>Claude-User</code></td><td>Acessa sites quando uma pessoa faz uma pergunta ao Claude.</td><td>O sistema não consegue buscar o seu conteúdo em resposta à pergunta do usuário, o que pode reduzir a visibilidade na busca dirigida pelo usuário.</td></tr>
+          </tbody>
+        </table>
+        <p>A Anthropic diz que os três respeitam as diretivas do robots.txt, aceitam a extensão não padronizada <code>Crawl-delay</code> e não tentam burlar CAPTCHAs. Para navegadores que o Claude usa ao executar tarefas para o usuário (<code>Claude-Agent</code>), a Anthropic mantém uma página separada.</p>
+
+        <h2>Como o Claude usa a web numa resposta?</h2>
+        <p>Segundo a central de ajuda, quando o assunto pede informação atual, o Claude aciona uma ferramenta de busca, processa várias fontes e responde com citações diretas, links e trechos quando cabe. Com a pesquisa ativada, ele também pode abrir uma URL que o usuário colar (o recurso que a Anthropic chama de web fetch). A ajuda diz ainda que o Claude pode usar a localização inferida pelo IP para resultados locais.</p>
+        <p>A documentação da API detalha quando o Claude tende a pesquisar: eventos recentes, preços, taxas e estatísticas atuais, e informações sobre organizações, pessoas ou produtos que podem ter mudado. Para fatos estáveis, ele responde sem pesquisar. Na prática, perguntas como “qual a melhor clínica de estética em Curitiba” ou “quanto custa um ERP para PME” são do tipo que leva a uma busca, e é aí que o seu site pode ser citado.</p>
+
+        <h2>O que mudou com o sinal de treino de 30/10/2026?</h2>
+        <p>A Anthropic informa que, desde 30 de outubro de 2026, começou a reconhecer um sinal legível por máquina para o site dizer se aceita ou não o uso do conteúdo em treino de IA. O sinal segue um rascunho do grupo aipref do IETF, a implantação é gradual e global, e a própria Anthropic avisa que a forma de ler essas configurações pode mudar enquanto o padrão evolui.</p>
+        <ul>
+          <li><strong>Se o robots.txt nomeia o ClaudeBot,</strong> a Anthropic segue essa regra para o caminho, mesmo que o sinal geral diga outra coisa.</li>
+          <li><strong>Se o robots.txt não menciona o ClaudeBot,</strong> vale o sinal geral.</li>
+        </ul>
+        <p>O sinal trata de treino, não de busca. Explicamos o mesmo movimento do lado de Google, OpenAI e Microsoft no artigo <a href="treino-versus-grounding-robots-txt-controle-compartilhado-ia.html">Treino versus grounding</a>.</p>
+
+        <h2>Como configurar o robots.txt para aparecer no Claude?</h2>
+        <p>Um exemplo para quem quer ser citado na busca do Claude e prefere ficar fora do treino:</p>
+        <pre><code>User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: ClaudeBot
+Disallow: /</code></pre>
+        <p>Se você também quer contribuir para o treino, troque a última regra por <code>Allow: /</code>. A Anthropic pede que a configuração seja repetida em cada subdomínio e desaconselha bloquear por IP, porque isso impede a leitura do robots.txt. Para revisar as regras de todos os robôs de IA de uma vez, veja o nosso <a href="robots-txt-para-ia-gptbot-oai-searchbot-perplexitybot-claudebot.html">guia de robots.txt para IA</a>.</p>
+
+        <h2>O que mais ajuda a ser citado pelo Claude?</h2>
+        <ul>
+          <li><strong>Responda a pergunta logo no começo da página.</strong> Na API, cada citação traz até 150 caracteres do texto citado, então uma frase curta e completa é mais fácil de citar.</li>
+          <li><strong>Mantenha a data de atualização visível e verdadeira.</strong> Os resultados de busca da API trazem o campo <code>page_age</code>, com a última atualização do site.</li>
+          <li><strong>Deixe o conteúdo acessível sem login nem CAPTCHA.</strong> A Anthropic diz que os seus robôs não burlam CAPTCHAs.</li>
+          <li><strong>Lembre que quem usa a API pode filtrar domínios.</strong> A ferramenta de busca aceita listas de domínios permitidos ou bloqueados; ser uma fonte reconhecida no seu setor pesa nessas escolhas.</li>
+          <li><strong>Meça.</strong> Faça no Claude as perguntas reais dos seus clientes, com a pesquisa na web ligada, e registre se a sua marca aparece e é linkada. O mesmo vale para <a href="como-medir-marca-chatgpt-gemini-perplexity.html">ChatGPT, Gemini e Perplexity</a>.</li>
+        </ul>
+
+        <h2 id="faq">Perguntas frequentes</h2>
+        </div>
+        <div class="space-y-3 mt-4"><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Bloquear o ClaudeBot tira o meu site das respostas do Claude?</summary><p class="mt-2 text-mist text-sm">Não necessariamente. Segundo a Anthropic, o ClaudeBot coleta conteúdo que pode contribuir para o treino dos modelos, e restringi-lo sinaliza que o material futuro do site deve ficar fora dos dados de treino. A busca usa outros dois robôs: o Claude-SearchBot, que indexa para melhorar os resultados de busca, e o Claude-User, que acessa páginas quando um usuário pergunta algo ao Claude.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Qual robô da Anthropic eu preciso liberar para ser citado pelo Claude?</summary><p class="mt-2 text-mist text-sm">A Anthropic diz que desativar o Claude-SearchBot pode reduzir a visibilidade e a precisão do site nos resultados de busca, e que desativar o Claude-User impede que o sistema busque seu conteúdo em resposta a uma pergunta de usuário. Quem quer aparecer nas respostas com pesquisa deve manter os dois liberados no robots.txt.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">O que mudou em 30 de outubro de 2026?</summary><p class="mt-2 text-mist text-sm">A Anthropic passou a reconhecer um sinal legível por máquina para o site dizer que não quer seu conteúdo usado em treino de IA. O sinal segue um rascunho do grupo de trabalho aipref do IETF, e a implantação será gradual e global. Se o robots.txt nomear o ClaudeBot, a Anthropic segue essa regra mesmo que o sinal geral diga outra coisa; se não nomear, segue o sinal geral.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Bloquear os IPs da Anthropic funciona?</summary><p class="mt-2 text-mist text-sm">A Anthropic avisa que bloquear endereços IP pode não funcionar direito nem garantir a exclusão de forma permanente, porque impede que os robôs leiam o robots.txt. O caminho documentado é o robots.txt, em cada subdomínio que você quer controlar.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">O Claude cita as fontes que usa?</summary><p class="mt-2 text-mist text-sm">Sim. A central de ajuda do Claude diz que cada resposta com pesquisa na web inclui citações para o usuário verificar as fontes. Na API, a documentação diz que as citações estão sempre ativas na ferramenta de busca e trazem a URL, o título e até 150 caracteres do texto citado.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Empresas que usam a API do Claude podem excluir o meu site da busca?</summary><p class="mt-2 text-mist text-sm">Podem. A ferramenta de busca da API aceita uma lista de domínios permitidos (allowed_domains) ou de domínios bloqueados (blocked_domains), nunca as duas juntas. Ela também aceita a localização do usuário (user_location) para localizar os resultados. Isso é configuração de quem constrói o produto, não algo que o dono do site controle.</p></details></div>
+        <div class="prose-r"><h2>Fontes</h2><ul>
+<li><a href="https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler" rel="noopener">https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler</a> — Anthropic, “Does Anthropic crawl data from the web, and how can site owners block the crawler?” (consultado em 10/11/2026)</li>
+<li><a href="https://support.claude.com/en/articles/10684626-enable-and-use-web-search" rel="noopener">https://support.claude.com/en/articles/10684626-enable-and-use-web-search</a> — Claude Help Center, “Enable and use web search” (consultado em 10/11/2026)</li>
+<li><a href="https://platform.claude.com/docs/en/agents-and-tools/tool-use/web-search-tool" rel="noopener">https://platform.claude.com/docs/en/agents-and-tools/tool-use/web-search-tool</a> — Claude Platform, documentação da ferramenta de busca na web (consultada em 10/11/2026)</li>
+</ul></div>
+        <div class="mt-12 rounded-2xl card-border bg-charcoal-800 p-6">
+          <p class="text-snow font-semibold text-lg">Quer saber se as IAs já citam a sua marca?</p>
+          <p class="mt-2 text-mist text-sm">O Gabarito GEO da Refrain testa perguntas reais no ChatGPT, Perplexity e Gemini e entrega score, gaps priorizados e checklist em minutos, incluindo a checagem de acesso dos robôs de IA ao seu site. R$ 497, pagamento único.</p>
+          <div class="mt-4 flex flex-wrap gap-3"><a href="../precos.html" class="text-sm font-medium px-4 py-2 rounded-lg bg-cyan text-charcoal-950 hover:bg-cyan-dim transition">Ver preços do Gabarito</a><a href="../orcamento.html" class="text-sm font-medium px-4 py-2 rounded-lg border border-charcoal-600 text-snow hover:border-cyan/40 hover:text-cyan transition">Fazer diagnóstico rápido</a></div>
+        </div>
+      
+        <aside class="mt-12 p-5 rounded-xl border border-white/10 bg-white/5" aria-label="Sobre o autor">
+          <p class="text-snow font-semibold">Sobre o autor</p>
+          <p class="mt-2 text-sm text-mist"><a href="/autor/leandro-franca-de-mello/" class="text-cyan hover:underline">Leandro França de Mello</a> é Google Developer, engenheiro de ML e foi um dos pioneiros em Google Ads e campanhas de SEO no início dos anos 2000. Fundou a Refrain conjugando essas competências pra criar uma agência 100% automatizada de GEO e com alcance mundial.</p>
+        </aside>
+      </article>
+    </section>
+  </main>
+
+  <footer class="border-t border-charcoal-700 py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row justify-between gap-8">
+      <div>
+        <a href="../index.html" class="inline-block" aria-label="Refrain — início"><img src="../assets/refrain-wordmark.svg" alt="Refrain" width="104" height="28" class="h-7 w-auto" /></a>
+        <p class="mt-2 text-sm text-mist max-w-xs">Seja o refrão que a IA repete. GEO + Caçador de Citações.</p>
+        <p class="mt-2 text-sm text-mist"><a href="mailto:contato@refrain.com.br" class="hover:text-cyan">contato@refrain.com.br</a></p>
+      </div>
+      <div class="flex flex-wrap gap-8 text-sm text-mist">
+        <div class="space-y-2">
+          <p class="text-snow font-medium text-xs uppercase tracking-wider">Site</p>
+          <a href="../servicos.html" class="block hover:text-cyan">Serviços</a>
+          <a href="../metodologia.html" class="block hover:text-cyan">Metodologia</a>
+          <a href="../case-climatewise.html" class="block hover:text-cyan">Case</a>
+          <a href="../orcamento.html" class="block hover:text-cyan">Diagnóstico</a>
+          <a href="../precos.html" class="block hover:text-cyan">Preços</a>
+          <a href="./" class="block hover:text-cyan">Artigos</a>
+          <a href="/estudos/quem-as-ias-citam-no-brasil/" class="block hover:text-cyan">Estudo: quem as IAs citam</a>
+          <a href="/autor/leandro-franca-de-mello/" class="block hover:text-cyan">Autor</a>
+          <a href="../contato.html" class="block hover:text-cyan">Contato</a>
+          <a href="../portal.html" class="block hover:text-cyan">Portal</a>
+        </div>
+        <div class="space-y-2">
+          <p class="text-snow font-medium text-xs uppercase tracking-wider">Legal</p>
+          <a href="../privacidade.html" class="block hover:text-cyan">Privacidade</a>
+          <a href="../termos.html" class="block hover:text-cyan">Termos</a>
+          <a href="../llms.txt" class="block hover:text-cyan font-mono text-xs">llms.txt</a>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 mt-10 pt-6 border-t border-charcoal-700 text-xs text-mist/50">
+      © 2026 Refrain · Leandro França de Mello
+    </div>
+  </footer>
+<script src="https://app.refrain.com.br/chat-widget.js" async></script>
+</body>
+</html>
