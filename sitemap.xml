@@ -47,9 +47,15 @@
   </url>
   <url>
     <loc>https://www.refrain.com.br/blog/</loc>
-    <lastmod>2026-11-11</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.refrain.com.br/blog/como-aparecer-na-siri-apple-intelligence-applebot-extended.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.refrain.com.br/blog/geo-para-empresas-b2b-como-aparecer-nas-respostas-de-ia.html</loc>
