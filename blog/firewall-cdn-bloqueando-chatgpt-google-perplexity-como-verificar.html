@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seu firewall ou CDN está bloqueando o ChatGPT e o Google? Como verificar e liberar os robôs certos | Blog Refrain</title>
+  <meta name="description" content="Liberar os robôs no robots.txt não basta: proteções de bot de CDN e firewall podem barrar o Googlebot, o OAI-SearchBot e o PerplexityBot com CAPTCHA ou erro 403. Veja o que o Google, a OpenAI, a Perplexity e a Cloudflare recomendam e como checar o seu site." />
+  <link rel="canonical" href="https://www.refrain.com.br/blog/firewall-cdn-bloqueando-chatgpt-google-perplexity-como-verificar.html" />
+  <meta property="og:title" content="Seu firewall ou CDN está bloqueando o ChatGPT e o Google? Como verificar e liberar os robôs certos" />
+  <meta property="og:description" content="Liberar os robôs no robots.txt não basta: proteções de bot de CDN e firewall podem barrar o Googlebot, o OAI-SearchBot e o PerplexityBot com CAPTCHA ou erro 403. Veja o que o Google, a OpenAI, a Perplexity e a Cloudflare recomendam e como checar o seu site." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.refrain.com.br/blog/firewall-cdn-bloqueando-chatgpt-google-perplexity-como-verificar.html" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Refrain" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Article",
+   "@id": "https://www.refrain.com.br/blog/firewall-cdn-bloqueando-chatgpt-google-perplexity-como-verificar.html#article",
+   "headline": "Seu firewall ou CDN está bloqueando o ChatGPT e o Google? Como verificar e liberar os robôs certos",
+   "description": "Liberar os robôs no robots.txt não basta: proteções de bot de CDN e firewall podem barrar o Googlebot, o OAI-SearchBot e o PerplexityBot com CAPTCHA ou erro 403. Veja o que o Google, a OpenAI, a Perplexity e a Cloudflare recomendam e como checar o seu site.",
+   "inLanguage": "pt-BR",
+   "datePublished": "2026-11-17",
+   "dateModified": "2026-11-17",
+   "author": {
+    "@type": "Person",
+    "name": "Leandro França de Mello",
+    "description": "Leandro França de Mello é Google Developer, engenheiro de ML e foi um dos pioneiros em Google Ads e campanhas de SEO no início dos anos 2000. Fundou a Refrain conjugando essas competências pra criar uma agência 100% automatizada de GEO e com alcance mundial.",
+    "jobTitle": "Fundador da Refrain",
+    "url": "https://www.refrain.com.br/autor/leandro-franca-de-mello/",
+    "@id": "https://www.refrain.com.br/autor/leandro-franca-de-mello/#person",
+    "worksFor": {
+     "@id": "https://www.refrain.com.br/#organization"
+    },
+    "knowsAbout": [
+     "GEO",
+     "SEO",
+     "Google Ads",
+     "machine learning"
+    ]
+   },
+   "publisher": {
+    "@type": "Organization",
+    "@id": "https://www.refrain.com.br/#organization",
+    "name": "Refrain",
+    "url": "https://www.refrain.com.br/"
+   },
+   "mainEntityOfPage": "https://www.refrain.com.br/blog/firewall-cdn-bloqueando-chatgpt-google-perplexity-como-verificar.html",
+   "citation": [
+    "https://developers.google.com/search/blog/2026/11/crawling-cdn",
+    "https://platform.openai.com/docs/bots",
+    "https://docs.perplexity.ai/guides/bots",
+    "https://developers.cloudflare.com/bots/additional-configurations/block-ai-bots/",
+    "https://developers.google.com/search/docs/crawling-indexing/verifying-googlebot",
+    "https://christopherjanb.com/blog/aeo-best-practices-study/"
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://www.refrain.com.br/blog/firewall-cdn-bloqueando-chatgpt-google-perplexity-como-verificar.html#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Se meu robots.txt libera os robôs de IA, meu site está acessível?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Não necessariamente. O robots.txt é só um pedido aos robôs; quem decide se a requisição passa é o servidor, a CDN e o firewall (WAF). Se uma regra de proteção de bots responder com CAPTCHA ou erro 403, o robô não lê a página, mesmo com o robots.txt liberado."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "O que o Google diz sobre bloqueio de bots em CDN?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Num post de 11/11/2026, o Google Search Central explica que o Googlebot não resolve CAPTCHA. Se uma proteção de bots genérica continuar ativa sem exceção para robôs verificados, os rastreadores recuam e as páginas começam a sair da Busca. A recomendação é liberar robôs verificados e, se o servidor precisar de alívio, responder 429 ou 503 por pouco tempo."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Quais robôs preciso liberar para aparecer no ChatGPT e no Perplexity?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Para a busca do ChatGPT, a OpenAI recomenda liberar o OAI-SearchBot no robots.txt e permitir as faixas de IP que ela publica. Para o Perplexity, a recomendação é liberar o PerplexityBot e as faixas de IP publicadas. O ChatGPT-User e o Perplexity-User fazem buscas pedidas por usuários e também precisam passar pelo firewall para que a página seja lida na hora."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Liberar um robô pelo nome no firewall é seguro?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Só pelo nome, não, porque qualquer um pode copiar o user-agent. A Perplexity recomenda combinar user-agent e faixa de IP na mesma regra. O Google ensina a verificar pelo DNS reverso ou pelas listas de IP que ele publica. Na Cloudflare, a opção de robôs verificados já faz essa checagem."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "A Bot Fight Mode da Cloudflare pode bloquear robôs de IA?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Pode. A documentação da Perplexity avisa que a Bot Fight Mode não pode ser pulada por regras personalizadas do WAF e ainda pode desafiar os robôs dela. Se o seu site depende de ser citado, revise essa opção e as políticas de acesso de robôs de IA em Security > Settings."
+     }
+    }
+   ]
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Início",
+     "item": "https://www.refrain.com.br/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Blog",
+     "item": "https://www.refrain.com.br/blog/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Seu firewall ou CDN está bloqueando o ChatGPT e o Google? Como verificar e liberar os robôs certos",
+     "item": "https://www.refrain.com.br/blog/firewall-cdn-bloqueando-chatgpt-google-perplexity-como-verificar.html"
+    }
+   ]
+  }
+ ]
+}
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../config.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            charcoal: { 950: '#0B1220', 900: '#0f1218', 800: '#161b22', 700: '#1e2530', 600: '#2a3341' },
+            cyan: { DEFAULT: '#2F6BFF', dim: '#2557d6' },
+            teal: { DEFAULT: '#00A896' },
+            cream: { DEFAULT: '#F7F5F1' },
+            warn: { DEFAULT: '#E85D04' },
+            mist: '#a8b2c1',
+            snow: '#e8ecf1'
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
+          },
+          boxShadow: { 'glow-sm': '0 0 20px rgba(47,107,255,0.2)', glow: '0 0 40px rgba(47,107,255,0.15)' }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background: #0B1220; color: #e8ecf1; }
+    .nav-blur { backdrop-filter: blur(12px); background: rgba(11,18,32,0.85); }
+    .card-border { border: 1px solid rgba(42,51,65,0.9); }
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(47,107,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(47,107,255,0.03) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    .field-error { border-color: #E85D04 !important; }
+    .error-msg { color: #E85D04; font-size: 0.75rem; margin-top: 0.35rem; display: none; }
+    .error-msg.visible { display: block; }
+  </style>
+<script src="https://app.refrain.com.br/hub/refrain-1b85fe/geo.js" async></script>
+</head>
+<body class="font-sans antialiased">
+  <style>
+    .prose-r h2 { font-size:1.5rem; font-weight:700; color:#e8ecf1; margin-top:2.5rem; margin-bottom:.75rem; }
+    .prose-r p { color:#c9d1dc; line-height:1.75; margin-top:1rem; }
+    .prose-r ul, .prose-r ol { color:#c9d1dc; margin-top:1rem; padding-left:1.25rem; line-height:1.75; }
+    .prose-r ul { list-style:disc; } .prose-r ol { list-style:decimal; }
+    .prose-r a { color:#2F6BFF; text-decoration:underline; }
+    .prose-r table { width:100%; margin-top:1.25rem; border-collapse:collapse; font-size:.9rem; }
+    .prose-r th, .prose-r td { border:1px solid rgba(42,51,65,0.9); padding:.6rem .75rem; text-align:left; vertical-align:top; color:#c9d1dc; }
+    .prose-r th { background:#161b22; color:#e8ecf1; }
+    .prose-r code { font-family:'JetBrains Mono',monospace; font-size:.85em; background:#161b22; padding:.1rem .3rem; border-radius:.25rem; }
+  </style>
+  <header class="fixed top-0 inset-x-0 z-50 nav-blur border-b border-charcoal-600/50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="../index.html" class="flex items-center gap-2">
+        <img src="../assets/refrain-wordmark.svg" alt="Refrain" width="119" height="32" class="h-8 w-auto" />
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm text-mist">
+        <a href="../servicos.html" class="hover:text-cyan transition">Serviços</a>
+        <a href="../metodologia.html" class="hover:text-cyan transition">Metodologia</a>
+        <a href="../case-climatewise.html" class="hover:text-cyan transition">Case</a>
+        <a href="../orcamento.html" class="hover:text-cyan transition">Diagnóstico</a>
+        <a href="../index.html#pacotes" class="hover:text-cyan transition">Pacotes</a>
+        <a href="../precos.html" class="hover:text-cyan transition">Preços</a>
+        <a href="./" class="text-cyan">Blog</a>
+        <a href="../contato.html" class="hover:text-cyan transition">Contato</a>
+      </nav>
+      <a href="../orcamento.html" class="text-sm font-medium px-4 py-2 rounded-lg bg-cyan text-charcoal-950 hover:bg-cyan-dim transition shadow-glow-sm">Diagnóstico rápido</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="pt-28 pb-20 sm:pt-32 grid-bg">
+      <article class="max-w-3xl mx-auto px-4 sm:px-6">
+        <p class="text-cyan font-mono text-xs uppercase tracking-widest mb-3"><a href="./" class="hover:underline">Blog</a> · 17 de novembro de 2026</p>
+        <h1 class="text-3xl sm:text-4xl font-bold text-snow tracking-tight">Seu firewall ou CDN está bloqueando o ChatGPT e o Google? Como verificar e liberar os robôs certos</h1>
+        <div class="prose-r">
+        <p id="resposta"><strong>Pode estar, e o robots.txt não mostra isso. Proteções de bots ligadas na CDN ou no firewall (WAF) costumam tratar todo tráfego automatizado igual: o Googlebot, o OAI-SearchBot (busca do ChatGPT) e o PerplexityBot recebem um CAPTCHA ou um erro 403 e não leem a página. Página que o robô não lê não entra na Busca nem é citada.</strong> A correção recomendada pelo Google, pela OpenAI e pela Perplexity é a mesma: liberar só os robôs verificados, conferindo nome e faixa de IP, em vez de desligar a proteção.</p>
+        <p>Abaixo está o que cada empresa documenta, como checar o seu site em 15 minutos e o que pedir para quem cuida da sua hospedagem.</p>
+
+        <h2>Por que o robots.txt liberado não garante acesso?</h2>
+        <p>O robots.txt é um aviso de quais áreas o robô pode visitar. Ele não abre porta nenhuma. Antes de a requisição chegar ao seu site, ela passa pela CDN e pelo firewall, e é ali que regras de “proteção contra bots”, desafios de CAPTCHA e limites de taxa decidem se o pedido segue.</p>
+        <p>No <a href="https://christopherjanb.com/blog/aeo-best-practices-study/" rel="noopener">estudo de Christopher Jan Benitez</a> que analisamos <a href="checklist-geo-garante-citacao-chatgpt-perplexity-estudo-2026.html">no artigo de ontem</a>, 10 de 120 sites recusaram ou desafiaram uma requisição identificada como PerplexityBot mesmo com o robots.txt liberado, e o autor atribui isso provavelmente a regras de firewall ou CDN. É uma amostra pequena, nos Estados Unidos, mas mostra que o problema existe fora da teoria.</p>
+
+        <h2>O que o Google disse em novembro de 2026?</h2>
+        <p>Em 11/11/2026 o Google Search Central publicou <a href="https://developers.google.com/search/blog/2026/11/crawling-cdn" rel="noopener">um post sobre migração para CDN</a>. O ponto central para quem quer aparecer na Busca e nas Visões gerais:</p>
+        <ul>
+          <li>O Googlebot não resolve CAPTCHA. Se a CDN ou o WAF intercepta robôs com desafio, o rastreador fica preso numa página de erro.</li>
+          <li>Para o Google, o site parece “deliberadamente restrito ou quebrado”. Se isso continuar, os rastreadores recuam e as páginas, inclusive anúncios de produtos, começam a sair da Busca.</li>
+          <li>A recomendação: se precisar bloquear bots, libere os robôs verificados (a maioria das CDNs e WAFs tem uma opção pronta para isso) ou bloqueie robôs específicos indesejados pelo robots.txt ou por regras, em vez de bloquear todo cliente automatizado.</li>
+          <li>Se o servidor estiver sobrecarregado, responda 429 ou 503 por uma janela curta (algumas horas, no máximo um ou dois dias), em vez de 403 ou CAPTCHA.</li>
+        </ul>
+        <p>O post também explica por que o tráfego de robôs sobe logo depois de ativar uma CDN: respostas mais rápidas fazem o Google aumentar o ritmo de rastreamento, e com o cache ainda vazio cada URL nova vai direto ao servidor de origem. É justamente nesse momento que muita gente liga o bloqueio de bots e tira o site da Busca sem perceber.</p>
+
+        <h2>Quais robôs de IA precisam passar pelo firewall?</h2>
+        <p>Cada empresa publica os nomes e as faixas de IP dos seus robôs. Estes são os que importam para aparecer nas respostas:</p>
+        <table>
+          <thead><tr><th>Robô</th><th>Para que serve</th><th>Onde estão os IPs oficiais</th></tr></thead>
+          <tbody>
+            <tr><td>Googlebot</td><td>Rastreamento da Busca do Google, base das Visões gerais e do Modo IA</td><td>Listas JSON e verificação por DNS reverso na <a href="https://developers.google.com/search/docs/crawling-indexing/verifying-googlebot" rel="noopener">documentação do Google</a></td></tr>
+            <tr><td>OAI-SearchBot</td><td>Mostrar sites nas respostas de busca do ChatGPT</td><td>openai.com/searchbot.json (<a href="https://platform.openai.com/docs/bots" rel="noopener">documentação da OpenAI</a>)</td></tr>
+            <tr><td>ChatGPT-User</td><td>Visitas feitas quando um usuário pede ao ChatGPT para abrir uma página</td><td>openai.com/chatgpt-user.json</td></tr>
+            <tr><td>PerplexityBot</td><td>Mostrar e linkar sites nos resultados do Perplexity</td><td>perplexity.ai/perplexitybot.json (<a href="https://docs.perplexity.ai/guides/bots" rel="noopener">documentação da Perplexity</a>)</td></tr>
+            <tr><td>Perplexity-User</td><td>Visitas feitas em resposta à pergunta de um usuário</td><td>perplexity.ai/perplexity-user.json</td></tr>
+          </tbody>
+        </table>
+        <p>A OpenAI diz que sites fora do OAI-SearchBot não aparecem nas respostas de busca do ChatGPT (podem aparecer só como links de navegação) e recomenda “permitir requisições das nossas faixas de IP publicadas”. A Perplexity faz a mesma recomendação e tem uma seção inteira de configuração de WAF. Se você quer controlar treino de modelos, o lugar é outro robô (GPTBot, por exemplo), e bloqueá-lo não tira você da busca do ChatGPT. Detalhamos essa diferença no artigo sobre <a href="robots-txt-para-ia-gptbot-oai-searchbot-perplexitybot-claudebot.html">robots.txt para IA</a>.</p>
+
+        <h2>Como liberar com segurança, sem abrir a porta para qualquer bot?</h2>
+        <p>Liberar pelo nome do robô não basta, porque qualquer script pode copiar o user-agent. As documentações oficiais pedem verificação dupla:</p>
+        <ol>
+          <li><strong>Use a opção de robôs verificados da sua CDN.</strong> O Google cita esse caminho como o mais simples. Na Cloudflare, os robôs verificados já passam por checagem da própria Cloudflare.</li>
+          <li><strong>Se criar regra manual, combine nome e IP.</strong> A Perplexity recomenda casar cada user-agent com a sua própria faixa de IP, e atualizar as faixas quando os arquivos JSON mudarem.</li>
+          <li><strong>Coloque a regra de liberação antes das regras de bloqueio.</strong> Na Cloudflare, uma regra “Skip” só pula as regras que vêm depois dela; no AWS WAF, a regra de liberação precisa de prioridade menor que as de bloqueio.</li>
+          <li><strong>Para conferir um IP do Google nos logs,</strong> faça o DNS reverso: o nome precisa terminar em googlebot.com, google.com ou googleusercontent.com, e a consulta direta desse nome precisa devolver o mesmo IP.</li>
+        </ol>
+
+        <h2>O que checar se o site usa Cloudflare?</h2>
+        <p>A Cloudflare é comum em sites de PMEs brasileiras, inclusive no plano grátis. Três pontos da documentação merecem atenção:</p>
+        <ul>
+          <li><strong>Políticas de acesso de robôs de IA.</strong> Em Security > Settings, filtre por tráfego de bots e abra “AI Crawler and Agent access policies”. Ali você escolhe, para Busca, Agente e Treino, entre bloquear, bloquear só em páginas com anúncios ou não bloquear. <a href="https://developers.cloudflare.com/bots/additional-configurations/block-ai-bots/" rel="noopener">A documentação</a> avisa que a ação de Treino também vale para robôs mistos, usados para treino e busca ao mesmo tempo. Então bloquear Treino pode afetar a busca de quem usa um único robô para as duas coisas.</li>
+          <li><strong>Padrões mudaram em 2026.</strong> O registro de mudanças da Cloudflare de 01/07/2026 anunciou novos padrões para domínios que entrassem a partir de 15/09/2026, com Treino e Agente bloqueados em páginas com anúncios; a página atual da documentação diz que, para novos domínios, os três usam “não bloquear” por padrão. Como as duas fontes divergem, não confie em padrão: abra o painel e veja o que está configurado no seu domínio.</li>
+          <li><strong>Bot Fight Mode.</strong> A Perplexity avisa que esse modo não pode ser pulado por regras personalizadas do WAF e pode continuar desafiando os robôs dela.</li>
+        </ul>
+
+        <h2>Como testar o meu site em 15 minutos?</h2>
+        <ol>
+          <li><strong>Abra os eventos de segurança da CDN</strong> e filtre por Googlebot, OAI-SearchBot e PerplexityBot. Desafios e bloqueios aparecem ali.</li>
+          <li><strong>No Google Search Console,</strong> use a Inspeção de URL numa página importante e veja o relatório de Estatísticas de rastreamento. Picos de erros ou respostas 403 são sinal de bloqueio.</li>
+          <li><strong>Teste com o nome do robô</strong>, por exemplo <code>curl -I -A "OAI-SearchBot" https://seusite.com.br/</code>. Se vier CAPTCHA ou 403, há uma regra pegando o nome. Se vier 200, isso não prova que o robô verdadeiro passa, porque o firewall vê que o seu IP não é da OpenAI; confirme nos logs.</li>
+          <li><strong>Pergunte ao ChatGPT e ao Perplexity</strong> sobre uma página específica do seu site e veja se eles conseguem abri-la e citá-la.</li>
+        </ol>
+
+        <h2>E se o servidor não aguentar o tráfego de robôs?</h2>
+        <p>Use freio temporário, não muro. O Google recomenda responder 429 (muitas requisições) ou 503 (serviço indisponível) por algumas horas, no máximo um ou dois dias, e pré-aquecer o cache da CDN com as páginas mais visitadas antes de migrar. Um 403 ou um CAPTCHA permanente diz ao robô que o site está fechado; um 429 curto diz que ele deve voltar mais tarde.</p>
+        </div>
+        <div class="space-y-3 mt-4"><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Se meu robots.txt libera os robôs de IA, meu site está acessível?</summary><p class="mt-2 text-mist text-sm">Não necessariamente. O robots.txt é só um pedido aos robôs; quem decide se a requisição passa é o servidor, a CDN e o firewall (WAF). Se uma regra de proteção de bots responder com CAPTCHA ou erro 403, o robô não lê a página, mesmo com o robots.txt liberado.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">O que o Google diz sobre bloqueio de bots em CDN?</summary><p class="mt-2 text-mist text-sm">Num post de 11/11/2026, o Google Search Central explica que o Googlebot não resolve CAPTCHA. Se uma proteção de bots genérica continuar ativa sem exceção para robôs verificados, os rastreadores recuam e as páginas começam a sair da Busca. A recomendação é liberar robôs verificados e, se o servidor precisar de alívio, responder 429 ou 503 por pouco tempo.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Quais robôs preciso liberar para aparecer no ChatGPT e no Perplexity?</summary><p class="mt-2 text-mist text-sm">Para a busca do ChatGPT, a OpenAI recomenda liberar o OAI-SearchBot no robots.txt e permitir as faixas de IP que ela publica. Para o Perplexity, a recomendação é liberar o PerplexityBot e as faixas de IP publicadas. O ChatGPT-User e o Perplexity-User fazem buscas pedidas por usuários e também precisam passar pelo firewall para que a página seja lida na hora.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Liberar um robô pelo nome no firewall é seguro?</summary><p class="mt-2 text-mist text-sm">Só pelo nome, não, porque qualquer um pode copiar o user-agent. A Perplexity recomenda combinar user-agent e faixa de IP na mesma regra. O Google ensina a verificar pelo DNS reverso ou pelas listas de IP que ele publica. Na Cloudflare, a opção de robôs verificados já faz essa checagem.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">A Bot Fight Mode da Cloudflare pode bloquear robôs de IA?</summary><p class="mt-2 text-mist text-sm">Pode. A documentação da Perplexity avisa que a Bot Fight Mode não pode ser pulada por regras personalizadas do WAF e ainda pode desafiar os robôs dela. Se o seu site depende de ser citado, revise essa opção e as políticas de acesso de robôs de IA em Security > Settings.</p></details></div>
+        <div class="prose-r"><h2>Fontes</h2><ul>
+<li><a href="https://developers.google.com/search/blog/2026/11/crawling-cdn" rel="noopener">https://developers.google.com/search/blog/2026/11/crawling-cdn</a> — Google Search Central, “Moving to a CDN without overwhelming your origin (or blocking Googlebot)”, 11/11/2026 (consultada em 17/11/2026)</li>
+<li><a href="https://platform.openai.com/docs/bots" rel="noopener">https://platform.openai.com/docs/bots</a> — OpenAI, “Overview of OpenAI Crawlers” (consultada em 17/11/2026)</li>
+<li><a href="https://docs.perplexity.ai/guides/bots" rel="noopener">https://docs.perplexity.ai/guides/bots</a> — Perplexity, “Perplexity Crawlers” (inclui configuração de WAF) (consultada em 17/11/2026)</li>
+<li><a href="https://developers.cloudflare.com/bots/additional-configurations/block-ai-bots/" rel="noopener">https://developers.cloudflare.com/bots/additional-configurations/block-ai-bots/</a> — Cloudflare Docs, “AI Crawler and Agent access policies” (consultada em 17/11/2026)</li>
+<li><a href="https://developers.cloudflare.com/changelog/post/2026-07-01-ai-traffic-options/" rel="noopener">https://developers.cloudflare.com/changelog/post/2026-07-01-ai-traffic-options/</a> — Cloudflare Changelog, “New options to manage AI traffic”, 01/07/2026 (consultada em 17/11/2026)</li>
+<li><a href="https://developers.google.com/search/docs/crawling-indexing/verifying-googlebot" rel="noopener">https://developers.google.com/search/docs/crawling-indexing/verifying-googlebot</a> — Google, “Verify requests from Google crawlers and fetchers” (consultada em 17/11/2026)</li>
+<li><a href="https://christopherjanb.com/blog/aeo-best-practices-study/" rel="noopener">https://christopherjanb.com/blog/aeo-best-practices-study/</a> — Christopher Jan Benitez, “Do AEO Best Practices Get You Cited by AI? I Tested Google, ChatGPT and Perplexity”, 11/11/2026 (consultada em 17/11/2026)</li>
+</ul></div>
+        <div class="mt-12 rounded-2xl card-border bg-charcoal-800 p-6">
+          <p class="text-snow font-semibold text-lg">Quer saber se o ChatGPT, o Perplexity e o Gemini conseguem ler e citar o seu site?</p>
+          <p class="mt-2 text-mist text-sm">O Gabarito GEO da Refrain testa perguntas reais nos três motores, mostra quais fontes cada um citou e entrega score, gaps priorizados e checklist em minutos. R$ 497, pagamento único.</p>
+          <div class="mt-4 flex flex-wrap gap-3"><a href="../precos.html" class="text-sm font-medium px-4 py-2 rounded-lg bg-cyan text-charcoal-950 hover:bg-cyan-dim transition">Ver preços do Gabarito</a><a href="../orcamento.html" class="text-sm font-medium px-4 py-2 rounded-lg border border-charcoal-600 text-snow hover:border-cyan/40 hover:text-cyan transition">Fazer diagnóstico rápido</a></div>
+        </div>
+      
+        <aside class="mt-12 p-5 rounded-xl border border-white/10 bg-white/5" aria-label="Sobre o autor">
+          <p class="text-snow font-semibold">Sobre o autor</p>
+          <p class="mt-2 text-sm text-mist"><a href="/autor/leandro-franca-de-mello/" class="text-cyan hover:underline">Leandro França de Mello</a> é Google Developer, engenheiro de ML e foi um dos pioneiros em Google Ads e campanhas de SEO no início dos anos 2000. Fundou a Refrain conjugando essas competências pra criar uma agência 100% automatizada de GEO e com alcance mundial.</p>
+        </aside>
+      </article>
+    </section>
+  </main>
+
+  <footer class="border-t border-charcoal-700 py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row justify-between gap-8">
+      <div>
+        <a href="../index.html" class="inline-block" aria-label="Refrain — início"><img src="../assets/refrain-wordmark.svg" alt="Refrain" width="104" height="28" class="h-7 w-auto" /></a>
+        <p class="mt-2 text-sm text-mist max-w-xs">Seja o refrão que a IA repete. GEO + Caçador de Citações.</p>
+        <p class="mt-2 text-sm text-mist"><a href="mailto:contato@refrain.com.br" class="hover:text-cyan">contato@refrain.com.br</a></p>
+      </div>
+      <div class="flex flex-wrap gap-8 text-sm text-mist">
+        <div class="space-y-2">
+          <p class="text-snow font-medium text-xs uppercase tracking-wider">Site</p>
+          <a href="../servicos.html" class="block hover:text-cyan">Serviços</a>
+          <a href="../metodologia.html" class="block hover:text-cyan">Metodologia</a>
+          <a href="../case-climatewise.html" class="block hover:text-cyan">Case</a>
+          <a href="../orcamento.html" class="block hover:text-cyan">Diagnóstico</a>
+          <a href="../precos.html" class="block hover:text-cyan">Preços</a>
+          <a href="./" class="block hover:text-cyan">Artigos</a>
+          <a href="/estudos/quem-as-ias-citam-no-brasil/" class="block hover:text-cyan">Estudo: quem as IAs citam</a>
+          <a href="/autor/leandro-franca-de-mello/" class="block hover:text-cyan">Autor</a>
+          <a href="../contato.html" class="block hover:text-cyan">Contato</a>
+          <a href="../portal.html" class="block hover:text-cyan">Portal</a>
+        </div>
+        <div class="space-y-2">
+          <p class="text-snow font-medium text-xs uppercase tracking-wider">Legal</p>
+          <a href="../privacidade.html" class="block hover:text-cyan">Privacidade</a>
+          <a href="../termos.html" class="block hover:text-cyan">Termos</a>
+          <a href="../llms.txt" class="block hover:text-cyan font-mono text-xs">llms.txt</a>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 mt-10 pt-6 border-t border-charcoal-700 text-xs text-mist/50">
+      © 2026 Refrain · Leandro França de Mello
+    </div>
+  </footer>
+<script src="https://app.refrain.com.br/chat-widget.js" async></script>
+</body>
+</html>
