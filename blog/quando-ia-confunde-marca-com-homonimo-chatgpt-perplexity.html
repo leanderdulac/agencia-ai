@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quando a IA confunde sua marca com um homônimo: o que fazer no ChatGPT e no Perplexity | Blog Refrain</title>
+  <meta name="description" content="Quando o ChatGPT ou o Perplexity cita outra empresa com o mesmo nome, o motor está lendo páginas do homônimo. Veja como deixar a identidade oficial inequívoca no site, no schema e no llms.txt." />
+  <link rel="canonical" href="https://www.refrain.com.br/blog/quando-ia-confunde-marca-com-homonimo-chatgpt-perplexity.html" />
+  <meta property="og:title" content="Quando a IA confunde sua marca com um homônimo: o que fazer no ChatGPT e no Perplexity" />
+  <meta property="og:description" content="Quando o ChatGPT ou o Perplexity cita outra empresa com o mesmo nome, o motor está lendo páginas do homônimo. Veja como deixar a identidade oficial inequívoca no site, no schema e no llms.txt." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.refrain.com.br/blog/quando-ia-confunde-marca-com-homonimo-chatgpt-perplexity.html" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Refrain" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Article",
+   "@id": "https://www.refrain.com.br/blog/quando-ia-confunde-marca-com-homonimo-chatgpt-perplexity.html#article",
+   "headline": "Quando a IA confunde sua marca com um homônimo: o que fazer no ChatGPT e no Perplexity",
+   "description": "Quando o ChatGPT ou o Perplexity cita outra empresa com o mesmo nome, o motor está lendo páginas do homônimo. Veja como deixar a identidade oficial inequívoca no site, no schema e no llms.txt.",
+   "inLanguage": "pt-BR",
+   "datePublished": "2026-11-18",
+   "dateModified": "2026-11-18",
+   "author": {
+    "@type": "Person",
+    "name": "Leandro França de Mello",
+    "description": "Leandro França de Mello é Google Developer, engenheiro de ML e foi um dos pioneiros em Google Ads e campanhas de SEO no início dos anos 2000. Fundou a Refrain conjugando essas competências pra criar uma agência 100% automatizada de GEO e com alcance mundial.",
+    "jobTitle": "Fundador da Refrain",
+    "url": "https://www.refrain.com.br/autor/leandro-franca-de-mello/",
+    "@id": "https://www.refrain.com.br/autor/leandro-franca-de-mello/#person",
+    "worksFor": {
+     "@id": "https://www.refrain.com.br/#organization"
+    },
+    "knowsAbout": [
+     "GEO",
+     "SEO",
+     "Google Ads",
+     "machine learning"
+    ]
+   },
+   "publisher": {
+    "@type": "Organization",
+    "@id": "https://www.refrain.com.br/#organization",
+    "name": "Refrain",
+    "url": "https://www.refrain.com.br/"
+   },
+   "mainEntityOfPage": "https://www.refrain.com.br/blog/quando-ia-confunde-marca-com-homonimo-chatgpt-perplexity.html",
+   "citation": [
+    "https://schema.org/Organization",
+    "https://schema.org/disambiguatingDescription",
+    "https://developers.google.com/search/docs/appearance/structured-data/organization",
+    "https://developers.google.com/search/blog/2023/11/introducing-organization-markup",
+    "https://developers.google.com/search/docs/appearance/ai-features",
+    "https://www.tributus.net/site-oficial"
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://www.refrain.com.br/blog/quando-ia-confunde-marca-com-homonimo-chatgpt-perplexity.html#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Por que o ChatGPT ou o Perplexity fala de outra empresa com o mesmo nome?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Porque, na hora da resposta, o motor busca páginas com esse nome e pode recuperar o site, o diretório ou a avaliação de um homônimo — outro domínio, outro país ou outro ramo. Sem uma identidade clara no seu site oficial, a resposta mistura as duas entidades."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Uma página “não confundir com” resolve o problema sozinha?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Não. Ela ajuda se estiver no domínio oficial, em HTML indexável e com os fatos visíveis (razão social, site canônico, o que a empresa não é). Ainda assim, o motor pode continuar citando diretórios e páginas de avaliação do homônimo. A página é âncora, não garantia."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Qual dado estruturado ajuda a separar a minha marca de um homônimo?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No tipo Organization do schema.org, use name, legalName, url e, quando couber, alternateName, disambiguatingDescription, sameAs e taxID. O Google recomenda name, alternateName, url e sinais de presença real no guia de Organization; isso alimenta a Busca, não é garantia de citação no ChatGPT ou no Perplexity. O markup precisa bater com o texto visível, e sameAs só deve apontar páginas da mesma empresa."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Preciso de uma página na Wikipedia ou no Wikidata para a IA me distinguir?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Não. O schema.org cita Wikipedia e Wikidata como exemplos de sameAs, não como requisito. Só inclua essas URLs se a página existir e for realmente sobre a sua empresa. Criar ou apontar a entrada de um homônimo aumenta a confusão. Na falta delas, o site oficial, a razão social e a seção “não confundir com” já servem de âncora."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Como sei se a confusão diminuiu?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Pergunte de novo, em mais de um motor, e anote menção, link e quais URLs foram citadas. O sinal positivo é o motor linkar o seu domínio canônico e deixar de citar o site do homônimo nas perguntas de marca e de confiança. Uma menção ao nome com link para o xará ainda é confusão. Não conclua com uma pergunta só nem com um motor só."
+     }
+    }
+   ]
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Início",
+     "item": "https://www.refrain.com.br/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Blog",
+     "item": "https://www.refrain.com.br/blog/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Quando a IA confunde sua marca com um homônimo: o que fazer no ChatGPT e no Perplexity",
+     "item": "https://www.refrain.com.br/blog/quando-ia-confunde-marca-com-homonimo-chatgpt-perplexity.html"
+    }
+   ]
+  }
+ ]
+}
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../config.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            charcoal: { 950: '#0B1220', 900: '#0f1218', 800: '#161b22', 700: '#1e2530', 600: '#2a3341' },
+            cyan: { DEFAULT: '#2F6BFF', dim: '#2557d6' },
+            teal: { DEFAULT: '#00A896' },
+            cream: { DEFAULT: '#F7F5F1' },
+            warn: { DEFAULT: '#E85D04' },
+            mist: '#a8b2c1',
+            snow: '#e8ecf1'
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
+          },
+          boxShadow: { 'glow-sm': '0 0 20px rgba(47,107,255,0.2)', glow: '0 0 40px rgba(47,107,255,0.15)' }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background: #0B1220; color: #e8ecf1; }
+    .nav-blur { backdrop-filter: blur(12px); background: rgba(11,18,32,0.85); }
+    .card-border { border: 1px solid rgba(42,51,65,0.9); }
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(47,107,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(47,107,255,0.03) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    .field-error { border-color: #E85D04 !important; }
+    .error-msg { color: #E85D04; font-size: 0.75rem; margin-top: 0.35rem; display: none; }
+    .error-msg.visible { display: block; }
+  </style>
+<script src="https://app.refrain.com.br/hub/refrain-1b85fe/geo.js" async></script>
+</head>
+<body class="font-sans antialiased">
+  <style>
+    .prose-r h2 { font-size:1.5rem; font-weight:700; color:#e8ecf1; margin-top:2.5rem; margin-bottom:.75rem; }
+    .prose-r p { color:#c9d1dc; line-height:1.75; margin-top:1rem; }
+    .prose-r ul, .prose-r ol { color:#c9d1dc; margin-top:1rem; padding-left:1.25rem; line-height:1.75; }
+    .prose-r ul { list-style:disc; } .prose-r ol { list-style:decimal; }
+    .prose-r a { color:#2F6BFF; text-decoration:underline; }
+    .prose-r table { width:100%; margin-top:1.25rem; border-collapse:collapse; font-size:.9rem; }
+    .prose-r th, .prose-r td { border:1px solid rgba(42,51,65,0.9); padding:.6rem .75rem; text-align:left; vertical-align:top; color:#c9d1dc; }
+    .prose-r th { background:#161b22; color:#e8ecf1; }
+    .prose-r code { font-family:'JetBrains Mono',monospace; font-size:.85em; background:#161b22; padding:.1rem .3rem; border-radius:.25rem; }
+  </style>
+  <header class="fixed top-0 inset-x-0 z-50 nav-blur border-b border-charcoal-600/50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="../index.html" class="flex items-center gap-2">
+        <img src="../assets/refrain-wordmark.svg" alt="Refrain" width="119" height="32" class="h-8 w-auto" />
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm text-mist">
+        <a href="../servicos.html" class="hover:text-cyan transition">Serviços</a>
+        <a href="../metodologia.html" class="hover:text-cyan transition">Metodologia</a>
+        <a href="../case-climatewise.html" class="hover:text-cyan transition">Case</a>
+        <a href="../orcamento.html" class="hover:text-cyan transition">Diagnóstico</a>
+        <a href="../index.html#pacotes" class="hover:text-cyan transition">Pacotes</a>
+        <a href="../precos.html" class="hover:text-cyan transition">Preços</a>
+        <a href="./" class="text-cyan">Blog</a>
+        <a href="../contato.html" class="hover:text-cyan transition">Contato</a>
+      </nav>
+      <a href="../orcamento.html" class="text-sm font-medium px-4 py-2 rounded-lg bg-cyan text-charcoal-950 hover:bg-cyan-dim transition shadow-glow-sm">Diagnóstico rápido</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="pt-28 pb-20 sm:pt-32 grid-bg">
+      <article class="max-w-3xl mx-auto px-4 sm:px-6">
+        <p class="text-cyan font-mono text-xs uppercase tracking-widest mb-3"><a href="./" class="hover:underline">Blog</a> · 18 de novembro de 2026</p>
+        <h1 class="text-3xl sm:text-4xl font-bold text-snow tracking-tight">Quando a IA confunde sua marca com um homônimo: o que fazer no ChatGPT e no Perplexity</h1>
+        <div class="prose-r">
+        <p id="resposta"><strong>Isso acontece quando o motor encontra, na hora da resposta, páginas de outra organização com o mesmo nome ou um nome muito parecido — outro domínio, outro país, outro ramo — e trata essas páginas como se fossem a sua.</strong> A correção não é pedir para a IA “conhecer” a marca: é tornar a identidade inequívoca no próprio site (nome fantasia, razão social, URL oficial e o que você não é) e repetir isso no texto visível, no JSON-LD de Organization e no llms.txt. Sem essa âncora, o ChatGPT e o Perplexity continuam livres para citar o homônimo que estiver mais fácil de recuperar.</p>
+
+        <h2>Como isso aparece na prática</h2>
+        <p>No radar da Refrain, dois casos recentes mostram o mesmo mecanismo com desfechos diferentes.</p>
+        <p>Quando a pergunta é “A Tributus é confiável? O que dizem os clientes?”, o Perplexity mencionou a marca, mas não linkou <a href="https://www.tributus.net/">tributus.net</a>. Em vez disso, citou avaliações no Trustindex da <a href="https://tributus.pt/">tributus.pt</a> (empresa portuguesa de outro ramo), a página da Tribus Services no Indeed e perfis no Clutch com nomes parecidos. São entidades distintas que só compartilham um pedaço do nome. No mesmo intervalo de 7 dias, enquanto o ChatGPT esteve no ar, ele linkou www.tributus.net na maior parte das respostas em que citou a marca: 19 links em 24 respostas. O mesmo nome, motores diferentes, fontes diferentes.</p>
+        <p>Com a Asana Bem-Estar, empresa de saúde ocupacional, o padrão aparece do outro lado: o Perplexity cita com frequência asana.com, inclusive a página de bem-estar do software de gestão de projetos. O nome coincide; o negócio, não.</p>
+        <p>Nenhum desses exemplos prova que um motor “erra de propósito”. Eles mostram o que acontece quando a busca devolve documentos de mais de uma entidade e a resposta mistura as duas.</p>
+
+        <h2>Por que o motor mistura entidades</h2>
+        <p>A busca do ChatGPT, o Perplexity e o Gemini com grounding não consultam um cadastro oficial da sua empresa. Eles buscam páginas, leem trechos e montam a resposta com o que acharam. Se o termo da busca é só o nome da marca, o índice devolve tudo que contém esse nome: um domínio em outro país, um software internacional, um diretório, uma página de avaliação de uma empresa quase homônima.</p>
+        <p>Perguntas de reputação (“é confiável?”, “o que dizem os clientes?”) aumentam o risco, porque o motor privilegia sites de avaliação. Se o seu domínio ainda não aparece nesses sites — ou se um homônimo já aparece — a citação vai para o outro. Já tratamos esse tipo de pergunta no artigo sobre <a href="empresa-e-confiavel-como-ia-responde-perguntas-de-reputacao.html">como a IA responde “a empresa é confiável?”</a>. Aqui o ponto é outro: mesmo quando o nome é mencionado, a IA pode estar falando de outra pessoa jurídica.</p>
+
+        <h2>O que publicar no seu site</h2>
+        <p>A peça mais útil é uma página canônica de identidade, em HTML, indexável, com texto visível — não só em imagem ou PDF. Em poucas linhas, ela deve deixar explícito:</p>
+        <ul>
+          <li>o nome fantasia e a razão social;</li>
+          <li>o site oficial (um único domínio canônico, com HTTPS);</li>
+          <li>o que a empresa faz e para quem, em linguagem direta;</li>
+          <li>uma seção “Não confundir com”, listando os homônimos conhecidos (outros domínios, outros países, outros produtos) e dizendo, com clareza, que não são a mesma empresa;</li>
+          <li>um identificador oficial quando existir e for público (no Brasil, o CNPJ), igual ao do cadastro.</li>
+        </ul>
+        <p>A Tributus publicou em novembro de 2026 a página <a href="https://www.tributus.net/site-oficial">/site-oficial</a> em tributus.net com exatamente esse bloco: tributus.pt, tributus.com.br, tributus.app e tributus.com não são o site oficial, e o aplicativo oficial é tributum.app. O valor está no fato de a distinção estar no próprio domínio oficial, em texto que o robô consegue ler.</p>
+        <p>Repita o essencial na página inicial, no rodapé e na página “Sobre”. Se a home usa só o nome curto e a razão social aparece apenas numa imagem no rodapé, o motor que lê a home não leva a âncora embora.</p>
+
+        <h2>Dados estruturados: o que o schema.org e o Google descrevem</h2>
+        <p>No JSON-LD de Organization, o <a href="https://schema.org/Organization" rel="noopener">schema.org</a> prevê propriedades de identidade:</p>
+        <ul>
+          <li><code>name</code>: o nome pelo qual a empresa é conhecida;</li>
+          <li><code>legalName</code>: o nome oficial registrado;</li>
+          <li><code>alternateName</code>: outros nomes reais pelos quais ela é chamada (sigla ou nome antigo), não uma lista de palavras-chave;</li>
+          <li><code>disambiguatingDescription</code>: segundo o schema.org, “uma descrição curta do item usada para distingui-lo de outros itens semelhantes”;</li>
+          <li><code>url</code>: o site oficial;</li>
+          <li><code>sameAs</code>: URL de uma página que indica de forma inequívoca a identidade do item (o schema.org cita, como exemplos, Wikipedia, Wikidata ou o site oficial);</li>
+          <li><code>taxID</code>: o número fiscal oficial, quando você tiver um e ele for público.</li>
+        </ul>
+        <p>O Google, no <a href="https://developers.google.com/search/docs/appearance/structured-data/organization" rel="noopener">guia de dados estruturados de Organization</a>, recomenda <code>name</code> e <code>alternateName</code>, <code>url</code>, <code>logo</code> e sinais de presença real (endereço, telefone). Num <a href="https://developers.google.com/search/blog/2023/11/introducing-organization-markup" rel="noopener">post de novembro de 2023</a>, passou a usar mais esses dados em painéis de conhecimento e elementos visuais da Busca. Isso não é garantia de citação no ChatGPT, no Perplexity ou nas Visões gerais: o próprio Google, no <a href="https://developers.google.com/search/docs/appearance/ai-features" rel="noopener">guia de recursos de IA da Pesquisa</a>, não pede um schema especial para esses formatos. Já detalhamos essa ressalva no artigo sobre <a href="dados-estruturados-schema-org-ajudam-aparecer-chatgpt-google-ia.html">dados estruturados e respostas de IA</a>.</p>
+        <p>O markup só é útil se bater com o texto visível. E <code>sameAs</code> só deve apontar páginas que realmente falam da mesma empresa: um perfil vazio ou a Wikipedia de um homônimo piora a confusão. Não invente página, perfil ou identificador que a empresa não tem.</p>
+
+        <h2>llms.txt e consistência entre as páginas</h2>
+        <p>O <a href="llms-txt-o-que-e-como-criar-chatgpt-perplexity-gemini.html">llms.txt</a> não é requisito do Google para Visões gerais ou Modo IA, e não garante citação. Ainda assim, é um arquivo curto, em Markdown, que agentes leem na raiz do site. Vale usá-lo para repetir a identidade canônica: nome, razão social, URL oficial e a linha “não confundir com”.</p>
+        <p>A consistência entre home, página de identidade, schema e llms.txt importa mais do que a quantidade de arquivos. Se o llms.txt aponta o domínio certo e a home não menciona o homônimo — ou o contrário — você entrega duas versões da mesma entidade.</p>
+
+        <h2>Como medir se a confusão diminuiu</h2>
+        <p>Meça pergunta por pergunta, motor por motor, e separe menção de link. Mencionar o nome e linkar o seu domínio são coisas diferentes. No radar, a Tributus chega a ser mencionada pelo Perplexity em perguntas de marca sem que tributus.net entre nas fontes; a Asana Bem-Estar é mencionada enquanto asana.com leva o link. O método está no artigo sobre <a href="como-medir-marca-chatgpt-gemini-perplexity.html">como medir se sua marca aparece no ChatGPT, Gemini e Perplexity</a>.</p>
+        <p>Anote, a cada rodada, quais URLs foram citadas. O sinal positivo é o motor linkar o seu domínio canônico e deixar de citar o homônimo nas perguntas de marca e de confiança. Se a menção subiu mas o link continua no site do xará ou só em diretórios, a identidade ainda não chegou à fonte que o motor está usando. Não conclua isso com uma pergunta isolada nem com um motor só: no exemplo da Tributus, o ChatGPT e o Perplexity não se comportaram igual.</p>
+        </div>
+        <div class="space-y-3 mt-4"><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Por que o ChatGPT ou o Perplexity fala de outra empresa com o mesmo nome?</summary><p class="mt-2 text-mist text-sm">Porque, na hora da resposta, o motor busca páginas com esse nome e pode recuperar o site, o diretório ou a avaliação de um homônimo — outro domínio, outro país ou outro ramo. Sem uma identidade clara no seu site oficial, a resposta mistura as duas entidades.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Uma página “não confundir com” resolve o problema sozinha?</summary><p class="mt-2 text-mist text-sm">Não. Ela ajuda se estiver no domínio oficial, em HTML indexável e com os fatos visíveis (razão social, site canônico, o que a empresa não é). Ainda assim, o motor pode continuar citando diretórios e páginas de avaliação do homônimo. A página é âncora, não garantia.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Qual dado estruturado ajuda a separar a minha marca de um homônimo?</summary><p class="mt-2 text-mist text-sm">No tipo Organization do schema.org, use name, legalName, url e, quando couber, alternateName, disambiguatingDescription, sameAs e taxID. O Google recomenda name, alternateName, url e sinais de presença real no guia de Organization; isso alimenta a Busca, não é garantia de citação no ChatGPT ou no Perplexity. O markup precisa bater com o texto visível, e sameAs só deve apontar páginas da mesma empresa.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Preciso de uma página na Wikipedia ou no Wikidata para a IA me distinguir?</summary><p class="mt-2 text-mist text-sm">Não. O schema.org cita Wikipedia e Wikidata como exemplos de sameAs, não como requisito. Só inclua essas URLs se a página existir e for realmente sobre a sua empresa. Criar ou apontar a entrada de um homônimo aumenta a confusão. Na falta delas, o site oficial, a razão social e a seção “não confundir com” já servem de âncora.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Como sei se a confusão diminuiu?</summary><p class="mt-2 text-mist text-sm">Pergunte de novo, em mais de um motor, e anote menção, link e quais URLs foram citadas. O sinal positivo é o motor linkar o seu domínio canônico e deixar de citar o site do homônimo nas perguntas de marca e de confiança. Uma menção ao nome com link para o xará ainda é confusão. Não conclua com uma pergunta só nem com um motor só.</p></details></div>
+        <div class="prose-r"><h2>Fontes</h2><ul>
+<li><a href="https://schema.org/Organization" rel="noopener">https://schema.org/Organization</a> — schema.org, tipo Organization: legalName, alternateName, sameAs, taxID e demais propriedades (consultada em 18/11/2026)</li>
+<li><a href="https://schema.org/disambiguatingDescription" rel="noopener">https://schema.org/disambiguatingDescription</a> — schema.org, propriedade disambiguatingDescription (consultada em 18/11/2026)</li>
+<li><a href="https://developers.google.com/search/docs/appearance/structured-data/organization" rel="noopener">https://developers.google.com/search/docs/appearance/structured-data/organization</a> — Google Search Central, “Organization structured data” (consultada em 18/11/2026)</li>
+<li><a href="https://developers.google.com/search/blog/2023/11/introducing-organization-markup" rel="noopener">https://developers.google.com/search/blog/2023/11/introducing-organization-markup</a> — Google Search Central Blog, “Expanding markup support for Organization details”, 29/11/2023 (consultada em 18/11/2026)</li>
+<li><a href="https://developers.google.com/search/docs/appearance/ai-features" rel="noopener">https://developers.google.com/search/docs/appearance/ai-features</a> — Google Search Central, “AI features and your website” (consultada em 18/11/2026)</li>
+<li><a href="https://www.tributus.net/site-oficial" rel="noopener">https://www.tributus.net/site-oficial</a> — página pública de identidade e desambiguação da Tributus (consultada em 18/11/2026)</li>
+</ul></div>
+        <div class="mt-12 rounded-2xl card-border bg-charcoal-800 p-6">
+          <p class="text-snow font-semibold text-lg">Quer saber se o ChatGPT e o Perplexity estão citando a sua empresa — ou um homônimo?</p>
+          <p class="mt-2 text-mist text-sm">O Gabarito GEO da Refrain testa perguntas reais nos motores, mostra quais fontes cada um citou e entrega score, gaps priorizados e checklist em minutos. R$ 497, pagamento único.</p>
+          <div class="mt-4 flex flex-wrap gap-3"><a href="../precos.html" class="text-sm font-medium px-4 py-2 rounded-lg bg-cyan text-charcoal-950 hover:bg-cyan-dim transition">Ver preços do Gabarito</a><a href="../orcamento.html" class="text-sm font-medium px-4 py-2 rounded-lg border border-charcoal-600 text-snow hover:border-cyan/40 hover:text-cyan transition">Fazer diagnóstico rápido</a></div>
+        </div>
+
+        <aside class="mt-12 p-5 rounded-xl border border-white/10 bg-white/5" aria-label="Sobre o autor">
+          <p class="text-snow font-semibold">Sobre o autor</p>
+          <p class="mt-2 text-sm text-mist"><a href="/autor/leandro-franca-de-mello/" class="text-cyan hover:underline">Leandro França de Mello</a> é Google Developer, engenheiro de ML e foi um dos pioneiros em Google Ads e campanhas de SEO no início dos anos 2000. Fundou a Refrain conjugando essas competências pra criar uma agência 100% automatizada de GEO e com alcance mundial.</p>
+        </aside>
+      </article>
+    </section>
+  </main>
+
+  <footer class="border-t border-charcoal-700 py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row justify-between gap-8">
+      <div>
+        <a href="../index.html" class="inline-block" aria-label="Refrain — início"><img src="../assets/refrain-wordmark.svg" alt="Refrain" width="104" height="28" class="h-7 w-auto" /></a>
+        <p class="mt-2 text-sm text-mist max-w-xs">Seja o refrão que a IA repete. GEO + Caçador de Citações.</p>
+        <p class="mt-2 text-sm text-mist"><a href="mailto:contato@refrain.com.br" class="hover:text-cyan">contato@refrain.com.br</a></p>
+      </div>
+      <div class="flex flex-wrap gap-8 text-sm text-mist">
+        <div class="space-y-2">
+          <p class="text-snow font-medium text-xs uppercase tracking-wider">Site</p>
+          <a href="../servicos.html" class="block hover:text-cyan">Serviços</a>
+          <a href="../metodologia.html" class="block hover:text-cyan">Metodologia</a>
+          <a href="../case-climatewise.html" class="block hover:text-cyan">Case</a>
+          <a href="../orcamento.html" class="block hover:text-cyan">Diagnóstico</a>
+          <a href="../precos.html" class="block hover:text-cyan">Preços</a>
+          <a href="./" class="block hover:text-cyan">Artigos</a>
+          <a href="/estudos/quem-as-ias-citam-no-brasil/" class="block hover:text-cyan">Estudo: quem as IAs citam</a>
+          <a href="/autor/leandro-franca-de-mello/" class="block hover:text-cyan">Autor</a>
+          <a href="../contato.html" class="block hover:text-cyan">Contato</a>
+          <a href="../portal.html" class="block hover:text-cyan">Portal</a>
+        </div>
+        <div class="space-y-2">
+          <p class="text-snow font-medium text-xs uppercase tracking-wider">Legal</p>
+          <a href="../privacidade.html" class="block hover:text-cyan">Privacidade</a>
+          <a href="../termos.html" class="block hover:text-cyan">Termos</a>
+          <a href="../llms.txt" class="block hover:text-cyan font-mono text-xs">llms.txt</a>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 mt-10 pt-6 border-t border-charcoal-700 text-xs text-mist/50">
+      © 2026 Refrain · Leandro França de Mello
+    </div>
+  </footer>
+<script src="https://app.refrain.com.br/chat-widget.js" async></script>
+</body>
+</html>
