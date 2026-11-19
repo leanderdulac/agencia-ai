@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fontes preferidas do Google: como seu site pode ganhar o selo “preferida” no Modo IA e nas Visões gerais | Blog Refrain</title>
+  <meta name="description" content="O leitor pode marcar o seu site como fonte preferida no Google, e aí seu conteúdo pode aparecer com o selo “preferida” no Modo IA, nas Visões gerais e nas Principais notícias. Veja o que o Google documenta, quem é elegível e como colocar o botão no seu site." />
+  <link rel="canonical" href="https://www.refrain.com.br/blog/fontes-preferidas-google-modo-ia-visoes-gerais-como-ser-escolhido.html" />
+  <meta property="og:title" content="Fontes preferidas do Google: como seu site pode ganhar o selo “preferida” no Modo IA e nas Visões gerais" />
+  <meta property="og:description" content="O leitor pode marcar o seu site como fonte preferida no Google, e aí seu conteúdo pode aparecer com o selo “preferida” no Modo IA, nas Visões gerais e nas Principais notícias. Veja o que o Google documenta, quem é elegível e como colocar o botão no seu site." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.refrain.com.br/blog/fontes-preferidas-google-modo-ia-visoes-gerais-como-ser-escolhido.html" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Refrain" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Article",
+   "@id": "https://www.refrain.com.br/blog/fontes-preferidas-google-modo-ia-visoes-gerais-como-ser-escolhido.html#article",
+   "headline": "Fontes preferidas do Google: como seu site pode ganhar o selo “preferida” no Modo IA e nas Visões gerais",
+   "description": "O leitor pode marcar o seu site como fonte preferida no Google, e aí seu conteúdo pode aparecer com o selo “preferida” no Modo IA, nas Visões gerais e nas Principais notícias. Veja o que o Google documenta, quem é elegível e como colocar o botão no seu site.",
+   "inLanguage": "pt-BR",
+   "datePublished": "2026-11-19",
+   "dateModified": "2026-11-19",
+   "author": {
+    "@type": "Person",
+    "name": "Leandro França de Mello",
+    "description": "Leandro França de Mello é Google Developer, engenheiro de ML e foi um dos pioneiros em Google Ads e campanhas de SEO no início dos anos 2000. Fundou a Refrain conjugando essas competências pra criar uma agência 100% automatizada de GEO e com alcance mundial.",
+    "jobTitle": "Fundador da Refrain",
+    "url": "https://www.refrain.com.br/autor/leandro-franca-de-mello/",
+    "@id": "https://www.refrain.com.br/autor/leandro-franca-de-mello/#person",
+    "worksFor": {
+     "@id": "https://www.refrain.com.br/#organization"
+    },
+    "knowsAbout": [
+     "GEO",
+     "SEO",
+     "Google Ads",
+     "machine learning"
+    ]
+   },
+   "publisher": {
+    "@type": "Organization",
+    "@id": "https://www.refrain.com.br/#organization",
+    "name": "Refrain",
+    "url": "https://www.refrain.com.br/"
+   },
+   "mainEntityOfPage": "https://www.refrain.com.br/blog/fontes-preferidas-google-modo-ia-visoes-gerais-como-ser-escolhido.html",
+   "citation": [
+    "https://developers.google.com/search/docs/appearance/preferred-sources",
+    "https://blog.google/products-and-platforms/products/search/updates-ai-mode-overviews-explore-web/",
+    "https://blog.google/products-and-platforms/products/search/personalize-search-discover-news/",
+    "https://blog.google/products-and-platforms/products/search/new-controls-website-owners/"
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://www.refrain.com.br/blog/fontes-preferidas-google-modo-ia-visoes-gerais-como-ser-escolhido.html#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "O que são as fontes preferidas do Google?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "É um recurso em que o próprio usuário escolhe sites que quer ver com mais destaque na Busca. Segundo a documentação do Google, o conteúdo de um site marcado como preferido fica mais propenso a aparecer nas Principais notícias e, no Modo IA e nas Visões gerais criadas por IA, pode ser destacado com o selo “preferida” para quem fez essa escolha."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Fonte preferida faz meu site ser citado mais pela IA do Google?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "O Google não promete isso. A documentação fala em destaque com o selo para os usuários que escolheram o seu site, não em presença garantida nas respostas. É um sinal de relacionamento com o seu público, que funciona junto com o resto do trabalho de GEO, não no lugar dele."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Meu site pode ser fonte preferida?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Só domínios e subdomínios são elegíveis (por exemplo www.seusite.com.br ou blog.seusite.com.br), não subpastas como seusite.com.br/blog. Para aparecer como preferida no Modo IA e nas Visões gerais, o site também precisa estar incluído nos recursos de IA generativa da Busca no Search Console. Dá para conferir digitando o domínio na ferramenta de preferências de fontes do Google."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Como coloco o botão “Adicionar às fontes preferidas” no meu site?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "O jeito recomendado pelo Google são duas linhas de HTML: um script que carrega a biblioteca (news.google.com/swg/js/v1/publisher.js) e uma div com o atributo google-add-preferred-source-btn onde o botão deve aparecer. Se o seu CMS não aceita JavaScript, use o link https://www.google.com/preferences/source?q= seguido do seu domínio."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Preciso do botão para ser escolhido como fonte preferida?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Não. O Google diz que o botão e o link são formas de ajudar o público a encontrar a opção, mas não são obrigatórios. Qualquer usuário pode adicionar o seu site pela ferramenta de preferências, desde que o site apareça nela."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Se eu desativar os recursos de IA no Search Console, perco a fonte preferida no Modo IA?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sim, nessa parte. A documentação diz que, para o site ser elegível como fonte preferida no Modo IA e nas Visões gerais, ele precisa estar incluído nos recursos de IA generativa da Busca no Search Console. Quem desliga esse controle também deixa de receber tráfego e impressões desses recursos, segundo o Google."
+     }
+    }
+   ]
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Início",
+     "item": "https://www.refrain.com.br/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Blog",
+     "item": "https://www.refrain.com.br/blog/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Fontes preferidas do Google: como seu site pode ganhar o selo “preferida” no Modo IA e nas Visões gerais",
+     "item": "https://www.refrain.com.br/blog/fontes-preferidas-google-modo-ia-visoes-gerais-como-ser-escolhido.html"
+    }
+   ]
+  }
+ ]
+}
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../config.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            charcoal: { 950: '#0B1220', 900: '#0f1218', 800: '#161b22', 700: '#1e2530', 600: '#2a3341' },
+            cyan: { DEFAULT: '#2F6BFF', dim: '#2557d6' },
+            teal: { DEFAULT: '#00A896' },
+            cream: { DEFAULT: '#F7F5F1' },
+            warn: { DEFAULT: '#E85D04' },
+            mist: '#a8b2c1',
+            snow: '#e8ecf1'
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
+          },
+          boxShadow: { 'glow-sm': '0 0 20px rgba(47,107,255,0.2)', glow: '0 0 40px rgba(47,107,255,0.15)' }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background: #0B1220; color: #e8ecf1; }
+    .nav-blur { backdrop-filter: blur(12px); background: rgba(11,18,32,0.85); }
+    .card-border { border: 1px solid rgba(42,51,65,0.9); }
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(47,107,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(47,107,255,0.03) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    .field-error { border-color: #E85D04 !important; }
+    .error-msg { color: #E85D04; font-size: 0.75rem; margin-top: 0.35rem; display: none; }
+    .error-msg.visible { display: block; }
+  </style>
+<script src="https://app.refrain.com.br/hub/refrain-1b85fe/geo.js" async></script>
+</head>
+<body class="font-sans antialiased">
+  <style>
+    .prose-r h2 { font-size:1.5rem; font-weight:700; color:#e8ecf1; margin-top:2.5rem; margin-bottom:.75rem; }
+    .prose-r p { color:#c9d1dc; line-height:1.75; margin-top:1rem; }
+    .prose-r ul, .prose-r ol { color:#c9d1dc; margin-top:1rem; padding-left:1.25rem; line-height:1.75; }
+    .prose-r ul { list-style:disc; } .prose-r ol { list-style:decimal; }
+    .prose-r a { color:#2F6BFF; text-decoration:underline; }
+    .prose-r table { width:100%; margin-top:1.25rem; border-collapse:collapse; font-size:.9rem; }
+    .prose-r th, .prose-r td { border:1px solid rgba(42,51,65,0.9); padding:.6rem .75rem; text-align:left; vertical-align:top; color:#c9d1dc; }
+    .prose-r th { background:#161b22; color:#e8ecf1; }
+    .prose-r code { font-family:'JetBrains Mono',monospace; font-size:.85em; background:#161b22; padding:.1rem .3rem; border-radius:.25rem; }
+  </style>
+  <header class="fixed top-0 inset-x-0 z-50 nav-blur border-b border-charcoal-600/50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="../index.html" class="flex items-center gap-2">
+        <img src="../assets/refrain-wordmark.svg" alt="Refrain" width="119" height="32" class="h-8 w-auto" />
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm text-mist">
+        <a href="../servicos.html" class="hover:text-cyan transition">Serviços</a>
+        <a href="../metodologia.html" class="hover:text-cyan transition">Metodologia</a>
+        <a href="../case-climatewise.html" class="hover:text-cyan transition">Case</a>
+        <a href="../orcamento.html" class="hover:text-cyan transition">Diagnóstico</a>
+        <a href="../index.html#pacotes" class="hover:text-cyan transition">Pacotes</a>
+        <a href="../precos.html" class="hover:text-cyan transition">Preços</a>
+        <a href="./" class="text-cyan">Blog</a>
+        <a href="../contato.html" class="hover:text-cyan transition">Contato</a>
+      </nav>
+      <a href="../orcamento.html" class="text-sm font-medium px-4 py-2 rounded-lg bg-cyan text-charcoal-950 hover:bg-cyan-dim transition shadow-glow-sm">Diagnóstico rápido</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="pt-28 pb-20 sm:pt-32 grid-bg">
+      <article class="max-w-3xl mx-auto px-4 sm:px-6">
+        <p class="text-cyan font-mono text-xs uppercase tracking-widest mb-3"><a href="./" class="hover:underline">Blog</a> · 19 de novembro de 2026</p>
+        <h1 class="text-3xl sm:text-4xl font-bold text-snow tracking-tight">Fontes preferidas do Google: como seu site pode ganhar o selo “preferida” no Modo IA e nas Visões gerais</h1>
+        <div class="prose-r">
+        <p id="resposta"><strong>Fontes preferidas são sites que o próprio usuário escolhe ver com mais destaque no Google. Quando alguém marca o seu site, o Google diz que seu conteúdo fica mais propenso a aparecer nas Principais notícias e pode ganhar o selo “preferida” no Modo IA e nas Visões gerais criadas por IA para essa pessoa.</strong> Para isso, o site precisa ser um domínio ou subdomínio, estar incluído nos recursos de IA generativa no Search Console e, de preferência, oferecer ao leitor o botão oficial “Adicionar às fontes preferidas”.</p>
+        <p>Abaixo está o que o Google publicou sobre o recurso, o que ele muda (e o que não muda) para quem quer ser citado pela IA e como instalar o botão em poucos minutos.</p>
+
+        <h2>O que o Google anunciou sobre fontes preferidas?</h2>
+        <p>O recurso nasceu para notícias e foi crescendo. A linha do tempo, pelas fontes oficiais:</p>
+        <ul>
+          <li><strong>Junho de 2026:</strong> no <a href="https://blog.google/products-and-platforms/products/search/new-controls-website-owners/" rel="noopener">post sobre novos controles para donos de sites</a>, o Google disse que tinha levado as fontes preferidas para as Visões gerais e o Modo IA, junto com selos de assinatura.</li>
+          <li><strong>20 de agosto de 2026:</strong> o Google <a href="https://blog.google/products-and-platforms/products/search/personalize-search-discover-news/" rel="noopener">lançou o botão interativo</a> que os sites podem colocar nas páginas. Naquele momento, as pessoas já tinham escolhido mais de 600 mil fontes diferentes.</li>
+          <li><strong>15 de outubro de 2026:</strong> nas <a href="https://blog.google/products-and-platforms/products/search/updates-ai-mode-overviews-explore-web/" rel="noopener">atualizações do Modo IA e das Visões gerais</a>, o Google disse que o número de pessoas usando fontes preferidas cresceu mais de 7 vezes desde o início do ano e que os carrosséis de artigos recentes nas respostas de IA passam a destacar as fontes preferidas de cada usuário.</li>
+        </ul>
+        <p>A <a href="https://developers.google.com/search/docs/appearance/preferred-sources" rel="noopener">documentação para donos de sites</a> confirma que o recurso funciona em todos os idiomas onde a Busca existe (nas Principais notícias) e em todos os idiomas e países onde o Modo IA e as Visões gerais estão disponíveis, o que inclui o Brasil.</p>
+
+        <h2>O que muda para quem quer ser citado pela IA do Google?</h2>
+        <p>Muda a relação com quem já conhece você. A maior parte do GEO trata de convencer o motor de que sua página responde bem a uma pergunta. A fonte preferida é diferente: é o leitor dizendo ao Google “quero ver este site”. Quando ele faz isso, o conteúdo pode vir marcado com o selo “preferida” dentro da resposta de IA, o que ajuda a sua marca a se destacar no meio de outros links.</p>
+        <p>É preciso ler com cuidado o que o Google promete:</p>
+        <table>
+          <thead><tr><th>Onde</th><th>O que a documentação diz</th></tr></thead>
+          <tbody>
+            <tr><td>Principais notícias</td><td>O conteúdo fica “mais propenso a aparecer”, com o selo “preferida”</td></tr>
+            <tr><td>Modo IA e Visões gerais</td><td>O conteúdo “pode ser destacado” com o selo para quem escolheu o site</td></tr>
+            <tr><td>Carrosséis de artigos recentes nas respostas de IA</td><td>Destacam as fontes preferidas do usuário (anúncio de 15/10/2026)</td></tr>
+          </tbody>
+        </table>
+        <p>Não há promessa de que o site passa a ser citado em perguntas onde não seria, nem de que o efeito vale para quem não marcou o site. Por isso tratamos o recurso como reforço de audiência, não como atalho de ranqueamento.</p>
+
+        <h2>Meu site é elegível?</h2>
+        <p>Pelas regras da documentação, confira três pontos:</p>
+        <ol>
+          <li><strong>Domínio ou subdomínio.</strong> www.suaempresa.com.br e blog.suaempresa.com.br são elegíveis. Uma subpasta como suaempresa.com.br/blog não é, então o selo vale para o domínio inteiro.</li>
+          <li><strong>Recursos de IA ligados no Search Console.</strong> Para aparecer como preferida no Modo IA e nas Visões gerais, o site precisa estar incluído nos recursos de IA generativa da Busca. Explicamos esse controle no artigo sobre <a href="controle-ia-generativa-search-console-ai-overviews-ai-mode.html">o controle de IA generativa no Search Console</a>.</li>
+          <li><strong>Aparecer na ferramenta.</strong> Abra https://www.google.com/preferences/source?q= seguido do seu domínio e veja se o site aparece. Se aparecer, já pode ser escolhido.</li>
+        </ol>
+
+        <h2>Como colocar o botão “Adicionar às fontes preferidas”?</h2>
+        <p>O Google oferece três caminhos. Nenhum é obrigatório, mas sem eles poucos leitores vão descobrir a opção sozinhos.</p>
+        <ul>
+          <li><strong>Botão padrão (recomendado):</strong> cole <code>&lt;script async src="https://news.google.com/swg/js/v1/publisher.js"&gt;&lt;/script&gt;</code> no <code>&lt;head&gt;</code> e <code>&lt;div google-add-preferred-source-btn&gt;&lt;/div&gt;</code> onde o botão deve aparecer. O botão é traduzido sozinho e aceita tema claro ou escuro com <code>data-theme="dark"</code>. O leitor clica, confirma e volta para a sua página.</li>
+          <li><strong>Botão com o seu design:</strong> a mesma biblioteca pode ser chamada pelo seu próprio botão via JavaScript, com o fluxo idêntico para o leitor.</li>
+          <li><strong>Link direto:</strong> se o CMS não aceita scripts, use um link de texto ou imagem para https://www.google.com/preferences/source?q=suaempresa.com.br. Esse link também serve para newsletter, WhatsApp e redes sociais.</li>
+        </ul>
+        <p>Bons lugares para o botão: fim dos artigos do blog, página de novidades, rodapé e o e-mail que você manda para a base de clientes.</p>
+
+        <h2>Faz sentido para clínica, SaaS, e-commerce ou escola?</h2>
+        <p>Faz mais sentido para quem publica conteúdo com frequência. Um SaaS com blog de atualizações, uma escola com notícias sobre matrículas e cursos, uma clínica que explica tratamentos, um e-commerce com guias de compra: todos têm leitores recorrentes que podem marcar o site. Para quem tem só uma página institucional parada, o ganho tende a ser pequeno, porque o recurso destaca conteúdo, e é o conteúdo novo que entra nas respostas e nos carrosséis.</p>
+        <p>Vale lembrar o resto do trabalho: o selo só aparece se a sua página entrar na resposta, e ela entra quando responde bem à pergunta e está acessível aos robôs. Se ainda não sabe se a IA do Google cita o seu site, comece pelo <a href="como-aparecer-nas-visoes-gerais-criadas-por-ia-do-google.html">guia das Visões gerais</a> e pelo <a href="o-que-o-google-diz-sobre-geo-aeo-visoes-gerais-modo-ia.html">que o Google diz sobre GEO</a>.</p>
+
+        <h2>Checklist rápido</h2>
+        <ul>
+          <li>Confirmar que o domínio aparece na ferramenta de preferências de fontes.</li>
+          <li>Confirmar no Search Console que o site está incluído nos recursos de IA generativa.</li>
+          <li>Instalar o botão padrão no fim dos artigos e no rodapé.</li>
+          <li>Colocar o link direto na newsletter e nas redes.</li>
+          <li>Acompanhar as impressões no relatório de IA generativa do Search Console.</li>
+        </ul>
+
+        <h2>Perguntas frequentes</h2>
+        </div>
+        <div class="space-y-3 mt-4"><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">O que são as fontes preferidas do Google?</summary><p class="mt-2 text-mist text-sm">É um recurso em que o próprio usuário escolhe sites que quer ver com mais destaque na Busca. Segundo a documentação do Google, o conteúdo de um site marcado como preferido fica mais propenso a aparecer nas Principais notícias e, no Modo IA e nas Visões gerais criadas por IA, pode ser destacado com o selo “preferida” para quem fez essa escolha.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Fonte preferida faz meu site ser citado mais pela IA do Google?</summary><p class="mt-2 text-mist text-sm">O Google não promete isso. A documentação fala em destaque com o selo para os usuários que escolheram o seu site, não em presença garantida nas respostas. É um sinal de relacionamento com o seu público, que funciona junto com o resto do trabalho de GEO, não no lugar dele.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Meu site pode ser fonte preferida?</summary><p class="mt-2 text-mist text-sm">Só domínios e subdomínios são elegíveis (por exemplo www.seusite.com.br ou blog.seusite.com.br), não subpastas como seusite.com.br/blog. Para aparecer como preferida no Modo IA e nas Visões gerais, o site também precisa estar incluído nos recursos de IA generativa da Busca no Search Console. Dá para conferir digitando o domínio na ferramenta de preferências de fontes do Google.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Como coloco o botão “Adicionar às fontes preferidas” no meu site?</summary><p class="mt-2 text-mist text-sm">O jeito recomendado pelo Google são duas linhas de HTML: um script que carrega a biblioteca (news.google.com/swg/js/v1/publisher.js) e uma div com o atributo google-add-preferred-source-btn onde o botão deve aparecer. Se o seu CMS não aceita JavaScript, use o link https://www.google.com/preferences/source?q= seguido do seu domínio.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Preciso do botão para ser escolhido como fonte preferida?</summary><p class="mt-2 text-mist text-sm">Não. O Google diz que o botão e o link são formas de ajudar o público a encontrar a opção, mas não são obrigatórios. Qualquer usuário pode adicionar o seu site pela ferramenta de preferências, desde que o site apareça nela.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Se eu desativar os recursos de IA no Search Console, perco a fonte preferida no Modo IA?</summary><p class="mt-2 text-mist text-sm">Sim, nessa parte. A documentação diz que, para o site ser elegível como fonte preferida no Modo IA e nas Visões gerais, ele precisa estar incluído nos recursos de IA generativa da Busca no Search Console. Quem desliga esse controle também deixa de receber tráfego e impressões desses recursos, segundo o Google.</p></details></div>
+        <div class="prose-r"><h2>Fontes</h2><ul>
+<li><a href="https://developers.google.com/search/docs/appearance/preferred-sources" rel="noopener">https://developers.google.com/search/docs/appearance/preferred-sources</a> — Google Search Central, “Help your readers find your site through preferred sources in Google Search” (atualizada em 18/09/2026) (consultada em 19/11/2026)</li>
+<li><a href="https://blog.google/products-and-platforms/products/search/updates-ai-mode-overviews-explore-web/" rel="noopener">https://blog.google/products-and-platforms/products/search/updates-ai-mode-overviews-explore-web/</a> — Google, “More ways to connect with the web from Search”, 15/10/2026 (consultada em 19/11/2026)</li>
+<li><a href="https://blog.google/products-and-platforms/products/search/personalize-search-discover-news/" rel="noopener">https://blog.google/products-and-platforms/products/search/personalize-search-discover-news/</a> — Google, “Personalize the content you see on Search, Discover, and News”, 20/08/2026 (consultada em 19/11/2026)</li>
+<li><a href="https://blog.google/products-and-platforms/products/search/new-controls-website-owners/" rel="noopener">https://blog.google/products-and-platforms/products/search/new-controls-website-owners/</a> — Google, “New opportunities, control and insights for website owners”, 03/06/2026 (atualizado em 31/08/2026) (consultada em 19/11/2026)</li>
+</ul></div>
+        <div class="mt-12 rounded-2xl card-border bg-charcoal-800 p-6">
+          <p class="text-snow font-semibold text-lg">Quer saber se a IA do Google, o ChatGPT e o Perplexity citam o seu site?</p>
+          <p class="mt-2 text-mist text-sm">O Gabarito GEO da Refrain testa perguntas reais nos motores de IA, mostra quais fontes cada um citou e entrega score, gaps priorizados e checklist em minutos. R$ 497, pagamento único.</p>
+          <div class="mt-4 flex flex-wrap gap-3"><a href="../precos.html" class="text-sm font-medium px-4 py-2 rounded-lg bg-cyan text-charcoal-950 hover:bg-cyan-dim transition">Ver preços do Gabarito</a><a href="../orcamento.html" class="text-sm font-medium px-4 py-2 rounded-lg border border-charcoal-600 text-snow hover:border-cyan/40 hover:text-cyan transition">Fazer diagnóstico rápido</a></div>
+        </div>
+
+        <aside class="mt-12 p-5 rounded-xl border border-white/10 bg-white/5" aria-label="Sobre o autor">
+          <p class="text-snow font-semibold">Sobre o autor</p>
+          <p class="mt-2 text-sm text-mist"><a href="/autor/leandro-franca-de-mello/" class="text-cyan hover:underline">Leandro França de Mello</a> é Google Developer, engenheiro de ML e foi um dos pioneiros em Google Ads e campanhas de SEO no início dos anos 2000. Fundou a Refrain conjugando essas competências pra criar uma agência 100% automatizada de GEO e com alcance mundial.</p>
+        </aside>
+      </article>
+    </section>
+  </main>
+
+  <footer class="border-t border-charcoal-700 py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row justify-between gap-8">
+      <div>
+        <a href="../index.html" class="inline-block" aria-label="Refrain — início"><img src="../assets/refrain-wordmark.svg" alt="Refrain" width="104" height="28" class="h-7 w-auto" /></a>
+        <p class="mt-2 text-sm text-mist max-w-xs">Seja o refrão que a IA repete. GEO + Caçador de Citações.</p>
+        <p class="mt-2 text-sm text-mist"><a href="mailto:contato@refrain.com.br" class="hover:text-cyan">contato@refrain.com.br</a></p>
+      </div>
+      <div class="flex flex-wrap gap-8 text-sm text-mist">
+        <div class="space-y-2">
+          <p class="text-snow font-medium text-xs uppercase tracking-wider">Site</p>
+          <a href="../servicos.html" class="block hover:text-cyan">Serviços</a>
+          <a href="../metodologia.html" class="block hover:text-cyan">Metodologia</a>
+          <a href="../case-climatewise.html" class="block hover:text-cyan">Case</a>
+          <a href="../orcamento.html" class="block hover:text-cyan">Diagnóstico</a>
+          <a href="../precos.html" class="block hover:text-cyan">Preços</a>
+          <a href="./" class="block hover:text-cyan">Artigos</a>
+          <a href="/estudos/quem-as-ias-citam-no-brasil/" class="block hover:text-cyan">Estudo: quem as IAs citam</a>
+          <a href="/autor/leandro-franca-de-mello/" class="block hover:text-cyan">Autor</a>
+          <a href="../contato.html" class="block hover:text-cyan">Contato</a>
+          <a href="../portal.html" class="block hover:text-cyan">Portal</a>
+        </div>
+        <div class="space-y-2">
+          <p class="text-snow font-medium text-xs uppercase tracking-wider">Legal</p>
+          <a href="../privacidade.html" class="block hover:text-cyan">Privacidade</a>
+          <a href="../termos.html" class="block hover:text-cyan">Termos</a>
+          <a href="../llms.txt" class="block hover:text-cyan font-mono text-xs">llms.txt</a>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 mt-10 pt-6 border-t border-charcoal-700 text-xs text-mist/50">
+      © 2026 Refrain · Leandro França de Mello
+    </div>
+  </footer>
+<script src="https://app.refrain.com.br/chat-widget.js" async></script>
+</body>
+</html>
