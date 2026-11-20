@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Páginas de resposta: como criar uma página por pergunta que o ChatGPT e o Perplexity consigam linkar | Blog Refrain</title>
+  <meta name="description" content="Uma página de resposta trata de uma única pergunta de compra, com a resposta no primeiro parágrafo, tabela de fatos, FAQ e JSON-LD. Veja como montar uma e o que o radar da Refrain mostrou: a mesma estrutura levou o link para uma marca e não para outra." />
+  <link rel="canonical" href="https://www.refrain.com.br/blog/paginas-de-resposta-uma-pergunta-por-pagina-chatgpt-perplexity-linkar.html" />
+  <meta property="og:title" content="Páginas de resposta: como criar uma página por pergunta que o ChatGPT e o Perplexity consigam linkar" />
+  <meta property="og:description" content="Uma página de resposta trata de uma única pergunta de compra, com a resposta no primeiro parágrafo, tabela de fatos, FAQ e JSON-LD. Veja como montar uma e o que o radar da Refrain mostrou: a mesma estrutura levou o link para uma marca e não para outra." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.refrain.com.br/blog/paginas-de-resposta-uma-pergunta-por-pagina-chatgpt-perplexity-linkar.html" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Refrain" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Article",
+   "@id": "https://www.refrain.com.br/blog/paginas-de-resposta-uma-pergunta-por-pagina-chatgpt-perplexity-linkar.html#article",
+   "headline": "Páginas de resposta: como criar uma página por pergunta que o ChatGPT e o Perplexity consigam linkar",
+   "description": "Uma página de resposta trata de uma única pergunta de compra, com a resposta no primeiro parágrafo, tabela de fatos, FAQ e JSON-LD. Veja como montar uma e o que o radar da Refrain mostrou: a mesma estrutura levou o link para uma marca e não para outra.",
+   "inLanguage": "pt-BR",
+   "datePublished": "2026-11-20",
+   "dateModified": "2026-11-20",
+   "author": {
+    "@type": "Person",
+    "name": "Leandro França de Mello",
+    "description": "Leandro França de Mello é Google Developer, engenheiro de ML e foi um dos pioneiros em Google Ads e campanhas de SEO no início dos anos 2000. Fundou a Refrain conjugando essas competências pra criar uma agência 100% automatizada de GEO e com alcance mundial.",
+    "jobTitle": "Fundador da Refrain",
+    "url": "https://www.refrain.com.br/autor/leandro-franca-de-mello/",
+    "@id": "https://www.refrain.com.br/autor/leandro-franca-de-mello/#person",
+    "worksFor": {
+     "@id": "https://www.refrain.com.br/#organization"
+    },
+    "knowsAbout": [
+     "GEO",
+     "SEO",
+     "Google Ads",
+     "machine learning"
+    ]
+   },
+   "publisher": {
+    "@type": "Organization",
+    "@id": "https://www.refrain.com.br/#organization",
+    "name": "Refrain",
+    "url": "https://www.refrain.com.br/"
+   },
+   "mainEntityOfPage": "https://www.refrain.com.br/blog/paginas-de-resposta-uma-pergunta-por-pagina-chatgpt-perplexity-linkar.html",
+   "citation": [
+    "https://developers.google.com/search/docs/appearance/ai-features",
+    "https://developers.google.com/search/docs/appearance/structured-data/sd-policies",
+    "https://developers.google.com/search/blog/2023/08/howto-faq-changes",
+    "https://developers.google.com/search/docs/fundamentals/creating-helpful-content",
+    "https://docs.perplexity.ai/guides/bots",
+    "https://developers.openai.com/api/docs/bots"
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://www.refrain.com.br/blog/paginas-de-resposta-uma-pergunta-por-pagina-chatgpt-perplexity-linkar.html#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "O que é uma página de resposta?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "É uma URL dedicada a uma única pergunta que o comprador faz à IA, como “quanto custa X por mês” ou “qual a diferença entre a empresa Y e as outras”. A pergunta vira o título, a resposta direta vem no primeiro parágrafo e o resto da página traz os fatos que sustentam essa resposta: preços, limites, para quem serve e perguntas frequentes."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Uma página de resposta garante que a IA vai linkar meu site?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Não. Nenhum formato garante citação. O Google diz que cumprir requisitos e boas práticas não garante rastreamento, indexação nem exibição. No radar da Refrain, páginas com a mesma estrutura foram linkadas em primeira posição pelo Perplexity para uma marca e não apareceram para outra na mesma rodada."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Preciso de schema FAQPage para aparecer nas respostas de IA?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "O Google afirma que não há dados estruturados especiais exigidos para as Visões gerais e o Modo IA. Desde agosto de 2023, o resultado rico de FAQ só aparece regularmente para sites governamentais e de saúde reconhecidos. O JSON-LD continua útil para descrever a página de forma consistente, desde que repita o que está visível no texto."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Quantas páginas de resposta devo criar?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Uma por pergunta de compra relevante em que sua marca não leva o link. Comece pelas perguntas que o seu radar já mede (melhores empresas do setor, preço, diferença, confiança) e só publique quando tiver fatos verificáveis para responder. Página sem fato próprio tende a repetir o que outros sites já dizem."
+     }
+    }
+   ]
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Início",
+     "item": "https://www.refrain.com.br/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Blog",
+     "item": "https://www.refrain.com.br/blog/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Páginas de resposta: como criar uma página por pergunta que o ChatGPT e o Perplexity consigam linkar",
+     "item": "https://www.refrain.com.br/blog/paginas-de-resposta-uma-pergunta-por-pagina-chatgpt-perplexity-linkar.html"
+    }
+   ]
+  }
+ ]
+}
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../config.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            charcoal: { 950: '#0B1220', 900: '#0f1218', 800: '#161b22', 700: '#1e2530', 600: '#2a3341' },
+            cyan: { DEFAULT: '#2F6BFF', dim: '#2557d6' },
+            teal: { DEFAULT: '#00A896' },
+            cream: { DEFAULT: '#F7F5F1' },
+            warn: { DEFAULT: '#E85D04' },
+            mist: '#a8b2c1',
+            snow: '#e8ecf1'
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
+          },
+          boxShadow: { 'glow-sm': '0 0 20px rgba(47,107,255,0.2)', glow: '0 0 40px rgba(47,107,255,0.15)' }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background: #0B1220; color: #e8ecf1; }
+    .nav-blur { backdrop-filter: blur(12px); background: rgba(11,18,32,0.85); }
+    .card-border { border: 1px solid rgba(42,51,65,0.9); }
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(47,107,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(47,107,255,0.03) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    .field-error { border-color: #E85D04 !important; }
+    .error-msg { color: #E85D04; font-size: 0.75rem; margin-top: 0.35rem; display: none; }
+    .error-msg.visible { display: block; }
+  </style>
+<script src="https://app.refrain.com.br/hub/refrain-1b85fe/geo.js" async></script>
+</head>
+<body class="font-sans antialiased">
+  <style>
+    .prose-r h2 { font-size:1.5rem; font-weight:700; color:#e8ecf1; margin-top:2.5rem; margin-bottom:.75rem; }
+    .prose-r p { color:#c9d1dc; line-height:1.75; margin-top:1rem; }
+    .prose-r ul, .prose-r ol { color:#c9d1dc; margin-top:1rem; padding-left:1.25rem; line-height:1.75; }
+    .prose-r ul { list-style:disc; } .prose-r ol { list-style:decimal; }
+    .prose-r a { color:#2F6BFF; text-decoration:underline; }
+    .prose-r table { width:100%; margin-top:1.25rem; border-collapse:collapse; font-size:.9rem; }
+    .prose-r th, .prose-r td { border:1px solid rgba(42,51,65,0.9); padding:.6rem .75rem; text-align:left; vertical-align:top; color:#c9d1dc; }
+    .prose-r th { background:#161b22; color:#e8ecf1; }
+    .prose-r code { font-family:'JetBrains Mono',monospace; font-size:.85em; background:#161b22; padding:.1rem .3rem; border-radius:.25rem; }
+  </style>
+  <header class="fixed top-0 inset-x-0 z-50 nav-blur border-b border-charcoal-600/50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="../index.html" class="flex items-center gap-2">
+        <img src="../assets/refrain-wordmark.svg" alt="Refrain" width="119" height="32" class="h-8 w-auto" />
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm text-mist">
+        <a href="../servicos.html" class="hover:text-cyan transition">Serviços</a>
+        <a href="../metodologia.html" class="hover:text-cyan transition">Metodologia</a>
+        <a href="../case-climatewise.html" class="hover:text-cyan transition">Case</a>
+        <a href="../orcamento.html" class="hover:text-cyan transition">Diagnóstico</a>
+        <a href="../index.html#pacotes" class="hover:text-cyan transition">Pacotes</a>
+        <a href="../precos.html" class="hover:text-cyan transition">Preços</a>
+        <a href="./" class="text-cyan">Blog</a>
+        <a href="../contato.html" class="hover:text-cyan transition">Contato</a>
+      </nav>
+      <a href="../orcamento.html" class="text-sm font-medium px-4 py-2 rounded-lg bg-cyan text-charcoal-950 hover:bg-cyan-dim transition shadow-glow-sm">Diagnóstico rápido</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="pt-28 pb-20 sm:pt-32 grid-bg">
+      <article class="max-w-3xl mx-auto px-4 sm:px-6">
+        <p class="text-cyan font-mono text-xs uppercase tracking-widest mb-3"><a href="./" class="hover:underline">Blog</a> · 20 de novembro de 2026</p>
+        <h1 class="text-3xl sm:text-4xl font-bold text-snow tracking-tight">Páginas de resposta: como criar uma página por pergunta que o ChatGPT e o Perplexity consigam linkar</h1>
+        <div class="prose-r">
+        <p id="resposta"><strong>Uma página de resposta é uma URL dedicada a uma única pergunta de compra, com a resposta direta no primeiro parágrafo, uma tabela com fatos verificáveis, perguntas frequentes e dados estruturados que repetem o texto visível.</strong> Ela dá ao ChatGPT, ao Perplexity e ao Google uma fonte objetiva sobre a sua empresa para aquela pergunta, mas não garante o link: no radar da Refrain de 20/11/2026, páginas com a mesma estrutura foram linkadas pelo Perplexity em primeira posição para uma marca e ignoradas para outra.</p>
+        <p>Abaixo, o que é esse formato, o que medimos com ele, por que o resultado variou e um checklist para montar a sua.</p>
+
+        <h2>O que é uma página de resposta?</h2>
+        <p>As perguntas que mais pesam na decisão de compra se repetem em quase todo setor: “quais são as melhores empresas de…”, “quanto custa por mês”, “qual a diferença entre a empresa X e as outras” e “a empresa X é confiável?”. Quando o comprador faz uma delas a um motor de IA, a resposta costuma vir com links. Se o seu site não tem uma página que responda exatamente aquilo, o link tende a ir para quem tem: diretórios, listas, comparativos de terceiros ou concorrentes.</p>
+        <p>A página de resposta preenche esse buraco. Ela tem a própria pergunta como título, uma resposta de uma ou duas frases com os números públicos da empresa, uma tabela com os detalhes, uma seção de limites (o que a empresa não faz) e um FAQ curto. É diferente de um post de blog: o post explica um tema; a página de resposta é uma ficha de consulta sobre a sua empresa. A Refrain publica as suas em <a href="/respostas/">/respostas</a>.</p>
+
+        <h2>O que o radar da Refrain mostrou?</h2>
+        <p>O radar interno da Refrain faz todos os dias as mesmas quatro perguntas de compra para três projetos que acompanhamos (Refrain, Tributus e Asana Bem-Estar) e registra, por motor, se a marca foi mencionada e se o site dela foi linkado. Em 31/10/2026, Refrain e Tributus ganharam páginas de resposta com a mesma estrutura: resposta direta, tabela, FAQ e JSON-LD dos tipos Article, FAQPage e BreadcrumbList.</p>
+        <table>
+          <thead><tr><th>Sinal medido</th><th>Tributus</th><th>Refrain</th></tr></thead>
+          <tbody>
+            <tr><td>Perplexity, rodada de 20/11/2026 (4 perguntas)</td><td>Site linkado em 3; nas 3, o primeiro link era uma página /respostas da Tributus</td><td>Site linkado em 0; marca mencionada na pergunta de diferença, sem link</td></tr>
+            <tr><td>Perplexity, 14 a 20/11/2026 (28 respostas)</td><td>3 com link, todas na rodada de 20/11</td><td>3 com link, em 14, 16 e 17/11</td></tr>
+            <tr><td>ChatGPT, 14 a 17/11/2026 (16 respostas)</td><td>12 com link, quase sempre para a página inicial</td><td>0 com link</td></tr>
+          </tbody>
+        </table>
+        <p>O ChatGPT ficou fora das rodadas de 18 a 20/11, por isso a comparação dele cobre só 14 a 17/11. Na pergunta “qual a diferença entre a Refrain e outras agências de GEO?”, o Perplexity citou a Refrain pelo nome, mas os links foram para páginas de outras empresas: listas de “melhores agências de GEO”, páginas institucionais e o FAQ de uma agência concorrente. A página <a href="/respostas/diferenca-refrain-outras-agencias-geo/">diferença entre a Refrain e outras agências de GEO</a> existe, está no sitemap e responde exatamente essa pergunta, e mesmo assim não foi citada.</p>
+
+        <h2>Por que a mesma estrutura deu resultados diferentes?</h2>
+        <p>O radar mostra o que aconteceu, não a causa. Com os dados que temos, há três diferenças observáveis entre os dois casos:</p>
+        <ul>
+          <li><strong>Concorrência pela pergunta.</strong> Nas perguntas da Tributus, os outros links eram em boa parte diretórios genéricos de empresas. Nas da Refrain, havia muitas páginas escritas especificamente sobre agências de GEO, em português e em inglês.</li>
+          <li><strong>Especificidade.</strong> As perguntas da Tributus combinam nicho e cidade (“IA tributária para contadores no Rio de Janeiro”). Quanto mais específica a pergunta, menos páginas a respondem diretamente.</li>
+          <li><strong>Nome da marca.</strong> “Refrain” é uma palavra comum em inglês e o nome de outras empresas. Na pergunta de confiança, o Perplexity citou páginas de avaliação de empresas com nomes parecidos, um problema que tratamos em <a href="quando-ia-confunde-marca-com-homonimo-chatgpt-perplexity.html">quando a IA confunde sua marca com um homônimo</a>.</li>
+        </ul>
+        <p>A lição prática é que a página de resposta é necessária, mas a decisão de linkar depende também de quantas outras fontes disputam a mesma pergunta e de o motor entender de qual empresa se trata.</p>
+
+        <h2>Como montar uma página de resposta, passo a passo</h2>
+        <ol>
+          <li><strong>Escolha a pergunta exata.</strong> Use a frase que o comprador digita, de preferência uma que o seu monitoramento já mede e em que a marca não leva o link. Veja <a href="como-medir-marca-chatgpt-gemini-perplexity.html">como medir se sua marca aparece no ChatGPT, Gemini e Perplexity</a>.</li>
+          <li><strong>Coloque a pergunta no título e no H1</strong>, sem trocadilhos.</li>
+          <li><strong>Responda nas duas primeiras frases</strong>, com o nome da empresa e os fatos que sustentam a resposta: preço publicado, cidade, o que está incluído.</li>
+          <li><strong>Monte uma tabela</strong> com os detalhes que o comprador compara: planos, limites, prazos, para quem serve.</li>
+          <li><strong>Diga o que a empresa não faz.</strong> Limites claros evitam que a IA atribua a você algo que você não oferece.</li>
+          <li><strong>Inclua um FAQ curto</strong> com perguntas de acompanhamento reais.</li>
+          <li><strong>Adicione JSON-LD que repita o texto visível.</strong> As diretrizes de dados estruturados do Google pedem que a marcação represente o conteúdo da página. Explicamos os tipos em <a href="dados-estruturados-schema-org-ajudam-aparecer-chatgpt-google-ia.html">dados estruturados e respostas de IA</a>.</li>
+          <li><strong>Ponha a data</strong> de publicação e de atualização, e atualize quando preço ou oferta mudar.</li>
+          <li><strong>Ligue a página ao resto do site</strong>: um índice de respostas, links a partir de serviços e preços, e entrada no sitemap.xml e no <a href="llms-txt-o-que-e-como-criar-chatgpt-perplexity-gemini.html">llms.txt</a>.</li>
+          <li><strong>Libere os robôs certos.</strong> A OpenAI diz que sites que bloqueiam o OAI-SearchBot não aparecem nas respostas de busca do ChatGPT, e a Perplexity recomenda liberar o PerplexityBot no robots.txt e no firewall. O passo a passo está em <a href="robots-txt-para-ia-gptbot-oai-searchbot-perplexitybot-claudebot.html">robots.txt para IA</a>.</li>
+        </ol>
+
+        <h2>O que o Google diz sobre esse formato?</h2>
+        <p>Na página <a href="https://developers.google.com/search/docs/appearance/ai-features" rel="noopener">“AI features and your website”</a>, o Google afirma que não há requisitos extras nem marcação schema.org especial para aparecer nas Visões gerais e no Modo IA: valem os fundamentos de SEO, como conteúdo em texto, links internos e dados estruturados que correspondam ao texto visível. O mesmo documento avisa que cumprir tudo isso não garante indexação nem exibição.</p>
+        <p>Sobre o FAQ, o <a href="https://developers.google.com/search/blog/2023/08/howto-faq-changes" rel="noopener">anúncio de agosto de 2023</a> limitou o resultado rico de FAQ a sites governamentais e de saúde reconhecidos, e disse que não é preciso remover a marcação: dados estruturados não usados não causam problema. E o guia de <a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content" rel="noopener">conteúdo útil e confiável</a> pergunta se a página traz informação original. Por isso a página de resposta precisa de fatos próprios da empresa, não de uma reescrita do que outros sites já publicaram.</p>
+
+        <h2>Como saber se a página funcionou?</h2>
+        <p>Refaça a mesma pergunta nos motores, sempre com o mesmo texto, e registre duas coisas separadas: se a marca foi mencionada e se o link apontou para o seu site. Menção sem link, como a da Refrain na pergunta de diferença, mostra que o motor conhece a marca mas preferiu outra fonte. Nesse caso, olhe quais URLs levaram o link no seu lugar. Fizemos essa análise para listas de ranking em <a href="como-aparecer-quando-ia-lista-melhores-empresas-chatgpt-perplexity.html">como aparecer quando a IA lista as melhores empresas</a>. Para entender o conceito por trás de tudo isso, veja <a href="o-que-e-geo-generative-engine-optimization.html">o que é GEO</a>.</p>
+
+        <h2>Perguntas frequentes</h2>
+        </div>
+        <div class="space-y-3 mt-4"><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">O que é uma página de resposta?</summary><p class="mt-2 text-mist text-sm">É uma URL dedicada a uma única pergunta que o comprador faz à IA, como “quanto custa X por mês” ou “qual a diferença entre a empresa Y e as outras”. A pergunta vira o título, a resposta direta vem no primeiro parágrafo e o resto da página traz os fatos que sustentam essa resposta: preços, limites, para quem serve e perguntas frequentes.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Uma página de resposta garante que a IA vai linkar meu site?</summary><p class="mt-2 text-mist text-sm">Não. Nenhum formato garante citação. O Google diz que cumprir requisitos e boas práticas não garante rastreamento, indexação nem exibição. No radar da Refrain, páginas com a mesma estrutura foram linkadas em primeira posição pelo Perplexity para uma marca e não apareceram para outra na mesma rodada.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Preciso de schema FAQPage para aparecer nas respostas de IA?</summary><p class="mt-2 text-mist text-sm">O Google afirma que não há dados estruturados especiais exigidos para as Visões gerais e o Modo IA. Desde agosto de 2023, o resultado rico de FAQ só aparece regularmente para sites governamentais e de saúde reconhecidos. O JSON-LD continua útil para descrever a página de forma consistente, desde que repita o que está visível no texto.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Quantas páginas de resposta devo criar?</summary><p class="mt-2 text-mist text-sm">Uma por pergunta de compra relevante em que sua marca não leva o link. Comece pelas perguntas que o seu radar já mede (melhores empresas do setor, preço, diferença, confiança) e só publique quando tiver fatos verificáveis para responder. Página sem fato próprio tende a repetir o que outros sites já dizem.</p></details></div>
+        <div class="prose-r"><h2>Fontes</h2><ul>
+<li><a href="https://developers.google.com/search/docs/appearance/ai-features" rel="noopener">https://developers.google.com/search/docs/appearance/ai-features</a> — Google Search Central, “AI features and your website” (atualizada em 10/12/2025) (consultada em 20/11/2026)</li>
+<li><a href="https://developers.google.com/search/docs/appearance/structured-data/sd-policies" rel="noopener">https://developers.google.com/search/docs/appearance/structured-data/sd-policies</a> — Google Search Central, “Diretrizes gerais de dados estruturados” (consultada em 20/11/2026)</li>
+<li><a href="https://developers.google.com/search/blog/2023/08/howto-faq-changes" rel="noopener">https://developers.google.com/search/blog/2023/08/howto-faq-changes</a> — Google Search Central Blog, “Changes to HowTo and FAQ rich results”, 08/08/2023 (consultada em 20/11/2026)</li>
+<li><a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content" rel="noopener">https://developers.google.com/search/docs/fundamentals/creating-helpful-content</a> — Google Search Central, “Criar conteúdo útil, confiável e que priorize as pessoas” (consultada em 20/11/2026)</li>
+<li><a href="https://docs.perplexity.ai/guides/bots" rel="noopener">https://docs.perplexity.ai/guides/bots</a> — Perplexity, “Perplexity Crawlers” (consultada em 20/11/2026)</li>
+<li><a href="https://developers.openai.com/api/docs/bots" rel="noopener">https://developers.openai.com/api/docs/bots</a> — OpenAI, “Overview of OpenAI Crawlers” (consultada em 20/11/2026)</li>
+</ul></div>
+        <div class="mt-12 rounded-2xl card-border bg-charcoal-800 p-6">
+          <p class="text-snow font-semibold text-lg">Quer saber em quais perguntas de compra a IA cita o seu nome, mas linka outro site?</p>
+          <p class="mt-2 text-mist text-sm">O Gabarito GEO da Refrain testa perguntas reais nos motores de IA, separa menção de link, mostra quais URLs levaram o link no seu lugar e entrega score, gaps priorizados e checklist em minutos. R$ 497, pagamento único.</p>
+          <div class="mt-4 flex flex-wrap gap-3"><a href="../precos.html" class="text-sm font-medium px-4 py-2 rounded-lg bg-cyan text-charcoal-950 hover:bg-cyan-dim transition">Ver preços do Gabarito</a><a href="../orcamento.html" class="text-sm font-medium px-4 py-2 rounded-lg border border-charcoal-600 text-snow hover:border-cyan/40 hover:text-cyan transition">Fazer diagnóstico rápido</a></div>
+        </div>
+
+        <aside class="mt-12 p-5 rounded-xl border border-white/10 bg-white/5" aria-label="Sobre o autor">
+          <p class="text-snow font-semibold">Sobre o autor</p>
+          <p class="mt-2 text-sm text-mist"><a href="/autor/leandro-franca-de-mello/" class="text-cyan hover:underline">Leandro França de Mello</a> é Google Developer, engenheiro de ML e foi um dos pioneiros em Google Ads e campanhas de SEO no início dos anos 2000. Fundou a Refrain conjugando essas competências pra criar uma agência 100% automatizada de GEO e com alcance mundial.</p>
+        </aside>
+      </article>
+    </section>
+  </main>
+
+  <footer class="border-t border-charcoal-700 py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row justify-between gap-8">
+      <div>
+        <a href="../index.html" class="inline-block" aria-label="Refrain — início"><img src="../assets/refrain-wordmark.svg" alt="Refrain" width="104" height="28" class="h-7 w-auto" /></a>
+        <p class="mt-2 text-sm text-mist max-w-xs">Seja o refrão que a IA repete. GEO + Caçador de Citações.</p>
+        <p class="mt-2 text-sm text-mist"><a href="mailto:contato@refrain.com.br" class="hover:text-cyan">contato@refrain.com.br</a></p>
+      </div>
+      <div class="flex flex-wrap gap-8 text-sm text-mist">
+        <div class="space-y-2">
+          <p class="text-snow font-medium text-xs uppercase tracking-wider">Site</p>
+          <a href="../servicos.html" class="block hover:text-cyan">Serviços</a>
+          <a href="../metodologia.html" class="block hover:text-cyan">Metodologia</a>
+          <a href="../case-climatewise.html" class="block hover:text-cyan">Case</a>
+          <a href="../orcamento.html" class="block hover:text-cyan">Diagnóstico</a>
+          <a href="../precos.html" class="block hover:text-cyan">Preços</a>
+          <a href="./" class="block hover:text-cyan">Artigos</a>
+          <a href="/estudos/quem-as-ias-citam-no-brasil/" class="block hover:text-cyan">Estudo: quem as IAs citam</a>
+          <a href="/autor/leandro-franca-de-mello/" class="block hover:text-cyan">Autor</a>
+          <a href="../contato.html" class="block hover:text-cyan">Contato</a>
+          <a href="../portal.html" class="block hover:text-cyan">Portal</a>
+        </div>
+        <div class="space-y-2">
+          <p class="text-snow font-medium text-xs uppercase tracking-wider">Legal</p>
+          <a href="../privacidade.html" class="block hover:text-cyan">Privacidade</a>
+          <a href="../termos.html" class="block hover:text-cyan">Termos</a>
+          <a href="../llms.txt" class="block hover:text-cyan font-mono text-xs">llms.txt</a>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 mt-10 pt-6 border-t border-charcoal-700 text-xs text-mist/50">
+      © 2026 Refrain · Leandro França de Mello
+    </div>
+  </footer>
+<script src="https://app.refrain.com.br/chat-widget.js" async></script>
+</body>
+</html>
