@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Por que a IA linka páginas em inglês quando a pergunta é em português (e o que fazer no seu site) | Blog Refrain</title>
+  <meta name="description" content="Na rodada do radar da Refrain de 23/11/2026, 15 dos 41 links que o Perplexity deu a perguntas em português sobre agências de GEO apontavam para URLs /en/, inclusive de sites com versão pt-BR declarada. Veja o que medimos, o que o Google documenta sobre idiomas e o que ajustar." />
+  <link rel="canonical" href="https://www.refrain.com.br/blog/ia-cita-paginas-em-ingles-pergunta-em-portugues-hreflang-perplexity.html" />
+  <meta property="og:title" content="Por que a IA linka páginas em inglês quando a pergunta é em português (e o que fazer no seu site)" />
+  <meta property="og:description" content="Na rodada do radar da Refrain de 23/11/2026, 15 dos 41 links que o Perplexity deu a perguntas em português sobre agências de GEO apontavam para URLs /en/, inclusive de sites com versão pt-BR declarada. Veja o que medimos, o que o Google documenta sobre idiomas e o que ajustar." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.refrain.com.br/blog/ia-cita-paginas-em-ingles-pergunta-em-portugues-hreflang-perplexity.html" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Refrain" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Article",
+   "@id": "https://www.refrain.com.br/blog/ia-cita-paginas-em-ingles-pergunta-em-portugues-hreflang-perplexity.html#article",
+   "headline": "Por que a IA linka páginas em inglês quando a pergunta é em português (e o que fazer no seu site)",
+   "description": "Na rodada do radar da Refrain de 23/11/2026, 15 dos 41 links que o Perplexity deu a perguntas em português sobre agências de GEO apontavam para URLs /en/, inclusive de sites com versão pt-BR declarada. Veja o que medimos, o que o Google documenta sobre idiomas e o que ajustar.",
+   "inLanguage": "pt-BR",
+   "datePublished": "2026-11-23",
+   "dateModified": "2026-11-23",
+   "author": {
+    "@type": "Person",
+    "name": "Leandro França de Mello",
+    "description": "Leandro França de Mello é Google Developer, engenheiro de ML e foi um dos pioneiros em Google Ads e campanhas de SEO no início dos anos 2000. Fundou a Refrain conjugando essas competências pra criar uma agência 100% automatizada de GEO e com alcance mundial.",
+    "jobTitle": "Fundador da Refrain",
+    "url": "https://www.refrain.com.br/autor/leandro-franca-de-mello/",
+    "@id": "https://www.refrain.com.br/autor/leandro-franca-de-mello/#person",
+    "worksFor": {
+     "@id": "https://www.refrain.com.br/#organization"
+    },
+    "knowsAbout": [
+     "GEO",
+     "SEO",
+     "Google Ads",
+     "machine learning"
+    ]
+   },
+   "publisher": {
+    "@type": "Organization",
+    "@id": "https://www.refrain.com.br/#organization",
+    "name": "Refrain",
+    "url": "https://www.refrain.com.br/"
+   },
+   "mainEntityOfPage": "https://www.refrain.com.br/blog/ia-cita-paginas-em-ingles-pergunta-em-portugues-hreflang-perplexity.html",
+   "citation": [
+    "https://developers.google.com/search/docs/specialty/international/managing-multi-regional-sites",
+    "https://developers.google.com/search/docs/specialty/international/localized-versions",
+    "https://developers.google.com/search/docs/appearance/ai-features",
+    "https://docs.perplexity.ai/guides/bots"
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://www.refrain.com.br/blog/ia-cita-paginas-em-ingles-pergunta-em-portugues-hreflang-perplexity.html#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Por que o Perplexity linka uma página em inglês se eu perguntei em português?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "O Perplexity não documenta publicamente como escolhe o idioma das fontes. O que o radar da Refrain registrou em 23/11/2026 foi que, em quatro perguntas em português sobre agências de GEO, 15 dos 41 links do Perplexity apontavam para URLs com /en/ no caminho, inclusive quando o mesmo site tinha uma versão em pt-BR declarada por hreflang."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "O hreflang resolve o problema nas respostas de IA?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Não há garantia. O hreflang é documentado pelo Google para indicar versões de idioma na Pesquisa Google. No radar, um guia em inglês com hreflang apontando para a versão pt-BR, e com x-default também em pt-BR, foi linkado pelo Perplexity na versão em inglês. Mesmo assim, vale implementar, porque é o método que o Google recomenda e não custa caro."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Preciso criar uma versão em inglês do meu site?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Só se você atende clientes que pesquisam em inglês ou se os seus concorrentes estão sendo linkados por páginas em inglês nas perguntas que importam para você. Para a maioria das empresas brasileiras, a prioridade é ter em português uma página que responda diretamente a pergunta de compra."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "O atributo lang do HTML ajuda a IA a entender o idioma?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Para o Google, não: a documentação diz que o Google identifica o idioma pelo conteúdo visível e não usa o atributo lang nem a URL para isso. Mantenha o lang correto por acessibilidade e consistência, mas o que conta é a página estar inteira em um idioma só."
+     }
+    }
+   ]
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Início",
+     "item": "https://www.refrain.com.br/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Blog",
+     "item": "https://www.refrain.com.br/blog/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Por que a IA linka páginas em inglês quando a pergunta é em português (e o que fazer no seu site)",
+     "item": "https://www.refrain.com.br/blog/ia-cita-paginas-em-ingles-pergunta-em-portugues-hreflang-perplexity.html"
+    }
+   ]
+  }
+ ]
+}
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../config.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            charcoal: { 950: '#0B1220', 900: '#0f1218', 800: '#161b22', 700: '#1e2530', 600: '#2a3341' },
+            cyan: { DEFAULT: '#2F6BFF', dim: '#2557d6' },
+            teal: { DEFAULT: '#00A896' },
+            cream: { DEFAULT: '#F7F5F1' },
+            warn: { DEFAULT: '#E85D04' },
+            mist: '#a8b2c1',
+            snow: '#e8ecf1'
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
+          },
+          boxShadow: { 'glow-sm': '0 0 20px rgba(47,107,255,0.2)', glow: '0 0 40px rgba(47,107,255,0.15)' }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background: #0B1220; color: #e8ecf1; }
+    .nav-blur { backdrop-filter: blur(12px); background: rgba(11,18,32,0.85); }
+    .card-border { border: 1px solid rgba(42,51,65,0.9); }
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(47,107,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(47,107,255,0.03) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    .field-error { border-color: #E85D04 !important; }
+    .error-msg { color: #E85D04; font-size: 0.75rem; margin-top: 0.35rem; display: none; }
+    .error-msg.visible { display: block; }
+  </style>
+<script src="https://app.refrain.com.br/hub/refrain-1b85fe/geo.js" async></script>
+</head>
+<body class="font-sans antialiased">
+  <style>
+    .prose-r h2 { font-size:1.5rem; font-weight:700; color:#e8ecf1; margin-top:2.5rem; margin-bottom:.75rem; }
+    .prose-r p { color:#c9d1dc; line-height:1.75; margin-top:1rem; }
+    .prose-r ul, .prose-r ol { color:#c9d1dc; margin-top:1rem; padding-left:1.25rem; line-height:1.75; }
+    .prose-r ul { list-style:disc; } .prose-r ol { list-style:decimal; }
+    .prose-r a { color:#2F6BFF; text-decoration:underline; }
+    .prose-r table { width:100%; margin-top:1.25rem; border-collapse:collapse; font-size:.9rem; }
+    .prose-r th, .prose-r td { border:1px solid rgba(42,51,65,0.9); padding:.6rem .75rem; text-align:left; vertical-align:top; color:#c9d1dc; }
+    .prose-r th { background:#161b22; color:#e8ecf1; }
+    .prose-r code { font-family:'JetBrains Mono',monospace; font-size:.85em; background:#161b22; padding:.1rem .3rem; border-radius:.25rem; }
+  </style>
+  <header class="fixed top-0 inset-x-0 z-50 nav-blur border-b border-charcoal-600/50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="../index.html" class="flex items-center gap-2">
+        <img src="../assets/refrain-wordmark.svg" alt="Refrain" width="119" height="32" class="h-8 w-auto" />
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm text-mist">
+        <a href="../servicos.html" class="hover:text-cyan transition">Serviços</a>
+        <a href="../metodologia.html" class="hover:text-cyan transition">Metodologia</a>
+        <a href="../case-climatewise.html" class="hover:text-cyan transition">Case</a>
+        <a href="../orcamento.html" class="hover:text-cyan transition">Diagnóstico</a>
+        <a href="../index.html#pacotes" class="hover:text-cyan transition">Pacotes</a>
+        <a href="../precos.html" class="hover:text-cyan transition">Preços</a>
+        <a href="./" class="text-cyan">Blog</a>
+        <a href="../contato.html" class="hover:text-cyan transition">Contato</a>
+      </nav>
+      <a href="../orcamento.html" class="text-sm font-medium px-4 py-2 rounded-lg bg-cyan text-charcoal-950 hover:bg-cyan-dim transition shadow-glow-sm">Diagnóstico rápido</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="pt-28 pb-20 sm:pt-32 grid-bg">
+      <article class="max-w-3xl mx-auto px-4 sm:px-6">
+        <p class="text-cyan font-mono text-xs uppercase tracking-widest mb-3"><a href="./" class="hover:underline">Blog</a> · 23 de novembro de 2026</p>
+        <h1 class="text-3xl sm:text-4xl font-bold text-snow tracking-tight">Por que a IA linka páginas em inglês quando a pergunta é em português (e o que fazer no seu site)</h1>
+        <p class="mt-4 text-sm text-mist">Por <a href="/autor/leandro-franca-de-mello/" class="text-cyan hover:underline">Leandro França de Mello</a> · 23 de novembro de 2026</p>
+        <div class="prose-r">
+        <p id="resposta"><strong>Motores de IA como o Perplexity às vezes linkam páginas em inglês para perguntas feitas em português, mesmo quando o site citado publica uma versão em pt-BR do mesmo conteúdo.</strong> Na rodada do radar da Refrain de 23/11/2026, 15 dos 41 links que o Perplexity deu a quatro perguntas em português sobre agências de GEO apontavam para URLs com <code>/en/</code> no caminho. Para não perder esse link, a sua empresa precisa de uma página em português que responda a pergunta de forma direta, versões de idioma em URLs separadas ligadas por <code>hreflang</code> e nenhum redirecionamento automático por idioma.</p>
+        <p>Abaixo, o que o radar registrou, o que o Google documenta sobre sites em mais de um idioma e um checklist para revisar o seu.</p>
+
+        <h2>O que o radar da Refrain mostrou em 23/11/2026?</h2>
+        <p>O radar interno da Refrain faz todos os dias as mesmas quatro perguntas de compra, em português, para três projetos que acompanhamos (Refrain, Tributus e Asana Bem-Estar) e guarda as URLs que cada motor linkou. Contamos, na rodada de 23/11/2026, quantos desses links tinham <code>/en/</code> no caminho, um sinal objetivo de versão em inglês:</p>
+        <table>
+          <thead><tr><th>Projeto (4 perguntas em português)</th><th>Links do Perplexity com /en/ no caminho</th></tr></thead>
+          <tbody>
+            <tr><td>Refrain (agência de GEO)</td><td>15 de 41</td></tr>
+            <tr><td>Asana Bem-Estar (riscos psicossociais, NR-1)</td><td>5 de 40, todos na pergunta de “melhores empresas”</td></tr>
+            <tr><td>Tributus (IA tributária para contadores)</td><td>3 de 41</td></tr>
+          </tbody>
+        </table>
+        <p>O ChatGPT e o Modo IA do Google ficaram fora desta rodada por limite de cota na nossa coleta. O Gemini respondeu, mas na nossa coleta os links dele chegam só como domínio (sem o caminho da página), então não dá para saber o idioma da página citada; por isso a tabela traz apenas o Perplexity. Na pergunta “Quais são as melhores empresas de otimização de marca para respostas de IA (GEO) no Brasil para uma empresa de médio porte?”, quatro dos cinco primeiros links do Perplexity eram guias em inglês (URLs <code>/en/guide/</code>) de uma mesma agência sobre o mercado brasileiro. A Refrain não foi mencionada nem linkada nessa resposta. Tratamos esse tipo de pergunta em <a href="como-aparecer-quando-ia-lista-melhores-empresas-chatgpt-perplexity.html">como aparecer quando a IA lista as melhores empresas</a>.</p>
+        <p>A diferença entre os projetos chama atenção: nas perguntas sobre agências de GEO, várias das páginas linkadas pertencem a empresas que publicam nos dois idiomas; nas perguntas da Tributus, um nicho brasileiro (tributos e contadores), só 3 links tinham <code>/en/</code>. Uma hipótese, que uma rodada só não prova, é que o idioma do link depende de quanto conteúdo existe em cada idioma sobre aquele tema.</p>
+
+        <h2>Ter a versão em português basta?</h2>
+        <p>Não bastou nos casos que vimos. Conferimos as páginas citadas em 23/11/2026:</p>
+        <ul>
+          <li>O guia em inglês sobre as melhores agências de GEO no Brasil, linkado pelo Perplexity, declara uma versão <code>pt-BR</code> por <code>hreflang</code> e aponta o <code>x-default</code> para essa versão em português. Mesmo assim, o link na resposta foi para a URL em inglês.</li>
+          <li>Outra agência foi linkada em três páginas: duas em inglês (metodologia e “sobre”) e uma em português (FAQ). As três têm <code>hreflang</code> para inglês, espanhol e pt-BR.</li>
+        </ul>
+        <p>Ou seja, o Perplexity não seguiu o <code>hreflang</code> de forma consistente nessa rodada. Isso não é falha do método: o <code>hreflang</code> é uma especificação que o Google documenta para a Pesquisa Google. A documentação de robôs do Perplexity (“Perplexity Crawlers”) trata de acesso, robots.txt e firewall, e não fala de escolha de idioma. Por isso a página em português precisa se sustentar sozinha: ser a melhor resposta para a pergunta em português, e não apenas a tradução de uma página que nasceu em inglês.</p>
+
+        <h2>O que o Google documenta sobre idiomas</h2>
+        <p>Para a Pesquisa Google, e portanto para as Visões gerais e o Modo IA, que usam o índice do Google, as regras estão na documentação de sites multilíngues:</p>
+        <ul>
+          <li><strong>URLs diferentes para cada idioma.</strong> O Google recomenda uma URL por versão de idioma em vez de trocar o conteúdo por cookie ou configuração do navegador. Ele avisa que o Googlebot costuma rastrear a partir dos EUA e envia requisições sem o cabeçalho <code>Accept-Language</code>; se o site troca o idioma dinamicamente, o Google pode não encontrar todas as versões.</li>
+          <li><strong><code>hreflang</code> com links de volta.</strong> Cada versão deve listar a si mesma e as outras, com URLs completas (com <code>https://</code>). Se duas páginas não apontam uma para a outra, as marcações são ignoradas. Pode ser feito no HTML, no cabeçalho HTTP ou no sitemap; os três métodos são equivalentes.</li>
+          <li><strong>O idioma vem do texto visível.</strong> O Google diz que não usa o atributo <code>lang</code> nem a URL para detectar o idioma, e que o <code>hreflang</code> também não serve para isso. Use um único idioma no conteúdo e na navegação de cada página e evite traduções lado a lado.</li>
+          <li><strong>Sem redirecionamento automático.</strong> A recomendação é não redirecionar o visitante com base no idioma que você supõe que ele fala, nem adaptar o conteúdo pelo IP, e oferecer links para as outras versões.</li>
+        </ul>
+
+        <h2>Checklist para o seu site</h2>
+        <ol>
+          <li><strong>Descubra se o problema existe para você.</strong> Faça as suas perguntas de compra em português nos motores, sempre com o mesmo texto, e anote o idioma das URLs linkadas. Explicamos o método em <a href="como-medir-marca-chatgpt-gemini-perplexity.html">como medir se sua marca aparece no ChatGPT, Gemini e Perplexity</a>.</li>
+          <li><strong>Crie a resposta em português.</strong> Se a pergunta é “quais as melhores empresas de X no Brasil” ou “quanto custa X”, tenha uma página em pt-BR que responda isso no primeiro parágrafo, com fatos próprios. O formato está em <a href="paginas-de-resposta-uma-pergunta-por-pagina-chatgpt-perplexity-linkar.html">páginas de resposta</a>; os exemplos da Refrain ficam em <a href="/respostas/">/respostas</a>.</li>
+          <li><strong>Se tiver versão em inglês, use URLs separadas</strong> (por exemplo, <code>/en/</code>) e <code>hreflang</code> recíproco entre as duas, com <code>x-default</code> para a versão principal.</li>
+          <li><strong>Não esconda o português atrás de redirecionamento.</strong> Robôs que chegam dos EUA sem <code>Accept-Language</code> podem nunca ver a versão em pt-BR.</li>
+          <li><strong>Escreva cada página em um idioma só.</strong> Menu, rodapé e texto principal no mesmo idioma.</li>
+          <li><strong>Libere os robôs de busca das IAs</strong> nas duas versões, no robots.txt e no firewall. O passo a passo está em <a href="robots-txt-para-ia-gptbot-oai-searchbot-perplexitybot-claudebot.html">robots.txt para IA</a> e, para o Perplexity especificamente, em <a href="como-aparecer-no-perplexity-perplexitybot-selos-de-fonte.html">como aparecer no Perplexity</a>.</li>
+          <li><strong>Liste as versões no sitemap e no <a href="llms-txt-o-que-e-como-criar-chatgpt-perplexity-gemini.html">llms.txt</a></strong>, indicando o idioma de cada página.</li>
+          <li><strong>Meça de novo</strong> na rodada seguinte e compare o idioma dos links, separando menção de link.</li>
+        </ol>
+
+        <h2>Quando vale ter uma versão em inglês?</h2>
+        <p>Quando você vende para quem pesquisa em inglês, ou quando o radar mostra que a pergunta que importa para o seu negócio é dominada por páginas em inglês e você tem algo próprio a dizer naquele idioma. Uma tradução automática sem revisão, só para “ocupar espaço”, tende a repetir o problema ao contrário: uma página fraca em outro idioma. Antes de traduzir, confira também se a IA está identificando a empresa certa; nomes que são palavras comuns em inglês, como “Refrain”, atraem homônimos, tema de <a href="quando-ia-confunde-marca-com-homonimo-chatgpt-perplexity.html">quando a IA confunde sua marca com um homônimo</a>.</p>
+
+        <h2>Perguntas frequentes</h2>
+        </div>
+        <div class="space-y-3 mt-4"><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Por que o Perplexity linka uma página em inglês se eu perguntei em português?</summary><p class="mt-2 text-mist text-sm">O Perplexity não documenta publicamente como escolhe o idioma das fontes. O que o radar da Refrain registrou em 23/11/2026 foi que, em quatro perguntas em português sobre agências de GEO, 15 dos 41 links do Perplexity apontavam para URLs com /en/ no caminho, inclusive quando o mesmo site tinha uma versão em pt-BR declarada por hreflang.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">O hreflang resolve o problema nas respostas de IA?</summary><p class="mt-2 text-mist text-sm">Não há garantia. O hreflang é documentado pelo Google para indicar versões de idioma na Pesquisa Google. No radar, um guia em inglês com hreflang apontando para a versão pt-BR, e com x-default também em pt-BR, foi linkado pelo Perplexity na versão em inglês. Mesmo assim, vale implementar, porque é o método que o Google recomenda e não custa caro.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Preciso criar uma versão em inglês do meu site?</summary><p class="mt-2 text-mist text-sm">Só se você atende clientes que pesquisam em inglês ou se os seus concorrentes estão sendo linkados por páginas em inglês nas perguntas que importam para você. Para a maioria das empresas brasileiras, a prioridade é ter em português uma página que responda diretamente a pergunta de compra.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">O atributo lang do HTML ajuda a IA a entender o idioma?</summary><p class="mt-2 text-mist text-sm">Para o Google, não: a documentação diz que o Google identifica o idioma pelo conteúdo visível e não usa o atributo lang nem a URL para isso. Mantenha o lang correto por acessibilidade e consistência, mas o que conta é a página estar inteira em um idioma só.</p></details></div>
+        <div class="prose-r"><h2>Fontes</h2><ul>
+<li><a href="https://developers.google.com/search/docs/specialty/international/managing-multi-regional-sites" rel="noopener">https://developers.google.com/search/docs/specialty/international/managing-multi-regional-sites</a> — Google Search Central, “Managing multi-regional and multilingual sites” (atualizada em 10/12/2025) (consultada em 23/11/2026)</li>
+<li><a href="https://developers.google.com/search/docs/specialty/international/localized-versions" rel="noopener">https://developers.google.com/search/docs/specialty/international/localized-versions</a> — Google Search Central, “Tell Google about localized versions of your page” (atualizada em 21/09/2026) (consultada em 23/11/2026)</li>
+<li><a href="https://developers.google.com/search/docs/appearance/ai-features" rel="noopener">https://developers.google.com/search/docs/appearance/ai-features</a> — Google Search Central, “AI features and your website” (consultada em 23/11/2026)</li>
+<li><a href="https://docs.perplexity.ai/guides/bots" rel="noopener">https://docs.perplexity.ai/guides/bots</a> — Perplexity, “Perplexity Crawlers” (consultada em 23/11/2026)</li>
+<li>Radar interno da Refrain, rodada de 23/11/2026 (4 perguntas em português por projeto, links do Perplexity).</li>
+</ul></div>
+        <div class="mt-12 rounded-2xl card-border bg-charcoal-800 p-6">
+          <p class="text-snow font-semibold text-lg">Quer saber em quais perguntas de compra a IA cita o seu nome, mas linka outro site?</p>
+          <p class="mt-2 text-mist text-sm">O Gabarito GEO da Refrain testa perguntas reais nos motores de IA, separa menção de link, mostra quais URLs levaram o link no seu lugar e entrega score, gaps priorizados e checklist em minutos. R$ 497, pagamento único.</p>
+          <div class="mt-4 flex flex-wrap gap-3"><a href="../precos.html" class="text-sm font-medium px-4 py-2 rounded-lg bg-cyan text-charcoal-950 hover:bg-cyan-dim transition">Ver preços do Gabarito</a><a href="../orcamento.html" class="text-sm font-medium px-4 py-2 rounded-lg border border-charcoal-600 text-snow hover:border-cyan/40 hover:text-cyan transition">Fazer diagnóstico rápido</a></div>
+        </div>
+
+        <aside class="mt-12 p-5 rounded-xl border border-white/10 bg-white/5" aria-label="Sobre o autor">
+          <p class="text-snow font-semibold">Sobre o autor</p>
+          <p class="mt-2 text-sm text-mist"><a href="/autor/leandro-franca-de-mello/" class="text-cyan hover:underline">Leandro França de Mello</a> é Google Developer, engenheiro de ML e foi um dos pioneiros em Google Ads e campanhas de SEO no início dos anos 2000. Fundou a Refrain conjugando essas competências pra criar uma agência 100% automatizada de GEO e com alcance mundial.</p>
+        </aside>
+      </article>
+    </section>
+  </main>
+
+  <footer class="border-t border-charcoal-700 py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row justify-between gap-8">
+      <div>
+        <a href="../index.html" class="inline-block" aria-label="Refrain — início"><img src="../assets/refrain-wordmark.svg" alt="Refrain" width="104" height="28" class="h-7 w-auto" /></a>
+        <p class="mt-2 text-sm text-mist max-w-xs">Seja o refrão que a IA repete. GEO + Caçador de Citações.</p>
+        <p class="mt-2 text-sm text-mist"><a href="mailto:contato@refrain.com.br" class="hover:text-cyan">contato@refrain.com.br</a></p>
+      </div>
+      <div class="flex flex-wrap gap-8 text-sm text-mist">
+        <div class="space-y-2">
+          <p class="text-snow font-medium text-xs uppercase tracking-wider">Site</p>
+          <a href="../servicos.html" class="block hover:text-cyan">Serviços</a>
+          <a href="../metodologia.html" class="block hover:text-cyan">Metodologia</a>
+          <a href="../case-climatewise.html" class="block hover:text-cyan">Case</a>
+          <a href="../orcamento.html" class="block hover:text-cyan">Diagnóstico</a>
+          <a href="../precos.html" class="block hover:text-cyan">Preços</a>
+          <a href="./" class="block hover:text-cyan">Artigos</a>
+          <a href="/estudos/quem-as-ias-citam-no-brasil/" class="block hover:text-cyan">Estudo: quem as IAs citam</a>
+          <a href="/autor/leandro-franca-de-mello/" class="block hover:text-cyan">Autor</a>
+          <a href="../contato.html" class="block hover:text-cyan">Contato</a>
+          <a href="../portal.html" class="block hover:text-cyan">Portal</a>
+        </div>
+        <div class="space-y-2">
+          <p class="text-snow font-medium text-xs uppercase tracking-wider">Legal</p>
+          <a href="../privacidade.html" class="block hover:text-cyan">Privacidade</a>
+          <a href="../termos.html" class="block hover:text-cyan">Termos</a>
+          <a href="../llms.txt" class="block hover:text-cyan font-mono text-xs">llms.txt</a>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 mt-10 pt-6 border-t border-charcoal-700 text-xs text-mist/50">
+      © 2026 Refrain · Leandro França de Mello
+    </div>
+  </footer>
+<script src="https://app.refrain.com.br/chat-widget.js" async></script>
+</body>
+</html>
