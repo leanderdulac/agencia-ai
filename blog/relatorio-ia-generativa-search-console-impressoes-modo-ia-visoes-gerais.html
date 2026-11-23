@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Relatório de IA generativa do Search Console: como medir as impressões do seu site no Modo IA e nas Visões gerais | Blog Refrain</title>
+  <meta name="description" content="O Search Console já mostra, para todos os sites, quantas vezes links do seu site apareceram nas Visões gerais criadas por IA e no Modo IA do Google. Veja o que o relatório mede, o que ele ainda não mostra (cliques, CTR e consultas), a falha de dados de 9 a 11/11/2026 e como usar os números na sua empresa." />
+  <link rel="canonical" href="https://www.refrain.com.br/blog/relatorio-ia-generativa-search-console-impressoes-modo-ia-visoes-gerais.html" />
+  <meta property="og:title" content="Relatório de IA generativa do Search Console: como medir as impressões do seu site no Modo IA e nas Visões gerais" />
+  <meta property="og:description" content="O Search Console já mostra, para todos os sites, quantas vezes links do seu site apareceram nas Visões gerais criadas por IA e no Modo IA do Google. Veja o que o relatório mede, o que ele ainda não mostra (cliques, CTR e consultas), a falha de dados de 9 a 11/11/2026 e como usar os números na sua empresa." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.refrain.com.br/blog/relatorio-ia-generativa-search-console-impressoes-modo-ia-visoes-gerais.html" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Refrain" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Article",
+   "@id": "https://www.refrain.com.br/blog/relatorio-ia-generativa-search-console-impressoes-modo-ia-visoes-gerais.html#article",
+   "headline": "Relatório de IA generativa do Search Console: como medir as impressões do seu site no Modo IA e nas Visões gerais",
+   "description": "O Search Console já mostra, para todos os sites, quantas vezes links do seu site apareceram nas Visões gerais criadas por IA e no Modo IA do Google. Veja o que o relatório mede, o que ele ainda não mostra (cliques, CTR e consultas), a falha de dados de 9 a 11/11/2026 e como usar os números na sua empresa.",
+   "inLanguage": "pt-BR",
+   "datePublished": "2026-11-23",
+   "dateModified": "2026-11-23",
+   "author": {
+    "@type": "Person",
+    "name": "Leandro França de Mello",
+    "description": "Leandro França de Mello é Google Developer, engenheiro de ML e foi um dos pioneiros em Google Ads e campanhas de SEO no início dos anos 2000. Fundou a Refrain conjugando essas competências pra criar uma agência 100% automatizada de GEO e com alcance mundial.",
+    "jobTitle": "Fundador da Refrain",
+    "url": "https://www.refrain.com.br/autor/leandro-franca-de-mello/",
+    "@id": "https://www.refrain.com.br/autor/leandro-franca-de-mello/#person",
+    "worksFor": {
+     "@id": "https://www.refrain.com.br/#organization"
+    },
+    "knowsAbout": [
+     "GEO",
+     "SEO",
+     "Google Ads",
+     "machine learning"
+    ]
+   },
+   "publisher": {
+    "@type": "Organization",
+    "@id": "https://www.refrain.com.br/#organization",
+    "name": "Refrain",
+    "url": "https://www.refrain.com.br/"
+   },
+   "mainEntityOfPage": "https://www.refrain.com.br/blog/relatorio-ia-generativa-search-console-impressoes-modo-ia-visoes-gerais.html",
+   "citation": [
+    "https://support.google.com/webmasters/answer/16984139?hl=en",
+    "https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports",
+    "https://support.google.com/webmasters/answer/7042828?hl=en",
+    "https://support.google.com/webmasters/answer/6211453?hl=pt-BR",
+    "https://www.searchenginejournal.com/google-ai-click-reporting-uk-deadline/595663/",
+    "https://www.seroundtable.com/google-generative-ai-performance-report-data-bug-42527.html"
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://www.refrain.com.br/blog/relatorio-ia-generativa-search-console-impressoes-modo-ia-visoes-gerais.html#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "O Search Console mostra se meu site aparece no Modo IA e nas Visões gerais?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sim. Desde 31/08/2026 o relatório de performance da IA generativa na Pesquisa está disponível para todos os sites. Ele conta as impressões, ou seja, quantas vezes links para o seu site foram mostrados nas Visões gerais criadas por IA e no Modo IA, com detalhamento por página, país, dispositivo e data."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "O relatório separa Modo IA e Visões gerais?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Não. Segundo a Ajuda do Search Console e a cobertura do Search Engine Journal, o relatório soma as impressões das Visões gerais e do Modo IA. Não há, por enquanto, um filtro para ver cada recurso separado."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Dá para ver cliques e consultas vindos da IA do Google?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ainda não nesse relatório. Ele mostra impressões, mas não cliques, CTR nem consultas. Os cliques em links das Visões gerais e do Modo IA entram no relatório de Desempenho comum, misturados aos demais resultados da web, sem um tipo de aparência próprio. Em 02/11/2026, Gary Illyes, do Google, disse que a equipe quer dar mais dados, mas que não havia nada a anunciar."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Por que o relatório de IA generativa não aparece para o meu site?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "O Google diz que isso costuma acontecer quando o site ainda não teve impressões suficientes em recursos de IA generativa da Pesquisa. Também pode ser porque o site foi excluído desses recursos no controle de IA generativa do Search Console; nesse caso, é preciso incluí-lo de novo para voltar a ser elegível."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Minhas impressões de IA caíram entre 9 e 11 de novembro de 2026. Perdi visibilidade?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Não necessariamente. O Google registrou na página de anomalias de dados que um erro de geração de registros diminuiu as impressões desse relatório entre 9 e 11/11/2026 e que o problema afeta só os dados, não a exibição real. O Search Engine Roundtable lembra que a atualização principal de novembro de 2026 começou em 10/11, no meio desse período, então compare semanas fora dessa janela antes de tirar conclusões."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "O relatório mede minha marca no ChatGPT, no Perplexity ou no Gemini?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Não. Ele cobre só os recursos de IA generativa da Pesquisa Google (Visões gerais e Modo IA), sem dados de experimentos do Search Labs. Para saber se o ChatGPT, o Perplexity ou o Gemini citam sua empresa, é preciso testar perguntas nesses motores ou usar ferramentas próprias deles, como o relatório de IA do Bing Webmaster Tools para o Copilot."
+     }
+    }
+   ]
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Início",
+     "item": "https://www.refrain.com.br/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Blog",
+     "item": "https://www.refrain.com.br/blog/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Relatório de IA generativa do Search Console: como medir as impressões do seu site no Modo IA e nas Visões gerais",
+     "item": "https://www.refrain.com.br/blog/relatorio-ia-generativa-search-console-impressoes-modo-ia-visoes-gerais.html"
+    }
+   ]
+  }
+ ]
+}
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../config.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            charcoal: { 950: '#0B1220', 900: '#0f1218', 800: '#161b22', 700: '#1e2530', 600: '#2a3341' },
+            cyan: { DEFAULT: '#2F6BFF', dim: '#2557d6' },
+            teal: { DEFAULT: '#00A896' },
+            cream: { DEFAULT: '#F7F5F1' },
+            warn: { DEFAULT: '#E85D04' },
+            mist: '#a8b2c1',
+            snow: '#e8ecf1'
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
+          },
+          boxShadow: { 'glow-sm': '0 0 20px rgba(47,107,255,0.2)', glow: '0 0 40px rgba(47,107,255,0.15)' }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background: #0B1220; color: #e8ecf1; }
+    .nav-blur { backdrop-filter: blur(12px); background: rgba(11,18,32,0.85); }
+    .card-border { border: 1px solid rgba(42,51,65,0.9); }
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(47,107,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(47,107,255,0.03) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    .field-error { border-color: #E85D04 !important; }
+    .error-msg { color: #E85D04; font-size: 0.75rem; margin-top: 0.35rem; display: none; }
+    .error-msg.visible { display: block; }
+  </style>
+<script src="https://app.refrain.com.br/hub/refrain-1b85fe/geo.js" async></script>
+</head>
+<body class="font-sans antialiased">
+  <style>
+    .prose-r h2 { font-size:1.5rem; font-weight:700; color:#e8ecf1; margin-top:2.5rem; margin-bottom:.75rem; }
+    .prose-r p { color:#c9d1dc; line-height:1.75; margin-top:1rem; }
+    .prose-r ul, .prose-r ol { color:#c9d1dc; margin-top:1rem; padding-left:1.25rem; line-height:1.75; }
+    .prose-r ul { list-style:disc; } .prose-r ol { list-style:decimal; }
+    .prose-r a { color:#2F6BFF; text-decoration:underline; }
+    .prose-r table { width:100%; margin-top:1.25rem; border-collapse:collapse; font-size:.9rem; }
+    .prose-r th, .prose-r td { border:1px solid rgba(42,51,65,0.9); padding:.6rem .75rem; text-align:left; vertical-align:top; color:#c9d1dc; }
+    .prose-r th { background:#161b22; color:#e8ecf1; }
+    .prose-r code { font-family:'JetBrains Mono',monospace; font-size:.85em; background:#161b22; padding:.1rem .3rem; border-radius:.25rem; }
+  </style>
+  <header class="fixed top-0 inset-x-0 z-50 nav-blur border-b border-charcoal-600/50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="../index.html" class="flex items-center gap-2">
+        <img src="../assets/refrain-wordmark.svg" alt="Refrain" width="119" height="32" class="h-8 w-auto" />
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm text-mist">
+        <a href="../servicos.html" class="hover:text-cyan transition">Serviços</a>
+        <a href="../metodologia.html" class="hover:text-cyan transition">Metodologia</a>
+        <a href="../case-climatewise.html" class="hover:text-cyan transition">Case</a>
+        <a href="../orcamento.html" class="hover:text-cyan transition">Diagnóstico</a>
+        <a href="../index.html#pacotes" class="hover:text-cyan transition">Pacotes</a>
+        <a href="../precos.html" class="hover:text-cyan transition">Preços</a>
+        <a href="./" class="text-cyan">Blog</a>
+        <a href="../contato.html" class="hover:text-cyan transition">Contato</a>
+      </nav>
+      <a href="../orcamento.html" class="text-sm font-medium px-4 py-2 rounded-lg bg-cyan text-charcoal-950 hover:bg-cyan-dim transition shadow-glow-sm">Diagnóstico rápido</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="pt-28 pb-20 sm:pt-32 grid-bg">
+      <article class="max-w-3xl mx-auto px-4 sm:px-6">
+        <p class="text-cyan font-mono text-xs uppercase tracking-widest mb-3"><a href="./" class="hover:underline">Blog</a> · 23 de novembro de 2026</p>
+        <h1 class="text-3xl sm:text-4xl font-bold text-snow tracking-tight">Relatório de IA generativa do Search Console: como medir as impressões do seu site no Modo IA e nas Visões gerais</h1>
+        <div class="prose-r">
+        <p id="resposta"><strong>Para saber se o seu site aparece no Modo IA e nas Visões gerais criadas por IA do Google, abra o relatório de performance da IA generativa na Pesquisa, no Google Search Console: desde 31 de agosto de 2026 ele está disponível para todos os sites e mostra quantas vezes links para as suas páginas foram exibidos nesses recursos.</strong> O relatório conta impressões por página, país, dispositivo e data. Ele ainda não mostra cliques, CTR nem as consultas que geraram cada aparição.</p>
+        <p>É a primeira medição oficial e gratuita do Google sobre GEO. Para PMEs, clínicas, lojas virtuais, SaaS e escolas, isso responde a uma pergunta simples: alguma página minha já está sendo usada como link nas respostas com IA? Abaixo, o que o relatório mede, o que fica de fora e como ler os números de novembro de 2026.</p>
+
+        <h2>O que é o relatório de performance da IA generativa?</h2>
+        <p>É uma visão do Search Console dedicada aos recursos de IA generativa da Pesquisa Google. O Google anunciou o relatório em <a href="https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports" rel="noopener">3 de junho de 2026</a>, primeiro para uma parte dos sites, e, segundo a <a href="https://support.google.com/webmasters/answer/16984139?hl=en" rel="noopener">Ajuda do Search Console</a>, liberou para todos os sites do mundo em 31 de agosto de 2026. Existe também um relatório separado para os recursos de IA generativa do Discover.</p>
+        <p>Os dados continuam somados ao relatório de Desempenho geral. O que muda é que agora há uma tela só para a visibilidade vinda da IA.</p>
+
+        <h2>Quais recursos do Google entram no relatório?</h2>
+        <p>A Ajuda lista dois recursos, e diz que a lista pode crescer:</p>
+        <ul>
+          <li>Visões gerais criadas por IA (AI Overviews);</li>
+          <li>Modo IA (AI Mode).</li>
+        </ul>
+        <p>Os experimentos do Search Labs ficam de fora. E o relatório não separa os dois recursos: as impressões do Modo IA e das Visões gerais aparecem somadas.</p>
+
+        <h2>O que o relatório mostra e o que ele não mostra?</h2>
+        <div class="overflow-x-auto"><table>
+          <thead><tr><th>Item</th><th>No relatório de IA generativa?</th><th>Onde encontrar</th></tr></thead>
+          <tbody>
+            <tr><td>Impressões em Visões gerais + Modo IA</td><td>Sim</td><td>Gráfico e tabela do relatório</td></tr>
+            <tr><td>Páginas que apareceram</td><td>Sim (aba Páginas, por URL canônica)</td><td>Tabela do relatório</td></tr>
+            <tr><td>País, dispositivo e data</td><td>Sim</td><td>Abas da tabela</td></tr>
+            <tr><td>Busca por texto ou por imagem (Lens, Circle to Search)</td><td>Sim (filtro de tipo de pesquisa)</td><td>Filtro no topo</td></tr>
+            <tr><td>Cliques e CTR</td><td>Não</td><td>Cliques entram misturados no Desempenho comum</td></tr>
+            <tr><td>Consultas (o que a pessoa perguntou)</td><td>Não</td><td>Sem fonte oficial por enquanto</td></tr>
+            <tr><td>Modo IA separado das Visões gerais</td><td>Não</td><td>Sem fonte oficial por enquanto</td></tr>
+          </tbody>
+        </table></div>
+        <p>Detalhes que mudam a leitura, segundo a Ajuda:</p>
+        <ul>
+          <li><strong>Impressão</strong> é cada vez que um link para o seu site foi mostrado num recurso de IA generativa.</li>
+          <li><strong>Gráfico por propriedade:</strong> se duas páginas suas aparecem na mesma resposta, o gráfico conta uma impressão. Na aba Páginas, cada URL conta a sua. Por isso os totais podem não bater.</li>
+          <li><strong>Datas no fuso do Pacífico (PT)</strong>, não no horário de Brasília.</li>
+          <li>Vale o limite de 1.000 linhas da tabela, como no Desempenho comum.</li>
+          <li>Na exportação, valores mostrados como “~” ou “-” viram zero.</li>
+        </ul>
+
+        <h2>Onde ficam os cliques vindos da IA do Google?</h2>
+        <p>Pela página <a href="https://support.google.com/webmasters/answer/7042828?hl=en" rel="noopener">“O que são impressões, posição e cliques”</a>, clicar num link externo dentro de uma Visão geral ou do Modo IA conta como clique. Numa Visão geral, todos os links recebem a mesma posição. No Modo IA, uma pergunta de continuação é tratada como uma nova consulta.</p>
+        <p>O problema é que esses cliques entram no relatório de Desempenho comum junto com os resultados da web. Como observou o <a href="https://www.searchenginejournal.com/google-ai-click-reporting-uk-deadline/595663/" rel="noopener">Search Engine Journal</a> em 2 de novembro de 2026, nenhum tipo de aparência do relatório cobre as Visões gerais ou o Modo IA. Na mesma reportagem, Gary Illyes, do Google, disse que a equipe está “super interessada” em dar mais dados, mas que não havia nada a anunciar.</p>
+        <p>Há pressão regulatória. A autoridade de concorrência do Reino Unido (CMA) lista impressões, cliques e CTR entre as métricas de busca com IA que o Google deve dar aos publishers, com prazo até 3 de dezembro, segundo o SEJ. É uma regra britânica; não há anúncio de mudança para o Brasil.</p>
+
+        <h2>Por que as impressões de IA caíram em novembro de 2026?</h2>
+        <p>Se o seu gráfico mostra uma queda entre 9 e 11 de novembro, olhe primeiro a página de <a href="https://support.google.com/webmasters/answer/6211453?hl=pt-BR" rel="noopener">anomalias de dados do Search Console</a>. O Google registrou ali que um erro na geração de registros diminuiu as impressões do relatório de IA generativa na Pesquisa de 9 a 11/11/2026, e que o problema afeta só os dados.</p>
+        <p>O <a href="https://www.seroundtable.com/google-generative-ai-performance-report-data-bug-42527.html" rel="noopener">Search Engine Roundtable</a> lembrou que a atualização principal (core update) de novembro de 2026 começou em 10/11, dentro dessa janela. Então não atribua a queda nem à IA nem à atualização olhando só esses três dias: compare semanas inteiras antes e depois.</p>
+
+        <h2>O relatório não aparece. O que pode ser?</h2>
+        <p>O Google dá dois motivos:</p>
+        <ol>
+          <li>o site ainda não teve impressões suficientes em recursos de IA generativa da Pesquisa;</li>
+          <li>o site foi excluído desses recursos no controle de IA generativa do Search Console. Explicamos esse controle em <a href="controle-ia-generativa-search-console-ai-overviews-ai-mode.html">“Controle de IA generativa no Search Console”</a>.</li>
+        </ol>
+        <p>Se for o primeiro caso, o caminho é o de sempre: página indexada, apta a aparecer com snippet e com conteúdo útil. O passo a passo está em <a href="como-aparecer-nas-visoes-gerais-criadas-por-ia-do-google.html">como aparecer nas Visões gerais criadas por IA</a>.</p>
+
+        <h2>Como usar o relatório na prática, em 5 passos?</h2>
+        <ol>
+          <li><strong>Veja quais páginas aparecem.</strong> Na aba Páginas, anote as URLs com impressões. São as páginas que o Google já usa como link nas respostas.</li>
+          <li><strong>Compare com o Desempenho comum.</strong> Abra as mesmas URLs no relatório de Desempenho e veja consultas e cliques delas. Não é o dado de IA isolado, mas mostra sobre quais perguntas cada página tende a ser encontrada.</li>
+          <li><strong>Procure páginas importantes sem impressões.</strong> Se a página de preços, de serviço ou de uma especialidade da clínica não aparece, revise se ela responde direto à pergunta no primeiro parágrafo.</li>
+          <li><strong>Separe Brasil do resto.</strong> Use a aba Países para ver se as impressões vêm do seu mercado.</li>
+          <li><strong>Acompanhe por semana ou mês</strong>, marcando eventos como a falha de 9 a 11/11 e atualizações do Google, e exporte os dados para manter histórico.</li>
+        </ol>
+
+        <h2>E o ChatGPT, o Perplexity e o Gemini?</h2>
+        <p>O relatório cobre só a Pesquisa Google. Ele não diz nada sobre o ChatGPT, o Perplexity ou o app do Gemini. Para o Copilot, o Bing tem um relatório próprio, que explicamos em <a href="copilot-cita-meu-site-bing-webmaster-tools-ai-performance.html">“O Copilot cita meu site?”</a>. Para os demais motores, ainda é preciso testar as perguntas dos seus clientes e registrar quem é citado, como mostramos em <a href="como-medir-marca-chatgpt-gemini-perplexity.html">como medir sua marca no ChatGPT, no Gemini e no Perplexity</a>.</p>
+        </div>
+        <div class="space-y-3 mt-4"><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">O Search Console mostra se meu site aparece no Modo IA e nas Visões gerais?</summary><p class="mt-2 text-mist text-sm">Sim. Desde 31/08/2026 o relatório de performance da IA generativa na Pesquisa está disponível para todos os sites. Ele conta as impressões, ou seja, quantas vezes links para o seu site foram mostrados nas Visões gerais criadas por IA e no Modo IA, com detalhamento por página, país, dispositivo e data.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">O relatório separa Modo IA e Visões gerais?</summary><p class="mt-2 text-mist text-sm">Não. Segundo a Ajuda do Search Console e a cobertura do Search Engine Journal, o relatório soma as impressões das Visões gerais e do Modo IA. Não há, por enquanto, um filtro para ver cada recurso separado.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Dá para ver cliques e consultas vindos da IA do Google?</summary><p class="mt-2 text-mist text-sm">Ainda não nesse relatório. Ele mostra impressões, mas não cliques, CTR nem consultas. Os cliques em links das Visões gerais e do Modo IA entram no relatório de Desempenho comum, misturados aos demais resultados da web, sem um tipo de aparência próprio. Em 02/11/2026, Gary Illyes, do Google, disse que a equipe quer dar mais dados, mas que não havia nada a anunciar.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Por que o relatório de IA generativa não aparece para o meu site?</summary><p class="mt-2 text-mist text-sm">O Google diz que isso costuma acontecer quando o site ainda não teve impressões suficientes em recursos de IA generativa da Pesquisa. Também pode ser porque o site foi excluído desses recursos no controle de IA generativa do Search Console; nesse caso, é preciso incluí-lo de novo para voltar a ser elegível.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Minhas impressões de IA caíram entre 9 e 11 de novembro de 2026. Perdi visibilidade?</summary><p class="mt-2 text-mist text-sm">Não necessariamente. O Google registrou na página de anomalias de dados que um erro de geração de registros diminuiu as impressões desse relatório entre 9 e 11/11/2026 e que o problema afeta só os dados, não a exibição real. O Search Engine Roundtable lembra que a atualização principal de novembro de 2026 começou em 10/11, no meio desse período, então compare semanas fora dessa janela antes de tirar conclusões.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">O relatório mede minha marca no ChatGPT, no Perplexity ou no Gemini?</summary><p class="mt-2 text-mist text-sm">Não. Ele cobre só os recursos de IA generativa da Pesquisa Google (Visões gerais e Modo IA), sem dados de experimentos do Search Labs. Para saber se o ChatGPT, o Perplexity ou o Gemini citam sua empresa, é preciso testar perguntas nesses motores ou usar ferramentas próprias deles, como o relatório de IA do Bing Webmaster Tools para o Copilot.</p></details></div>
+        <div class="prose-r"><h2>Fontes</h2><ul>
+<li><a href="https://support.google.com/webmasters/answer/16984139?hl=en" rel="noopener">https://support.google.com/webmasters/answer/16984139?hl=en</a> — Ajuda do Search Console, “Generative AI performance report (Search)” (consultada em 23/11/2026)</li>
+<li><a href="https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports" rel="noopener">https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports</a> — Google Search Central Blog, “Introducing Search Generative AI performance reports in Search Console”, 03/06/2026 (consultada em 23/11/2026)</li>
+<li><a href="https://support.google.com/webmasters/answer/7042828?hl=en" rel="noopener">https://support.google.com/webmasters/answer/7042828?hl=en</a> — Ajuda do Search Console, “What are impressions, position, and clicks?” (seções AI Mode e AI Overviews) (consultada em 23/11/2026)</li>
+<li><a href="https://support.google.com/webmasters/answer/6211453?hl=pt-BR" rel="noopener">https://support.google.com/webmasters/answer/6211453?hl=pt-BR</a> — Ajuda do Search Console, “Anomalias de dados no Search Console” (9 a 11 de novembro de 2026) (consultada em 23/11/2026)</li>
+<li><a href="https://www.searchenginejournal.com/google-ai-click-reporting-uk-deadline/595663/" rel="noopener">https://www.searchenginejournal.com/google-ai-click-reporting-uk-deadline/595663/</a> — Search Engine Journal, “Google Says No AI Click Reporting News Yet, Ahead Of UK Deadline”, 02/11/2026 (consultada em 23/11/2026)</li>
+<li><a href="https://www.seroundtable.com/google-generative-ai-performance-report-data-bug-42527.html" rel="noopener">https://www.seroundtable.com/google-generative-ai-performance-report-data-bug-42527.html</a> — Search Engine Roundtable, “Google Search Console Generative AI Performance Report Data Bug Nov 9 - 11”, 12/11/2026 (consultada em 23/11/2026)</li>
+</ul></div>
+        <div class="mt-12 rounded-2xl card-border bg-charcoal-800 p-6">
+          <p class="text-snow font-semibold text-lg">O Search Console mostra o Google. E o ChatGPT e o Perplexity, citam a sua empresa?</p>
+          <p class="mt-2 text-mist text-sm">O Gabarito GEO da Refrain testa perguntas reais nos motores de IA, mostra quais fontes cada um citou e entrega score, gaps priorizados e checklist em minutos. R$ 497, pagamento único.</p>
+          <div class="mt-4 flex flex-wrap gap-3"><a href="../precos.html" class="text-sm font-medium px-4 py-2 rounded-lg bg-cyan text-charcoal-950 hover:bg-cyan-dim transition">Ver preços do Gabarito</a><a href="../orcamento.html" class="text-sm font-medium px-4 py-2 rounded-lg border border-charcoal-600 text-snow hover:border-cyan/40 hover:text-cyan transition">Fazer diagnóstico rápido</a></div>
+        </div>
+
+        <aside class="mt-12 p-5 rounded-xl border border-white/10 bg-white/5" aria-label="Sobre o autor">
+          <p class="text-snow font-semibold">Sobre o autor</p>
+          <p class="mt-2 text-sm text-mist"><a href="/autor/leandro-franca-de-mello/" class="text-cyan hover:underline">Leandro França de Mello</a> é Google Developer, engenheiro de ML e foi um dos pioneiros em Google Ads e campanhas de SEO no início dos anos 2000. Fundou a Refrain conjugando essas competências pra criar uma agência 100% automatizada de GEO e com alcance mundial.</p>
+        </aside>
+      </article>
+    </section>
+  </main>
+
+  <footer class="border-t border-charcoal-700 py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row justify-between gap-8">
+      <div>
+        <a href="../index.html" class="inline-block" aria-label="Refrain — início"><img src="../assets/refrain-wordmark.svg" alt="Refrain" width="104" height="28" class="h-7 w-auto" /></a>
+        <p class="mt-2 text-sm text-mist max-w-xs">Seja o refrão que a IA repete. GEO + Caçador de Citações.</p>
+        <p class="mt-2 text-sm text-mist"><a href="mailto:contato@refrain.com.br" class="hover:text-cyan">contato@refrain.com.br</a></p>
+      </div>
+      <div class="flex flex-wrap gap-8 text-sm text-mist">
+        <div class="space-y-2">
+          <p class="text-snow font-medium text-xs uppercase tracking-wider">Site</p>
+          <a href="../servicos.html" class="block hover:text-cyan">Serviços</a>
+          <a href="../metodologia.html" class="block hover:text-cyan">Metodologia</a>
+          <a href="../case-climatewise.html" class="block hover:text-cyan">Case</a>
+          <a href="../orcamento.html" class="block hover:text-cyan">Diagnóstico</a>
+          <a href="../precos.html" class="block hover:text-cyan">Preços</a>
+          <a href="./" class="block hover:text-cyan">Artigos</a>
+          <a href="/estudos/quem-as-ias-citam-no-brasil/" class="block hover:text-cyan">Estudo: quem as IAs citam</a>
+          <a href="/autor/leandro-franca-de-mello/" class="block hover:text-cyan">Autor</a>
+          <a href="../contato.html" class="block hover:text-cyan">Contato</a>
+          <a href="../portal.html" class="block hover:text-cyan">Portal</a>
+        </div>
+        <div class="space-y-2">
+          <p class="text-snow font-medium text-xs uppercase tracking-wider">Legal</p>
+          <a href="../privacidade.html" class="block hover:text-cyan">Privacidade</a>
+          <a href="../termos.html" class="block hover:text-cyan">Termos</a>
+          <a href="../llms.txt" class="block hover:text-cyan font-mono text-xs">llms.txt</a>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 mt-10 pt-6 border-t border-charcoal-700 text-xs text-mist/50">
+      © 2026 Refrain · Leandro França de Mello
+    </div>
+  </footer>
+<script src="https://app.refrain.com.br/chat-widget.js" async></script>
+</body>
+</html>
