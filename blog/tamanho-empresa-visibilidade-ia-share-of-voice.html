@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Como medir se sua marca aparece no ChatGPT, Gemini e Perplexity | Refrain</title>
+  <meta name="description" content="Para medir presença em IA, faça as mesmas perguntas de compra em cada motor, várias vezes, e registre duas taxas separadas: a % de respostas que mencionam a marca e a % que trazem link para o seu site. Veja o método do radar da Refrain, com 4 motores." />
+  <link rel="canonical" href="https://www.refrain.com.br/blog/como-medir-marca-chatgpt-gemini-perplexity.html" />
+  <meta property="og:title" content="Como medir se sua marca aparece no ChatGPT, Gemini e Perplexity" />
+  <meta property="og:description" content="Para medir presença em IA, faça as mesmas perguntas de compra em cada motor, várias vezes, e registre duas taxas separadas: a % de respostas que mencionam a marca e a % que trazem link para o seu site. Veja o método do radar da Refrain, com 4 motores." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.refrain.com.br/blog/como-medir-marca-chatgpt-gemini-perplexity.html" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Refrain" />
+  <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Article",
+   "@id": "https://www.refrain.com.br/blog/tamanho-empresa-visibilidade-ia-share-of-voice.html#article",
+   "headline": "O tamanho da sua empresa importa cada vez menos para os algoritmos de IA",
+   "description": "Ranking de visibilidade em buscas por IA no setor de SEO mostra uma operação enxuta colada em gigantes: Maudy em 14º, com 2% de visibilidade e 1,4% de SOV. Entenda por que os LLMs leem entidade e estrutura, não tamanho.",
+   "inLanguage": "pt-BR",
+   "datePublished": "2026-11-24",
+   "dateModified": "2026-11-24",
+   "image": "https://www.refrain.com.br/blog/ranking-visibilidade-sov-ia-seo.png",
+   "author": {
+    "@type": "Person",
+    "@id": "https://www.refrain.com.br/autor/leandro-franca-de-mello/#person",
+    "name": "Leandro França de Mello",
+    "jobTitle": "Fundador da Refrain",
+    "url": "https://www.refrain.com.br/autor/leandro-franca-de-mello/"
+   },
+   "publisher": {
+    "@type": "Organization",
+    "@id": "https://www.refrain.com.br/#organization",
+    "name": "Refrain",
+    "url": "https://www.refrain.com.br/"
+   },
+   "mainEntityOfPage": "https://www.refrain.com.br/blog/tamanho-empresa-visibilidade-ia-share-of-voice.html"
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://www.refrain.com.br/blog/tamanho-empresa-visibilidade-ia-share-of-voice.html#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "O que é share of voice em buscas por IA?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "É a fatia das respostas dos motores de IA em que a sua marca aparece, dentro de um conjunto de perguntas sobre um setor. Aqui, a Maudy tem 1,4% de SOV no setor de SEO, perto de operações muito maiores."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "O tamanho da empresa não conta nada para as IAs?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Conta indiretamente: empresas grandes costumam ter mais páginas e citações. Mas o que o LLM lê na hora de responder é autoridade de entidade, estrutura de dados, profundidade técnica e relevância do conteúdo — e nisso uma operação enxuta pode empatar."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Como medir a visibilidade da minha marca nas IAs?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Faça as mesmas perguntas de compra em cada motor, várias vezes, e registre duas taxas: menção (nome no texto) e link (domínio nas fontes). O Gabarito GEO da Refrain automatiza essa medição."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Por que os nomes do ranking estão censurados?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Por ética: o print mostra dados de terceiros. Os números de visibilidade e SOV estão intactos; só os nomes das posições 9 a 13 foram cobertos."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/config.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            charcoal: { 950: '#0B1220', 900: '#0f1218', 800: '#161b22', 700: '#1e2530', 600: '#2a3341' },
+            cyan: { DEFAULT: '#2F6BFF', dim: '#2557d6' },
+            teal: { DEFAULT: '#00A896' },
+            cream: { DEFAULT: '#F7F5F1' },
+            warn: { DEFAULT: '#E85D04' },
+            mist: '#a8b2c1',
+            snow: '#e8ecf1'
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
+          },
+          boxShadow: { 'glow-sm': '0 0 20px rgba(47,107,255,0.2)', glow: '0 0 40px rgba(47,107,255,0.15)' }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background: #0B1220; color: #e8ecf1; }
+    .nav-blur { backdrop-filter: blur(12px); background: rgba(11,18,32,0.85); }
+    .card-border { border: 1px solid rgba(42,51,65,0.9); }
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(47,107,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(47,107,255,0.03) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    .field-error { border-color: #E85D04 !important; }
+    .error-msg { color: #E85D04; font-size: 0.75rem; margin-top: 0.35rem; display: none; }
+    .error-msg.visible { display: block; }
+  </style>
+<script src="https://app.refrain.com.br/hub/refrain-1b85fe/geo.js" async></script>
+  <style>
+    .prose-r h2 { font-size:1.5rem; font-weight:700; color:#e8ecf1; margin-top:2.5rem; margin-bottom:.75rem; }
+    .prose-r p { color:#c9d1dc; line-height:1.75; margin-top:1rem; }
+    .prose-r ul, .prose-r ol { color:#c9d1dc; margin-top:1rem; padding-left:1.25rem; line-height:1.75; }
+    .prose-r ul { list-style:disc; } .prose-r ol { list-style:decimal; }
+    .prose-r a { color:#2F6BFF; text-decoration:underline; }
+    .prose-r table { width:100%; margin-top:1.25rem; border-collapse:collapse; font-size:.9rem; }
+    .prose-r th, .prose-r td { border:1px solid rgba(42,51,65,0.9); padding:.6rem .75rem; text-align:left; vertical-align:top; color:#c9d1dc; }
+    .prose-r th { background:#161b22; color:#e8ecf1; }
+    .prose-r code { font-family:'JetBrains Mono',monospace; font-size:.85em; background:#161b22; padding:.1rem .3rem; border-radius:.25rem; }
+  </style>
+</head>
+<body class="font-sans antialiased">
+  <header class="fixed top-0 inset-x-0 z-50 nav-blur border-b border-charcoal-600/50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="/index.html" class="flex items-center gap-2">
+        <img src="/assets/refrain-wordmark.svg" alt="Refrain" width="119" height="32" class="h-8 w-auto" />
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm text-mist">
+        <a href="/servicos.html" class="hover:text-cyan transition">Serviços</a>
+        <a href="/metodologia.html" class="hover:text-cyan transition">Metodologia</a>
+        <a href="/case-climatewise.html" class="hover:text-cyan transition">Case</a>
+        <a href="/orcamento.html" class="hover:text-cyan transition">Diagnóstico</a>
+        <a href="/index.html#pacotes" class="hover:text-cyan transition">Pacotes</a>
+        <a href="/precos.html" class="hover:text-cyan transition">Preços</a>
+        <a href="/blog/" class="text-cyan">Blog</a>
+        <a href="/contato.html" class="hover:text-cyan transition">Contato</a>
+      </nav>
+      <a href="/orcamento.html" class="text-sm font-medium px-4 py-2 rounded-lg bg-cyan text-charcoal-950 hover:bg-cyan-dim transition shadow-glow-sm">Diagnóstico rápido</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="pt-28 pb-20 sm:pt-32 grid-bg">
+      <article class="max-w-3xl mx-auto px-4 sm:px-6">
+        <nav class="text-xs text-mist mb-6"><a href="/" class="hover:text-cyan">Início</a> › <a href="/blog/" class="hover:text-cyan">Artigos</a></nav>
+<h1 class="text-3xl sm:text-4xl font-bold text-snow leading-tight">O tamanho da sua empresa importa cada vez menos para os algoritmos de IA</h1>
+        <p class="mt-4 text-sm text-mist">Por <a href="/autor/leandro-franca-de-mello/" class="text-cyan hover:underline">Leandro França de Mello</a>, fundador da Refrain · Publicado em 24/11/2026 · Atualizado em 24/11/2026</p>
+        <div class="prose-r">
+
+<p><strong>O tamanho da sua empresa importa cada vez menos para os algoritmos de IA.</strong> Num ranking de visibilidade e share of voice (SOV) em buscas por IA no setor de SEO, uma operação enxuta aparece colada em algumas das maiores agências e redes do mercado — porque os LLMs leem autoridade de entidade e estrutura, não o tamanho do escritório.</p>
+
+<h2>O ranking</h2>
+<p>Da posição 9 à 13 estão operações grandes do setor (nomes cobertos por ética). Na posição 14: Maudy, com 2% de visibilidade e 1,4% de SOV — a mesma visibilidade das posições 11 a 13 e a 1 ponto das posições 9 e 10.</p>
+<figure class="my-6"><img src="/blog/ranking-visibilidade-sov-ia-seo.png" alt="Ranking de visibilidade e share of voice em buscas por IA no setor de SEO, posições 9 a 14, com Maudy em 14º" class="rounded-xl border border-charcoal-700 w-full" loading="lazy" /><figcaption class="mt-2 text-xs text-mist">Posições 9 a 14 em visibilidade e SOV no setor de SEO. Nomes de terceiros censurados.</figcaption></figure>
+<table>
+<thead><tr><th>Posição</th><th>Visibilidade</th><th>SOV</th></tr></thead>
+<tbody>
+<tr><td>9</td><td>3%</td><td>2,2%</td></tr>
+<tr><td>10</td><td>3%</td><td>2,2%</td></tr>
+<tr><td>11</td><td>2%</td><td>1,7%</td></tr>
+<tr><td>12</td><td>2%</td><td>1,7%</td></tr>
+<tr><td>13</td><td>2%</td><td>1,5%</td></tr>
+<tr><td>14 — Maudy</td><td>2%</td><td>1,4%</td></tr>
+</tbody>
+</table>
+
+<h2>Por que isso acontece</h2>
+<p>Os LLMs não leem o tamanho do seu escritório. Na hora de montar uma resposta, eles leem quatro coisas:</p>
+<ul>
+<li><strong>Autoridade de entidade:</strong> a marca existe como entidade clara e consistente no site, no schema e em terceiros?</li>
+<li><strong>Estrutura de dados:</strong> schema, llms.txt, páginas que respondem a uma pergunta por vez?</li>
+<li><strong>Profundidade técnica:</strong> conteúdo que resolve de verdade, com fatos e números, não texto genérico?</li>
+<li><strong>Relevância real:</strong> o conteúdo responde à pergunta que o usuário fez?</li>
+</ul>
+<p>Nada disso exige uma equipe grande. Exige arquitetura de informação bem feita.</p>
+
+<h2>No SEO tradicional, força bruta vencia. No GEO, não</h2>
+<p>No SEO clássico, grandes estruturas muitas vezes venciam na produção em massa: mais páginas, mais links, mais orçamento. No GEO (Generative Engine Optimization), qualidade estrutural e especialização real nivelam o jogo. Não é sobre ter a maior equipe. É sobre ter a melhor arquitetura de informação.</p>
+<p>Para uma comparação item por item entre os dois, veja <a href="/blog/geo-vs-seo-diferencas-na-pratica.html">GEO vs SEO: diferenças na prática</a>.</p>
+
+<h2>O que fazer com isso</h2>
+<p>Se você tem uma operação pequena, a notícia é boa — desde que faça o dever de casa:</p>
+<ol>
+<li><strong>Entidade primeiro:</strong> nome único e consistente no site, no schema Organization e no llms.txt.</li>
+<li><strong>Uma página por pergunta:</strong> resposta direta no primeiro parágrafo, fatos em tabela, FAQ.</li>
+<li><strong>Meça menção e link em separado:</strong> ser citado sem link não traz visita. Veja <a href="/blog/como-medir-marca-chatgpt-gemini-perplexity.html">como medir nos 4 motores</a>.</li>
+</ol>
+
+<h2>Como a Refrain entrega essa medição</h2>
+<p>O <a href="/precos.html">Gabarito GEO</a> (R$ 497, pagamento único) faz o diagnóstico do site e gera as perguntas de compra. O upgrade para R$ 997 no total liga o monitoramento diário de menção e link por motor, com histórico no portal.</p>
+
+        <h2 id="faq">Perguntas frequentes</h2></div><div class="space-y-3 mt-4"><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">O que é share of voice em buscas por IA?</summary><p class="mt-2 text-mist text-sm">É a fatia das respostas dos motores de IA em que a sua marca aparece, dentro de um conjunto de perguntas sobre um setor. Aqui, a Maudy tem 1,4% de SOV no setor de SEO, perto de operações muito maiores.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">O tamanho da empresa não conta nada para as IAs?</summary><p class="mt-2 text-mist text-sm">Conta indiretamente: empresas grandes costumam ter mais páginas e citações. Mas o que o LLM lê na hora de responder é autoridade de entidade, estrutura de dados, profundidade técnica e relevância do conteúdo — e nisso uma operação enxuta pode empatar.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Como medir a visibilidade da minha marca nas IAs?</summary><p class="mt-2 text-mist text-sm">Faça as mesmas perguntas de compra em cada motor, várias vezes, e registre duas taxas: menção (nome no texto) e link (domínio nas fontes). O Gabarito GEO da Refrain automatiza essa medição.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Por que os nomes do ranking estão censurados?</summary><p class="mt-2 text-mist text-sm">Por ética: o print mostra dados de terceiros. Os números de visibilidade e SOV estão intactos; só os nomes das posições 9 a 13 foram cobertos.</p></details></div><div class="prose-r">
+        <h2>Fontes</h2><ul><li><a href="/blog/como-medir-marca-chatgpt-gemini-perplexity.html">Como medir se sua marca aparece no ChatGPT, Gemini e Perplexity</a></li><li><a href="/blog/geo-vs-seo-diferencas-na-pratica.html">GEO vs SEO: diferenças na prática</a></li></ul>
+        </div>
+              <div class="mt-12 rounded-2xl card-border bg-charcoal-800 p-6">
+          <p class="text-snow font-semibold text-lg">Quer saber se as IAs já citam a sua marca?</p>
+          <p class="mt-2 text-mist text-sm">O Gabarito GEO da Refrain testa perguntas de compra nas IAs e entrega score 0–100, gaps priorizados e checklist no portal, em minutos. R$ 497, pagamento único, sem reunião.</p>
+          <div class="mt-4 flex flex-wrap gap-3"><a href="/precos.html" class="text-sm font-medium px-4 py-2 rounded-lg bg-cyan text-charcoal-950 hover:bg-cyan-dim transition">Ver preços do Gabarito</a><a href="/respostas/agencias-geo-brasil/" class="text-sm font-medium px-4 py-2 rounded-lg border border-charcoal-600 text-snow hover:border-cyan/40 hover:text-cyan transition">Comparar agências de GEO</a></div>
+        </div>
+      
+        <aside class="mt-12 p-5 rounded-xl border border-white/10 bg-white/5" aria-label="Sobre o autor">
+          <p class="text-snow font-semibold">Sobre o autor</p>
+          <p class="mt-2 text-sm text-mist"><a href="/autor/leandro-franca-de-mello/" class="text-cyan hover:underline">Leandro França de Mello</a> é Google Developer, engenheiro de ML e foi um dos pioneiros em Google Ads e campanhas de SEO no início dos anos 2000. Fundou a Refrain conjugando essas competências pra criar uma agência 100% automatizada de GEO e com alcance mundial.</p>
+        </aside>
+      </article>
+    </section>
+  </main>
+
+  <footer class="border-t border-charcoal-700 py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row justify-between gap-8">
+      <div>
+        <a href="/index.html" class="inline-block" aria-label="Refrain — início"><img src="/assets/refrain-wordmark.svg" alt="Refrain" width="104" height="28" class="h-7 w-auto" /></a>
+        <p class="mt-2 text-sm text-mist max-w-xs">Seja o refrão que a IA repete. GEO + Caçador de Citações.</p>
+        <p class="mt-2 text-sm text-mist"><a href="mailto:contato@refrain.com.br" class="hover:text-cyan">contato@refrain.com.br</a></p>
+      </div>
+      <div class="flex flex-wrap gap-8 text-sm text-mist">
+        <div class="space-y-2">
+          <p class="text-snow font-medium text-xs uppercase tracking-wider">Site</p>
+          <a href="/servicos.html" class="block hover:text-cyan">Serviços</a>
+          <a href="/metodologia.html" class="block hover:text-cyan">Metodologia</a>
+          <a href="/case-climatewise.html" class="block hover:text-cyan">Case</a>
+          <a href="/orcamento.html" class="block hover:text-cyan">Diagnóstico</a>
+          <a href="/precos.html" class="block hover:text-cyan">Preços</a>
+          <a href="/blog/" class="block hover:text-cyan">Artigos</a>
+          <a href="/estudos/quem-as-ias-citam-no-brasil/" class="block hover:text-cyan">Estudo: quem as IAs citam</a>
+          <a href="/autor/leandro-franca-de-mello/" class="block hover:text-cyan">Autor</a>
+          <a href="/respostas/agencias-geo-brasil/" class="block hover:text-cyan">Agências de GEO no Brasil</a>
+          <a href="/contato.html" class="block hover:text-cyan">Contato</a>
+          <a href="/portal.html" class="block hover:text-cyan">Portal</a>
+        </div>
+        <div class="space-y-2">
+          <p class="text-snow font-medium text-xs uppercase tracking-wider">Legal</p>
+          <a href="/privacidade.html" class="block hover:text-cyan">Privacidade</a>
+          <a href="/termos.html" class="block hover:text-cyan">Termos</a>
+          <a href="/llms.txt" class="block hover:text-cyan font-mono text-xs">llms.txt</a>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 mt-10 pt-6 border-t border-charcoal-700 text-xs text-mist/50">
+      © 2026 Refrain · Leandro França de Mello
+    </div>
+  </footer>
+<script src="https://app.refrain.com.br/chat-widget.js" async></script>
+</body>
+</html>
