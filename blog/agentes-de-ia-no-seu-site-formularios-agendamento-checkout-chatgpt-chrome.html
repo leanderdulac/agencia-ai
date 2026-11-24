@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agentes de IA no seu site: como preparar formulários, agendamento e checkout para o ChatGPT e o Chrome | Blog Refrain</title>
+  <meta name="description" content="O ChatGPT e o Chrome já têm agentes que abrem sites, clicam e preenchem formulários a pedido do usuário. Veja como deixar o agente entrar (Web Bot Auth), o que ele enxerga na página, o que é WebMCP, quais ações devem pedir confirmação humana e como testar o seu site no Lighthouse." />
+  <link rel="canonical" href="https://www.refrain.com.br/blog/agentes-de-ia-no-seu-site-formularios-agendamento-checkout-chatgpt-chrome.html" />
+  <meta property="og:title" content="Agentes de IA no seu site: como preparar formulários, agendamento e checkout para o ChatGPT e o Chrome" />
+  <meta property="og:description" content="O ChatGPT e o Chrome já têm agentes que abrem sites, clicam e preenchem formulários a pedido do usuário. Veja como deixar o agente entrar (Web Bot Auth), o que ele enxerga na página, o que é WebMCP, quais ações devem pedir confirmação humana e como testar o seu site no Lighthouse." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.refrain.com.br/blog/agentes-de-ia-no-seu-site-formularios-agendamento-checkout-chatgpt-chrome.html" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Refrain" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Article",
+   "@id": "https://www.refrain.com.br/blog/agentes-de-ia-no-seu-site-formularios-agendamento-checkout-chatgpt-chrome.html#article",
+   "headline": "Agentes de IA no seu site: como preparar formulários, agendamento e checkout para o ChatGPT e o Chrome",
+   "description": "O ChatGPT e o Chrome já têm agentes que abrem sites, clicam e preenchem formulários a pedido do usuário. Veja como deixar o agente entrar (Web Bot Auth), o que ele enxerga na página, o que é WebMCP, quais ações devem pedir confirmação humana e como testar o seu site no Lighthouse.",
+   "inLanguage": "pt-BR",
+   "datePublished": "2026-11-24",
+   "dateModified": "2026-11-24",
+   "author": {
+    "@type": "Person",
+    "name": "Leandro França de Mello",
+    "description": "Leandro França de Mello é Google Developer, engenheiro de ML e foi um dos pioneiros em Google Ads e campanhas de SEO no início dos anos 2000. Fundou a Refrain conjugando essas competências pra criar uma agência 100% automatizada de GEO e com alcance mundial.",
+    "jobTitle": "Fundador da Refrain",
+    "url": "https://www.refrain.com.br/autor/leandro-franca-de-mello/",
+    "@id": "https://www.refrain.com.br/autor/leandro-franca-de-mello/#person",
+    "worksFor": {
+     "@id": "https://www.refrain.com.br/#organization"
+    },
+    "knowsAbout": [
+     "GEO",
+     "SEO",
+     "Google Ads",
+     "machine learning"
+    ]
+   },
+   "publisher": {
+    "@type": "Organization",
+    "@id": "https://www.refrain.com.br/#organization",
+    "name": "Refrain",
+    "url": "https://www.refrain.com.br/"
+   },
+   "mainEntityOfPage": "https://www.refrain.com.br/blog/agentes-de-ia-no-seu-site-formularios-agendamento-checkout-chatgpt-chrome.html",
+   "citation": [
+    "https://developers.openai.com/commerce/agent-access",
+    "https://help.openai.com/en/articles/11845367-chatgpt-works-cloud-browser-allowlisting",
+    "https://blog.google/products-and-platforms/products/chrome/gemini-3-auto-browse/",
+    "https://developer.chrome.com/blog/agent-ready-toolkit",
+    "https://developer.chrome.com/docs/lighthouse/agentic-browsing/scoring",
+    "https://developer.chrome.com/docs/ai/webmcp/declarative-api",
+    "https://developer.chrome.com/docs/modern-web-guidance/guides/webmcp/agentic-forms",
+    "https://help.openai.com/en/articles/20001371-evolving-atlas-into-chatgpt-for-browser-based-agentic-work"
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://www.refrain.com.br/blog/agentes-de-ia-no-seu-site-formularios-agendamento-checkout-chatgpt-chrome.html#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "O que é um agente de IA navegando no meu site?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "É um assistente de IA que abre as páginas do seu site, clica em botões e preenche formulários a pedido de um usuário, para concluir uma tarefa como comparar opções, pedir um orçamento ou chegar até a compra. A OpenAI diz que, para algumas tarefas, o ChatGPT usa um navegador que roda num computador na nuvem; o Google lançou em 28/01/2026 o auto browse do Chrome, em prévia nos EUA para assinantes Google AI Pro e AI Ultra."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Agente de IA é a mesma coisa que robô de busca como o OAI-SearchBot?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Não. O robô de busca rastreia páginas para um índice. O agente visita o site no lugar de uma pessoa, durante uma tarefa. A OpenAI diz que as visitas do navegador na nuvem do ChatGPT são separadas dos seus rastreadores, incluindo o OAI-SearchBot, e que liberar o agente no firewall não muda o tratamento dos outros bots."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Como liberar o agente do ChatGPT no meu firewall sem abrir o site para qualquer bot?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "O navegador na nuvem do ChatGPT assina as requisições com Web Bot Auth (padrão RFC 9421), com o cabeçalho Signature-Agent igual a \"https://chatgpt.com\". Akamai, Cloudflare, HUMAN e Vercel verificam a assinatura automaticamente; na Cloudflare, ele aparece como \"dots, OpenAI\" em Personal Agents. Em outros provedores, a OpenAI pede para validar a assinatura com a chave pública antes de liberar. Liberar só pelo user-agent ou pelo cabeçalho não basta."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Posso impedir que o agente finalize uma compra sozinho?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A OpenAI diz que ainda não oferece um controle para o dono do site escolher quais ações o usuário pode fazer com o agente, mas que exige revisão humana antes de qualquer ação de consequência. O Google diz que o auto browse pausa e pede confirmação em tarefas como compras e posts em redes sociais. No seu lado, mantenha confirmação, login e controles de acesso por página."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "O que é WebMCP e preciso implementar agora?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "WebMCP é uma proposta de padrão, em origin trial no Chrome, que permite expor um formulário como ferramenta para agentes com atributos HTML como toolname e tooldescription. É experimental e pode mudar. Como navegadores sem suporte ignoram esses atributos, testar num formulário simples tem pouco risco, mas o básico vem antes: HTML semântico, campos com rótulo e página estável."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Como sei se o meu site está pronto para agentes de IA?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "O Lighthouse ganhou a categoria Agentic Browsing, a partir do Chrome 150, ainda experimental. Ela verifica se cada elemento interativo tem nome acessível, se a árvore de acessibilidade está íntegra, se a página muda de lugar enquanto carrega (CLS), se há llms.txt na raiz e se há ferramentas WebMCP. Não dá nota de 0 a 100: mostra quantas verificações passaram."
+     }
+    }
+   ]
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Início",
+     "item": "https://www.refrain.com.br/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Blog",
+     "item": "https://www.refrain.com.br/blog/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Agentes de IA no seu site: como preparar formulários, agendamento e checkout para o ChatGPT e o Chrome",
+     "item": "https://www.refrain.com.br/blog/agentes-de-ia-no-seu-site-formularios-agendamento-checkout-chatgpt-chrome.html"
+    }
+   ]
+  }
+ ]
+}
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../config.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            charcoal: { 950: '#0B1220', 900: '#0f1218', 800: '#161b22', 700: '#1e2530', 600: '#2a3341' },
+            cyan: { DEFAULT: '#2F6BFF', dim: '#2557d6' },
+            teal: { DEFAULT: '#00A896' },
+            cream: { DEFAULT: '#F7F5F1' },
+            warn: { DEFAULT: '#E85D04' },
+            mist: '#a8b2c1',
+            snow: '#e8ecf1'
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
+          },
+          boxShadow: { 'glow-sm': '0 0 20px rgba(47,107,255,0.2)', glow: '0 0 40px rgba(47,107,255,0.15)' }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background: #0B1220; color: #e8ecf1; }
+    .nav-blur { backdrop-filter: blur(12px); background: rgba(11,18,32,0.85); }
+    .card-border { border: 1px solid rgba(42,51,65,0.9); }
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(47,107,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(47,107,255,0.03) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    .field-error { border-color: #E85D04 !important; }
+    .error-msg { color: #E85D04; font-size: 0.75rem; margin-top: 0.35rem; display: none; }
+    .error-msg.visible { display: block; }
+  </style>
+<script src="https://app.refrain.com.br/hub/refrain-1b85fe/geo.js" async></script>
+</head>
+<body class="font-sans antialiased">
+  <style>
+    .prose-r h2 { font-size:1.5rem; font-weight:700; color:#e8ecf1; margin-top:2.5rem; margin-bottom:.75rem; }
+    .prose-r p { color:#c9d1dc; line-height:1.75; margin-top:1rem; }
+    .prose-r ul, .prose-r ol { color:#c9d1dc; margin-top:1rem; padding-left:1.25rem; line-height:1.75; }
+    .prose-r ul { list-style:disc; } .prose-r ol { list-style:decimal; }
+    .prose-r a { color:#2F6BFF; text-decoration:underline; }
+    .prose-r table { width:100%; margin-top:1.25rem; border-collapse:collapse; font-size:.9rem; }
+    .prose-r th, .prose-r td { border:1px solid rgba(42,51,65,0.9); padding:.6rem .75rem; text-align:left; vertical-align:top; color:#c9d1dc; }
+    .prose-r th { background:#161b22; color:#e8ecf1; }
+    .prose-r code { font-family:'JetBrains Mono',monospace; font-size:.85em; background:#161b22; padding:.1rem .3rem; border-radius:.25rem; }
+  </style>
+  <header class="fixed top-0 inset-x-0 z-50 nav-blur border-b border-charcoal-600/50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="../index.html" class="flex items-center gap-2">
+        <img src="../assets/refrain-wordmark.svg" alt="Refrain" width="119" height="32" class="h-8 w-auto" />
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm text-mist">
+        <a href="../servicos.html" class="hover:text-cyan transition">Serviços</a>
+        <a href="../metodologia.html" class="hover:text-cyan transition">Metodologia</a>
+        <a href="../case-climatewise.html" class="hover:text-cyan transition">Case</a>
+        <a href="../orcamento.html" class="hover:text-cyan transition">Diagnóstico</a>
+        <a href="../index.html#pacotes" class="hover:text-cyan transition">Pacotes</a>
+        <a href="../precos.html" class="hover:text-cyan transition">Preços</a>
+        <a href="./" class="text-cyan">Blog</a>
+        <a href="../contato.html" class="hover:text-cyan transition">Contato</a>
+      </nav>
+      <a href="../orcamento.html" class="text-sm font-medium px-4 py-2 rounded-lg bg-cyan text-charcoal-950 hover:bg-cyan-dim transition shadow-glow-sm">Diagnóstico rápido</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="pt-28 pb-20 sm:pt-32 grid-bg">
+      <article class="max-w-3xl mx-auto px-4 sm:px-6">
+        <p class="text-cyan font-mono text-xs uppercase tracking-widest mb-3"><a href="./" class="hover:underline">Blog</a> · 24 de novembro de 2026</p>
+        <h1 class="text-3xl sm:text-4xl font-bold text-snow tracking-tight">Agentes de IA no seu site: como preparar formulários, agendamento e checkout para o ChatGPT e o Chrome</h1>
+        <div class="prose-r">
+        <p id="resposta"><strong>Agentes de IA já entram em sites para fazer tarefas no lugar do usuário: o ChatGPT usa um navegador na nuvem que lê páginas, clica em botões e interage com o site, e o Chrome tem o auto browse, que preenche formulários e agenda horários. Para não perder esse cliente, faça quatro coisas: deixe o agente verificado passar pelo firewall, use HTML semântico com campos rotulados, evite que a página “pule” enquanto carrega e mantenha confirmação humana em pagamento e ações sensíveis.</strong></p>
+        <p>Até aqui, GEO era fazer a IA citar e linkar a sua empresa. O passo seguinte é a IA conseguir <em>usar</em> o seu site: pedir orçamento, marcar consulta, montar o carrinho, assinar o teste do SaaS. Abaixo, o que a OpenAI e o Google documentam até 24/11/2026 e o que isso muda para PMEs, clínicas, lojas virtuais, SaaS e escolas no Brasil.</p>
+
+        <h2>O que é um agente de IA navegando no seu site?</h2>
+        <p>É um assistente que visita o site no lugar de uma pessoa, durante uma tarefa. A <a href="https://developers.openai.com/commerce/agent-access" rel="noopener">documentação da OpenAI para empresas</a> descreve assim: as pessoas pedem ao ChatGPT para visitar sites e ajudá-las a fazer coisas, como achar um produto, comparar opções ou preencher um formulário; para algumas dessas tarefas, o ChatGPT usa um navegador que roda num computador na nuvem e que “lê páginas, clica em botões e interage com o seu site” em nome do usuário.</p>
+        <p>Isso é diferente do robô que rastreia o site para a busca:</p>
+        <div class="overflow-x-auto"><table>
+          <thead><tr><th></th><th>Robô de busca (ex.: OAI-SearchBot, Googlebot)</th><th>Agente de IA (ex.: navegador na nuvem do ChatGPT, auto browse do Chrome)</th></tr></thead>
+          <tbody>
+            <tr><td>Quando visita</td><td>Em rastreamentos periódicos, para montar o índice</td><td>Durante uma tarefa pedida por um usuário</td></tr>
+            <tr><td>O que faz</td><td>Lê e indexa o conteúdo</td><td>Lê, clica, preenche formulários, avança até o carrinho</td></tr>
+            <tr><td>Como se controla</td><td>robots.txt e regras de firewall por robô</td><td>Regras de firewall/CDN e verificação de assinatura; robots.txt não é o controle documentado para isso</td></tr>
+            <tr><td>Resultado para a empresa</td><td>Citação e link na resposta</td><td>Pedido, orçamento, agendamento ou cadastro concluído</td></tr>
+          </tbody>
+        </table></div>
+        <p>A OpenAI diz que as visitas do navegador na nuvem são separadas dos seus rastreadores, incluindo o OAI-SearchBot. Para o lado dos robôs de busca, veja o nosso guia de <a href="robots-txt-para-ia-gptbot-oai-searchbot-perplexitybot-claudebot.html">robots.txt para IA</a>.</p>
+
+        <h2>Quais agentes já fazem isso hoje?</h2>
+        <ul>
+          <li><strong>ChatGPT (navegador na nuvem):</strong> descrito na <a href="https://developers.openai.com/commerce/agent-access" rel="noopener">página da OpenAI sobre acesso de agentes</a>. As requisições são assinadas, o que permite ao seu site confirmar que vieram do ChatGPT.</li>
+          <li><strong>Chrome auto browse (Gemini):</strong> o Google anunciou em <a href="https://blog.google/products-and-platforms/products/chrome/gemini-3-auto-browse/" rel="noopener">28 de janeiro de 2026</a> um recurso que faz tarefas de várias etapas no navegador, como agendar consultas, preencher formulários, pedir orçamentos de encanadores e eletricistas e colocar itens no carrinho. No anúncio, estava em prévia nos EUA para assinantes Google AI Pro e AI Ultra.</li>
+          <li><strong>ChatGPT Atlas:</strong> o navegador próprio da OpenAI foi <a href="https://help.openai.com/en/articles/20001371-evolving-atlas-into-chatgpt-for-browser-based-agentic-work" rel="noopener">aposentado</a> e não recebe mais atualizações. Não vale a pena criar regra específica para ele.</li>
+        </ul>
+        <p>Para o Brasil, a leitura prática é: o recurso do ChatGPT já trata do seu site como um visitante a mais, e o do Chrome mostra para onde o Google está indo. Preparar o site agora custa pouco, porque quase tudo também melhora a experiência de quem usa leitor de tela e de quem navega pelo celular.</p>
+
+        <h2>O agente consegue entrar no meu site?</h2>
+        <p>Pode não conseguir. A OpenAI avisa que o firewall pode bloquear ou interromper a visita e, com isso, impedir que a pessoa conclua o que foi fazer, como uma compra. A solução documentada é liberar o perfil verificado do agente, sem desligar as outras proteções:</p>
+        <ul>
+          <li><strong>Cloudflare:</strong> em Security &gt; Settings, filtre por tráfego de bots, abra “AI Crawler and Agent access policies” e, em Personal Agents, deixe “dots, OpenAI” como Allow. Também dá para criar regra no WAF pelo detection ID <code>129220581</code> (<a href="https://help.openai.com/en/articles/11845367-chatgpt-works-cloud-browser-allowlisting" rel="noopener">Ajuda da OpenAI</a>).</li>
+          <li><strong>Vercel:</strong> se as suas regras de segurança não bloqueiam esse tráfego, não precisa configurar nada; a Vercel reconhece o agente como <code>chatgpt-operator</code> e verifica a assinatura.</li>
+          <li><strong>Akamai e HUMAN:</strong> o agente aparece como “ChatGPT Agent”; as duas verificam a assinatura sozinhas.</li>
+          <li><strong>Outros provedores:</strong> confira se o cabeçalho <code>Signature-Agent</code> é exatamente <code>"https://chatgpt.com"</code>, busque a chave pública em <code>https://chatgpt.com/.well-known/http-message-signatures-directory</code> e valide <code>Signature</code> e <code>Signature-Input</code> pelo padrão RFC 9421 (Web Bot Auth) antes de liberar.</li>
+        </ul>
+        <p>Dois cuidados. Liberar só pelo nome ou pelo cabeçalho abre a porta para qualquer um que copie esses valores; a liberação precisa da assinatura verificada. E a OpenAI lembra que a exceção vale para o site inteiro, então mantenha os controles de acesso por página (área do cliente, painel administrativo). Se o seu problema é com os robôs de busca, o caminho está em <a href="firewall-cdn-bloqueando-chatgpt-google-perplexity-como-verificar.html">firewall e CDN bloqueando o ChatGPT, o Google e o Perplexity</a>.</p>
+
+        <h2>O que o agente “enxerga” na sua página?</h2>
+        <p>Segundo o <a href="https://developer.chrome.com/blog/agent-ready-toolkit" rel="noopener">blog do Chrome para desenvolvedores</a> (22/06/2026), os agentes usam a árvore de acessibilidade como principal modelo de dados da página, a mesma estrutura que leitores de tela usam. Por isso, o que atrapalha uma pessoa com deficiência visual tende a atrapalhar o agente. O Google cita três sinais que tornam um fluxo confiável para máquinas, como marcar uma consulta ou fazer um pedido:</p>
+        <ol>
+          <li><strong>Nomes e rótulos:</strong> todo botão, link e campo precisa de um nome acessível. Um botão que é só um ícone, sem texto nem <code>aria-label</code>, vira um elemento sem nome.</li>
+          <li><strong>Estrutura íntegra:</strong> papéis e relações entre elementos válidos, e nada interativo escondido da árvore de acessibilidade.</li>
+          <li><strong>Estabilidade:</strong> pouco deslocamento de layout (CLS). Se um banner ou imagem sem dimensão empurra o botão no meio do caminho, o agente clica no lugar errado.</li>
+        </ol>
+        <p>Na prática, por tipo de negócio:</p>
+        <div class="overflow-x-auto"><table>
+          <thead><tr><th>Negócio</th><th>Fluxo que o agente tende a tentar</th><th>O que revisar primeiro</th></tr></thead>
+          <tbody>
+            <tr><td>Clínica</td><td>Ver especialidades, convênios e marcar horário</td><td>Agenda com datas e horários em texto (não só em imagem), campos com rótulo, confirmação do agendamento na tela</td></tr>
+            <tr><td>Loja virtual</td><td>Comparar produtos, aplicar cupom, chegar ao carrinho</td><td>Preço, frete e estoque visíveis no HTML; botões “Adicionar ao carrinho” com texto; pop-ups que não cobrem o botão</td></tr>
+            <tr><td>SaaS</td><td>Comparar planos, criar conta de teste, pedir demonstração</td><td>Tabela de preços em HTML, formulário de demonstração simples, sem etapas escondidas</td></tr>
+            <tr><td>Escola e cursos</td><td>Ver grade, valores e fazer pré-matrícula</td><td>Página de cada curso com carga horária, preço e datas em texto; formulário de interesse curto</td></tr>
+            <tr><td>Serviços B2B e locais</td><td>Pedir orçamento</td><td>Formulário de orçamento com campos claros e mensagem de erro em texto</td></tr>
+          </tbody>
+        </table></div>
+        <p>As colunas “fluxo” e “o que revisar” são a nossa leitura aplicada dos sinais que o Google descreve; não são uma lista oficial por setor.</p>
+
+        <h2>O que é WebMCP e vale a pena usar agora?</h2>
+        <p>WebMCP é uma proposta de padrão para o site expor “ferramentas” aos agentes, em vez de o agente adivinhar onde clicar. A forma mais simples é a <a href="https://developer.chrome.com/docs/ai/webmcp/declarative-api" rel="noopener">API declarativa</a>: você adiciona atributos a um formulário HTML que já existe, como <code>toolname</code> (nome da ferramenta) e <code>tooldescription</code> (o que ela faz), e o navegador transforma os campos em parâmetros. Campos podem ganhar <code>toolparamdescription</code>; sem ele, o navegador usa o texto do <code>&lt;label&gt;</code>.</p>
+        <p>Um formulário de orçamento ficaria assim: <code>&lt;form toolname="pedir_orcamento" tooldescription="Envia um pedido de orçamento para a equipe comercial."&gt;</code>, com os mesmos campos e rótulos de hoje.</p>
+        <p>O que pesa na decisão:</p>
+        <ul>
+          <li>Está em <strong>origin trial</strong> no Chrome, é experimental e pode mudar.</li>
+          <li>Navegadores sem suporte <a href="https://developer.chrome.com/docs/modern-web-guidance/guides/webmcp/agentic-forms" rel="noopener">ignoram os atributos</a> e o formulário continua funcionando normalmente. O risco de testar é baixo.</li>
+          <li>O Google diz que a API declarativa funciona mal em formulários com campos que dependem uns dos outros, componentes fora do padrão (como editores de texto ricos) e fluxos de várias etapas.</li>
+        </ul>
+        <p>Para a maioria das PMEs, a ordem é: primeiro acessibilidade e estabilidade, que valem para qualquer agente e para pessoas; depois, se houver equipe técnica, WebMCP num formulário simples, como busca ou orçamento.</p>
+
+        <h2>Quais ações o agente pode fazer sozinho e quais devem pedir confirmação?</h2>
+        <p>No WebMCP, o atributo <code>toolautosubmit</code> deixa o agente enviar o formulário sem esperar o usuário. O <a href="https://developer.chrome.com/docs/modern-web-guidance/guides/webmcp/agentic-forms" rel="noopener">guia do Chrome</a> separa bem os casos:</p>
+        <div class="overflow-x-auto"><table>
+          <thead><tr><th>Pode enviar sozinho (toolautosubmit)</th><th>Deve esperar o usuário</th></tr></thead>
+          <tbody>
+            <tr><td>Buscas, filtros, consulta de detalhes, status e estoque</td><td>Checkout, transferências, autorização de assinatura, pedido final</td></tr>
+            <tr><td>Ações de baixo risco e reversíveis: adicionar ao carrinho, aplicar cupom, salvar rascunho</td><td>Apagar registros ou redefinir configurações</td></tr>
+            <tr><td></td><td>Candidatura final, mensagens para outras pessoas, publicação de conteúdo</td></tr>
+            <tr><td></td><td>Senha, permissões, dados de cobrança e de perfil</td></tr>
+          </tbody>
+        </table></div>
+        <p>Os agentes também têm travas próprias. A OpenAI diz que ainda não oferece ao dono do site um controle sobre quais ações o usuário pode fazer, mas que exige revisão humana antes de qualquer ação de consequência. O Google diz que o auto browse pausa e pede confirmação em tarefas como compras e posts em redes sociais. Mesmo assim, não dependa só da trava do agente: mantenha confirmação, login e as regras de segurança do seu checkout.</p>
+
+        <h2>Como testar se o meu site está pronto?</h2>
+        <ol>
+          <li><strong>Rode o Lighthouse na categoria Agentic Browsing.</strong> Ela exige Chrome 150 ou mais recente e é experimental. Segundo a <a href="https://developer.chrome.com/docs/lighthouse/agentic-browsing/scoring" rel="noopener">documentação</a>, não dá nota de 0 a 100: mostra quantas verificações passaram e os erros de cada uma. Entre as verificações estão nomes acessíveis, árvore de acessibilidade, CLS, presença de <a href="llms-txt-o-que-e-como-criar-chatgpt-perplexity-gemini.html">llms.txt</a> na raiz e ferramentas WebMCP (estas exigem inscrição no origin trial).</li>
+          <li><strong>Peça ao próprio ChatGPT para fazer a tarefa.</strong> Por exemplo: “entre no site X e peça um orçamento de Y”. Veja onde ele trava.</li>
+          <li><strong>Olhe o firewall.</strong> Procure bloqueios do agente verificado do ChatGPT nos logs da sua CDN no horário do teste.</li>
+          <li><strong>Teste com teclado e leitor de tela.</strong> Se dá para chegar até o fim do formulário só com o teclado, a chance de o agente chegar também é maior.</li>
+          <li><strong>Para desenvolvedores:</strong> o Google oferece o Chrome DevTools para agentes, que simula os passos de um agente e roda o Lighthouse na aba aberta (<a href="https://developer.chrome.com/blog/agent-ready-toolkit" rel="noopener">detalhes</a>).</li>
+        </ol>
+
+        <h2>Quem responde se o agente errar o pedido?</h2>
+        <p>A OpenAI diz que o cliente é o responsável final pelas ações que faz, e que o atendimento deve ser o mesmo que você daria se o próprio cliente tivesse feito a ação. Também diz que a loja não precisa ter um feed de produtos com a OpenAI para que o agente navegue no site; o feed ajuda na descoberta dos produtos e o agente ajuda a concluir a ação. Se você vende online, o feed está explicado em <a href="como-aparecer-nas-compras-do-chatgpt-feed-de-produtos-ecommerce.html">como aparecer nas compras do ChatGPT</a>.</p>
+        <p>A frase da OpenAI que resume o tema: sites que bloqueiam o acesso podem perder usuários ou clientes que vão buscar outras fontes para decidir.</p>
+        </div>
+        <div class="space-y-3 mt-4"><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">O que é um agente de IA navegando no meu site?</summary><p class="mt-2 text-mist text-sm">É um assistente de IA que abre as páginas do seu site, clica em botões e preenche formulários a pedido de um usuário, para concluir uma tarefa como comparar opções, pedir um orçamento ou chegar até a compra. A OpenAI diz que, para algumas tarefas, o ChatGPT usa um navegador que roda num computador na nuvem; o Google lançou em 28/01/2026 o auto browse do Chrome, em prévia nos EUA para assinantes Google AI Pro e AI Ultra.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Agente de IA é a mesma coisa que robô de busca como o OAI-SearchBot?</summary><p class="mt-2 text-mist text-sm">Não. O robô de busca rastreia páginas para um índice. O agente visita o site no lugar de uma pessoa, durante uma tarefa. A OpenAI diz que as visitas do navegador na nuvem do ChatGPT são separadas dos seus rastreadores, incluindo o OAI-SearchBot, e que liberar o agente no firewall não muda o tratamento dos outros bots.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Como liberar o agente do ChatGPT no meu firewall sem abrir o site para qualquer bot?</summary><p class="mt-2 text-mist text-sm">O navegador na nuvem do ChatGPT assina as requisições com Web Bot Auth (padrão RFC 9421), com o cabeçalho Signature-Agent igual a "https://chatgpt.com". Akamai, Cloudflare, HUMAN e Vercel verificam a assinatura automaticamente; na Cloudflare, ele aparece como "dots, OpenAI" em Personal Agents. Em outros provedores, a OpenAI pede para validar a assinatura com a chave pública antes de liberar. Liberar só pelo user-agent ou pelo cabeçalho não basta.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Posso impedir que o agente finalize uma compra sozinho?</summary><p class="mt-2 text-mist text-sm">A OpenAI diz que ainda não oferece um controle para o dono do site escolher quais ações o usuário pode fazer com o agente, mas que exige revisão humana antes de qualquer ação de consequência. O Google diz que o auto browse pausa e pede confirmação em tarefas como compras e posts em redes sociais. No seu lado, mantenha confirmação, login e controles de acesso por página.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">O que é WebMCP e preciso implementar agora?</summary><p class="mt-2 text-mist text-sm">WebMCP é uma proposta de padrão, em origin trial no Chrome, que permite expor um formulário como ferramenta para agentes com atributos HTML como toolname e tooldescription. É experimental e pode mudar. Como navegadores sem suporte ignoram esses atributos, testar num formulário simples tem pouco risco, mas o básico vem antes: HTML semântico, campos com rótulo e página estável.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Como sei se o meu site está pronto para agentes de IA?</summary><p class="mt-2 text-mist text-sm">O Lighthouse ganhou a categoria Agentic Browsing, a partir do Chrome 150, ainda experimental. Ela verifica se cada elemento interativo tem nome acessível, se a árvore de acessibilidade está íntegra, se a página muda de lugar enquanto carrega (CLS), se há llms.txt na raiz e se há ferramentas WebMCP. Não dá nota de 0 a 100: mostra quantas verificações passaram.</p></details></div>
+        <div class="prose-r"><h2>Fontes</h2><ul>
+<li><a href="https://developers.openai.com/commerce/agent-access" rel="noopener">https://developers.openai.com/commerce/agent-access</a> — OpenAI Developers, “Help ensure cloud browser access to your site” (consultada em 24/11/2026)</li>
+<li><a href="https://help.openai.com/en/articles/11845367-chatgpt-works-cloud-browser-allowlisting" rel="noopener">https://help.openai.com/en/articles/11845367-chatgpt-works-cloud-browser-allowlisting</a> — OpenAI Help Center, “ChatGPT Work's Cloud browser allowlisting” (consultada em 24/11/2026)</li>
+<li><a href="https://blog.google/products-and-platforms/products/chrome/gemini-3-auto-browse/" rel="noopener">https://blog.google/products-and-platforms/products/chrome/gemini-3-auto-browse/</a> — Google Blog, “The new era of browsing: Putting Gemini to work in Chrome” (auto browse), 28/01/2026 (consultada em 24/11/2026)</li>
+<li><a href="https://developer.chrome.com/blog/agent-ready-toolkit" rel="noopener">https://developer.chrome.com/blog/agent-ready-toolkit</a> — Chrome for Developers, “A developer toolkit to make your website agent-ready”, 22/06/2026 (consultada em 24/11/2026)</li>
+<li><a href="https://developer.chrome.com/docs/lighthouse/agentic-browsing/scoring" rel="noopener">https://developer.chrome.com/docs/lighthouse/agentic-browsing/scoring</a> — Chrome for Developers, “Lighthouse agentic browsing scoring” (consultada em 24/11/2026)</li>
+<li><a href="https://developer.chrome.com/docs/ai/webmcp/declarative-api" rel="noopener">https://developer.chrome.com/docs/ai/webmcp/declarative-api</a> — Chrome for Developers, “Declarative API” (WebMCP), atualizada em 25/09/2026 (consultada em 24/11/2026)</li>
+<li><a href="https://developer.chrome.com/docs/modern-web-guidance/guides/webmcp/agentic-forms" rel="noopener">https://developer.chrome.com/docs/modern-web-guidance/guides/webmcp/agentic-forms</a> — Chrome for Developers, Modern Web Guidance, guia de formulários WebMCP (agentic forms) (consultada em 24/11/2026)</li>
+<li><a href="https://help.openai.com/en/articles/20001371-evolving-atlas-into-chatgpt-for-browser-based-agentic-work" rel="noopener">https://help.openai.com/en/articles/20001371-evolving-atlas-into-chatgpt-for-browser-based-agentic-work</a> — OpenAI Help Center, “ChatGPT Atlas retirement” (consultada em 24/11/2026)</li>
+</ul></div>
+        <div class="mt-12 rounded-2xl card-border bg-charcoal-800 p-6">
+          <p class="text-snow font-semibold text-lg">Antes de o agente usar o seu site, a IA precisa indicar o seu site. Ela indica?</p>
+          <p class="mt-2 text-mist text-sm">O Gabarito GEO da Refrain testa perguntas reais de compra nos motores de IA, mostra quais fontes cada um citou no seu lugar e entrega score, gaps priorizados e checklist em minutos. R$ 497, pagamento único.</p>
+          <div class="mt-4 flex flex-wrap gap-3"><a href="../precos.html" class="text-sm font-medium px-4 py-2 rounded-lg bg-cyan text-charcoal-950 hover:bg-cyan-dim transition">Ver preços do Gabarito</a><a href="../orcamento.html" class="text-sm font-medium px-4 py-2 rounded-lg border border-charcoal-600 text-snow hover:border-cyan/40 hover:text-cyan transition">Fazer diagnóstico rápido</a></div>
+        </div>
+
+        <aside class="mt-12 p-5 rounded-xl border border-white/10 bg-white/5" aria-label="Sobre o autor">
+          <p class="text-snow font-semibold">Sobre o autor</p>
+          <p class="mt-2 text-sm text-mist"><a href="/autor/leandro-franca-de-mello/" class="text-cyan hover:underline">Leandro França de Mello</a> é Google Developer, engenheiro de ML e foi um dos pioneiros em Google Ads e campanhas de SEO no início dos anos 2000. Fundou a Refrain conjugando essas competências pra criar uma agência 100% automatizada de GEO e com alcance mundial.</p>
+        </aside>
+      </article>
+    </section>
+  </main>
+
+  <footer class="border-t border-charcoal-700 py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row justify-between gap-8">
+      <div>
+        <a href="../index.html" class="inline-block" aria-label="Refrain — início"><img src="../assets/refrain-wordmark.svg" alt="Refrain" width="104" height="28" class="h-7 w-auto" /></a>
+        <p class="mt-2 text-sm text-mist max-w-xs">Seja o refrão que a IA repete. GEO + Caçador de Citações.</p>
+        <p class="mt-2 text-sm text-mist"><a href="mailto:contato@refrain.com.br" class="hover:text-cyan">contato@refrain.com.br</a></p>
+      </div>
+      <div class="flex flex-wrap gap-8 text-sm text-mist">
+        <div class="space-y-2">
+          <p class="text-snow font-medium text-xs uppercase tracking-wider">Site</p>
+          <a href="../servicos.html" class="block hover:text-cyan">Serviços</a>
+          <a href="../metodologia.html" class="block hover:text-cyan">Metodologia</a>
+          <a href="../case-climatewise.html" class="block hover:text-cyan">Case</a>
+          <a href="../orcamento.html" class="block hover:text-cyan">Diagnóstico</a>
+          <a href="../precos.html" class="block hover:text-cyan">Preços</a>
+          <a href="./" class="block hover:text-cyan">Artigos</a>
+          <a href="/estudos/quem-as-ias-citam-no-brasil/" class="block hover:text-cyan">Estudo: quem as IAs citam</a>
+          <a href="/autor/leandro-franca-de-mello/" class="block hover:text-cyan">Autor</a>
+          <a href="../contato.html" class="block hover:text-cyan">Contato</a>
+          <a href="../portal.html" class="block hover:text-cyan">Portal</a>
+        </div>
+        <div class="space-y-2">
+          <p class="text-snow font-medium text-xs uppercase tracking-wider">Legal</p>
+          <a href="../privacidade.html" class="block hover:text-cyan">Privacidade</a>
+          <a href="../termos.html" class="block hover:text-cyan">Termos</a>
+          <a href="../llms.txt" class="block hover:text-cyan font-mono text-xs">llms.txt</a>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 mt-10 pt-6 border-t border-charcoal-700 text-xs text-mist/50">
+      © 2026 Refrain · Leandro França de Mello
+    </div>
+  </footer>
+<script src="https://app.refrain.com.br/chat-widget.js" async></script>
+</body>
+</html>
