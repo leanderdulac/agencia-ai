@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Como o Google escolhe quais sites linkar nas Visões gerais e no Modo IA (e o que fazer quando a citação sai errada) | Blog Refrain</title>
+  <meta name="description" content="O Google publicou um documento oficial sobre atribuição e factualidade nas respostas com IA da Busca. Veja as 4 etapas da escolha dos links, as checagens antes da resposta aparecer, o que fazer se a IA creditar outro site pelo seu conteúdo e como corrigir uma citação errada." />
+  <link rel="canonical" href="https://www.refrain.com.br/blog/como-google-escolhe-links-visoes-gerais-modo-ia-citacao-errada.html" />
+  <meta property="og:title" content="Como o Google escolhe quais sites linkar nas Visões gerais e no Modo IA (e o que fazer quando a citação sai errada)" />
+  <meta property="og:description" content="O Google publicou um documento oficial sobre atribuição e factualidade nas respostas com IA da Busca. Veja as 4 etapas da escolha dos links, as checagens antes da resposta aparecer, o que fazer se a IA creditar outro site pelo seu conteúdo e como corrigir uma citação errada." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.refrain.com.br/blog/como-google-escolhe-links-visoes-gerais-modo-ia-citacao-errada.html" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Refrain" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Article",
+   "@id": "https://www.refrain.com.br/blog/como-google-escolhe-links-visoes-gerais-modo-ia-citacao-errada.html#article",
+   "headline": "Como o Google escolhe quais sites linkar nas Visões gerais e no Modo IA (e o que fazer quando a citação sai errada)",
+   "description": "O Google publicou um documento oficial sobre atribuição e factualidade nas respostas com IA da Busca. Veja as 4 etapas da escolha dos links, as checagens antes da resposta aparecer, o que fazer se a IA creditar outro site pelo seu conteúdo e como corrigir uma citação errada.",
+   "inLanguage": "pt-BR",
+   "datePublished": "2026-11-25",
+   "dateModified": "2026-11-25",
+   "author": {
+    "@type": "Person",
+    "name": "Leandro França de Mello",
+    "description": "Leandro França de Mello é Google Developer, engenheiro de ML e foi um dos pioneiros em Google Ads e campanhas de SEO no início dos anos 2000. Fundou a Refrain conjugando essas competências pra criar uma agência 100% automatizada de GEO e com alcance mundial.",
+    "jobTitle": "Fundador da Refrain",
+    "url": "https://www.refrain.com.br/autor/leandro-franca-de-mello/",
+    "@id": "https://www.refrain.com.br/autor/leandro-franca-de-mello/#person",
+    "worksFor": {
+     "@id": "https://www.refrain.com.br/#organization"
+    },
+    "knowsAbout": [
+     "GEO",
+     "SEO",
+     "Google Ads",
+     "machine learning"
+    ]
+   },
+   "publisher": {
+    "@type": "Organization",
+    "@id": "https://www.refrain.com.br/#organization",
+    "name": "Refrain",
+    "url": "https://www.refrain.com.br/"
+   },
+   "mainEntityOfPage": "https://www.refrain.com.br/blog/como-google-escolhe-links-visoes-gerais-modo-ia-citacao-errada.html",
+   "citation": [
+    "https://developers.google.com/search/docs/fundamentals/gen-ai-attribution-factuality",
+    "https://www.seroundtable.com/google-ai-overviews-ai-mode-link-selection-42617.html",
+    "https://blog.google/products-and-platforms/products/search/updates-ai-mode-overviews-explore-web/",
+    "https://blog.google/products-and-platforms/products/search/google-search-personal-intelligence-apps/",
+    "https://blog.google/products-and-platforms/products/search/temporary-threads-ai-mode/"
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://www.refrain.com.br/blog/como-google-escolhe-links-visoes-gerais-modo-ia-citacao-errada.html#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Como o Google escolhe os sites que aparecem como link nas Visões gerais e no Modo IA?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Segundo o documento oficial do Google sobre atribuição e factualidade, são quatro etapas: os resultados ranqueados do índice da Busca, buscas relacionadas feitas pelo modelo (query fan-out), a corroboração, em que a resposta cita e linka as páginas que sustentam cada informação, e a exibição, que equilibra relevância, qualidade e diversidade de fontes."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Preciso fazer algo diferente de SEO para ser linkado pela IA do Google?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "O Google diz que os recursos de IA generativa da Busca são integrados aos sistemas centrais de ranking e qualidade, e que as mesmas práticas que ajudam o site na Busca ajudam a página a ser linkada e representada com precisão. A página precisa estar indexada e apta a aparecer com snippet."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "A IA do Google creditou outro site pelo meu conteúdo. O que eu faço?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "O Google indica: se você distribui o conteúdo para parceiros (sindicação), peça que eles bloqueiem a indexação da cópia; se outro site copiou sem permissão, pode caber um pedido pela DMCA. Também vale revisar a canonicalização das suas páginas."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "A resposta com IA citou a minha página com uma informação errada. Como corrigir?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Se o problema é a atribuição, use o link de Feedback logo abaixo da resposta com IA. Se o problema está no texto da sua página, atualize a página e peça novo rastreamento. Em caso urgente, a ferramenta de remoções tira a página da Busca por cerca de 6 meses, inclusive dos recursos de IA, enquanto você corrige."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Mudar a data do artigo ajuda a ser escolhido pela IA?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Não há indicação disso. O Google recomenda manter as informações corretas e atualizadas, e evitar mudar a data da página se o conteúdo não mudou de forma substancial."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Por que eu vejo meu site na resposta e o meu cliente não?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "As respostas variam. O Google anunciou em 23/11/2026 respostas mais personalizadas nas Visões gerais e no Modo IA com base no contexto de pesquisas recentes. Para medir, use as conversas temporárias do Modo IA, que não usam preferências anteriores, e o relatório de IA generativa do Search Console."
+     }
+    }
+   ]
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Início",
+     "item": "https://www.refrain.com.br/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Blog",
+     "item": "https://www.refrain.com.br/blog/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Como o Google escolhe quais sites linkar nas Visões gerais e no Modo IA (e o que fazer quando a citação sai errada)",
+     "item": "https://www.refrain.com.br/blog/como-google-escolhe-links-visoes-gerais-modo-ia-citacao-errada.html"
+    }
+   ]
+  }
+ ]
+}
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../config.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            charcoal: { 950: '#0B1220', 900: '#0f1218', 800: '#161b22', 700: '#1e2530', 600: '#2a3341' },
+            cyan: { DEFAULT: '#2F6BFF', dim: '#2557d6' },
+            teal: { DEFAULT: '#00A896' },
+            cream: { DEFAULT: '#F7F5F1' },
+            warn: { DEFAULT: '#E85D04' },
+            mist: '#a8b2c1',
+            snow: '#e8ecf1'
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
+          },
+          boxShadow: { 'glow-sm': '0 0 20px rgba(47,107,255,0.2)', glow: '0 0 40px rgba(47,107,255,0.15)' }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background: #0B1220; color: #e8ecf1; }
+    .nav-blur { backdrop-filter: blur(12px); background: rgba(11,18,32,0.85); }
+    .card-border { border: 1px solid rgba(42,51,65,0.9); }
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(47,107,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(47,107,255,0.03) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    .field-error { border-color: #E85D04 !important; }
+    .error-msg { color: #E85D04; font-size: 0.75rem; margin-top: 0.35rem; display: none; }
+    .error-msg.visible { display: block; }
+  </style>
+<script src="https://app.refrain.com.br/hub/refrain-1b85fe/geo.js" async></script>
+</head>
+<body class="font-sans antialiased">
+  <style>
+    .prose-r h2 { font-size:1.5rem; font-weight:700; color:#e8ecf1; margin-top:2.5rem; margin-bottom:.75rem; }
+    .prose-r p { color:#c9d1dc; line-height:1.75; margin-top:1rem; }
+    .prose-r ul, .prose-r ol { color:#c9d1dc; margin-top:1rem; padding-left:1.25rem; line-height:1.75; }
+    .prose-r ul { list-style:disc; } .prose-r ol { list-style:decimal; }
+    .prose-r a { color:#2F6BFF; text-decoration:underline; }
+    .prose-r table { width:100%; margin-top:1.25rem; border-collapse:collapse; font-size:.9rem; }
+    .prose-r th, .prose-r td { border:1px solid rgba(42,51,65,0.9); padding:.6rem .75rem; text-align:left; vertical-align:top; color:#c9d1dc; }
+    .prose-r th { background:#161b22; color:#e8ecf1; }
+    .prose-r code { font-family:'JetBrains Mono',monospace; font-size:.85em; background:#161b22; padding:.1rem .3rem; border-radius:.25rem; }
+  </style>
+  <header class="fixed top-0 inset-x-0 z-50 nav-blur border-b border-charcoal-600/50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="../index.html" class="flex items-center gap-2">
+        <img src="../assets/refrain-wordmark.svg" alt="Refrain" width="119" height="32" class="h-8 w-auto" />
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm text-mist">
+        <a href="../servicos.html" class="hover:text-cyan transition">Serviços</a>
+        <a href="../metodologia.html" class="hover:text-cyan transition">Metodologia</a>
+        <a href="../case-climatewise.html" class="hover:text-cyan transition">Case</a>
+        <a href="../orcamento.html" class="hover:text-cyan transition">Diagnóstico</a>
+        <a href="../index.html#pacotes" class="hover:text-cyan transition">Pacotes</a>
+        <a href="../precos.html" class="hover:text-cyan transition">Preços</a>
+        <a href="./" class="text-cyan">Blog</a>
+        <a href="../contato.html" class="hover:text-cyan transition">Contato</a>
+      </nav>
+      <a href="../orcamento.html" class="text-sm font-medium px-4 py-2 rounded-lg bg-cyan text-charcoal-950 hover:bg-cyan-dim transition shadow-glow-sm">Diagnóstico rápido</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="pt-28 pb-20 sm:pt-32 grid-bg">
+      <article class="max-w-3xl mx-auto px-4 sm:px-6">
+        <p class="text-cyan font-mono text-xs uppercase tracking-widest mb-3"><a href="./" class="hover:underline">Blog</a> · 25 de novembro de 2026</p>
+        <h1 class="text-3xl sm:text-4xl font-bold text-snow tracking-tight">Como o Google escolhe quais sites linkar nas Visões gerais e no Modo IA (e o que fazer quando a citação sai errada)</h1>
+        <div class="prose-r">
+        <p id="resposta"><strong>O Google monta os links das Visões gerais e do Modo IA a partir do próprio índice da Busca: pega os resultados ranqueados para a pergunta, faz buscas relacionadas (query fan-out), cita as páginas que sustentam cada afirmação da resposta e escolhe como exibi-las equilibrando relevância, qualidade e diversidade de fontes. Isso está num documento oficial novo do Google Search Central, que também diz o que fazer quando a citação sai errada ou quando outro site leva o crédito pelo seu conteúdo.</strong></p>
+        <p>O documento se chama “Attribution and factuality in Search generative AI features” (<a href="https://developers.google.com/search/docs/fundamentals/gen-ai-attribution-factuality" rel="noopener">atribuição e factualidade nos recursos de IA generativa da Busca</a>) e foi destacado pelo Search Engine Roundtable em 24/11/2026 (<a href="https://www.seroundtable.com/google-ai-overviews-ai-mode-link-selection-42617.html" rel="noopener">reportagem</a>). Abaixo, o que ele diz, em português, e o que muda para PMEs, clínicas, lojas virtuais, SaaS e escolas no Brasil.</p>
+
+        <h2>Quais são as 4 etapas da escolha dos links?</h2>
+        <p>O Google diz que as respostas usam um modelo Gemini personalizado, integrado aos sistemas centrais de ranking, recuperação de informação e qualidade da Busca, em vez de depender só do que o modelo aprendeu no treino. As etapas descritas são:</p>
+        <div class="overflow-x-auto"><table>
+          <thead><tr><th>Etapa</th><th>O que o Google descreve</th><th>O que isso pede do seu site</th></tr></thead>
+          <tbody>
+            <tr><td>1. Resultados do índice</td><td>Nas Visões gerais, o primeiro passo é examinar os resultados ranqueados para a pergunta; trechos dessas páginas vão para o modelo como base</td><td>Estar indexado e bem posicionado para a pergunta</td></tr>
+            <tr><td>2. Buscas relacionadas</td><td>O modelo pode fazer uma ou mais buscas relacionadas (query fan-out) para achar páginas que respondam a partes diferentes da pergunta</td><td>Cobrir as subperguntas do seu tema, não só a principal</td></tr>
+            <tr><td>3. Corroboração</td><td>A resposta é escrita com base nos resultados encontrados e cita e linka as páginas que sustentam cada informação</td><td>Ter afirmações claras e verificáveis no texto</td></tr>
+            <tr><td>4. Exibição</td><td>Links inline, cards de fontes agrupadas e carrosséis; a escolha equilibra sinais de relevância e qualidade, layout e um conjunto diverso de fontes</td><td>Nome do site, favicon e título bem definidos</td></tr>
+          </tbody>
+        </table></div>
+        <p>O fan-out ficou mais importante com a atualização do modelo da Busca em novembro; explicamos em <a href="gemini-4-hydrogen-modo-ia-google-query-fan-out-o-que-muda.html">o que muda com o Gemini 4 Hydrogen</a>. Sobre a exibição, o Google já tinha anunciado em 15/10/2026 mais links inline, e mais no alto das respostas (<a href="https://blog.google/products-and-platforms/products/search/updates-ai-mode-overviews-explore-web/" rel="noopener">anúncio</a>).</p>
+
+        <h2>Que checagens acontecem antes de a resposta aparecer?</h2>
+        <p>O documento lista duas checagens automáticas antes da exibição:</p>
+        <ul>
+          <li><strong>Segurança e políticas:</strong> barra de qualidade ainda mais alta em temas sensíveis. O sistema foi feito para não mostrar resposta com IA quando ela pode trazer risco, violar políticas da Busca ou não houver consenso confiável, por exemplo em temas “Your Money or Your Life” (saúde, dinheiro) ou notícias de última hora com pouca cobertura.</li>
+          <li><strong>Corroboração com os principais resultados:</strong> a resposta é conferida contra fontes confiáveis, como resultados da web, feeds de dados e o Knowledge Graph do Google, para ver se as afirmações se sustentam.</li>
+        </ul>
+        <p>Para clínicas e serviços financeiros, isso tem uma consequência prática: em parte das perguntas de saúde e dinheiro pode nem haver resposta com IA. Nessas, o resultado orgânico clássico continua sendo a vitrine. Para clínicas, veja também <a href="geo-para-clinicas-medicas-como-aparecer-no-chatgpt-regras-cfm.html">GEO para clínicas e as regras do CFM</a>.</p>
+
+        <h2>Preciso de uma técnica especial para ser linkado?</h2>
+        <p>Segundo o Google, não. Como os recursos de IA são integrados ao ranking e aos sistemas de qualidade da Busca, as práticas que ajudam o site na Busca também aumentam a chance de a página ser linkada e representada com precisão. As boas práticas listadas são:</p>
+        <ol>
+          <li><strong>Garantir que a página seja elegível.</strong> Só páginas indexadas e aptas a aparecer na Busca com snippet podem ser links de apoio. O documento diz ainda que o site precisa estar incluído nos recursos de IA generativa no Search Console (explicamos esse controle em <a href="controle-ia-generativa-search-console-ai-overviews-ai-mode.html">controle de IA generativa no Search Console</a>).</li>
+          <li><strong>Conteúdo útil e confiável.</strong> Informação importante em texto (não só em imagem ou vídeo), fontes claras e contexto sobre o autor ou a empresa, como página de autor ou página “Sobre”.</li>
+          <li><strong>Informação correta e atualizada.</strong> Revisar erros e atualizar quando algo muda. E um detalhe que vale ouro: evitar mudar a data da página se o conteúdo não mudou de forma substancial.</li>
+          <li><strong>Monitorar a visibilidade</strong> no relatório de desempenho de IA generativa do Search Console (veja <a href="relatorio-ia-generativa-search-console-impressoes-modo-ia-visoes-gerais.html">como ler esse relatório</a>).</li>
+        </ol>
+
+        <h2>O que fazer quando a citação sai errada?</h2>
+        <p>O documento traz uma tabela de problemas e ações. Resumimos:</p>
+        <div class="overflow-x-auto"><table>
+          <thead><tr><th>Situação</th><th>O que o Google recomenda</th></tr></thead>
+          <tbody>
+            <tr><td>Atribuição incorreta numa Visão geral ou no Modo IA</td><td>Enviar feedback pelo link “Feedback” logo abaixo da resposta com IA</td></tr>
+            <tr><td>O problema está na sua página (texto errado ou ambíguo)</td><td>Atualizar a página e pedir novo rastreamento; se for urgente, a ferramenta de remoções tira a página da Busca por cerca de 6 meses (vale para toda a Busca, não só para a IA)</td></tr>
+            <tr><td>Outro site leva o crédito pelo seu conteúdo</td><td>Se você sindica conteúdo, pedir aos parceiros que bloqueiem a indexação; se houve cópia sem permissão, pode caber pedido pela DMCA; revisar canonicalização</td></tr>
+            <tr><td>Parte da página não deveria aparecer</td><td>Usar <code>nosnippet</code>, <code>data-nosnippet</code> ou <code>max-snippet</code>, que valem também para os recursos de IA</td></tr>
+          </tbody>
+        </table></div>
+        <p>Atenção ao último item: <code>nosnippet</code> limita o que pode aparecer, mas, como só páginas aptas a mostrar snippet viram link de apoio, bloquear o snippet da página inteira também pode tirá-la das respostas. Use em trechos, não no site todo.</p>
+
+        <h2>Por que a resposta muda de uma pessoa para outra?</h2>
+        <p>Porque o Google está personalizando cada vez mais. Em 23/11/2026, anunciou respostas mais relevantes para cada pessoa nas Visões gerais e no Modo IA, com base no contexto de pesquisas recentes, além da conexão opcional de apps como Wallet ao Personal Intelligence do Modo IA (<a href="https://blog.google/products-and-platforms/products/search/google-search-personal-intelligence-apps/" rel="noopener">anúncio</a>). Na prática, o que você vê no seu celular não é necessariamente o que o seu cliente vê.</p>
+        <p>Para testar sem a influência do seu histórico, o Modo IA ganhou em 17/11/2026 as conversas temporárias: a sessão fica desvinculada da conta e as respostas não usam preferências anteriores (<a href="https://blog.google/products-and-platforms/products/search/temporary-threads-ai-mode/" rel="noopener">anúncio</a>). É uma forma mais neutra de conferir se a sua página aparece para uma pergunta.</p>
+
+        <h2>Checklist rápido para esta semana</h2>
+        <ul>
+          <li>Liste 10 perguntas reais que seus clientes fazem e busque cada uma numa conversa temporária do Modo IA. Anote quem foi linkado.</li>
+          <li>Confira no Search Console se as páginas-chave estão indexadas e se o site está incluído nos recursos de IA generativa.</li>
+          <li>Procure <code>nosnippet</code> ou <code>max-snippet:0</code> esquecidos no código.</li>
+          <li>Revise páginas com preços, horários, endereço e condições: informação desatualizada vira citação errada.</li>
+          <li>Garanta página de autor e página “Sobre” com informações claras.</li>
+          <li>Se você publica em portais parceiros, combine que a cópia deles não seja indexada, ou que aponte a canônica para você.</li>
+        </ul>
+        </div>
+        <div class="space-y-3 mt-4"><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Como o Google escolhe os sites que aparecem como link nas Visões gerais e no Modo IA?</summary><p class="mt-2 text-mist text-sm">Segundo o documento oficial do Google sobre atribuição e factualidade, são quatro etapas: os resultados ranqueados do índice da Busca, buscas relacionadas feitas pelo modelo (query fan-out), a corroboração, em que a resposta cita e linka as páginas que sustentam cada informação, e a exibição, que equilibra relevância, qualidade e diversidade de fontes.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Preciso fazer algo diferente de SEO para ser linkado pela IA do Google?</summary><p class="mt-2 text-mist text-sm">O Google diz que os recursos de IA generativa da Busca são integrados aos sistemas centrais de ranking e qualidade, e que as mesmas práticas que ajudam o site na Busca ajudam a página a ser linkada e representada com precisão. A página precisa estar indexada e apta a aparecer com snippet.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">A IA do Google creditou outro site pelo meu conteúdo. O que eu faço?</summary><p class="mt-2 text-mist text-sm">O Google indica: se você distribui o conteúdo para parceiros (sindicação), peça que eles bloqueiem a indexação da cópia; se outro site copiou sem permissão, pode caber um pedido pela DMCA. Também vale revisar a canonicalização das suas páginas.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">A resposta com IA citou a minha página com uma informação errada. Como corrigir?</summary><p class="mt-2 text-mist text-sm">Se o problema é a atribuição, use o link de Feedback logo abaixo da resposta com IA. Se o problema está no texto da sua página, atualize a página e peça novo rastreamento. Em caso urgente, a ferramenta de remoções tira a página da Busca por cerca de 6 meses, inclusive dos recursos de IA, enquanto você corrige.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Mudar a data do artigo ajuda a ser escolhido pela IA?</summary><p class="mt-2 text-mist text-sm">Não há indicação disso. O Google recomenda manter as informações corretas e atualizadas, e evitar mudar a data da página se o conteúdo não mudou de forma substancial.</p></details><details class="rounded-xl card-border bg-charcoal-900 p-4"><summary class="font-medium text-snow cursor-pointer">Por que eu vejo meu site na resposta e o meu cliente não?</summary><p class="mt-2 text-mist text-sm">As respostas variam. O Google anunciou em 23/11/2026 respostas mais personalizadas nas Visões gerais e no Modo IA com base no contexto de pesquisas recentes. Para medir, use as conversas temporárias do Modo IA, que não usam preferências anteriores, e o relatório de IA generativa do Search Console.</p></details></div>
+        <div class="prose-r"><h2>Fontes</h2><ul>
+<li><a href="https://developers.google.com/search/docs/fundamentals/gen-ai-attribution-factuality" rel="noopener">https://developers.google.com/search/docs/fundamentals/gen-ai-attribution-factuality</a> — Google Search Central, “Attribution and factuality in Search generative AI features” (consultada em 25/11/2026)</li>
+<li><a href="https://www.seroundtable.com/google-ai-overviews-ai-mode-link-selection-42617.html" rel="noopener">https://www.seroundtable.com/google-ai-overviews-ai-mode-link-selection-42617.html</a> — Search Engine Roundtable, “Google On How Links Are Selected & Shown In AI Overviews & AI Mode”, 24/11/2026 (consultada em 25/11/2026)</li>
+<li><a href="https://blog.google/products-and-platforms/products/search/updates-ai-mode-overviews-explore-web/" rel="noopener">https://blog.google/products-and-platforms/products/search/updates-ai-mode-overviews-explore-web/</a> — Google Blog, “More ways to connect with the web from Search”, 15/10/2026 (consultada em 25/11/2026)</li>
+<li><a href="https://blog.google/products-and-platforms/products/search/google-search-personal-intelligence-apps/" rel="noopener">https://blog.google/products-and-platforms/products/search/google-search-personal-intelligence-apps/</a> — Google Blog, “A more tailored Google Search that’s uniquely yours”, 23/11/2026 (consultada em 25/11/2026)</li>
+<li><a href="https://blog.google/products-and-platforms/products/search/temporary-threads-ai-mode/" rel="noopener">https://blog.google/products-and-platforms/products/search/temporary-threads-ai-mode/</a> — Google Blog, “Temporary threads are now available in AI Mode in Search”, 17/11/2026 (consultada em 25/11/2026)</li>
+</ul></div>
+        <div class="mt-12 rounded-2xl card-border bg-charcoal-800 p-6">
+          <p class="text-snow font-semibold text-lg">A IA do Google linka o seu site ou o do concorrente?</p>
+          <p class="mt-2 text-mist text-sm">O Gabarito GEO da Refrain testa perguntas reais de compra nos motores de IA, mostra quais fontes cada um citou no seu lugar e entrega score, gaps priorizados e checklist em minutos. R$ 497, pagamento único.</p>
+          <div class="mt-4 flex flex-wrap gap-3"><a href="../precos.html" class="text-sm font-medium px-4 py-2 rounded-lg bg-cyan text-charcoal-950 hover:bg-cyan-dim transition">Ver preços do Gabarito</a><a href="../orcamento.html" class="text-sm font-medium px-4 py-2 rounded-lg border border-charcoal-600 text-snow hover:border-cyan/40 hover:text-cyan transition">Fazer diagnóstico rápido</a></div>
+        </div>
+
+        <aside class="mt-12 p-5 rounded-xl border border-white/10 bg-white/5" aria-label="Sobre o autor">
+          <p class="text-snow font-semibold">Sobre o autor</p>
+          <p class="mt-2 text-sm text-mist"><a href="/autor/leandro-franca-de-mello/" class="text-cyan hover:underline">Leandro França de Mello</a> é Google Developer, engenheiro de ML e foi um dos pioneiros em Google Ads e campanhas de SEO no início dos anos 2000. Fundou a Refrain conjugando essas competências pra criar uma agência 100% automatizada de GEO e com alcance mundial.</p>
+        </aside>
+      </article>
+    </section>
+  </main>
+
+  <footer class="border-t border-charcoal-700 py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row justify-between gap-8">
+      <div>
+        <a href="../index.html" class="inline-block" aria-label="Refrain — início"><img src="../assets/refrain-wordmark.svg" alt="Refrain" width="104" height="28" class="h-7 w-auto" /></a>
+        <p class="mt-2 text-sm text-mist max-w-xs">Seja o refrão que a IA repete. GEO + Caçador de Citações.</p>
+        <p class="mt-2 text-sm text-mist"><a href="mailto:contato@refrain.com.br" class="hover:text-cyan">contato@refrain.com.br</a></p>
+      </div>
+      <div class="flex flex-wrap gap-8 text-sm text-mist">
+        <div class="space-y-2">
+          <p class="text-snow font-medium text-xs uppercase tracking-wider">Site</p>
+          <a href="../servicos.html" class="block hover:text-cyan">Serviços</a>
+          <a href="../metodologia.html" class="block hover:text-cyan">Metodologia</a>
+          <a href="../case-climatewise.html" class="block hover:text-cyan">Case</a>
+          <a href="../orcamento.html" class="block hover:text-cyan">Diagnóstico</a>
+          <a href="../precos.html" class="block hover:text-cyan">Preços</a>
+          <a href="./" class="block hover:text-cyan">Artigos</a>
+          <a href="/estudos/quem-as-ias-citam-no-brasil/" class="block hover:text-cyan">Estudo: quem as IAs citam</a>
+          <a href="/autor/leandro-franca-de-mello/" class="block hover:text-cyan">Autor</a>
+          <a href="../contato.html" class="block hover:text-cyan">Contato</a>
+          <a href="../portal.html" class="block hover:text-cyan">Portal</a>
+        </div>
+        <div class="space-y-2">
+          <p class="text-snow font-medium text-xs uppercase tracking-wider">Legal</p>
+          <a href="../privacidade.html" class="block hover:text-cyan">Privacidade</a>
+          <a href="../termos.html" class="block hover:text-cyan">Termos</a>
+          <a href="../llms.txt" class="block hover:text-cyan font-mono text-xs">llms.txt</a>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 mt-10 pt-6 border-t border-charcoal-700 text-xs text-mist/50">
+      © 2026 Refrain · Leandro França de Mello
+    </div>
+  </footer>
+<script src="https://app.refrain.com.br/chat-widget.js" async></script>
+</body>
+</html>
